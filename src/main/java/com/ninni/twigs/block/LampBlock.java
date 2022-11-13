@@ -1,7 +1,7 @@
 package com.ninni.twigs.block;
 
+import com.ninni.twigs.registry.TwigsSoundEvents;
 import net.minecraft.core.BlockPos;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -25,11 +25,13 @@ public class LampBlock extends Block {
     @SuppressWarnings("deprecation")
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
-        final boolean wasLit = state.getValue(LIT);
-        level.setBlockAndUpdate(pos, state.setValue(LIT, !wasLit));
-        //TODO custom sound
-        level.playSound(null, pos, !wasLit ? SoundEvents.FLINTANDSTEEL_USE : SoundEvents.STONE_BUTTON_CLICK_OFF, SoundSource.BLOCKS, 1, 1);
-        return InteractionResult.SUCCESS;
+        if (!player.isShiftKeyDown()) {
+            final boolean wasLit = state.getValue(LIT);
+            level.setBlockAndUpdate(pos, state.setValue(LIT, !wasLit));
+            level.playSound(null, pos, !wasLit ? TwigsSoundEvents.LAMP_ON : TwigsSoundEvents.LAMP_OFF, SoundSource.BLOCKS, 1, 1);
+            return InteractionResult.SUCCESS;
+        }
+        return InteractionResult.PASS;
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {

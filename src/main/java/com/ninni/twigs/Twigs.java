@@ -21,7 +21,8 @@ public class Twigs implements ModInitializer {
 	public void onInitialize() {
 		Reflection.initialize(
 				TwigsItems.class,
-				TwigsBlocks.class
+				TwigsBlocks.class,
+				TwigsSoundEvents.class
 		);
 	}
 }

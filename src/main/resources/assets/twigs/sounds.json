@@ -1,0 +1,44 @@
+{
+  "block.lamp.break": {
+    "sounds": [
+      "twigs:block/lamp/break1",
+      "twigs:block/lamp/break2",
+      "twigs:block/lamp/break3",
+      "twigs:block/lamp/break4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.lamp.place": {
+    "sounds": [
+      "twigs:block/lamp/place1",
+      "twigs:block/lamp/place2",
+      "twigs:block/lamp/place3",
+      "twigs:block/lamp/place4"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.lamp.fall": {
+    "sounds": [
+      {
+        "name": "twigs:block.lamp.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.lamp.on": {
+    "sounds": [
+      "twigs:block/lamp/on1",
+      "twigs:block/lamp/on2",
+      "twigs:block/lamp/on3"
+    ],
+    "subtitle": "subtitles.block.lamp.on"
+  },
+  "block.lamp.off": {
+    "sounds": [
+      "twigs:block/lamp/off1",
+      "twigs:block/lamp/off2",
+      "twigs:block/lamp/off3"
+    ],
+    "subtitle": "subtitles.block.lamp.off"
+  }
+}
