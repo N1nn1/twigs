@@ -1,7 +1,8 @@
 {
-  "parent": "minecraft:block/cube_column",
+  "parent": "minecraft:block/cube_bottom_top",
   "textures": {
-    "end": "twigs:block/crimson_shroomlamp_end",
-    "side": "twigs:block/crimson_shroomlamp"
+    "top": "twigs:block/crimson_shroomlamp_top",
+    "side": "twigs:block/crimson_shroomlamp_side",
+    "bottom": "twigs:block/crimson_shroomlamp_bottom"
   }
 }
