@@ -6,12 +6,23 @@ import net.minecraft.world.level.block.SoundType;
 public interface TwigsSoundTypes {
 
     SoundType LAMP = new SoundType(
-            1.0F, 1.0F,
+            1.0F, 0.7F,
 
             TwigsSoundEvents.LAMP_BREAK,
             SoundEvents.LANTERN_STEP,
             TwigsSoundEvents.LAMP_PLACE,
             SoundEvents.LANTERN_HIT,
             TwigsSoundEvents.LAMP_FALL
+    );
+
+    SoundType SHROOMLAMP = new SoundType(
+            1.5F, 1.0F,
+
+            TwigsSoundEvents.SHROOMLAMP_BREAK,
+            //TODO in 1.19.2 add nether wood step sounds
+            SoundEvents.WOOD_STEP,
+            TwigsSoundEvents.SHROOMLAMP_PLACE,
+            SoundEvents.SHROOMLIGHT_HIT,
+            TwigsSoundEvents.SHROOMLAMP_FALL
     );
 }

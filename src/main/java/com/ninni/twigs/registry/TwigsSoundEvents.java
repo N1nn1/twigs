@@ -7,6 +7,10 @@ import net.minecraft.sounds.SoundEvent;
 
 public class TwigsSoundEvents {
 
+    public static final SoundEvent SHROOMLAMP_BREAK = register("block.shroomlamp.break");
+    public static final SoundEvent SHROOMLAMP_PLACE = register("block.shroomlamp.place");
+    public static final SoundEvent SHROOMLAMP_FALL = register("block.shroomlamp.fall");
+
     public static final SoundEvent LAMP_BREAK = register("block.lamp.break");
     public static final SoundEvent LAMP_PLACE = register("block.lamp.place");
     public static final SoundEvent LAMP_FALL = register("block.lamp.fall");

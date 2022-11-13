@@ -40,5 +40,31 @@
       "twigs:block/lamp/off3"
     ],
     "subtitle": "subtitles.block.lamp.off"
+  },
+  "block.shroomlamp.break": {
+  "sounds": [
+    "twigs:block/shroomlamp/heavy1",
+    "twigs:block/shroomlamp/heavy2",
+    "twigs:block/shroomlamp/heavy3",
+    "twigs:block/shroomlamp/heavy4"
+  ],
+  "subtitle": "subtitles.block.generic.break"
+},
+  "block.shroomlamp.place": {
+    "sounds": [
+      {
+        "name": "twigs:block.shroomlamp.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.shroomlamp.fall": {
+    "sounds": [
+      {
+        "name": "twigs:block.shroomlamp.break",
+        "type": "event"
+      }
+    ]
   }
 }
