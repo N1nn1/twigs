@@ -7,8 +7,13 @@
   "block.twigs.soul_lamp": "Soul Lamp",
   "subtitles.block.lamp.on": "Lamp is turned on",
   "subtitles.block.lamp.off": "Lamp is turned off",
-
-
   "block.twigs.crimson_shroomlamp": "Crimson Shroomlamp",
-  "block.twigs.warped_shroomlamp": "Warped Shroomlamp"
+  "block.twigs.warped_shroomlamp": "Warped Shroomlamp",
+
+  "block.twigs.polished_basalt_bricks": "Polished Basalt Bricks",
+  "block.twigs.chiseled_smooth_basalt_bricks": "Chiseled Smooth Basalt Bricks",
+  "block.twigs.smooth_basalt_bricks": "Smooth Basalt Bricks",
+  "block.twigs.smooth_basalt_brick_stairs": "Smooth Basalt Brick Stairs",
+  "block.twigs.smooth_basalt_brick_slab": "Smooth Basalt Brick Slab",
+  "block.twigs.smooth_basalt_brick_wall": "Smooth Basalt Brick Wall"
 }

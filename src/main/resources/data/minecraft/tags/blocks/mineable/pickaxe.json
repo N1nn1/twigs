@@ -2,6 +2,12 @@
   "replace": false,
   "values": [
     "twigs:lamp",
-    "twigs:soul_lamp"
+    "twigs:soul_lamp",
+    "twigs:polished_basalt_bricks",
+    "twigs:chiseled_smooth_basalt_bricks",
+    "twigs:smooth_basalt_bricks",
+    "twigs:smooth_basalt_brick_stairs",
+    "twigs:smooth_basalt_brick_slab",
+    "twigs:smooth_basalt_brick_wall"
   ]
 }
