@@ -25,4 +25,14 @@ public interface TwigsSoundTypes {
             SoundEvents.SHROOMLIGHT_HIT,
             TwigsSoundEvents.SHROOMLAMP_FALL
     );
+
+    SoundType BASALT_BRICKS = new SoundType(
+            1.0F, 0.75F,
+
+            TwigsSoundEvents.BASALT_BRICKS_BREAK,
+            TwigsSoundEvents.BASALT_BRICKS_STEP,
+            TwigsSoundEvents.BASALT_BRICKS_PLACE,
+            TwigsSoundEvents.BASALT_BRICKS_HIT,
+            TwigsSoundEvents.BASALT_BRICKS_FALL
+    );
 }

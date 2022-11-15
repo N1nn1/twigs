@@ -17,6 +17,12 @@ public class TwigsSoundEvents {
     public static final SoundEvent LAMP_ON = register("block.lamp.on");
     public static final SoundEvent LAMP_OFF = register("block.lamp.off");
 
+    public static final SoundEvent BASALT_BRICKS_BREAK = register("block.basalt_bricks.break");
+    public static final SoundEvent BASALT_BRICKS_PLACE = register("block.basalt_bricks.place");
+    public static final SoundEvent BASALT_BRICKS_FALL = register("block.basalt_bricks.fall");
+    public static final SoundEvent BASALT_BRICKS_STEP = register("block.basalt_bricks.step");
+    public static final SoundEvent BASALT_BRICKS_HIT = register("block.basalt_bricks.hit");
+
     private static SoundEvent register(String name) {
         ResourceLocation id = new ResourceLocation(Twigs.MOD_ID, name);
         return Registry.register(Registry.SOUND_EVENT, id, new SoundEvent(id));

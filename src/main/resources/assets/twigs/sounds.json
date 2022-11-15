@@ -66,5 +66,50 @@
         "type": "event"
       }
     ]
+  },
+  "block.basalt_bricks.break": {
+    "sounds": [
+      "twigs:block/basalt_bricks/heavy1",
+      "twigs:block/basalt_bricks/heavy2",
+      "twigs:block/basalt_bricks/heavy3",
+      "twigs:block/basalt_bricks/heavy4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.basalt_bricks.place": {
+    "sounds": [
+      {
+        "name": "twigs:block.basalt_bricks.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.basalt_bricks.fall": {
+    "sounds": [
+      {
+        "name": "twigs:block.basalt_bricks.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.basalt_bricks.hit": {
+    "sounds": [
+        "twigs:block/basalt_bricks/light1",
+        "twigs:block/basalt_bricks/light2",
+        "twigs:block/basalt_bricks/light3",
+        "twigs:block/basalt_bricks/light4",
+        "twigs:block/basalt_bricks/light5"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.basalt_bricks.step": {
+    "sounds": [
+      {
+        "name": "twigs:block.basalt_bricks.hit",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
   }
 }
