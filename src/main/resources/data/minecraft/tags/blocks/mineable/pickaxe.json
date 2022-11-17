@@ -15,6 +15,14 @@
     "twigs:mossy_bricks",
     "twigs:mossy_brick_stairs",
     "twigs:mossy_brick_slab",
-    "twigs:mossy_brick_wall"
+    "twigs:mossy_brick_wall",
+    "twigs:twisting_polished_blackstone_bricks",
+    "twigs:twisting_polished_blackstone_brick_slab",
+    "twigs:twisting_polished_blackstone_brick_stairs",
+    "twigs:twisting_polished_blackstone_brick_wall",
+    "twigs:weeping_polished_blackstone_bricks",
+    "twigs:weeping_polished_blackstone_brick_stairs",
+    "twigs:weeping_polished_blackstone_brick_slab",
+    "twigs:weeping_polished_blackstone_brick_wall"
   ]
 }

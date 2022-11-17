@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "twigs:smooth_basalt_brick_stairs",
-    "twigs:mossy_brick_stairs"
+    "twigs:mossy_brick_stairs",
+    "twigs:twisting_polished_blackstone_brick_stairs",
+    "twigs:weeping_polished_blackstone_brick_stairs"
   ]
 }

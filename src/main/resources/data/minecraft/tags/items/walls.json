@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "twigs:smooth_basalt_brick_wall"
+    "twigs:smooth_basalt_brick_wall",
+    "twigs:mossy_brick_wall",
+    "twigs:weeping_polished_blackstone_brick_wall",
+    "twigs:twisting_polished_blackstone_brick_wall"
   ]
 }

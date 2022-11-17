@@ -27,7 +27,7 @@ public interface TwigsSoundTypes {
     );
 
     SoundType BASALT_BRICKS = new SoundType(
-            1.0F, 0.75F,
+            0.75F, 1.0F,
 
             TwigsSoundEvents.BASALT_BRICKS_BREAK,
             TwigsSoundEvents.BASALT_BRICKS_STEP,
