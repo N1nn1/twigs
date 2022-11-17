@@ -1,7 +1,15 @@
 {
   "variants": {
-    "": {
-      "model": "twigs:block/cracked_bricks"
-    }
+    "": [
+      {
+        "model": "twigs:block/cracked_bricks0"
+      },
+      {
+        "model": "twigs:block/cracked_bricks1"
+      },
+      {
+        "model": "twigs:block/cracked_bricks2"
+      }
+    ]
   }
 }
