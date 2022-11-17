@@ -28,7 +28,7 @@ public class TwigsBlocks {
     public static final Block SMOOTH_BASALT_BRICK_WALL = register("smooth_basalt_brick_wall", new WallBlock(FabricBlockSettings.copyOf(SMOOTH_BASALT_BRICKS)));
     public static final Block CHISELED_SMOOTH_BASALT_BRICKS = register("chiseled_smooth_basalt_bricks", new Block(FabricBlockSettings.copyOf(SMOOTH_BASALT_BRICKS)));
 
-    //brick blocks
+    //bricks
     public static final Block MIXED_BRICKS = register("mixed_bricks", new Block(FabricBlockSettings.copyOf(Blocks.BRICKS)));
     public static final Block CHISELED_BRICKS = register("chiseled_bricks", new FacingBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)));
     public static final Block CRACKED_BRICKS = register("cracked_bricks", new Block(FabricBlockSettings.copyOf(Blocks.BRICKS)));
