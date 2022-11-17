@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "twigs:smooth_basalt_brick_slab"
+    "twigs:smooth_basalt_brick_slab",
+    "twigs:mossy_brick_slab"
   ]
 }

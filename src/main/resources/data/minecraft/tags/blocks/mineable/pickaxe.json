@@ -8,6 +8,13 @@
     "twigs:smooth_basalt_bricks",
     "twigs:smooth_basalt_brick_stairs",
     "twigs:smooth_basalt_brick_slab",
-    "twigs:smooth_basalt_brick_wall"
+    "twigs:smooth_basalt_brick_wall",
+    "twigs:mixed_bricks",
+    "twigs:chiseled__bricks",
+    "twigs:cracked_bricks",
+    "twigs:mossy_bricks",
+    "twigs:mossy_brick_stairs",
+    "twigs:mossy_brick_slab",
+    "twigs:mossy_brick_wall"
   ]
 }

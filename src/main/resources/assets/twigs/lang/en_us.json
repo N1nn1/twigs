@@ -15,5 +15,13 @@
   "block.twigs.smooth_basalt_bricks": "Smooth Basalt Bricks",
   "block.twigs.smooth_basalt_brick_stairs": "Smooth Basalt Brick Stairs",
   "block.twigs.smooth_basalt_brick_slab": "Smooth Basalt Brick Slab",
-  "block.twigs.smooth_basalt_brick_wall": "Smooth Basalt Brick Wall"
+  "block.twigs.smooth_basalt_brick_wall": "Smooth Basalt Brick Wall",
+
+  "block.twigs.chiseled_bricks": "Chiseled Bricks",
+  "block.twigs.cracked_bricks": "Cracked Bricks",
+  "block.twigs.mixed_bricks": "Mixed Bricks",
+  "block.twigs.mossy_bricks": "Mossy Bricks",
+  "block.twigs.mossy_brick_stairs": "Mossy Brick Stairs",
+  "block.twigs.mossy_brick_slab": "Mossy Brick Slab",
+  "block.twigs.mossy_brick_wall": "Mossy Brick Wall"
 }
