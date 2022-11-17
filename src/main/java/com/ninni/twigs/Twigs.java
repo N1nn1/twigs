@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Twigs implements ModInitializer {
 	public static final String MOD_ID = "twigs";
-	public static final CreativeModeTab TAB = FabricItemGroupBuilder.build(new ResourceLocation(MOD_ID, "item_group"), () -> new ItemStack(Items.STICK));
+	public static final CreativeModeTab TAB = FabricItemGroupBuilder.build(new ResourceLocation(MOD_ID, "item_group"), () -> new ItemStack(TwigsItems.TWIGS));
 	public static final Logger LOGGER = LogManager.getLogger();
 
 	@Override

@@ -35,4 +35,14 @@ public interface TwigsSoundTypes {
             TwigsSoundEvents.BASALT_BRICKS_HIT,
             TwigsSoundEvents.BASALT_BRICKS_FALL
     );
+
+    SoundType ROCKY_DIRT = new SoundType(
+            1.0F, 1.0F,
+
+            TwigsSoundEvents.ROCKY_DIRT_BREAK,
+            TwigsSoundEvents.ROCKY_DIRT_STEP,
+            TwigsSoundEvents.ROCKY_DIRT_PLACE,
+            TwigsSoundEvents.ROCKY_DIRT_HIT,
+            TwigsSoundEvents.ROCKY_DIRT_FALL
+    );
 }

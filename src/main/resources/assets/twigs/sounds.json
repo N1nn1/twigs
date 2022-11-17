@@ -111,5 +111,49 @@
       }
     ],
     "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.rocky_dirt.break": {
+    "sounds": [
+      "twigs:block/rocky_dirt/heavy1",
+      "twigs:block/rocky_dirt/heavy2",
+      "twigs:block/rocky_dirt/heavy3",
+      "twigs:block/rocky_dirt/heavy4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.rocky_dirt.place": {
+    "sounds": [
+      {
+        "name": "twigs:block.rocky_dirt.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.rocky_dirt.fall": {
+    "sounds": [
+      {
+        "name": "twigs:block.rocky_dirt.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.rocky_dirt.hit": {
+    "sounds": [
+      "twigs:block/rocky_dirt/light1",
+      "twigs:block/rocky_dirt/light2",
+      "twigs:block/rocky_dirt/light3",
+      "twigs:block/rocky_dirt/light4"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.rocky_dirt.step": {
+    "sounds": [
+      {
+        "name": "twigs:block.rocky_dirt.hit",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
   }
 }

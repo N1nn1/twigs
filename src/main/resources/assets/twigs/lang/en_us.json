@@ -2,6 +2,7 @@
   "mod.twigs.name": "Twigs",
   "itemGroup.twigs.item_group": "Twigs",
   "mod.twigs.contact.discord": "Discord",
+  "item.twigs.twigs": "Twigs",
 
   "block.twigs.lamp": "Lamp",
   "block.twigs.soul_lamp": "Soul Lamp",
@@ -32,5 +33,7 @@
   "block.twigs.weeping_polished_blackstone_bricks": "Weeping Polished Blackstone Bricks",
   "block.twigs.weeping_polished_blackstone_brick_wall": "Weeping Polished Blackstone Brick Wall",
   "block.twigs.weeping_polished_blackstone_brick_slab": "Weeping Polished Blackstone Brick Slab",
-  "block.twigs.weeping_polished_blackstone_brick_stairs": "Weeping Polished Blackstone Brick Stairs"
+  "block.twigs.weeping_polished_blackstone_brick_stairs": "Weeping Polished Blackstone Brick Stairs",
+
+  "block.twigs.rocky_dirt": "Rocky Dirt"
 }

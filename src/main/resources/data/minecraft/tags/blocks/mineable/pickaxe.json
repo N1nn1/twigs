@@ -10,7 +10,7 @@
     "twigs:smooth_basalt_brick_slab",
     "twigs:smooth_basalt_brick_wall",
     "twigs:mixed_bricks",
-    "twigs:chiseled__bricks",
+    "twigs:chiseled_bricks",
     "twigs:cracked_bricks",
     "twigs:mossy_bricks",
     "twigs:mossy_brick_stairs",
@@ -23,6 +23,7 @@
     "twigs:weeping_polished_blackstone_bricks",
     "twigs:weeping_polished_blackstone_brick_stairs",
     "twigs:weeping_polished_blackstone_brick_slab",
-    "twigs:weeping_polished_blackstone_brick_wall"
+    "twigs:weeping_polished_blackstone_brick_wall",
+    "twigs:rocky_dirt"
   ]
 }

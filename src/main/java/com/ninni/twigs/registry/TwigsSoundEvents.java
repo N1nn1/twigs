@@ -23,6 +23,12 @@ public class TwigsSoundEvents {
     public static final SoundEvent BASALT_BRICKS_STEP = register("block.basalt_bricks.step");
     public static final SoundEvent BASALT_BRICKS_HIT = register("block.basalt_bricks.hit");
 
+    public static final SoundEvent ROCKY_DIRT_BREAK = register("block.rocky_dirt.break");
+    public static final SoundEvent ROCKY_DIRT_PLACE = register("block.rocky_dirt.place");
+    public static final SoundEvent ROCKY_DIRT_FALL = register("block.rocky_dirt.fall");
+    public static final SoundEvent ROCKY_DIRT_STEP = register("block.rocky_dirt.step");
+    public static final SoundEvent ROCKY_DIRT_HIT = register("block.rocky_dirt.hit");
+
     private static SoundEvent register(String name) {
         ResourceLocation id = new ResourceLocation(Twigs.MOD_ID, name);
         return Registry.register(Registry.SOUND_EVENT, id, new SoundEvent(id));

@@ -6,11 +6,14 @@ import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 
 import static com.ninni.twigs.Twigs.TAB;
 
 @SuppressWarnings("unused")
 public class TwigsItems {
+    //logo
+    public static final Item TWIGS = register("twigs", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC).fireproof()));
 
     //lamps
     public static final Item lAMP = register("lamp", new BlockItem(TwigsBlocks.LAMP, new FabricItemSettings().group(TAB)));
@@ -44,6 +47,10 @@ public class TwigsItems {
     public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS = register("weeping_polished_blackstone_brick_stairs", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS, new FabricItemSettings().group(TAB)));
     public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB = register("weeping_polished_blackstone_brick_slab", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB, new FabricItemSettings().group(TAB)));
     public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_WALL = register("weeping_polished_blackstone_brick_wall", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL, new FabricItemSettings().group(TAB)));
+
+    //misc
+    //TODO recipe because pebbles are missing
+    public static final Item ROCKY_DIRT = register("rocky_dirt", new BlockItem(TwigsBlocks.ROCKY_DIRT, new FabricItemSettings().group(TAB)));
 
     private static Item register(String id, Item item) {
         return Registry.register(Registry.ITEM, new ResourceLocation(Twigs.MOD_ID, id), item);

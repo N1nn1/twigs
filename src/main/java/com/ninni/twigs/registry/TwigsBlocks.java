@@ -47,6 +47,8 @@ public class TwigsBlocks {
     public static final Block WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB = register("weeping_polished_blackstone_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(WEEPING_POLISHED_BLACKSTONE_BRICKS)));
     public static final Block WEEPING_POLISHED_BLACKSTONE_BRICK_WALL = register("weeping_polished_blackstone_brick_wall", new WallBlock(FabricBlockSettings.copyOf(WEEPING_POLISHED_BLACKSTONE_BRICKS)));
 
+    //misc
+    public static final Block ROCKY_DIRT = register("rocky_dirt", new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(1.25F, 6.0F).sounds(TwigsSoundTypes.ROCKY_DIRT)));
 
     private static ToIntFunction<BlockState> createLampLightLevel() {
         return (state) -> (Boolean)state.getValue(BlockStateProperties.LIT) ? 15 : 0;
