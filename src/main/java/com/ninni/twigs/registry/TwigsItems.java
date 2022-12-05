@@ -48,6 +48,48 @@ public class TwigsItems {
     public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB = register("weeping_polished_blackstone_brick_slab", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB, new FabricItemSettings().group(TAB)));
     public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_WALL = register("weeping_polished_blackstone_brick_wall", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL, new FabricItemSettings().group(TAB)));
 
+    //schist blocks
+    public static final Item SCHIST = register("schist", new BlockItem(TwigsBlocks.SCHIST, new FabricItemSettings().group(TAB)));
+    public static final Item SCHIST_STAIRS = register("schist_stairs", new BlockItem(TwigsBlocks.SCHIST_STAIRS, new FabricItemSettings().group(TAB)));
+    public static final Item SCHIST_SLAB = register("schist_slab", new BlockItem(TwigsBlocks.SCHIST_SLAB, new FabricItemSettings().group(TAB)));
+    public static final Item SCHIST_WALL = register("schist_wall", new BlockItem(TwigsBlocks.SCHIST_WALL, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_SCHIST = register("polished_schist", new BlockItem(TwigsBlocks.POLISHED_SCHIST, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_SCHIST_STAIRS = register("polished_schist_stairs", new BlockItem(TwigsBlocks.POLISHED_SCHIST_STAIRS, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_SCHIST_SLAB = register("polished_schist_slab", new BlockItem(TwigsBlocks.POLISHED_SCHIST_SLAB, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_SCHIST_BRICKS = register("polished_schist_bricks", new BlockItem(TwigsBlocks.POLISHED_SCHIST_BRICKS, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_SCHIST_BRICK_STAIRS = register("polished_schist_brick_stairs", new BlockItem(TwigsBlocks.POLISHED_SCHIST_BRICK_STAIRS, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_SCHIST_BRICK_SLAB = register("polished_schist_brick_slab", new BlockItem(TwigsBlocks.POLISHED_SCHIST_BRICK_SLAB, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_SCHIST_BRICK_WALL = register("polished_schist_brick_wall", new BlockItem(TwigsBlocks.POLISHED_SCHIST_BRICK_WALL, new FabricItemSettings().group(TAB)));
+    public static final Item CRACKED_POLISHED_SCHIST_BRICKS = register("cracked_polished_schist_bricks", new BlockItem(TwigsBlocks.CRACKED_POLISHED_SCHIST_BRICKS, new FabricItemSettings().group(TAB)));
+
+    //rhyolite blocks
+    public static final Item RHYOLITE = register("rhyolite", new BlockItem(TwigsBlocks.RHYOLITE, new FabricItemSettings().group(TAB)));
+    public static final Item RHYOLITE_STAIRS = register("rhyolite_stairs", new BlockItem(TwigsBlocks.RHYOLITE_STAIRS, new FabricItemSettings().group(TAB)));
+    public static final Item RHYOLITE_SLAB = register("rhyolite_slab", new BlockItem(TwigsBlocks.RHYOLITE_SLAB, new FabricItemSettings().group(TAB)));
+    public static final Item RHYOLITE_WALL = register("rhyolite_wall", new BlockItem(TwigsBlocks.RHYOLITE_WALL, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_RHYOLITE = register("polished_rhyolite", new BlockItem(TwigsBlocks.POLISHED_RHYOLITE, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_RHYOLITE_STAIRS = register("polished_rhyolite_stairs", new BlockItem(TwigsBlocks.POLISHED_RHYOLITE_STAIRS, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_RHYOLITE_SLAB = register("polished_rhyolite_slab", new BlockItem(TwigsBlocks.POLISHED_RHYOLITE_SLAB, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_RHYOLITE_BRICKS = register("polished_rhyolite_bricks", new BlockItem(TwigsBlocks.POLISHED_RHYOLITE_BRICKS, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_RHYOLITE_BRICK_STAIRS = register("polished_rhyolite_brick_stairs", new BlockItem(TwigsBlocks.POLISHED_RHYOLITE_BRICK_STAIRS, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_RHYOLITE_BRICK_SLAB = register("polished_rhyolite_brick_slab", new BlockItem(TwigsBlocks.POLISHED_RHYOLITE_BRICK_SLAB, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_RHYOLITE_BRICK_WALL = register("polished_rhyolite_brick_wall", new BlockItem(TwigsBlocks.POLISHED_RHYOLITE_BRICK_WALL, new FabricItemSettings().group(TAB)));
+    public static final Item CRACKED_POLISHED_RHYOLITE_BRICKS = register("cracked_polished_rhyolite_bricks", new BlockItem(TwigsBlocks.CRACKED_POLISHED_RHYOLITE_BRICKS, new FabricItemSettings().group(TAB)));
+
+    //bloodstone blocks
+    public static final Item BLOODSTONE = register("bloodstone", new BlockItem(TwigsBlocks.BLOODSTONE, new FabricItemSettings().group(TAB)));
+    public static final Item BLOODSTONE_STAIRS = register("bloodstone_stairs", new BlockItem(TwigsBlocks.BLOODSTONE_STAIRS, new FabricItemSettings().group(TAB)));
+    public static final Item BLOODSTONE_SLAB = register("bloodstone_slab", new BlockItem(TwigsBlocks.BLOODSTONE_SLAB, new FabricItemSettings().group(TAB)));
+    public static final Item BLOODSTONE_WALL = register("bloodstone_wall", new BlockItem(TwigsBlocks.BLOODSTONE_WALL, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_BLOODSTONE = register("polished_bloodstone", new BlockItem(TwigsBlocks.POLISHED_BLOODSTONE, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_BLOODSTONE_STAIRS = register("polished_bloodstone_stairs", new BlockItem(TwigsBlocks.POLISHED_BLOODSTONE_STAIRS, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_BLOODSTONE_SLAB = register("polished_bloodstone_slab", new BlockItem(TwigsBlocks.POLISHED_BLOODSTONE_SLAB, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_BLOODSTONE_BRICKS = register("polished_bloodstone_bricks", new BlockItem(TwigsBlocks.POLISHED_BLOODSTONE_BRICKS, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_BLOODSTONE_BRICK_STAIRS = register("polished_bloodstone_brick_stairs", new BlockItem(TwigsBlocks.POLISHED_BLOODSTONE_BRICK_STAIRS, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_BLOODSTONE_BRICK_SLAB = register("polished_bloodstone_brick_slab", new BlockItem(TwigsBlocks.POLISHED_BLOODSTONE_BRICK_SLAB, new FabricItemSettings().group(TAB)));
+    public static final Item POLISHED_BLOODSTONE_BRICK_WALL = register("polished_bloodstone_brick_wall", new BlockItem(TwigsBlocks.POLISHED_BLOODSTONE_BRICK_WALL, new FabricItemSettings().group(TAB)));
+    public static final Item CRACKED_POLISHED_BLOODSTONE_BRICKS = register("cracked_polished_bloodstone_bricks", new BlockItem(TwigsBlocks.CRACKED_POLISHED_BLOODSTONE_BRICKS, new FabricItemSettings().group(TAB)));
+
     //misc
     //TODO recipe because pebbles are missing
     public static final Item ROCKY_DIRT = register("rocky_dirt", new BlockItem(TwigsBlocks.ROCKY_DIRT, new FabricItemSettings().group(TAB)));
