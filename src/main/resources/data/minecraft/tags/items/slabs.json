@@ -4,6 +4,15 @@
     "twigs:smooth_basalt_brick_slab",
     "twigs:mossy_brick_slab",
     "twigs:twisting_polished_blackstone_brick_slab",
-    "twigs:weeping_polished_blackstone_brick_slab"
+    "twigs:weeping_polished_blackstone_brick_slab",
+    "twigs:schist_slab",
+    "twigs:polished_schist_slab",
+    "twigs:polished_schist_brick_slab",
+    "twigs:rhyolite_slab",
+    "twigs:polished_rhyolite_slab",
+    "twigs:polished_rhyolite_brick_slab",
+    "twigs:bloodstone_slab",
+    "twigs:polished_bloodstone_slab",
+    "twigs:polished_bloodstone_brick_slab"
   ]
 }

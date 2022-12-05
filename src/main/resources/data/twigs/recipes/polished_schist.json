@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "twigs:schist"
+    }
+  },
+  "result": {
+    "item": "twigs:polished_schist",
+    "count": 4
+  }
+}

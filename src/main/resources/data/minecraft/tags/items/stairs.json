@@ -4,6 +4,15 @@
     "twigs:smooth_basalt_brick_stairs",
     "twigs:mossy_brick_stairs",
     "twigs:twisting_polished_blackstone_brick_stairs",
-    "twigs:weeping_polished_blackstone_brick_stairs"
+    "twigs:weeping_polished_blackstone_brick_stairs",
+    "twigs:schist_stairs",
+    "twigs:polished_schist_stairs",
+    "twigs:polished_schist_brick_stairs",
+    "twigs:rhyolite_stairs",
+    "twigs:polished_rhyolite_stairs",
+    "twigs:polished_rhyolite_brick_stairs",
+    "twigs:bloodstone_stairs",
+    "twigs:polished_bloodstone_stairs",
+    "twigs:polished_bloodstone_brick_stairs"
   ]
 }

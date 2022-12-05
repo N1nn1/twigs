@@ -24,6 +24,9 @@
     "twigs:weeping_polished_blackstone_brick_stairs",
     "twigs:weeping_polished_blackstone_brick_slab",
     "twigs:weeping_polished_blackstone_brick_wall",
+    "#twigs:schist",
+    "#twigs:rhyolite",
+    "#twigs:bloodstone",
     "twigs:rocky_dirt"
   ]
 }
