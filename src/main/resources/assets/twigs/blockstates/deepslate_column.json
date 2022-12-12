@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "shape=base": {
+      "model": "twigs:block/deepslate_column"
+    },
+    "shape=tip": {
+      "model": "twigs:block/deepslate_column_tip"
+    }
+  }
+}

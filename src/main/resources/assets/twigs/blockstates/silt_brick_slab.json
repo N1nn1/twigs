@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "twigs:block/silt_brick_slab"
+    },
+    "type=double": {
+      "model": "twigs:block/silt_bricks"
+    },
+    "type=top": {
+      "model": "twigs:block/silt_brick_slab_top"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "variants": {
+    "facing=down": [
+      {
+        "model": "twigs:block/compacted_dripstone"
+      }
+    ],
+    "facing=up": [
+      {
+        "model": "twigs:block/compacted_dripstone",
+        "x": 180
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "twigs:block/compacted_dripstone",
+        "x": -90
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "twigs:block/compacted_dripstone",
+        "x": 90
+      }
+    ],
+    "facing=east": [
+      {
+        "model": "twigs:block/compacted_dripstone",
+        "x": -90,
+        "y": 90
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "twigs:block/compacted_dripstone",
+        "x": 90,
+        "y": 90
+      }
+    ]
+  }
+}

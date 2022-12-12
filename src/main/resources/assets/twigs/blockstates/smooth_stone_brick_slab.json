@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "twigs:block/smooth_stone_brick_slab"
+    },
+    "type=double": {
+      "model": "twigs:block/smooth_stone_bricks"
+    },
+    "type=top": {
+      "model": "twigs:block/smooth_stone_brick_slab_top"
+    }
+  }
+}

@@ -4,30 +4,28 @@ import com.ninni.twigs.Twigs;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.level.block.SoundType;
 
-public class TwigsSoundEvents {
+public interface TwigsSoundEvents {
 
-    public static final SoundEvent SHROOMLAMP_BREAK = register("block.shroomlamp.break");
-    public static final SoundEvent SHROOMLAMP_PLACE = register("block.shroomlamp.place");
-    public static final SoundEvent SHROOMLAMP_FALL = register("block.shroomlamp.fall");
+    SoundEvent LAMP_ON = register("block.lamp.on");
+    SoundEvent LAMP_OFF = register("block.lamp.off");
 
-    public static final SoundEvent LAMP_BREAK = register("block.lamp.break");
-    public static final SoundEvent LAMP_PLACE = register("block.lamp.place");
-    public static final SoundEvent LAMP_FALL = register("block.lamp.fall");
-    public static final SoundEvent LAMP_ON = register("block.lamp.on");
-    public static final SoundEvent LAMP_OFF = register("block.lamp.off");
+    SoundType ROCKY_DIRT = register("rocky_dirt", 1, 1);
+    SoundType BASALT_BRICKS = register("basalt_bricks", 0.75F, 1);
+    SoundType LAMP = register("lamp", 1, 0.7F);
+    SoundType SHROOMLAMP = register("shroomlamp", 1.5F, 1);
+    SoundType SILT = register("silt", 1, 1);
+    SoundType PACKED_SILT = register("packed_silt", 1, 1);
+    SoundType SILT_POT = register("silt_pot", 1, 1);
+    SoundType SILT_POT_FILLED = register("silt_pot_filled", 1, 1);
+    SoundType SILT_SHINGLES = register("silt_shingles", 1, 1);
+    SoundType GRAVEL_BRICKS = register("gravel_bricks", 1, 1);
 
-    public static final SoundEvent BASALT_BRICKS_BREAK = register("block.basalt_bricks.break");
-    public static final SoundEvent BASALT_BRICKS_PLACE = register("block.basalt_bricks.place");
-    public static final SoundEvent BASALT_BRICKS_FALL = register("block.basalt_bricks.fall");
-    public static final SoundEvent BASALT_BRICKS_STEP = register("block.basalt_bricks.step");
-    public static final SoundEvent BASALT_BRICKS_HIT = register("block.basalt_bricks.hit");
 
-    public static final SoundEvent ROCKY_DIRT_BREAK = register("block.rocky_dirt.break");
-    public static final SoundEvent ROCKY_DIRT_PLACE = register("block.rocky_dirt.place");
-    public static final SoundEvent ROCKY_DIRT_FALL = register("block.rocky_dirt.fall");
-    public static final SoundEvent ROCKY_DIRT_STEP = register("block.rocky_dirt.step");
-    public static final SoundEvent ROCKY_DIRT_HIT = register("block.rocky_dirt.hit");
+    private static SoundType register(String name, float volume, float pitch) {
+        return new SoundType(volume, pitch, register("block." + name + ".break"), register("block." + name + ".step"), register("block." + name + ".place"), register("block." + name + ".hit"), register("block." + name + ".fall"));
+    }
 
     private static SoundEvent register(String name) {
         ResourceLocation id = new ResourceLocation(Twigs.MOD_ID, name);

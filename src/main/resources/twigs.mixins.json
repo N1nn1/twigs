@@ -4,6 +4,9 @@
   "package": "com.ninni.twigs.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "BlockStateBaseMixin",
+    "FallingBlockEntityInvoker",
+    "FlowerBlockMixin"
   ],
   "client": [
   ],

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:pointed_dripstone"
+    }
+  },
+  "result": {
+    "item": "twigs:compacted_dripstone",
+    "count": 2
+  }
+}

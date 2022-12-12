@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twigs:pink_silt_shingles"
+    }
+  },
+  "result": {
+    "item": "twigs:pink_silt_shingle_stairs",
+    "count": 4
+  }
+}

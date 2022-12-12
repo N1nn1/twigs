@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twigs:silt_bricks"
+    }
+  },
+  "result": {
+    "item": "twigs:silt_brick_stairs",
+    "count": 4
+  }
+}

@@ -10,6 +10,26 @@
     "twigs:rhyolite_wall",
     "twigs:polished_rhyolite_brick_wall",
     "twigs:bloodstone_wall",
-    "twigs:polished_bloodstone_brick_wall"
+    "twigs:polished_bloodstone_brick_wall",
+    "twigs:gravel_brick_wall",
+    "twigs:silt_brick_wall",
+    "twigs:smooth_stone_brick_wall",
+    "twigs:silt_shingle_wall",
+    "twigs:white_silt_shingle_wall",
+    "twigs:orange_silt_shingle_wall",
+    "twigs:magenta_silt_shingle_wall",
+    "twigs:light_blue_silt_shingle_wall",
+    "twigs:yellow_silt_shingle_wall",
+    "twigs:lime_silt_shingle_wall",
+    "twigs:pink_silt_shingle_wall",
+    "twigs:gray_silt_shingle_wall",
+    "twigs:light_gray_silt_shingle_wall",
+    "twigs:cyan_silt_shingle_wall",
+    "twigs:purple_silt_shingle_wall",
+    "twigs:blue_silt_shingle_wall",
+    "twigs:brown_silt_shingle_wall",
+    "twigs:green_silt_shingle_wall",
+    "twigs:red_silt_shingle_wall",
+    "twigs:black_silt_shingle_wall"
   ]
 }

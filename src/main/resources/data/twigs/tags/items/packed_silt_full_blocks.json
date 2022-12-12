@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "twigs:packed_silt",
+    "twigs:white_packed_silt",
+    "twigs:orange_packed_silt",
+    "twigs:magenta_packed_silt",
+    "twigs:light_blue_packed_silt",
+    "twigs:yellow_packed_silt",
+    "twigs:lime_packed_silt",
+    "twigs:pink_packed_silt",
+    "twigs:gray_packed_silt",
+    "twigs:light_gray_packed_silt",
+    "twigs:cyan_packed_silt",
+    "twigs:purple_packed_silt",
+    "twigs:blue_packed_silt",
+    "twigs:brown_packed_silt",
+    "twigs:green_packed_silt",
+    "twigs:red_packed_silt",
+    "twigs:black_packed_silt"
+  ]
+}

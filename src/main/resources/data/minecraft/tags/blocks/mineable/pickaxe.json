@@ -27,6 +27,25 @@
     "#twigs:schist",
     "#twigs:rhyolite",
     "#twigs:bloodstone",
-    "twigs:rocky_dirt"
+    "twigs:rocky_dirt",
+    "#twigs:packed_silt",
+    "#twigs:silt_pots",
+    "twigs:gravel_bricks",
+    "twigs:gravel_brick_stairs",
+    "twigs:gravel_brick_slab",
+    "twigs:gravel_brick_wall",
+    "twigs:silt_bricks",
+    "twigs:silt_brick_stairs",
+    "twigs:silt_brick_slab",
+    "twigs:silt_brick_wall",
+    "twigs:compacted_dripstone",
+    "twigs:smooth_stone_bricks",
+    "twigs:smooth_stone_brick_stairs",
+    "twigs:smooth_stone_brick_slab",
+    "twigs:smooth_stone_brick_wall",
+    "twigs:quartz_column",
+    "twigs:stone_column",
+    "twigs:deepslate_column",
+    "twigs:blackstone_column"
   ]
 }

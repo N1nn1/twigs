@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twigs:white_silt_shingles"
+    }
+  },
+  "result": {
+    "item": "twigs:white_silt_shingle_slab",
+    "count": 6
+  }
+}

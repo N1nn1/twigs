@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_post",
+  "textures": {
+    "wall": "twigs:block/light_blue_silt_shingles"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "shape=base": {
+      "model": "twigs:block/blackstone_column"
+    },
+    "shape=tip": {
+      "model": "twigs:block/blackstone_column_tip"
+    }
+  }
+}

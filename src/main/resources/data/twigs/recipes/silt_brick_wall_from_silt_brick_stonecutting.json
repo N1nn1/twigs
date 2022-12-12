@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twigs:silt_bricks"
+  },
+  "result": "twigs:silt_brick_wall",
+  "count": 1
+}

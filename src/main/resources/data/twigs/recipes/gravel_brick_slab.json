@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twigs:gravel_bricks"
+    }
+  },
+  "result": {
+    "item": "twigs:gravel_brick_slab",
+    "count": 6
+  }
+}

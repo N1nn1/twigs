@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "twigs:block/silt_top",
+    "side": "twigs:block/silt"
+  }
+}

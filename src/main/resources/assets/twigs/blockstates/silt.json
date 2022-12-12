@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "axis=x": [
+      {
+        "model": "twigs:block/silt",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "twigs:block/silt"
+      },
+      {
+        "model": "twigs:block/silt",
+        "y": 90
+      },
+      {
+        "model": "twigs:block/silt",
+        "y": 180
+      },
+      {
+        "model": "twigs:block/silt",
+        "y": 270
+      }
+    ],
+    "axis=z": [
+      {
+        "model": "twigs:block/silt",
+        "x": 90
+      }
+    ]
+  }
+}

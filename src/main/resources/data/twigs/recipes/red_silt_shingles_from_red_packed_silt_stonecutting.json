@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twigs:red_packed_silt"
+  },
+  "result": "twigs:red_silt_shingles",
+  "count": 1
+}

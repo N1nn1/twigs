@@ -1,0 +1,8 @@
+{
+	"parent": "twigs:block/template_silt_pot",
+	"textures": {
+		"side": "twigs:block/light_blue_silt_pot",
+		"bottom": "twigs:block/light_blue_silt_pot_bottom",
+		"top": "twigs:block/light_blue_silt_pot_top"
+	}
+}

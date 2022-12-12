@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twigs:smooth_stone_bricks"
+  },
+  "result": "twigs:smooth_stone_brick_wall",
+  "count": 1
+}

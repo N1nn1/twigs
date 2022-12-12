@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "shape=base": {
+      "model": "twigs:block/quartz_column"
+    },
+    "shape=tip": {
+      "model": "twigs:block/quartz_column_tip"
+    }
+  }
+}

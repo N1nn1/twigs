@@ -1,0 +1,35 @@
+{
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"bottom": "quartz_column_bottom",
+		"side": "quartz_column_tip",
+		"top": "quartz_column_top",
+		"particle": "#side"
+	},
+	"elements": [
+		{
+			"from": [2, 0, 2],
+			"to": [14, 8, 14],
+			"faces": {
+				"north": {"uv": [2, 8, 14, 16], "texture": "#side"},
+				"east": {"uv": [2, 8, 14, 16], "texture": "#side"},
+				"south": {"uv": [2, 8, 14, 16], "texture": "#side"},
+				"west": {"uv": [2, 8, 14, 16], "texture": "#side"},
+				"up": {"uv": [2, 2, 14, 14], "texture": "#bottom"},
+				"down": {"uv": [2, 2, 14, 14], "texture": "#bottom"}
+			}
+		},
+		{
+			"from": [0, 8, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 8], "texture": "#side"},
+				"east": {"uv": [0, 0, 16, 8], "texture": "#side"},
+				"south": {"uv": [0, 0, 16, 8], "texture": "#side"},
+				"west": {"uv": [0, 0, 16, 8], "texture": "#side"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#bottom"}
+			}
+		}
+	]
+}

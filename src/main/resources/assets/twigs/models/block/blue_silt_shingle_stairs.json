@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "twigs:block/blue_silt_shingles",
+    "top": "twigs:block/blue_silt_shingles",
+    "side": "twigs:block/blue_silt_shingles"
+  }
+}
