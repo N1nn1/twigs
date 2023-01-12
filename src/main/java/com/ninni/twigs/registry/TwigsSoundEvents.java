@@ -2,6 +2,7 @@ package com.ninni.twigs.registry;
 
 import com.ninni.twigs.Twigs;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.SoundType;
@@ -29,6 +30,6 @@ public interface TwigsSoundEvents {
 
     private static SoundEvent register(String name) {
         ResourceLocation id = new ResourceLocation(Twigs.MOD_ID, name);
-        return Registry.register(Registry.SOUND_EVENT, id, new SoundEvent(id));
+        return Registry.register(BuiltInRegistries.SOUND_EVENT, id, SoundEvent.createVariableRangeEvent(id));
     }
 }

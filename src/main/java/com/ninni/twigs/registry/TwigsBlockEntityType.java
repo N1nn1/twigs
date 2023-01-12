@@ -4,13 +4,14 @@ import com.ninni.twigs.Twigs;
 import com.ninni.twigs.block.entity.SiltPotBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
 public class TwigsBlockEntityType {
 
     public static final BlockEntityType<SiltPotBlockEntity> SILT_POT = Registry.register(
-            Registry.BLOCK_ENTITY_TYPE, new ResourceLocation(Twigs.MOD_ID, "silt_pot"),
+            BuiltInRegistries.BLOCK_ENTITY_TYPE, new ResourceLocation(Twigs.MOD_ID, "silt_pot"),
             FabricBlockEntityTypeBuilder.create(SiltPotBlockEntity::new,
                     TwigsBlocks.SILT_POT,
                     TwigsBlocks.BLACK_SILT_POT,

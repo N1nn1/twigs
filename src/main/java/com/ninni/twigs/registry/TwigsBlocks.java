@@ -5,6 +5,7 @@ import com.ninni.twigs.block.*;
 import com.ninni.twigs.block.enums.SiltPotBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
@@ -233,6 +234,6 @@ public class TwigsBlocks {
     }
 
     private static Block register(String id, Block block) {
-        return Registry.register(Registry.BLOCK, new ResourceLocation(Twigs.MOD_ID, id), block);
+        return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Twigs.MOD_ID, id), block);
     }
 }
