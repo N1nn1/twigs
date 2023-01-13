@@ -63,6 +63,8 @@ public class TwigsCreativeModeTab {
             entries.addAfter(Items.DEEPSLATE, DEEPSLATE_COLUMN);
             entries.addAfter(Items.GILDED_BLACKSTONE, BLACKSTONE_COLUMN);
 
+            entries.addAfter(Items.AMETHYST_BLOCK, POLISHED_AMETHYST, CUT_AMETHYST);
+
             entries.addAfter(Items.BRICKS, CRACKED_BRICKS);
             entries.addAfter(Items.BRICK_WALL,
                     CHISELED_BRICKS,
@@ -302,6 +304,32 @@ public class TwigsCreativeModeTab {
             output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB);
             output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_WALL);
 
+            //gravel bricks
+            output.accept(GRAVEL_BRICKS);
+            output.accept(GRAVEL_BRICK_STAIRS);
+            output.accept(GRAVEL_BRICK_SLAB);
+            output.accept(GRAVEL_BRICK_WALL);
+
+            //smooth stone bricks
+            output.accept(SMOOTH_STONE_BRICKS);
+            output.accept(SMOOTH_STONE_BRICK_STAIRS);
+            output.accept(SMOOTH_STONE_BRICK_SLAB);
+            output.accept(SMOOTH_STONE_BRICK_WALL);
+
+            //columns
+            output.accept(QUARTZ_COLUMN);
+            output.accept(STONE_COLUMN);
+            output.accept(DEEPSLATE_COLUMN);
+            output.accept(BLACKSTONE_COLUMN);
+
+            //amethyst blocks
+            output.accept(POLISHED_AMETHYST);
+            output.accept(CUT_AMETHYST);
+
+            //misc
+            output.accept(COMPACTED_DRIPSTONE);
+            output.accept(ROCKY_DIRT);
+
             //schist blocks
             output.accept(SCHIST);
             output.accept(SCHIST_STAIRS);
@@ -343,28 +371,6 @@ public class TwigsCreativeModeTab {
             output.accept(POLISHED_BLOODSTONE_BRICK_STAIRS);
             output.accept(POLISHED_BLOODSTONE_BRICK_SLAB);
             output.accept(POLISHED_BLOODSTONE_BRICK_WALL);
-
-            //gravel bricks
-            output.accept(GRAVEL_BRICKS);
-            output.accept(GRAVEL_BRICK_STAIRS);
-            output.accept(GRAVEL_BRICK_SLAB);
-            output.accept(GRAVEL_BRICK_WALL);
-
-            //smooth stone bricks
-            output.accept(SMOOTH_STONE_BRICKS);
-            output.accept(SMOOTH_STONE_BRICK_STAIRS);
-            output.accept(SMOOTH_STONE_BRICK_SLAB);
-            output.accept(SMOOTH_STONE_BRICK_WALL);
-
-            //columns
-            output.accept(QUARTZ_COLUMN);
-            output.accept(STONE_COLUMN);
-            output.accept(DEEPSLATE_COLUMN);
-            output.accept(BLACKSTONE_COLUMN);
-
-            //misc
-            output.accept(COMPACTED_DRIPSTONE);
-            output.accept(ROCKY_DIRT);
 
             //silt blocks
             output.accept(SILT);

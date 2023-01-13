@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "twigs:block/cut_amethyst",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "twigs:block/cut_amethyst",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "twigs:block/cut_amethyst"
+    },
+    "facing=west": {
+      "model": "twigs:block/cut_amethyst",
+      "y": 90
+    }
+  }
+}

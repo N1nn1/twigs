@@ -47,6 +47,33 @@ public class TwigsItems {
     public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB = register("weeping_polished_blackstone_brick_slab", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB, new FabricItemSettings()));
     public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_WALL = register("weeping_polished_blackstone_brick_wall", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL, new FabricItemSettings()));
 
+    //gravel bricks
+    public static final Item GRAVEL_BRICKS = register("gravel_bricks", new BlockItem(TwigsBlocks.GRAVEL_BRICKS, new FabricItemSettings()));
+    public static final Item GRAVEL_BRICK_STAIRS = register("gravel_brick_stairs", new BlockItem(TwigsBlocks.GRAVEL_BRICK_STAIRS, new FabricItemSettings()));
+    public static final Item GRAVEL_BRICK_SLAB = register("gravel_brick_slab", new BlockItem(TwigsBlocks.GRAVEL_BRICK_SLAB, new FabricItemSettings()));
+    public static final Item GRAVEL_BRICK_WALL = register("gravel_brick_wall", new BlockItem(TwigsBlocks.GRAVEL_BRICK_WALL, new FabricItemSettings()));
+
+    //smooth stone bricks
+    public static final Item SMOOTH_STONE_BRICKS = register("smooth_stone_bricks", new BlockItem(TwigsBlocks.SMOOTH_STONE_BRICKS, new FabricItemSettings()));
+    public static final Item SMOOTH_STONE_BRICK_STAIRS = register("smooth_stone_brick_stairs", new BlockItem(TwigsBlocks.SMOOTH_STONE_BRICK_STAIRS, new FabricItemSettings()));
+    public static final Item SMOOTH_STONE_BRICK_SLAB = register("smooth_stone_brick_slab", new BlockItem(TwigsBlocks.SMOOTH_STONE_BRICK_SLAB, new FabricItemSettings()));
+    public static final Item SMOOTH_STONE_BRICK_WALL = register("smooth_stone_brick_wall", new BlockItem(TwigsBlocks.SMOOTH_STONE_BRICK_WALL, new FabricItemSettings()));
+
+    //columns
+    public static final Item QUARTZ_COLUMN = register("quartz_column", new BlockItem(TwigsBlocks.QUARTZ_COLUMN, new FabricItemSettings()));
+    public static final Item STONE_COLUMN = register("stone_column", new BlockItem(TwigsBlocks.STONE_COLUMN, new FabricItemSettings()));
+    public static final Item DEEPSLATE_COLUMN = register("deepslate_column", new BlockItem(TwigsBlocks.DEEPSLATE_COLUMN, new FabricItemSettings()));
+    public static final Item BLACKSTONE_COLUMN = register("blackstone_column", new BlockItem(TwigsBlocks.BLACKSTONE_COLUMN, new FabricItemSettings()));
+
+    //amethyst blocks
+    public static final Item POLISHED_AMETHYST = register("polished_amethyst", new BlockItem(TwigsBlocks.POLISHED_AMETHYST, new FabricItemSettings()));
+    public static final Item CUT_AMETHYST = register("cut_amethyst", new BlockItem(TwigsBlocks.CUT_AMETHYST, new FabricItemSettings()));
+
+    //misc
+    //TODO rocky dirt recipe because pebbles are missing
+    public static final Item COMPACTED_DRIPSTONE = register("compacted_dripstone", new BlockItem(TwigsBlocks.COMPACTED_DRIPSTONE, new FabricItemSettings()));
+    public static final Item ROCKY_DIRT = register("rocky_dirt", new BlockItem(TwigsBlocks.ROCKY_DIRT, new FabricItemSettings()));
+
     //schist blocks
     public static final Item SCHIST = register("schist", new BlockItem(TwigsBlocks.SCHIST, new FabricItemSettings()));
     public static final Item SCHIST_STAIRS = register("schist_stairs", new BlockItem(TwigsBlocks.SCHIST_STAIRS, new FabricItemSettings()));
@@ -88,29 +115,6 @@ public class TwigsItems {
     public static final Item POLISHED_BLOODSTONE_BRICK_SLAB = register("polished_bloodstone_brick_slab", new BlockItem(TwigsBlocks.POLISHED_BLOODSTONE_BRICK_SLAB, new FabricItemSettings()));
     public static final Item POLISHED_BLOODSTONE_BRICK_WALL = register("polished_bloodstone_brick_wall", new BlockItem(TwigsBlocks.POLISHED_BLOODSTONE_BRICK_WALL, new FabricItemSettings()));
     public static final Item CRACKED_POLISHED_BLOODSTONE_BRICKS = register("cracked_polished_bloodstone_bricks", new BlockItem(TwigsBlocks.CRACKED_POLISHED_BLOODSTONE_BRICKS, new FabricItemSettings()));
-
-    //gravel bricks
-    public static final Item GRAVEL_BRICKS = register("gravel_bricks", new BlockItem(TwigsBlocks.GRAVEL_BRICKS, new FabricItemSettings()));
-    public static final Item GRAVEL_BRICK_STAIRS = register("gravel_brick_stairs", new BlockItem(TwigsBlocks.GRAVEL_BRICK_STAIRS, new FabricItemSettings()));
-    public static final Item GRAVEL_BRICK_SLAB = register("gravel_brick_slab", new BlockItem(TwigsBlocks.GRAVEL_BRICK_SLAB, new FabricItemSettings()));
-    public static final Item GRAVEL_BRICK_WALL = register("gravel_brick_wall", new BlockItem(TwigsBlocks.GRAVEL_BRICK_WALL, new FabricItemSettings()));
-
-    //smooth stone bricks
-    public static final Item SMOOTH_STONE_BRICKS = register("smooth_stone_bricks", new BlockItem(TwigsBlocks.SMOOTH_STONE_BRICKS, new FabricItemSettings()));
-    public static final Item SMOOTH_STONE_BRICK_STAIRS = register("smooth_stone_brick_stairs", new BlockItem(TwigsBlocks.SMOOTH_STONE_BRICK_STAIRS, new FabricItemSettings()));
-    public static final Item SMOOTH_STONE_BRICK_SLAB = register("smooth_stone_brick_slab", new BlockItem(TwigsBlocks.SMOOTH_STONE_BRICK_SLAB, new FabricItemSettings()));
-    public static final Item SMOOTH_STONE_BRICK_WALL = register("smooth_stone_brick_wall", new BlockItem(TwigsBlocks.SMOOTH_STONE_BRICK_WALL, new FabricItemSettings()));
-
-    //columns
-    public static final Item QUARTZ_COLUMN = register("quartz_column", new BlockItem(TwigsBlocks.QUARTZ_COLUMN, new FabricItemSettings()));
-    public static final Item STONE_COLUMN = register("stone_column", new BlockItem(TwigsBlocks.STONE_COLUMN, new FabricItemSettings()));
-    public static final Item DEEPSLATE_COLUMN = register("deepslate_column", new BlockItem(TwigsBlocks.DEEPSLATE_COLUMN, new FabricItemSettings()));
-    public static final Item BLACKSTONE_COLUMN = register("blackstone_column", new BlockItem(TwigsBlocks.BLACKSTONE_COLUMN, new FabricItemSettings()));
-    
-    //misc
-    //TODO rocky dirt recipe because pebbles are missing
-    public static final Item COMPACTED_DRIPSTONE = register("compacted_dripstone", new BlockItem(TwigsBlocks.COMPACTED_DRIPSTONE, new FabricItemSettings()));
-    public static final Item ROCKY_DIRT = register("rocky_dirt", new BlockItem(TwigsBlocks.ROCKY_DIRT, new FabricItemSettings()));
 
     //silt blocks
     public static final Item SILT = register("silt", new BlockItem(TwigsBlocks.SILT, new FabricItemSettings()));

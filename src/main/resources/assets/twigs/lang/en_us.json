@@ -35,6 +35,27 @@
   "block.twigs.weeping_polished_blackstone_brick_slab": "Weeping Polished Blackstone Brick Slab",
   "block.twigs.weeping_polished_blackstone_brick_stairs": "Weeping Polished Blackstone Brick Stairs",
 
+  "block.twigs.gravel_bricks": "Gravel Bricks",
+  "block.twigs.gravel_brick_wall": "Gravel Brick Wall",
+  "block.twigs.gravel_brick_slab": "Gravel Brick Slab",
+  "block.twigs.gravel_brick_stairs": "Gravel Brick Stairs",
+
+  "block.twigs.smooth_stone_bricks": "Smooth Stone Bricks",
+  "block.twigs.smooth_stone_brick_wall": "Smooth Stone Brick Wall",
+  "block.twigs.smooth_stone_brick_slab": "Smooth Stone Brick Slab",
+  "block.twigs.smooth_stone_brick_stairs": "Smooth Stone Brick Stairs",
+
+  "block.twigs.quartz_column": "Quartz Column",
+  "block.twigs.stone_column": "Stone Column",
+  "block.twigs.deepslate_column": "Deepslate Column",
+  "block.twigs.blackstone_column": "Blackstone Column",
+
+  "block.twigs.polished_amethyst": "Polished Amethyst",
+  "block.twigs.cut_amethyst": "Cut Amethyst",
+
+  "block.twigs.compacted_dripstone": "Compacted Dripstone",
+  "block.twigs.rocky_dirt": "Rocky Dirt",
+
   "block.twigs.schist": "Schist",
   "block.twigs.schist_wall": "Schist Wall",
   "block.twigs.schist_slab": "Schist Slab",
@@ -73,24 +94,6 @@
   "block.twigs.polished_bloodstone_brick_slab": "Polished Bloodstone Brick Slab",
   "block.twigs.polished_bloodstone_brick_stairs": "Polished Bloodstone Brick Stairs",
   "block.twigs.cracked_polished_bloodstone_bricks": "Polished Cracked Bloodstone Bricks",
-
-  "block.twigs.gravel_bricks": "Gravel Bricks",
-  "block.twigs.gravel_brick_wall": "Gravel Brick Wall",
-  "block.twigs.gravel_brick_slab": "Gravel Brick Slab",
-  "block.twigs.gravel_brick_stairs": "Gravel Brick Stairs",
-
-  "block.twigs.smooth_stone_bricks": "Smooth Stone Bricks",
-  "block.twigs.smooth_stone_brick_wall": "Smooth Stone Brick Wall",
-  "block.twigs.smooth_stone_brick_slab": "Smooth Stone Brick Slab",
-  "block.twigs.smooth_stone_brick_stairs": "Smooth Stone Brick Stairs",
-
-  "block.twigs.quartz_column": "Quartz Column",
-  "block.twigs.stone_column": "Stone Column",
-  "block.twigs.deepslate_column": "Deepslate Column",
-  "block.twigs.blackstone_column": "Blackstone Column",
-
-  "block.twigs.compacted_dripstone": "Compacted Dripstone",
-  "block.twigs.rocky_dirt": "Rocky Dirt",
 
   "block.twigs.silt": "Silt",
   "item.twigs.silt_ball": "Silt Ball",
