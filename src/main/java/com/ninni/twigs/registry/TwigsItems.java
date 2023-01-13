@@ -14,6 +14,9 @@ public class TwigsItems {
     //logo
     public static final Item TWIGS = register("twigs", new Item(new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC).fireproof()));
 
+    //collectibles
+    public static final Item AZALEA_FLOWERS = register("azalea_flowers", new BlockItem(TwigsBlocks.AZALEA_FLOWERS, new FabricItemSettings()));
+
     //lamps
     public static final Item lAMP = register("lamp", new BlockItem(TwigsBlocks.LAMP, new FabricItemSettings()));
     public static final Item SOUL_LAMP = register("soul_lamp", new BlockItem(TwigsBlocks.SOUL_LAMP, new FabricItemSettings()));

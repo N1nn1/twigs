@@ -17,6 +17,10 @@ import java.util.function.ToIntFunction;
 
 public class TwigsBlocks {
 
+    //collectibles
+    public static final Block AZALEA_FLOWERS = register("azalea_flowers", new AzaleaFlowersBlock(FabricBlockSettings.of(Material.PLANT).breakInstantly().collidable(false).nonOpaque().sounds(SoundType.MOSS_CARPET)));
+    @SuppressWarnings("unused") public static final Block POTTED_AZALEA_FLOWERS = register("potted_azalea_flowers", new FlowerPotBlock(AZALEA_FLOWERS, FabricBlockSettings.copyOf(Blocks.POTTED_FLOWERING_AZALEA)));
+
     //lamps
     public static final Block LAMP = register("lamp", new LampBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(4.5F).sounds(TwigsSoundEvents.LAMP).luminance(createLampLightLevel())));
     public static final Block SOUL_LAMP = register("soul_lamp", new LampBlock(FabricBlockSettings.copyOf(TwigsBlocks.LAMP)));

@@ -4,6 +4,9 @@
   "mod.twigs.contact.discord": "Discord",
   "item.twigs.twigs": "Twigs",
 
+  "block.twigs.azalea_flowers": "Azalea Flowers",
+  "block.twigs.potted_azalea_flowers": "Potted Azalea Flowers",
+
   "block.twigs.lamp": "Lamp",
   "block.twigs.soul_lamp": "Soul Lamp",
   "subtitles.block.lamp.on": "Lamp is turned on",

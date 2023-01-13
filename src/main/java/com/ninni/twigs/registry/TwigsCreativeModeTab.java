@@ -43,7 +43,10 @@ public class TwigsCreativeModeTab {
             entries.addAfter(Items.MUD, SILT);
             entries.addAfter(Items.ANDESITE, SCHIST, RHYOLITE);
             entries.addAfter(Items.BLACKSTONE, BLOODSTONE);
+
             entries.addAfter(Items.FARMLAND, ROCKY_DIRT);
+
+            entries.addAfter(Items.FLOWERING_AZALEA, AZALEA_FLOWERS);
         });
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.REDSTONE_BLOCKS).register(entries -> entries.addAfter(Items.BARREL, SILT_POT));
@@ -270,6 +273,9 @@ public class TwigsCreativeModeTab {
         });
 
         FabricItemGroup.builder(new ResourceLocation(MOD_ID,"item_group")).icon(TWIGS::getDefaultInstance).displayItems((featureFlagSet, output, bl) -> {
+
+            //collectibles
+            output.accept(AZALEA_FLOWERS);
 
             //lamps
             output.accept(lAMP);
