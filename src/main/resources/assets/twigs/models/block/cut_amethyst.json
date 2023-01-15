@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/template_glazed_terracotta",
   "textures": {
-    "all": "twigs:block/cut_amethyst"
+    "pattern": "twigs:block/cut_amethyst"
   }
 }
