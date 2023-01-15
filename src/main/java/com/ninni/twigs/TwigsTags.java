@@ -4,6 +4,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 
 import static com.ninni.twigs.Twigs.MOD_ID;
@@ -26,4 +27,9 @@ public interface TwigsTags {
     TagKey<Block> PACKED_SILT_BLOCK = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "packed_silt"));
     TagKey<Block> SILT_POTS_BLOCK = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "silt_pots"));
     TagKey<Block> OFFSET_REMOVER = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "offset_remover"));
+
+    //biome tags
+    TagKey<Biome> BLOODSTONE_GENERATES = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "bloodstone_generates"));
+    TagKey<Biome> SCHIST_GENERATES = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "schist_generates"));
+    TagKey<Biome> SILT_GENERATES = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "silt_generates"));
 }

@@ -1,0 +1,37 @@
+package com.ninni.twigs.registry;
+
+import com.ninni.twigs.Twigs;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+
+public class TwigsConfiguredFeatures {
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_RHYOLITE = createKey("ore_rhyolite");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_SCHIST = createKey("ore_schist");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_BLOODSTONE = createKey("ore_bloodstone");
+
+    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+        TagMatchTest baseStoneOverworld = new TagMatchTest(BlockTags.BASE_STONE_OVERWORLD);
+        TagMatchTest baseStoneNether = new TagMatchTest(BlockTags.BASE_STONE_NETHER);
+        registerConfiguredFeature(context, ORE_RHYOLITE, Feature.ORE, new OreConfiguration(baseStoneOverworld, TwigsBlocks.RHYOLITE.defaultBlockState(), 45));
+        registerConfiguredFeature(context, ORE_SCHIST, Feature.ORE, new OreConfiguration(baseStoneOverworld, TwigsBlocks.SCHIST.defaultBlockState(), 64));
+        registerConfiguredFeature(context, ORE_BLOODSTONE, Feature.ORE, new OreConfiguration(baseStoneNether, TwigsBlocks.BLOODSTONE.defaultBlockState(), 64));
+    }
+
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void registerConfiguredFeature(BootstapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> resourceKey, F feature, FC featureConfiguration) {
+        context.register(resourceKey, new ConfiguredFeature<>(feature, featureConfiguration));
+    }
+
+    public static ResourceKey<ConfiguredFeature<?, ?>> createKey(String string) {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(Twigs.MOD_ID, string));
+    }
+
+}

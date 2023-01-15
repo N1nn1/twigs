@@ -10,6 +10,7 @@ public class Twigs implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		TwigsBiomeModifier.init();
 		Reflection.initialize(
 				TwigsItems.class,
 				TwigsCreativeModeTab.class,
