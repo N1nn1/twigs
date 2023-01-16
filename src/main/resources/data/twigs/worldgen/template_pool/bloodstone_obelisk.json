@@ -1,0 +1,15 @@
+{
+  "name": "twigs:bloodstone_obelisk",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "twigs:bloodstone_obelisk",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}
