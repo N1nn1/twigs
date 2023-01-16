@@ -1,9 +1,9 @@
-package com.ninni.twigs.world.gen;
+package com.ninni.twigs.world.gen.features;
 
 import com.mojang.serialization.Codec;
 import com.ninni.twigs.registry.TwigsBlocks;
 import com.ninni.twigs.world.FastNoise;
-import com.ninni.twigs.world.gen.config.NoiseStripConfig;
+import com.ninni.twigs.world.gen.features.config.NoiseStripConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;

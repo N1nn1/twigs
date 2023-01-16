@@ -1,7 +1,7 @@
 package com.ninni.twigs.registry;
 
 import com.ninni.twigs.Twigs;
-import com.ninni.twigs.world.gen.config.NoiseStripConfig;
+import com.ninni.twigs.world.gen.features.config.NoiseStripConfig;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;

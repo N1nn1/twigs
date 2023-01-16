@@ -20,7 +20,9 @@ public class Twigs implements ModInitializer {
 				TwigsBlocks.class,
 				TwigsStats.class,
 				TwigsBlockEntityType.class,
-				TwigsSoundEvents.class
+				TwigsSoundEvents.class,
+				TwigsStructureTypes.class,
+				TwigsStructurePieceTypes.class
 		);
 	}
 }

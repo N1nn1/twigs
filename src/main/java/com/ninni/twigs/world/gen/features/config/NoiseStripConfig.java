@@ -1,4 +1,4 @@
-package com.ninni.twigs.world.gen.config;
+package com.ninni.twigs.world.gen.features.config;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
