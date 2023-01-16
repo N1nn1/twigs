@@ -13,9 +13,9 @@ import net.minecraft.world.level.levelgen.feature.DripstoneUtils;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 
-public class StoneStripFeature extends Feature<NoiseStripConfig> {
+public class NoiseStripFeature extends Feature<NoiseStripConfig> {
 
-    public StoneStripFeature(Codec<NoiseStripConfig> codec) {
+    public NoiseStripFeature(Codec<NoiseStripConfig> codec) {
         super(codec);
     }
 
