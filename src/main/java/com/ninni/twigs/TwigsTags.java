@@ -32,4 +32,5 @@ public interface TwigsTags {
     TagKey<Biome> BLOODSTONE_GENERATES = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "bloodstone_generates"));
     TagKey<Biome> SCHIST_GENERATES = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "schist_generates"));
     TagKey<Biome> SILT_GENERATES = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "silt_generates"));
+    TagKey<Biome> AZALEA_FLOWERS_GENERATE = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "azalea_flowers_generate"));
 }

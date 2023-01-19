@@ -25,6 +25,8 @@ public class TwigsBiomeModifier {
             list.add(TwigsPlacedFeatures.ORE_SCHIST_UPPER);
         }).build().forEach(resourceKey -> addOre("add_ore_schist", resourceKey, BiomeSelectors.tag(TwigsTags.SCHIST_GENERATES)));
         addOre("add_silt_strip", TwigsPlacedFeatures.SILT_STRIP, BiomeSelectors.foundInTheNether());
+
+        BiomeModifications.create(new ResourceLocation(Twigs.MOD_ID, "add_azalea_flowers")).add(ModificationPhase.ADDITIONS, BiomeSelectors.tag(TwigsTags.AZALEA_FLOWERS_GENERATE), context -> context.getGenerationSettings().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, TwigsPlacedFeatures.AZALEA_FLOWERS));
     }
 
     private static void addOre(String id, ResourceKey<PlacedFeature> resourceKey, Predicate<BiomeSelectionContext> biome) {
