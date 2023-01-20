@@ -10,6 +10,9 @@ import net.fabricmc.fabric.api.biome.v1.ModificationPhase;
 import net.minecraft.Util;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BiomeTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
@@ -26,7 +29,11 @@ public class TwigsBiomeModifier {
         }).build().forEach(resourceKey -> addOre("add_ore_schist", resourceKey, BiomeSelectors.tag(TwigsTags.SCHIST_GENERATES)));
         addOre("add_silt_strip", TwigsPlacedFeatures.SILT_STRIP, BiomeSelectors.foundInTheNether());
 
-        BiomeModifications.create(new ResourceLocation(Twigs.MOD_ID, "add_azalea_flowers")).add(ModificationPhase.ADDITIONS, BiomeSelectors.tag(TwigsTags.AZALEA_FLOWERS_GENERATE), context -> context.getGenerationSettings().addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, TwigsPlacedFeatures.AZALEA_FLOWERS));
+        addFeature("add_azalea_flowers", GenerationStep.Decoration.VEGETAL_DECORATION, TwigsPlacedFeatures.AZALEA_FLOWERS, TwigsTags.AZALEA_FLOWERS_GENERATE);
+    }
+
+    public static void addFeature(String id, GenerationStep.Decoration decoration, ResourceKey<PlacedFeature> resourceKey, TagKey<Biome> biome) {
+        BiomeModifications.create(new ResourceLocation(Twigs.MOD_ID, id)).add(ModificationPhase.ADDITIONS, BiomeSelectors.tag(biome), biomeModificationContext -> biomeModificationContext.getGenerationSettings().addFeature(decoration, resourceKey));
     }
 
     private static void addOre(String id, ResourceKey<PlacedFeature> resourceKey, Predicate<BiomeSelectionContext> biome) {
