@@ -77,9 +77,12 @@ public class TwigsCreativeModeTab {
                     MOSSY_BRICK_SLAB,
                     MOSSY_BRICK_WALL,
                     SILT_BRICKS,
+                    CRACKED_SILT_BRICKS,
                     SILT_BRICK_STAIRS,
                     SILT_BRICK_SLAB,
-                    SILT_BRICK_WALL
+                    SILT_BRICK_WALL,
+                    CHISELED_SILT_BRICKS,
+                    MIXED_SILT_BRICKS
             );
 
             entries.addAfter(Items.POLISHED_BLACKSTONE_BRICK_WALL,
@@ -383,9 +386,12 @@ public class TwigsCreativeModeTab {
             output.accept(SILT_BALL);
             output.accept(SILT_BRICK);
             output.accept(SILT_BRICKS);
+            output.accept(CRACKED_SILT_BRICKS);
             output.accept(SILT_BRICK_STAIRS);
             output.accept(SILT_BRICK_SLAB);
             output.accept(SILT_BRICK_WALL);
+            output.accept(CHISELED_SILT_BRICKS);
+            output.accept(MIXED_SILT_BRICKS);
 
 
             output.accept(PACKED_SILT);

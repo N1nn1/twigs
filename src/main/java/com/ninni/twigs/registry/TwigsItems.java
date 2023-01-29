@@ -127,6 +127,9 @@ public class TwigsItems {
     public static final Item SILT_BRICK_STAIRS = register("silt_brick_stairs", new BlockItem(TwigsBlocks.SILT_BRICK_STAIRS, new FabricItemSettings()));
     public static final Item SILT_BRICK_SLAB = register("silt_brick_slab", new BlockItem(TwigsBlocks.SILT_BRICK_SLAB, new FabricItemSettings()));
     public static final Item SILT_BRICK_WALL = register("silt_brick_wall", new BlockItem(TwigsBlocks.SILT_BRICK_WALL, new FabricItemSettings()));
+    public static final Item MIXED_SILT_BRICKS = register("mixed_silt_bricks", new BlockItem(TwigsBlocks.MIXED_SILT_BRICKS, new FabricItemSettings()));
+    public static final Item CHISELED_SILT_BRICKS = register("chiseled_silt_bricks", new BlockItem(TwigsBlocks.CHISELED_SILT_BRICKS, new FabricItemSettings()));
+    public static final Item CRACKED_SILT_BRICKS = register("cracked_silt_bricks", new BlockItem(TwigsBlocks.CRACKED_SILT_BRICKS, new FabricItemSettings()));
 
     public static final Item SILT_POT = register("silt_pot", new BlockItem(TwigsBlocks.SILT_POT, new FabricItemSettings()));
     public static final Item WHITE_SILT_POT = register("white_silt_pot", new BlockItem(TwigsBlocks.WHITE_SILT_POT, new FabricItemSettings()));

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "twigs:block/mixed_silt_bricks0"
+      },
+      {
+        "model": "twigs:block/mixed_silt_bricks1"
+      },
+      {
+        "model": "twigs:block/mixed_silt_bricks2"
+      },
+      {
+        "model": "twigs:block/mixed_silt_bricks3"
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "variants": {
+    "facing=down": [
+      {
+        "model": "twigs:block/chiseled_silt_bricks"
+      }
+    ],
+    "facing=up": [
+      {
+        "model": "twigs:block/chiseled_silt_bricks",
+        "x": 180
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "twigs:block/chiseled_silt_bricks",
+        "x": -90
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "twigs:block/chiseled_silt_bricks",
+        "x": 90
+      }
+    ],
+    "facing=east": [
+      {
+        "model": "twigs:block/chiseled_silt_bricks",
+        "x": -90,
+        "y": 90
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "twigs:block/chiseled_silt_bricks",
+        "x": 90,
+        "y": 90
+      }
+    ]
+  }
+}

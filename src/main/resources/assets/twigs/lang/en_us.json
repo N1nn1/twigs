@@ -106,6 +106,9 @@
   "block.twigs.silt_brick_wall": "Silt Brick Wall",
   "block.twigs.silt_brick_slab": "Silt Brick Slab",
   "block.twigs.silt_brick_stairs": "Silt Brick Stairs",
+  "block.twigs.chiseled_silt_bricks": "Chiseled Silt Bricks",
+  "block.twigs.cracked_silt_bricks": "Cracked Silt Bricks",
+  "block.twigs.mixed_silt_bricks": "Mixed Silt Bricks",
 
   "container.twigs.silt_pot": "Silt Pot",
   "block.twigs.silt_pot": "Silt Pot",

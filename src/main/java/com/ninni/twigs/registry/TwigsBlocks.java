@@ -128,6 +128,9 @@ public class TwigsBlocks {
     public static final Block SILT_BRICK_STAIRS = register("silt_brick_stairs", new StairBlock(SILT_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(SILT_BRICKS)));
     public static final Block SILT_BRICK_SLAB = register("silt_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(SILT_BRICKS)));
     public static final Block SILT_BRICK_WALL = register("silt_brick_wall", new WallBlock(FabricBlockSettings.copyOf(SILT_BRICKS)));
+    public static final Block MIXED_SILT_BRICKS = register("mixed_silt_bricks", new Block(FabricBlockSettings.copyOf(SILT_BRICKS)));
+    public static final Block CHISELED_SILT_BRICKS = register("chiseled_silt_bricks", new FacingBlock(FabricBlockSettings.copyOf(SILT_BRICKS)));
+    public static final Block CRACKED_SILT_BRICKS = register("cracked_silt_bricks", new Block(FabricBlockSettings.copyOf(SILT_BRICKS)));
 
     public static final Block SILT_POT = register("silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).strength(0.5f, 2f)));
     public static final Block WHITE_SILT_POT = register("white_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.TERRACOTTA_WHITE)));
