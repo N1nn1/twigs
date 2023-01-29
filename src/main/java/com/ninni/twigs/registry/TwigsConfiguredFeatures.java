@@ -1,6 +1,7 @@
 package com.ninni.twigs.registry;
 
 import com.ninni.twigs.Twigs;
+import com.ninni.twigs.world.gen.features.config.AzaleaFlowerPatchConfig;
 import com.ninni.twigs.world.gen.features.config.NoiseStripConfig;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -8,6 +9,7 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.MultifaceBlock;
@@ -34,7 +36,7 @@ public class TwigsConfiguredFeatures {
         registerConfiguredFeature(context, ORE_SCHIST, Feature.ORE, new OreConfiguration(baseStoneOverworld, TwigsBlocks.SCHIST.defaultBlockState(), 64));
         registerConfiguredFeature(context, ORE_BLOODSTONE, Feature.ORE, new OreConfiguration(baseStoneNether, TwigsBlocks.BLOODSTONE.defaultBlockState(), 64));
         registerConfiguredFeature(context, SILT_STRIP, TwigsFeatures.NOISE_STRIP, new NoiseStripConfig(BlockStateProvider.simple(TwigsBlocks.SILT)));
-        registerConfiguredFeature(context, AZALEA_FLOWERS, Feature.MULTIFACE_GROWTH, new MultifaceGrowthConfiguration((MultifaceBlock)TwigsBlocks.AZALEA_FLOWERS, 20, false, true, true, 0.9f, HolderSet.direct(Block::builtInRegistryHolder, Blocks.STONE, Blocks.ANDESITE, Blocks.DIORITE, Blocks.GRANITE, Blocks.CALCITE, TwigsBlocks.RHYOLITE, TwigsBlocks.SCHIST, Blocks.CLAY, Blocks.TUFF, Blocks.MOSS_BLOCK, Blocks.DEEPSLATE)));
+        registerConfiguredFeature(context, AZALEA_FLOWERS, TwigsFeatures.AZALEA_FLOWER_PATCH, new AzaleaFlowerPatchConfig(UniformInt.of(2, 4), 3));
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void registerConfiguredFeature(BootstapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> resourceKey, F feature, FC featureConfiguration) {
