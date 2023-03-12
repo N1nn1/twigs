@@ -25,6 +25,8 @@ public class TwigsPlacedFeatureProvider extends FabricDynamicRegistryProvider {
         add(registries, entries, TwigsPlacedFeatures.ORE_SCHIST_LOWER);
         add(registries, entries, TwigsPlacedFeatures.SILT_STRIP);
         add(registries, entries, TwigsPlacedFeatures.AZALEA_FLOWERS);
+        add(registries, entries, TwigsPlacedFeatures.PATCH_TWIG);
+        add(registries, entries, TwigsPlacedFeatures.PATCH_PEBBLE);
     }
 
     private void add(HolderLookup.Provider registries, Entries entries, ResourceKey<PlacedFeature> resourceKey) {

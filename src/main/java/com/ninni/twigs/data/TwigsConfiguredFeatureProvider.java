@@ -24,6 +24,8 @@ public class TwigsConfiguredFeatureProvider extends FabricDynamicRegistryProvide
         add(registries, entries, TwigsConfiguredFeatures.ORE_BLOODSTONE);
         add(registries, entries, TwigsConfiguredFeatures.SILT_STRIP);
         add(registries, entries, TwigsConfiguredFeatures.AZALEA_FLOWERS);
+        add(registries, entries, TwigsConfiguredFeatures.PATCH_TWIG);
+        add(registries, entries, TwigsConfiguredFeatures.PATCH_PEBBLE);
     }
 
     private void add(HolderLookup.Provider registries, Entries entries, ResourceKey<ConfiguredFeature<?, ?>> resourceKey) {

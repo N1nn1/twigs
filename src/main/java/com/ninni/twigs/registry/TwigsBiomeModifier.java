@@ -30,6 +30,8 @@ public class TwigsBiomeModifier {
         addOre("add_silt_strip", TwigsPlacedFeatures.SILT_STRIP, BiomeSelectors.foundInTheNether());
 
         addFeature("add_azalea_flowers", GenerationStep.Decoration.VEGETAL_DECORATION, TwigsPlacedFeatures.AZALEA_FLOWERS, TwigsTags.AZALEA_FLOWERS_GENERATE);
+        addFeature("add_twigs", GenerationStep.Decoration.VEGETAL_DECORATION, TwigsPlacedFeatures.PATCH_TWIG, TwigsTags.SPAWNS_TWIG);
+        addFeature("add_pebbles", GenerationStep.Decoration.VEGETAL_DECORATION, TwigsPlacedFeatures.PATCH_PEBBLE, TwigsTags.SPAWNS_PEBBLE);
     }
 
     public static void addFeature(String id, GenerationStep.Decoration decoration, ResourceKey<PlacedFeature> resourceKey, TagKey<Biome> biome) {
@@ -37,9 +39,7 @@ public class TwigsBiomeModifier {
     }
 
     private static void addOre(String id, ResourceKey<PlacedFeature> resourceKey, Predicate<BiomeSelectionContext> biome) {
-        BiomeModifications.create(new ResourceLocation(Twigs.MOD_ID, id)).add(ModificationPhase.ADDITIONS, biome, context -> {
-            context.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, resourceKey);
-        });
+        BiomeModifications.create(new ResourceLocation(Twigs.MOD_ID, id)).add(ModificationPhase.ADDITIONS, biome, context -> context.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, resourceKey));
     }
 
 }

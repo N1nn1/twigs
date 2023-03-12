@@ -2,6 +2,7 @@ package com.ninni.twigs.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
@@ -31,8 +32,9 @@ public class FloorItemBlock extends Block {
 
     @Override
     public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
-        BlockPos blockPos2 = blockPos.below();
-        return levelReader.getBlockState(blockPos2).isFaceSturdy(levelReader, blockPos2, Direction.UP);
+        BlockPos belowPos = blockPos.below();
+        BlockState belowState = levelReader.getBlockState(belowPos);
+        return (!belowState.getCollisionShape(levelReader, belowPos).getFaceShape(Direction.UP).isEmpty() || belowState.isFaceSturdy(levelReader, belowPos, Direction.UP)) && !belowState.is(BlockTags.LEAVES);
     }
 
     @Override

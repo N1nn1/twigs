@@ -33,4 +33,6 @@ public interface TwigsTags {
     TagKey<Biome> SCHIST_GENERATES = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "schist_generates"));
     TagKey<Biome> SILT_GENERATES = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "silt_generates"));
     TagKey<Biome> AZALEA_FLOWERS_GENERATE = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "azalea_flowers_generate"));
+    TagKey<Biome> SPAWNS_TWIG = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "spawns_twig"));
+    TagKey<Biome> SPAWNS_PEBBLE = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "spawns_pebble"));
 }

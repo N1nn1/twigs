@@ -20,7 +20,7 @@ public class TwigItem extends BlockItem {
         if (player != null && useOnContext.isSecondaryUseActive()) {
             ItemStack mainHandItem = player.getMainHandItem();
             ItemStack offHandItem = player.getOffhandItem();
-            if (offHandItem.equals(mainHandItem)) {
+            if (offHandItem.sameItem(mainHandItem)) {
                 InteractionResult action = Items.FLINT_AND_STEEL.useOn(useOnContext);
                 if (action.consumesAction()) {
                     if (!player.getAbilities().instabuild) {
