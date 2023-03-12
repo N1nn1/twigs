@@ -289,6 +289,8 @@ public class TwigsCreativeModeTab {
             output.accept(CRIMSON_SHROOMLAMP);
             output.accept(WARPED_SHROOMLAMP);
 
+            output.accept(PETRIFIED_LICHEN);
+
             //basalt blocks
             output.accept(POLISHED_BASALT_BRICKS);
             output.accept(CHISELED_SMOOTH_BASALT_BRICKS);

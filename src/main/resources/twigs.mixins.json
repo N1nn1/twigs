@@ -6,7 +6,9 @@
   "mixins": [
     "BlockStateBaseMixin",
     "FallingBlockEntityInvoker",
-    "FlowerBlockMixin"
+    "FeatureContextAccessor",
+    "FlowerBlockMixin",
+    "MultifaceGrowthFeatureMixin"
   ],
   "client": [
   ],

@@ -7,7 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.SoundType;
 
-public interface TwigsSoundEvents {
+public interface    TwigsSoundEvents {
 
     SoundEvent LAMP_ON = register("block.lamp.on");
     SoundEvent LAMP_OFF = register("block.lamp.off");
@@ -23,6 +23,8 @@ public interface TwigsSoundEvents {
     SoundType SILT_POT_FILLED = register("silt_pot_filled", 1, 1);
     SoundType SILT_SHINGLES = register("silt_shingles", 1, 1);
     SoundType GRAVEL_BRICKS = register("gravel_bricks", 1, 1);
+    //Change this to custom sound
+    SoundType PETRIFIED_LICHEN = SoundType.DEEPSLATE;
 
 
     private static SoundType register(String name, float volume, float pitch) {

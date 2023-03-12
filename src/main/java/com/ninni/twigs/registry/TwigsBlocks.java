@@ -73,7 +73,7 @@ public class TwigsBlocks {
     public static final Block BAMBOO_MAT = register("bamboo_mat", new BambooMatBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO_PLANKS)));
     public static final Block COMPACTED_DRIPSTONE = register("compacted_dripstone", new CompactedDripstoneBlock(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK)));
     public static final Block ROCKY_DIRT = register("rocky_dirt", new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(1.25F, 6.0F).sounds(TwigsSoundEvents.ROCKY_DIRT)));
-    public static final Block PETRIFIED_LICHEN = register("petrified_lichen", new GlowLichenBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.GLOW_LICHEN).noCollission().strength(0.2f).sound(SoundType.GLOW_LICHEN).lightLevel(GlowLichenBlock.emission(7))));
+    public static final Block PETRIFIED_LICHEN = register("petrified_lichen", new GlowLichenBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.GLOW_LICHEN).noCollission().strength(0.2f).sound(TwigsSoundEvents.PETRIFIED_LICHEN).lightLevel(GlowLichenBlock.emission(7))));
 
     //decorated blackstone bricks
     public static final Block TWISTING_POLISHED_BLACKSTONE_BRICKS = register("twisting_polished_blackstone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BRICKS)));
