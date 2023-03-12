@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "twigs:block/roseate_seashell"
+      },
+      {
+        "model": "twigs:block/roseate_seashell",
+        "y": 90
+      },
+      {
+        "model": "twigs:block/roseate_seashell",
+        "y": 180
+      },
+      {
+        "model": "twigs:block/roseate_seashell",
+        "y": 270
+      },
+      {
+        "model": "twigs:block/roseate_seashell_rotated"
+      },
+      {
+        "model": "twigs:block/roseate_seashell_rotated",
+        "y": 90
+      },
+      {
+        "model": "twigs:block/roseate_seashell_rotated",
+        "y": 180
+      },
+      {
+        "model": "twigs:block/roseate_seashell_rotated",
+        "y": 270
+      }
+    ]
+  }
+}
