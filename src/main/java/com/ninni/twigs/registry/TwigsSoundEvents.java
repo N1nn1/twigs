@@ -11,6 +11,7 @@ public interface TwigsSoundEvents {
 
     SoundEvent LAMP_ON = register("block.lamp.on");
     SoundEvent LAMP_OFF = register("block.lamp.off");
+    SoundEvent ENTITY_PEBBLE_THROW = register("entity.pebble.throw");
 
     SoundType ROCKY_DIRT = register("rocky_dirt", 1, 1);
     SoundType BASALT_BRICKS = register("basalt_bricks", 0.75F, 1);

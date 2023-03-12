@@ -463,5 +463,9 @@
       "twigs:block/silt_shingles/light5"
     ],
     "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "entity.pebble.throw": {
+    "sounds": [ "minecraft:random/bow" ],
+    "subtitle": "subtitles.entity.twigs.pebble.throw"
   }
 }

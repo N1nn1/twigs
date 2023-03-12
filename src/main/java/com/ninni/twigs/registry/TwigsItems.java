@@ -1,6 +1,8 @@
 package com.ninni.twigs.registry;
 
 import com.ninni.twigs.Twigs;
+import com.ninni.twigs.item.PebbleItem;
+import com.ninni.twigs.item.TwigItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -16,8 +18,8 @@ public class TwigsItems {
 
     //collectibles
     public static final Item AZALEA_FLOWERS = register("azalea_flowers", new BlockItem(TwigsBlocks.AZALEA_FLOWERS, new FabricItemSettings()));
-    public static final Item TWIG = register("twig", new BlockItem(TwigsBlocks.TWIG, new Item.Properties()));
-    public static final Item PEBBLE = register("pebble", new BlockItem(TwigsBlocks.PEBBLE, new Item.Properties()));
+    public static final Item TWIG = register("twig", new TwigItem(TwigsBlocks.TWIG, new Item.Properties()));
+    public static final Item PEBBLE = register("pebble", new PebbleItem(TwigsBlocks.PEBBLE, new Item.Properties()));
 
     //lamps
     public static final Item lAMP = register("lamp", new BlockItem(TwigsBlocks.LAMP, new FabricItemSettings()));

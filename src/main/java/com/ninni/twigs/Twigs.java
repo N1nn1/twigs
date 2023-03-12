@@ -1,6 +1,7 @@
 package com.ninni.twigs;
 
 import com.google.common.reflect.Reflection;
+import com.ninni.twigs.client.particle.TwigsParticleType;
 import com.ninni.twigs.registry.*;
 import com.ninni.twigs.stat.TwigsStats;
 import net.fabricmc.api.ModInitializer;
@@ -14,6 +15,8 @@ public class Twigs implements ModInitializer {
 	public void onInitialize() {
 		TwigsBiomeModifier.init();
 		Reflection.initialize(
+				TwigsEntityTypes.class,
+				TwigsParticleTypes.class,
 				TwigsItems.class,
 				TwigsFeatures.class,
 				TwigsCreativeModeTab.class,
