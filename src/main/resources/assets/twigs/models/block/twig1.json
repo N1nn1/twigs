@@ -1,0 +1,6 @@
+{
+  "parent": "twigs:block/template_layer_block",
+  "textures": {
+    "all": "twigs:block/twig1"
+  }
+}

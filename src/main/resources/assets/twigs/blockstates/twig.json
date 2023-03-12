@@ -1,0 +1,96 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "twigs:block/twig0"
+      },
+      {
+        "model": "twigs:block/twig0",
+        "y": 90
+      },
+      {
+        "model": "twigs:block/twig0",
+        "y": 180
+      },
+      {
+        "model": "twigs:block/twig0",
+        "y": 270
+      },
+      {
+        "model": "twigs:block/twig1"
+      },
+      {
+        "model": "twigs:block/twig1",
+        "y": 90
+      },
+      {
+        "model": "twigs:block/twig1",
+        "y": 180
+      },
+      {
+        "model": "twigs:block/twig1",
+        "y": 270
+      },
+      {
+        "model": "twigs:block/twig2"
+      },
+      {
+        "model": "twigs:block/twig2",
+        "y": 90
+      },
+      {
+        "model": "twigs:block/twig2",
+        "y": 180
+      },
+      {
+        "model": "twigs:block/twig2",
+        "y": 270
+      }
+	        {
+        "model": "twigs:block/twig3"
+      },
+      {
+        "model": "twigs:block/twig3",
+        "y": 90
+      },
+      {
+        "model": "twigs:block/twig3",
+        "y": 180
+      },
+      {
+        "model": "twigs:block/twig3",
+        "y": 270
+      },
+      {
+        "model": "twigs:block/twig4"
+      },
+      {
+        "model": "twigs:block/twig4",
+        "y": 90
+      },
+      {
+        "model": "twigs:block/twig4",
+        "y": 180
+      },
+      {
+        "model": "twigs:block/twig4",
+        "y": 270
+      },
+      {
+        "model": "twigs:block/twig5"
+      },
+      {
+        "model": "twigs:block/twig5",
+        "y": 90
+      },
+      {
+        "model": "twigs:block/twig5",
+        "y": 180
+      },
+      {
+        "model": "twigs:block/twig5",
+        "y": 270
+      }
+    ]
+  }
+}
