@@ -15,6 +15,8 @@ public class TwigsClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(),
 				TwigsBlocks.AZALEA_FLOWERS,
+				TwigsBlocks.TWIG,
+				TwigsBlocks.PEBBLE,
 				TwigsBlocks.POTTED_AZALEA_FLOWERS,
 				TwigsBlocks.COMPACTED_DRIPSTONE
 		);

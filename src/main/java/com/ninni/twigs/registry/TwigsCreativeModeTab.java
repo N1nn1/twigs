@@ -280,6 +280,8 @@ public class TwigsCreativeModeTab {
 
             //collectibles
             output.accept(AZALEA_FLOWERS);
+            output.accept(TWIG);
+            output.accept(PEBBLE);
 
             //lamps
             output.accept(lAMP);

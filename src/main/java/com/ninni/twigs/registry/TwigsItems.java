@@ -16,6 +16,8 @@ public class TwigsItems {
 
     //collectibles
     public static final Item AZALEA_FLOWERS = register("azalea_flowers", new BlockItem(TwigsBlocks.AZALEA_FLOWERS, new FabricItemSettings()));
+    public static final Item TWIG = register("twig", new BlockItem(TwigsBlocks.TWIG, new Item.Properties()));
+    public static final Item PEBBLE = register("pebble", new BlockItem(TwigsBlocks.PEBBLE, new Item.Properties()));
 
     //lamps
     public static final Item lAMP = register("lamp", new BlockItem(TwigsBlocks.LAMP, new FabricItemSettings()));
@@ -77,6 +79,7 @@ public class TwigsItems {
     public static final Item BAMBOO_MAT = register("bamboo_mat", new BlockItem(TwigsBlocks.BAMBOO_MAT, new FabricItemSettings()));
     public static final Item COMPACTED_DRIPSTONE = register("compacted_dripstone", new BlockItem(TwigsBlocks.COMPACTED_DRIPSTONE, new FabricItemSettings()));
     public static final Item ROCKY_DIRT = register("rocky_dirt", new BlockItem(TwigsBlocks.ROCKY_DIRT, new FabricItemSettings()));
+    //Add petrified lichen here
 
     //schist blocks
     public static final Item SCHIST = register("schist", new BlockItem(TwigsBlocks.SCHIST, new FabricItemSettings()));
