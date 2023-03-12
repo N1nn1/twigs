@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "twigs:azalea_flowers_from_flowering_azalea"
+      "twigs:bamboo_mat"
     ]
   },
   "criteria": {
-    "has_item": {
+    "has_bamboo": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:flowering_azalea"
+              "minecraft:bamboo"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "twigs:azalea_flowers_from_flowering_azalea"
+        "recipe": "twigs:bamboo_mat"
       }
     }
   },
   "requirements": [
     [
-      "has_item",
+      "has_bamboo",
       "has_the_recipe"
     ]
   ]

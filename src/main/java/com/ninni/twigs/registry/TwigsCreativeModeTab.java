@@ -65,6 +65,7 @@ public class TwigsCreativeModeTab {
             entries.addAfter(Items.STONE, STONE_COLUMN);
             entries.addAfter(Items.DEEPSLATE, DEEPSLATE_COLUMN);
             entries.addAfter(Items.GILDED_BLACKSTONE, BLACKSTONE_COLUMN);
+            entries.addAfter(Items.BAMBOO_TRAPDOOR, BAMBOO_MAT);
 
             entries.addAfter(Items.AMETHYST_BLOCK, POLISHED_AMETHYST, CUT_AMETHYST);
 
@@ -336,6 +337,7 @@ public class TwigsCreativeModeTab {
             output.accept(CUT_AMETHYST);
 
             //misc
+            output.accept(BAMBOO_MAT);
             output.accept(COMPACTED_DRIPSTONE);
             output.accept(ROCKY_DIRT);
 

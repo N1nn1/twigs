@@ -18,7 +18,7 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 
 public class AzaleaFlowersBlock extends MultifaceBlock implements SimpleWaterloggedBlock {
-    private static final BooleanProperty WATERLOGGED;
+    private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     private final MultifaceSpreader spreader = new MultifaceSpreader(this);
 
     public AzaleaFlowersBlock(BlockBehaviour.Properties properties) {
@@ -52,9 +52,5 @@ public class AzaleaFlowersBlock extends MultifaceBlock implements SimpleWaterlog
 
     public MultifaceSpreader getSpreader() {
         return this.spreader;
-    }
-
-    static {
-        WATERLOGGED = BlockStateProperties.WATERLOGGED;
     }
 }

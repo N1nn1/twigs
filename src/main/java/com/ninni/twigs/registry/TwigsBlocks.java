@@ -67,6 +67,7 @@ public class TwigsBlocks {
     public static final Block CUT_AMETHYST = register("cut_amethyst", new CutAmethystBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)));
 
     //misc
+    public static final Block BAMBOO_MAT = register("bamboo_mat", new BambooMatBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO_PLANKS)));
     public static final Block COMPACTED_DRIPSTONE = register("compacted_dripstone", new CompactedDripstoneBlock(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK)));
     public static final Block ROCKY_DIRT = register("rocky_dirt", new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(1.25F, 6.0F).sounds(TwigsSoundEvents.ROCKY_DIRT)));
 

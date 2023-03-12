@@ -74,6 +74,7 @@ public class TwigsItems {
 
     //misc
     //TODO rocky dirt recipe because pebbles are missing
+    public static final Item BAMBOO_MAT = register("bamboo_mat", new BlockItem(TwigsBlocks.BAMBOO_MAT, new FabricItemSettings()));
     public static final Item COMPACTED_DRIPSTONE = register("compacted_dripstone", new BlockItem(TwigsBlocks.COMPACTED_DRIPSTONE, new FabricItemSettings()));
     public static final Item ROCKY_DIRT = register("rocky_dirt", new BlockItem(TwigsBlocks.ROCKY_DIRT, new FabricItemSettings()));
 

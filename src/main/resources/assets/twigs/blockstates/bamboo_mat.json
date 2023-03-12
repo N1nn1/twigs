@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "twigs:block/bamboo_mat",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "twigs:block/bamboo_mat"
+    },
+    "facing=south": {
+      "model": "twigs:block/bamboo_mat",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "twigs:block/bamboo_mat",
+      "y": 270
+    }
+  }
+}
