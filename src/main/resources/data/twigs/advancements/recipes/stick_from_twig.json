@@ -1,13 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "twigs:stick_from_twig"
+    ]
+  },
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "twigs:stick_from_twig"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_twig": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -16,19 +16,19 @@
             ]
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "twigs:stick_from_twig"
+      }
     }
   },
   "requirements": [
     [
-      "has_twig",
+      "has_item",
       "has_the_recipe"
     ]
-  ],
-  "rewards": {
-    "recipes": [
-      "twigs:stick_from_twig"
-    ]
-  }
+  ]
 }

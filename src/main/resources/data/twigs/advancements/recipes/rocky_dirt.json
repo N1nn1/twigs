@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "twigs:cobblestone_from_pebble"
+      "twigs:rocky_dirt"
     ]
   },
   "criteria": {
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "twigs:cobblestone_from_pebble"
+        "recipe": "twigs:rocky_dirt"
       }
     }
   },
