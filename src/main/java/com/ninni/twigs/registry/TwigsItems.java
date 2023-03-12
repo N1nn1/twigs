@@ -77,11 +77,10 @@ public class TwigsItems {
     public static final Item CUT_AMETHYST = register("cut_amethyst", new BlockItem(TwigsBlocks.CUT_AMETHYST, new FabricItemSettings()));
 
     //misc
-    //TODO rocky dirt recipe because pebbles are missing
+    public static final Item PETRIFIED_LICHEN = register("petrified_lichen", new BlockItem(TwigsBlocks.PETRIFIED_LICHEN, new Item.Properties()));
     public static final Item BAMBOO_MAT = register("bamboo_mat", new BlockItem(TwigsBlocks.BAMBOO_MAT, new FabricItemSettings()));
     public static final Item COMPACTED_DRIPSTONE = register("compacted_dripstone", new BlockItem(TwigsBlocks.COMPACTED_DRIPSTONE, new FabricItemSettings()));
     public static final Item ROCKY_DIRT = register("rocky_dirt", new BlockItem(TwigsBlocks.ROCKY_DIRT, new FabricItemSettings()));
-    public static final Item PETRIFIED_LICHEN = register("petrified_lichen", new BlockItem(TwigsBlocks.PETRIFIED_LICHEN, new Item.Properties()));
 
     //schist blocks
     public static final Item SCHIST = register("schist", new BlockItem(TwigsBlocks.SCHIST, new FabricItemSettings()));

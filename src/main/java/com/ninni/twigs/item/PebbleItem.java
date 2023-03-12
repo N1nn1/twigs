@@ -25,13 +25,12 @@ public class PebbleItem extends BlockItem {
         if (!level.isClientSide) {
             Pebble pebble = new Pebble(level, player);
             pebble.setItem(stack);
-            pebble.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
+            pebble.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.4F, 1.0F);
             level.addFreshEntity(pebble);
         }
+        player.getCooldowns().addCooldown(this, 10);
         player.awardStat(Stats.ITEM_USED.get(this));
-        if (!player.getAbilities().instabuild) {
-            stack.shrink(1);
-        }
+        if (!player.getAbilities().instabuild) stack.shrink(1);
         return InteractionResultHolder.sidedSuccess(stack, level.isClientSide);
     }
 }

@@ -16,6 +16,7 @@ public class TwigsCreativeModeTab {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> {
 
             entries.addAfter(Items.REDSTONE_TORCH, lAMP, SOUL_LAMP);
+            entries.addAfter(Items.GLOW_LICHEN, PETRIFIED_LICHEN);
             entries.addAfter(Items.SHROOMLIGHT, CRIMSON_SHROOMLAMP, WARPED_SHROOMLAMP);
             entries.addAfter(Items.FLOWER_POT,
                     SILT_POT,
@@ -38,15 +39,19 @@ public class TwigsCreativeModeTab {
             );
         });
 
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.addAfter(Items.FLINT_AND_STEEL, TWIG));
+
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(entries -> {
 
+
+            entries.addAfter(Items.GLOW_LICHEN, PETRIFIED_LICHEN);
             entries.addAfter(Items.MUD, SILT);
             entries.addAfter(Items.ANDESITE, SCHIST, RHYOLITE);
             entries.addAfter(Items.BLACKSTONE, BLOODSTONE);
 
             entries.addAfter(Items.FARMLAND, ROCKY_DIRT);
 
-            entries.addAfter(Items.FLOWERING_AZALEA, AZALEA_FLOWERS);
+            entries.addAfter(Items.FLOWERING_AZALEA, AZALEA_FLOWERS, TWIG, PEBBLE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.REDSTONE_BLOCKS).register(entries -> entries.addAfter(Items.BARREL, SILT_POT));
@@ -55,6 +60,7 @@ public class TwigsCreativeModeTab {
 
             entries.addAfter(Items.CLAY_BALL, SILT_BALL);
             entries.addAfter(Items.BRICK, SILT_BRICK);
+            entries.addAfter(Items.EGG, PEBBLE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(entries -> {
@@ -289,8 +295,6 @@ public class TwigsCreativeModeTab {
             output.accept(CRIMSON_SHROOMLAMP);
             output.accept(WARPED_SHROOMLAMP);
 
-            output.accept(PETRIFIED_LICHEN);
-
             //basalt blocks
             output.accept(POLISHED_BASALT_BRICKS);
             output.accept(CHISELED_SMOOTH_BASALT_BRICKS);
@@ -341,6 +345,7 @@ public class TwigsCreativeModeTab {
             output.accept(CUT_AMETHYST);
 
             //misc
+            output.accept(PETRIFIED_LICHEN);
             output.accept(BAMBOO_MAT);
             output.accept(COMPACTED_DRIPSTONE);
             output.accept(ROCKY_DIRT);
