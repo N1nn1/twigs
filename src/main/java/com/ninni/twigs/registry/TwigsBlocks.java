@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.phys.shapes.Shapes;
 
 import java.util.function.ToIntFunction;
 
@@ -23,6 +24,10 @@ public class TwigsBlocks {
     @SuppressWarnings("unused") public static final Block POTTED_AZALEA_FLOWERS = register("potted_azalea_flowers", new FlowerPotBlock(AZALEA_FLOWERS, FabricBlockSettings.copyOf(Blocks.POTTED_FLOWERING_AZALEA)));
     public static final Block TWIG = register("twig", new FloorItemBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).instabreak().noOcclusion().sound(SoundType.WOOD)));
     public static final Block PEBBLE = register("pebble", new FloorItemBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).instabreak().noOcclusion().sound(SoundType.STONE)));
+    public static final Block OPALINE_SEASHELL = register("opaline_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(SoundType.BONE_BLOCK)));
+    public static final Block BRONZED_SEASHELL = register("bronzed_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(SoundType.BONE_BLOCK)));
+    public static final Block ROSEATE_SEASHELL = register("roseate_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(SoundType.BONE_BLOCK)));
+    public static final Block TANGERINE_SEASHELL = register("tangerine_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(SoundType.BONE_BLOCK)));
 
     //lamps
     public static final Block LAMP = register("lamp", new LampBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(4.5F).sounds(TwigsSoundEvents.LAMP).luminance(createLampLightLevel())));

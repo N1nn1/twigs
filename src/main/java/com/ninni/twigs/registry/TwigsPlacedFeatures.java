@@ -31,6 +31,7 @@ public class TwigsPlacedFeatures {
     public static final ResourceKey<PlacedFeature> AZALEA_FLOWERS = createKey("azalea_flowers");
     public static final ResourceKey<PlacedFeature> PATCH_TWIG = createKey("patch_twig");
     public static final ResourceKey<PlacedFeature> PATCH_PEBBLE = createKey("patch_pebble");
+    public static final ResourceKey<PlacedFeature> PATCH_SEASHELL = createKey("patch_seashell");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         register(context, ORE_RHYOLITE, TwigsConfiguredFeatures.ORE_RHYOLITE, commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(16))));
@@ -41,6 +42,7 @@ public class TwigsPlacedFeatures {
         register(context, AZALEA_FLOWERS, TwigsConfiguredFeatures.AZALEA_FLOWERS, CountPlacement.of(160), InSquarePlacement.spread(), PlacementUtils.FULL_RANGE, BiomeFilter.biome());
         register(context, PATCH_TWIG, TwigsConfiguredFeatures.PATCH_TWIG, VegetationPlacements.worldSurfaceSquaredWithCount(2));
         register(context, PATCH_PEBBLE, TwigsConfiguredFeatures.PATCH_PEBBLE, VegetationPlacements.worldSurfaceSquaredWithCount(2));
+        register(context, PATCH_SEASHELL, TwigsConfiguredFeatures.PATCH_SEASHELL, VegetationPlacements.worldSurfaceSquaredWithCount(2));
     }
 
     public static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> resourceKey, ResourceKey<ConfiguredFeature<?, ?>> configuredFeature, PlacementModifier... placementModifiers) {
