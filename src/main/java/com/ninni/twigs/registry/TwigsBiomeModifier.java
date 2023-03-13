@@ -32,6 +32,8 @@ public class TwigsBiomeModifier {
         addFeature("add_azalea_flowers", GenerationStep.Decoration.VEGETAL_DECORATION, TwigsPlacedFeatures.AZALEA_FLOWERS, TwigsTags.AZALEA_FLOWERS_GENERATE);
         addFeature("add_twigs", GenerationStep.Decoration.VEGETAL_DECORATION, TwigsPlacedFeatures.PATCH_TWIG, TwigsTags.SPAWNS_TWIG);
         addFeature("add_pebbles", GenerationStep.Decoration.VEGETAL_DECORATION, TwigsPlacedFeatures.PATCH_PEBBLE, TwigsTags.SPAWNS_PEBBLE);
+        addFeature("add_land_sea_shells", GenerationStep.Decoration.VEGETAL_DECORATION, TwigsPlacedFeatures.PATCH_SEASHELL_LAND, TwigsTags.SPAWNS_SEA_SHELL);
+        addFeature("add_water_sea_shells", GenerationStep.Decoration.VEGETAL_DECORATION, TwigsPlacedFeatures.PATCH_SEASHELL_WATER, TwigsTags.SPAWNS_SEA_SHELL);
     }
 
     public static void addFeature(String id, GenerationStep.Decoration decoration, ResourceKey<PlacedFeature> resourceKey, TagKey<Biome> biome) {
