@@ -43,7 +43,6 @@ public class TwigsCreativeModeTab {
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(entries -> {
 
-
             entries.addAfter(Items.GLOW_LICHEN, PETRIFIED_LICHEN);
             entries.addAfter(Items.MUD, SILT);
             entries.addAfter(Items.ANDESITE, SCHIST, RHYOLITE);
@@ -51,7 +50,15 @@ public class TwigsCreativeModeTab {
 
             entries.addAfter(Items.FARMLAND, ROCKY_DIRT);
 
-            entries.addAfter(Items.FLOWERING_AZALEA, AZALEA_FLOWERS, TWIG, PEBBLE);
+            entries.addAfter(Items.FLOWERING_AZALEA,
+                    AZALEA_FLOWERS,
+                    TWIG,
+                    PEBBLE,
+                    BRONZED_SEASHELL,
+                    OPALINE_SEASHELL,
+                    ROSEATE_SEASHELL,
+                    TANGERINE_SEASHELL
+            );
         });
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.REDSTONE_BLOCKS).register(entries -> entries.addAfter(Items.BARREL, SILT_POT));
@@ -288,6 +295,10 @@ public class TwigsCreativeModeTab {
             output.accept(AZALEA_FLOWERS);
             output.accept(TWIG);
             output.accept(PEBBLE);
+            output.accept(BRONZED_SEASHELL);
+            output.accept(OPALINE_SEASHELL);
+            output.accept(ROSEATE_SEASHELL);
+            output.accept(TANGERINE_SEASHELL);
 
             //lamps
             output.accept(lAMP);
