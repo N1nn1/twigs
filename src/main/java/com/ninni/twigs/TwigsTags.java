@@ -3,6 +3,7 @@ package com.ninni.twigs;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
@@ -37,4 +38,6 @@ public interface TwigsTags {
     TagKey<Biome> SPAWNS_TWIG = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "spawns_twig"));
     TagKey<Biome> SPAWNS_PEBBLE = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "spawns_pebble"));
     TagKey<Biome> SPAWNS_SEA_SHELL = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "spawns_sea_shell"));
+
+    TagKey<EntityType<?>> BAMBOO_LEAVES_SLOW_IMMUNE = TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation(MOD_ID, "bamboo_leaves_slow_immune"));
 }

@@ -1,7 +1,6 @@
 package com.ninni.twigs;
 
 import com.ninni.twigs.client.particle.TwigsBreakingItemParticle;
-import com.ninni.twigs.client.particle.TwigsParticleType;
 import com.ninni.twigs.registry.TwigsBlocks;
 import com.ninni.twigs.registry.TwigsEntityTypes;
 import com.ninni.twigs.registry.TwigsParticleTypes;
@@ -17,7 +16,6 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 @Environment(EnvType.CLIENT)
 public class TwigsClient implements ClientModInitializer {
 
-
 	@Override
 	public void onInitializeClient() {
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(),
@@ -26,7 +24,8 @@ public class TwigsClient implements ClientModInitializer {
 				TwigsBlocks.TWIG,
 				TwigsBlocks.PEBBLE,
 				TwigsBlocks.POTTED_AZALEA_FLOWERS,
-				TwigsBlocks.COMPACTED_DRIPSTONE
+				TwigsBlocks.COMPACTED_DRIPSTONE,
+				TwigsBlocks.BAMBOO_LEAVES
 		);
 		ParticleFactoryRegistry.getInstance().register(TwigsParticleTypes.ITEM_PEBBLE, new TwigsBreakingItemParticle.Provider());
 		EntityRendererRegistry.register(TwigsEntityTypes.PEBBLE, ThrownItemRenderer::new);

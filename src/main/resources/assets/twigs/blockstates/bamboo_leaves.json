@@ -1,21 +1,21 @@
 {
   "variants": {
-    "pickles=1": [
+    "layers=1": [
       {
         "model": "twigs:block/bamboo_leaves0"
       }
     ],
-    "pickles=2": [
+    "layers=2": [
       {
         "model": "twigs:block/bamboo_leaves1"
       }
     ],
-    "pickles=3": [
+    "layers=3": [
       {
         "model": "twigs:block/bamboo_leaves2"
       }
     ],
-    "pickles=4": [
+    "layers=4": [
       {
         "model": "twigs:block/bamboo_leaves3"
       }

@@ -19,11 +19,16 @@ public class TwigsItems {
     //collectibles
     public static final Item AZALEA_FLOWERS = register("azalea_flowers", new BlockItem(TwigsBlocks.AZALEA_FLOWERS, new FabricItemSettings()));
     public static final Item TWIG = register("twig", new TwigItem(TwigsBlocks.TWIG, new Item.Properties()));
+    public static final Item BAMBOO_LEAVES = register("bamboo_leaves", new BlockItem(TwigsBlocks.BAMBOO_LEAVES, new Item.Properties()));
     public static final Item PEBBLE = register("pebble", new PebbleItem(TwigsBlocks.PEBBLE, new Item.Properties()));
     public static final Item BRONZED_SEASHELL = register("bronzed_seashell", new BlockItem(TwigsBlocks.BRONZED_SEASHELL, new Item.Properties()));
     public static final Item OPALINE_SEASHELL = register("opaline_seashell", new BlockItem(TwigsBlocks.OPALINE_SEASHELL, new Item.Properties()));
     public static final Item ROSEATE_SEASHELL = register("roseate_seashell", new BlockItem(TwigsBlocks.ROSEATE_SEASHELL, new Item.Properties()));
     public static final Item TANGERINE_SEASHELL = register("tangerine_seashell", new BlockItem(TwigsBlocks.TANGERINE_SEASHELL, new Item.Properties()));
+
+    public static final Item BAMBOO_THATCH = register("bamboo_thatch", new BlockItem(TwigsBlocks.BAMBOO_THATCH, new Item.Properties()));
+    public static final Item BAMBOO_THATCH_STAIRS = register("bamboo_thatch_stairs", new BlockItem(TwigsBlocks.BAMBOO_THATCH_STAIRS, new Item.Properties()));
+    public static final Item BAMBOO_THATCH_SLAB = register("bamboo_thatch_slab", new BlockItem(TwigsBlocks.BAMBOO_THATCH_SLAB, new Item.Properties()));
 
     //lamps
     public static final Item lAMP = register("lamp", new BlockItem(TwigsBlocks.LAMP, new FabricItemSettings()));

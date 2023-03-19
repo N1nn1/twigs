@@ -1,6 +1,6 @@
 {
 	"textures": {
-		"0": "twigs:block/bamboo_leaves_3",
+		"0": "twigs:block/bamboo_leaves3",
 		"particle": "twigs:block/bamboo_leaves3"
 	},
 	"elements": [

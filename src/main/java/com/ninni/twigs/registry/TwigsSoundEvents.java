@@ -25,6 +25,7 @@ public interface    TwigsSoundEvents {
     SoundType GRAVEL_BRICKS = register("gravel_bricks", 1, 1);
     //Change this to custom sound
     SoundType PETRIFIED_LICHEN = SoundType.DEEPSLATE;
+    SoundType BAMBOO_LEAVES = SoundType.AZALEA_LEAVES;
 
 
     private static SoundType register(String name, float volume, float pitch) {

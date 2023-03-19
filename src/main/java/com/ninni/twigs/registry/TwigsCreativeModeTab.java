@@ -299,6 +299,11 @@ public class TwigsCreativeModeTab {
             output.accept(OPALINE_SEASHELL);
             output.accept(ROSEATE_SEASHELL);
             output.accept(TANGERINE_SEASHELL);
+            output.accept(BAMBOO_LEAVES);
+
+            output.accept(BAMBOO_THATCH);
+            output.accept(BAMBOO_THATCH_STAIRS);
+            output.accept(BAMBOO_THATCH_SLAB);
 
             //lamps
             output.accept(lAMP);
