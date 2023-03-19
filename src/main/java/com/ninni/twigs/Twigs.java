@@ -26,6 +26,7 @@ public class Twigs implements ModInitializer {
 				TwigsItems.class,
 				TwigsFeatures.class,
 				TwigsCreativeModeTab.class,
+				TwigsLootTableAdditions.class,
 				TwigsBlocks.class,
 				TwigsStats.class,
 				TwigsBlockEntityType.class,

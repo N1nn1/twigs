@@ -50,6 +50,8 @@ public class TwigsCreativeModeTab {
 
             entries.addAfter(Items.FARMLAND, ROCKY_DIRT);
 
+            entries.addAfter(Items.BAMBOO, BAMBOO_LEAVES);
+
             entries.addAfter(Items.FLOWERING_AZALEA,
                     AZALEA_FLOWERS,
                     TWIG,
@@ -65,6 +67,7 @@ public class TwigsCreativeModeTab {
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(entries -> {
 
+            entries.addAfter(Items.WHEAT, BAMBOO_LEAVES);
             entries.addAfter(Items.CLAY_BALL, SILT_BALL);
             entries.addAfter(Items.BRICK, SILT_BRICK);
             entries.addAfter(Items.EGG, PEBBLE);
@@ -78,6 +81,10 @@ public class TwigsCreativeModeTab {
             entries.addAfter(Items.STONE, STONE_COLUMN);
             entries.addAfter(Items.DEEPSLATE, DEEPSLATE_COLUMN);
             entries.addAfter(Items.GILDED_BLACKSTONE, BLACKSTONE_COLUMN);
+            entries.addAfter(Items.MANGROVE_BUTTON,
+                    BAMBOO_THATCH,
+                    BAMBOO_THATCH_SLAB
+            );
             entries.addAfter(Items.BAMBOO_TRAPDOOR, BAMBOO_MAT);
 
             entries.addAfter(Items.AMETHYST_BLOCK, POLISHED_AMETHYST, CUT_AMETHYST);
@@ -299,11 +306,11 @@ public class TwigsCreativeModeTab {
             output.accept(OPALINE_SEASHELL);
             output.accept(ROSEATE_SEASHELL);
             output.accept(TANGERINE_SEASHELL);
-            output.accept(BAMBOO_LEAVES);
 
+            output.accept(BAMBOO_LEAVES);
             output.accept(BAMBOO_THATCH);
-            output.accept(BAMBOO_THATCH_STAIRS);
             output.accept(BAMBOO_THATCH_SLAB);
+            output.accept(BAMBOO_MAT);
 
             //lamps
             output.accept(lAMP);
@@ -362,7 +369,6 @@ public class TwigsCreativeModeTab {
 
             //misc
             output.accept(PETRIFIED_LICHEN);
-            output.accept(BAMBOO_MAT);
             output.accept(COMPACTED_DRIPSTONE);
             output.accept(ROCKY_DIRT);
 

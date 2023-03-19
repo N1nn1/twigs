@@ -23,16 +23,17 @@ public class TwigsBlocks {
     public static final Block AZALEA_FLOWERS = register("azalea_flowers", new AzaleaFlowersBlock(FabricBlockSettings.of(Material.PLANT).breakInstantly().collidable(false).nonOpaque().sounds(SoundType.MOSS_CARPET)));
     @SuppressWarnings("unused") public static final Block POTTED_AZALEA_FLOWERS = register("potted_azalea_flowers", new FlowerPotBlock(AZALEA_FLOWERS, FabricBlockSettings.copyOf(Blocks.POTTED_FLOWERING_AZALEA)));
     public static final Block TWIG = register("twig", new FloorItemBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).instabreak().noOcclusion().sound(SoundType.WOOD)));
-    public static final Block BAMBOO_LEAVES = register("bamboo_leaves", new BambooLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).noOcclusion().instabreak().noCollission().sound(TwigsSoundEvents.BAMBOO_LEAVES)));
     public static final Block PEBBLE = register("pebble", new FloorItemBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).instabreak().noOcclusion().sound(SoundType.STONE)));
     public static final Block OPALINE_SEASHELL = register("opaline_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(SoundType.BONE_BLOCK)));
     public static final Block BRONZED_SEASHELL = register("bronzed_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(SoundType.BONE_BLOCK)));
     public static final Block ROSEATE_SEASHELL = register("roseate_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(SoundType.BONE_BLOCK)));
     public static final Block TANGERINE_SEASHELL = register("tangerine_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(SoundType.BONE_BLOCK)));
 
+    //bamboo
+    public static final Block BAMBOO_LEAVES = register("bamboo_leaves", new BambooLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).noOcclusion().instabreak().noCollission().sound(TwigsSoundEvents.BAMBOO_LEAVES)));
     public static final Block BAMBOO_THATCH = register("bamboo_thatch", new Block(BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.COLOR_GREEN).strength(0.2F).sound(SoundType.AZALEA_LEAVES)));
-    public static final Block BAMBOO_THATCH_STAIRS = register("bamboo_thatch_stairs", new StairBlock(BAMBOO_THATCH.defaultBlockState(), BlockBehaviour.Properties.copy(BAMBOO_THATCH)));
     public static final Block BAMBOO_THATCH_SLAB = register("bamboo_thatch_slab", new SlabBlock(BlockBehaviour.Properties.copy(BAMBOO_THATCH)));
+    public static final Block BAMBOO_MAT = register("bamboo_mat", new BambooMatBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO_PLANKS)));
 
     //lamps
     public static final Block LAMP = register("lamp", new LampBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(4.5F).sounds(TwigsSoundEvents.LAMP).luminance(createLampLightLevel())));
@@ -81,7 +82,6 @@ public class TwigsBlocks {
 
     //misc
     public static final Block PETRIFIED_LICHEN = register("petrified_lichen", new GlowLichenBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.GLOW_LICHEN).noCollission().strength(0.2f).sound(TwigsSoundEvents.PETRIFIED_LICHEN).lightLevel(GlowLichenBlock.emission(7))));
-    public static final Block BAMBOO_MAT = register("bamboo_mat", new BambooMatBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO_PLANKS)));
     public static final Block COMPACTED_DRIPSTONE = register("compacted_dripstone", new CompactedDripstoneBlock(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK)));
     public static final Block ROCKY_DIRT = register("rocky_dirt", new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(1.25F, 6.0F).sounds(TwigsSoundEvents.ROCKY_DIRT)));
 

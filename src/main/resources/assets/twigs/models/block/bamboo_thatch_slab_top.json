@@ -1,8 +1,91 @@
 {
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "twigs:block/bamboo_thatch",
-    "side": "twigs:block/bamboo_thatch",
-    "top": "twigs:block/bamboo_thatch"
-  }
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/cube",
+	"ambientocclusion": false,
+	"textures": {
+		"0": "twigs:block/bamboo_thatch",
+		"1": "twigs:block/bamboo_thatch_thatch",
+		"particle": "twigs:block/bamboo_thatch"
+	},
+	"elements": [
+		{
+			"from": [0, 8, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 8], "texture": "#0", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 8], "texture": "#0", "cullface": "east"},
+				"south": {"uv": [0, 0, 16, 8], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 8], "texture": "#0", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#0", "cullface": "up"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#0", "cullface": "down"}
+			}
+		},
+		{
+			"name": "north",
+			"from": [0, 13, -4],
+			"to": [16, 13, 0],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 13, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 0], "texture": "#1", "cullface": "north"},
+				"east": {"uv": [0, 0, 4, 0], "texture": "#1", "cullface": "north"},
+				"south": {"uv": [0, 0, 16, 0], "texture": "#1", "cullface": "north"},
+				"west": {"uv": [0, 0, 4, 0], "texture": "#1", "cullface": "north"},
+				"up": {"uv": [0, 0, 16, 4], "rotation": 180, "texture": "#1", "cullface": "north"},
+				"down": {"uv": [0, 0, 16, 4], "texture": "#1", "cullface": "north"}
+			}
+		},
+		{
+			"name": "west",
+			"from": [-4, 13, 0],
+			"to": [0, 13, 16],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [0, 13, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 0], "texture": "#1", "cullface": "west"},
+				"east": {"uv": [0, 0, 16, 0], "texture": "#1", "cullface": "west"},
+				"south": {"uv": [0, 0, 4, 0], "texture": "#1", "cullface": "west"},
+				"west": {"uv": [0, 0, 16, 0], "texture": "#1", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 4], "rotation": 90, "texture": "#1", "cullface": "west"},
+				"down": {"uv": [0, 0, 16, 4], "rotation": 90, "texture": "#1", "cullface": "west"}
+			}
+		},
+		{
+			"name": "south",
+			"from": [0, 13, 16],
+			"to": [16, 13, 20],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 13, 16]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 0], "rotation": 180, "texture": "#1", "cullface": "south"},
+				"east": {"uv": [0, 0, 0, 4], "rotation": 90, "texture": "#1", "cullface": "south"},
+				"south": {"uv": [0, 0, 16, 0], "texture": "#1", "cullface": "south"},
+				"west": {"uv": [0, 0, 0, 4], "rotation": 270, "texture": "#1", "cullface": "south"},
+				"up": {"uv": [0, 0, 16, 4], "texture": "#1", "cullface": "south"},
+				"down": {"uv": [0, 0, 16, 4], "rotation": 180, "texture": "#1", "cullface": "south"}
+			}
+		},
+		{
+			"name": "east",
+			"from": [16, 13, 0],
+			"to": [20, 13, 16],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [16, 13, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 4], "rotation": 90, "texture": "#1", "cullface": "east"},
+				"east": {"uv": [0, 0, 0, 16], "rotation": 270, "texture": "#1", "cullface": "east"},
+				"south": {"uv": [0, 0, 0, 4], "rotation": 270, "texture": "#1", "cullface": "east"},
+				"west": {"uv": [0, 0, 0, 16], "rotation": 270, "texture": "#1", "cullface": "east"},
+				"up": {"uv": [0, 0, 16, 4], "rotation": 270, "texture": "#1", "cullface": "east"},
+				"down": {"uv": [0, 0, 16, 4], "rotation": 270, "texture": "#1", "cullface": "east"}
+			}
+		}
+	],
+	"groups": [
+		0,
+		{
+			"name": "top_thatch",
+			"origin": [8, 5, 16],
+			"color": 0,
+			"nbt": "{}",
+			"armAnimationEnabled": false,
+			"children": [1, 2, 3, 4]
+		}
+	]
 }

@@ -25,7 +25,9 @@ public class TwigsClient implements ClientModInitializer {
 				TwigsBlocks.PEBBLE,
 				TwigsBlocks.POTTED_AZALEA_FLOWERS,
 				TwigsBlocks.COMPACTED_DRIPSTONE,
-				TwigsBlocks.BAMBOO_LEAVES
+				TwigsBlocks.BAMBOO_LEAVES,
+				TwigsBlocks.BAMBOO_THATCH,
+				TwigsBlocks.BAMBOO_THATCH_SLAB
 		);
 		ParticleFactoryRegistry.getInstance().register(TwigsParticleTypes.ITEM_PEBBLE, new TwigsBreakingItemParticle.Provider());
 		EntityRendererRegistry.register(TwigsEntityTypes.PEBBLE, ThrownItemRenderer::new);

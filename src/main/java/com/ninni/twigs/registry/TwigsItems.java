@@ -4,6 +4,7 @@ import com.ninni.twigs.Twigs;
 import com.ninni.twigs.item.PebbleItem;
 import com.ninni.twigs.item.TwigItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -19,16 +20,17 @@ public class TwigsItems {
     //collectibles
     public static final Item AZALEA_FLOWERS = register("azalea_flowers", new BlockItem(TwigsBlocks.AZALEA_FLOWERS, new FabricItemSettings()));
     public static final Item TWIG = register("twig", new TwigItem(TwigsBlocks.TWIG, new Item.Properties()));
-    public static final Item BAMBOO_LEAVES = register("bamboo_leaves", new BlockItem(TwigsBlocks.BAMBOO_LEAVES, new Item.Properties()));
     public static final Item PEBBLE = register("pebble", new PebbleItem(TwigsBlocks.PEBBLE, new Item.Properties()));
     public static final Item BRONZED_SEASHELL = register("bronzed_seashell", new BlockItem(TwigsBlocks.BRONZED_SEASHELL, new Item.Properties()));
     public static final Item OPALINE_SEASHELL = register("opaline_seashell", new BlockItem(TwigsBlocks.OPALINE_SEASHELL, new Item.Properties()));
     public static final Item ROSEATE_SEASHELL = register("roseate_seashell", new BlockItem(TwigsBlocks.ROSEATE_SEASHELL, new Item.Properties()));
     public static final Item TANGERINE_SEASHELL = register("tangerine_seashell", new BlockItem(TwigsBlocks.TANGERINE_SEASHELL, new Item.Properties()));
 
+    //bamboo
+    public static final Item BAMBOO_LEAVES = register("bamboo_leaves", new BlockItem(TwigsBlocks.BAMBOO_LEAVES, new Item.Properties()));
     public static final Item BAMBOO_THATCH = register("bamboo_thatch", new BlockItem(TwigsBlocks.BAMBOO_THATCH, new Item.Properties()));
-    public static final Item BAMBOO_THATCH_STAIRS = register("bamboo_thatch_stairs", new BlockItem(TwigsBlocks.BAMBOO_THATCH_STAIRS, new Item.Properties()));
     public static final Item BAMBOO_THATCH_SLAB = register("bamboo_thatch_slab", new BlockItem(TwigsBlocks.BAMBOO_THATCH_SLAB, new Item.Properties()));
+    public static final Item BAMBOO_MAT = register("bamboo_mat", new BlockItem(TwigsBlocks.BAMBOO_MAT, new FabricItemSettings()));
 
     //lamps
     public static final Item lAMP = register("lamp", new BlockItem(TwigsBlocks.LAMP, new FabricItemSettings()));
@@ -87,7 +89,6 @@ public class TwigsItems {
 
     //misc
     public static final Item PETRIFIED_LICHEN = register("petrified_lichen", new BlockItem(TwigsBlocks.PETRIFIED_LICHEN, new Item.Properties()));
-    public static final Item BAMBOO_MAT = register("bamboo_mat", new BlockItem(TwigsBlocks.BAMBOO_MAT, new FabricItemSettings()));
     public static final Item COMPACTED_DRIPSTONE = register("compacted_dripstone", new BlockItem(TwigsBlocks.COMPACTED_DRIPSTONE, new FabricItemSettings()));
     public static final Item ROCKY_DIRT = register("rocky_dirt", new BlockItem(TwigsBlocks.ROCKY_DIRT, new FabricItemSettings()));
 
@@ -252,6 +253,11 @@ public class TwigsItems {
     public static final Item GREEN_SILT_SHINGLE_WALL =  register("green_silt_shingle_wall", new BlockItem(TwigsBlocks.GREEN_SILT_SHINGLE_WALL, new FabricItemSettings()));
     public static final Item RED_SILT_SHINGLE_WALL =  register("red_silt_shingle_wall", new BlockItem(TwigsBlocks.RED_SILT_SHINGLE_WALL, new FabricItemSettings()));
     public static final Item BLACK_SILT_SHINGLE_WALL =  register("black_silt_shingle_wall", new BlockItem(TwigsBlocks.BLACK_SILT_SHINGLE_WALL, new FabricItemSettings()));
+
+    static {
+        CompostingChanceRegistry composting = CompostingChanceRegistry.INSTANCE;
+        composting.add(BAMBOO_LEAVES, 0.3F);
+    }
 
     private static Item register(String id, Item item) {
         return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Twigs.MOD_ID, id), item);
