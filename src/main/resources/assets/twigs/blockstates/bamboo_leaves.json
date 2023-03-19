@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "pickles=1": [
+      {
+        "model": "twigs:block/bamboo_leaves0"
+      }
+    ],
+    "pickles=2": [
+      {
+        "model": "twigs:block/bamboo_leaves1"
+      }
+    ],
+    "pickles=3": [
+      {
+        "model": "twigs:block/bamboo_leaves2"
+      }
+    ],
+    "pickles=4": [
+      {
+        "model": "twigs:block/bamboo_leaves3"
+      }
+    ]
+  }
+}
