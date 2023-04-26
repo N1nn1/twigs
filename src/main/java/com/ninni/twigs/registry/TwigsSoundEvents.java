@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.SoundType;
 
 public interface    TwigsSoundEvents {
 
+    SoundEvent ITEM_BRONZED_SEASHELL = register("item.bronzed_seashell.play");
     SoundEvent LAMP_ON = register("block.lamp.on");
     SoundEvent LAMP_OFF = register("block.lamp.off");
     SoundEvent ENTITY_PEBBLE_THROW = register("entity.pebble.throw");
@@ -23,7 +24,7 @@ public interface    TwigsSoundEvents {
     SoundType SILT_POT_FILLED = register("silt_pot_filled", 1, 1);
     SoundType SILT_SHINGLES = register("silt_shingles", 1, 1);
     SoundType GRAVEL_BRICKS = register("gravel_bricks", 1, 1);
-    //Change this to custom sound
+    //TODO Change this to custom sound
     SoundType PETRIFIED_LICHEN = SoundType.DEEPSLATE;
     SoundType BAMBOO_LEAVES = SoundType.AZALEA_LEAVES;
 

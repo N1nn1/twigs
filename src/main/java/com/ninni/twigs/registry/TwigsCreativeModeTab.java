@@ -39,7 +39,10 @@ public class TwigsCreativeModeTab {
             );
         });
 
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.addAfter(Items.FLINT_AND_STEEL, TWIG));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> {
+            entries.addAfter(Items.TNT_MINECART, BRONZED_SEASHELL);
+            entries.addAfter(Items.FLINT_AND_STEEL, TWIG);
+        });
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(entries -> {
 

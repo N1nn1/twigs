@@ -20,6 +20,7 @@ public interface TwigsTags {
     TagKey<Item> PACKED_SILT_ITEM = TagKey.create(Registries.ITEM, new ResourceLocation(MOD_ID, "packed_silt"));
     TagKey<Item> PACKED_SILT_FULL_BLOCKS = TagKey.create(Registries.ITEM, new ResourceLocation(MOD_ID, "packed_silt_full_blocks"));
     TagKey<Item> SILT_POTS_ITEM = TagKey.create(Registries.ITEM, new ResourceLocation(MOD_ID, "silt_pots"));
+    TagKey<Item> SEASHELLS = TagKey.create(Registries.ITEM, new ResourceLocation(MOD_ID, "seashells"));
 
     //block tags
     TagKey<Block> SCHIST_BLOCK = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "schist"));

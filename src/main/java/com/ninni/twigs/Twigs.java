@@ -6,6 +6,7 @@ import com.ninni.twigs.entity.Pebble;
 import com.ninni.twigs.registry.*;
 import com.ninni.twigs.stat.TwigsStats;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
 import net.minecraft.Util;
 import net.minecraft.core.Position;
 import net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior;

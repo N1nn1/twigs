@@ -1,4 +1,10 @@
 {
+  "item.bronzed_seashell.play": {
+    "sounds": [
+      "twigs:item/bronzed_seashell/play"
+    ],
+    "subtitle": "subtitles.item.bronzed_seashell.play"
+  },
   "block.lamp.break": {
     "sounds": [
       "twigs:block/lamp/break1",
