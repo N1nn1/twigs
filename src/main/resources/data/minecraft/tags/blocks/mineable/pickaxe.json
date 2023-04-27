@@ -52,6 +52,14 @@
     "twigs:stone_column",
     "twigs:deepslate_column",
     "twigs:blackstone_column",
-    "twigs:petrified_lichen"
+    "twigs:petrified_lichen",
+    "twigs:copper_pillar",
+    "twigs:exposed_copper_pillar",
+    "twigs:weathered_copper_pillar",
+    "twigs:oxidized_copper_pillar",
+    "twigs:waxed_copper_pillar",
+    "twigs:waxed_exposed_copper_pillar",
+    "twigs:waxed_weathered_copper_pillar",
+    "twigs:waxed_oxidized_copper_pillar"
   ]
 }
