@@ -27,6 +27,7 @@ public interface    TwigsSoundEvents {
     //TODO Change this to custom sound
     SoundType PETRIFIED_LICHEN = SoundType.DEEPSLATE;
     SoundType BAMBOO_LEAVES = SoundType.AZALEA_LEAVES;
+    SoundType PAPER_LANTERN = SoundType.WOOL;
 
 
     private static SoundType register(String name, float volume, float pitch) {

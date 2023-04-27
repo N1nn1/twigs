@@ -15,7 +15,15 @@ public class TwigsCreativeModeTab {
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> {
 
-            entries.addAfter(Items.REDSTONE_TORCH, lAMP, SOUL_LAMP);
+            entries.addAfter(Items.REDSTONE_TORCH,
+                    PAPER_LANTERN,
+                    ALLIUM_PAPER_LANTERN,
+                    BLUE_ORCHID_PAPER_LANTERN,
+                    CRIMSON_SHROOMLAMP,
+                    DANDELION_PAPER_LANTERN,
+                    lAMP,
+                    SOUL_LAMP
+            );
             entries.addAfter(Items.GLOW_LICHEN, PETRIFIED_LICHEN);
             entries.addAfter(Items.SHROOMLIGHT, CRIMSON_SHROOMLAMP, WARPED_SHROOMLAMP);
             entries.addAfter(Items.FLOWER_POT,
@@ -314,6 +322,13 @@ public class TwigsCreativeModeTab {
             output.accept(BAMBOO_THATCH);
             output.accept(BAMBOO_THATCH_SLAB);
             output.accept(BAMBOO_MAT);
+
+            //paper lanterns
+            output.accept(PAPER_LANTERN);
+            output.accept(ALLIUM_PAPER_LANTERN);
+            output.accept(BLUE_ORCHID_PAPER_LANTERN);
+            output.accept(CRIMSON_ROOTS_PAPER_LANTERN);
+            output.accept(DANDELION_PAPER_LANTERN);
 
             //lamps
             output.accept(lAMP);

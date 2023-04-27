@@ -34,6 +34,13 @@ public class TwigsItems {
     public static final Item BAMBOO_THATCH_SLAB = register("bamboo_thatch_slab", new BlockItem(TwigsBlocks.BAMBOO_THATCH_SLAB, new Item.Properties()));
     public static final Item BAMBOO_MAT = register("bamboo_mat", new BlockItem(TwigsBlocks.BAMBOO_MAT, new FabricItemSettings()));
 
+    //paper lanterns
+    public static final Item PAPER_LANTERN = register("paper_lantern", new BlockItem(TwigsBlocks.PAPER_LANTERN, new FabricItemSettings()));
+    public static final Item ALLIUM_PAPER_LANTERN = register("allium_paper_lantern", new BlockItem(TwigsBlocks.ALLIUM_PAPER_LANTERN, new FabricItemSettings()));
+    public static final Item BLUE_ORCHID_PAPER_LANTERN = register("blue_orchid_paper_lantern", new BlockItem(TwigsBlocks.BLUE_ORCHID_PAPER_LANTERN, new FabricItemSettings()));
+    public static final Item CRIMSON_ROOTS_PAPER_LANTERN = register("crimson_roots_paper_lantern", new BlockItem(TwigsBlocks.CRIMSON_ROOTS_PAPER_LANTERN, new FabricItemSettings()));
+    public static final Item DANDELION_PAPER_LANTERN = register("dandelion_paper_lantern", new BlockItem(TwigsBlocks.DANDELION_PAPER_LANTERN, new FabricItemSettings()));
+
     //lamps
     public static final Item lAMP = register("lamp", new BlockItem(TwigsBlocks.LAMP, new FabricItemSettings()));
     public static final Item SOUL_LAMP = register("soul_lamp", new BlockItem(TwigsBlocks.SOUL_LAMP, new FabricItemSettings()));

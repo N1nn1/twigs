@@ -30,7 +30,7 @@
       "predicate": {
         "playing": 1
       },
-      "model": "twigs:item/tooting_bronzed_seashell"
+      "model": "twigs:item/playing_bronzed_seashell"
     }
   ]
 }
