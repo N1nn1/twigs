@@ -192,6 +192,31 @@ public class TwigsCreativeModeTab {
                     POLISHED_BLOODSTONE_BRICK_SLAB,
                     POLISHED_BLOODSTONE_BRICK_WALL
             );
+
+            entries.addAfter(Items.CUT_COPPER_SLAB,
+                    COPPER_PILLAR
+                    );
+            entries.addAfter(Items.EXPOSED_CUT_COPPER_SLAB,
+                    EXPOSED_COPPER_PILLAR
+            );
+            entries.addAfter(Items.WEATHERED_CUT_COPPER_SLAB,
+                    WEATHERED_COPPER_PILLAR
+            );
+            entries.addAfter(Items.OXIDIZED_CUT_COPPER_SLAB,
+                    OXIDIZED_COPPER_PILLAR
+            );
+            entries.addAfter(Items.WAXED_CUT_COPPER_SLAB,
+                    WAXED_COPPER_PILLAR
+            );
+            entries.addAfter(Items.WAXED_EXPOSED_CUT_COPPER_SLAB,
+                    WAXED_EXPOSED_COPPER_PILLAR
+            );
+            entries.addAfter(Items.WAXED_WEATHERED_CUT_COPPER_SLAB,
+                    WAXED_WEATHERED_COPPER_PILLAR
+            );
+            entries.addAfter(Items.WAXED_OXIDIZED_CUT_COPPER_SLAB,
+                    WAXED_OXIDIZED_COPPER_PILLAR
+            );
         });
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(entries -> {
@@ -329,6 +354,16 @@ public class TwigsCreativeModeTab {
             output.accept(BLUE_ORCHID_PAPER_LANTERN);
             output.accept(CRIMSON_ROOTS_PAPER_LANTERN);
             output.accept(DANDELION_PAPER_LANTERN);
+
+            //copper pillars
+            output.accept(COPPER_PILLAR);
+            output.accept(EXPOSED_COPPER_PILLAR);
+            output.accept(WEATHERED_COPPER_PILLAR);
+            output.accept(OXIDIZED_COPPER_PILLAR);
+            output.accept(WAXED_COPPER_PILLAR);
+            output.accept(WAXED_EXPOSED_COPPER_PILLAR);
+            output.accept(WAXED_WEATHERED_COPPER_PILLAR);
+            output.accept(WAXED_OXIDIZED_COPPER_PILLAR);
 
             //lamps
             output.accept(lAMP);

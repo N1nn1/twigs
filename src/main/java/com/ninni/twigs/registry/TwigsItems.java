@@ -47,6 +47,16 @@ public class TwigsItems {
     public static final Item CRIMSON_SHROOMLAMP = register("crimson_shroomlamp", new BlockItem(TwigsBlocks.CRIMSON_SHROOMLAMP, new FabricItemSettings()));
     public static final Item WARPED_SHROOMLAMP = register("warped_shroomlamp", new BlockItem(TwigsBlocks.WARPED_SHROOMLAMP, new FabricItemSettings()));
 
+    public static final Item COPPER_PILLAR = register("copper_pillar", new BlockItem(TwigsBlocks.COPPER_PILLAR, new FabricItemSettings()));
+    public static final Item EXPOSED_COPPER_PILLAR = register("exposed_copper_pillar", new BlockItem(TwigsBlocks.EXPOSED_COPPER_PILLAR, new FabricItemSettings()));
+    public static final Item WEATHERED_COPPER_PILLAR = register("weathered_copper_pillar", new BlockItem(TwigsBlocks.WEATHERED_COPPER_PILLAR, new FabricItemSettings()));
+    public static final Item OXIDIZED_COPPER_PILLAR = register("oxidized_copper_pillar", new BlockItem(TwigsBlocks.OXIDIZED_COPPER_PILLAR, new FabricItemSettings()));
+
+    public static final Item WAXED_COPPER_PILLAR = register("waxed_copper_pillar", new BlockItem(TwigsBlocks.WAXED_COPPER_PILLAR, new FabricItemSettings()));
+    public static final Item WAXED_EXPOSED_COPPER_PILLAR = register("waxed_exposed_copper_pillar", new BlockItem(TwigsBlocks.WAXED_EXPOSED_COPPER_PILLAR, new FabricItemSettings()));
+    public static final Item WAXED_WEATHERED_COPPER_PILLAR = register("waxed_weathered_copper_pillar", new BlockItem(TwigsBlocks.WAXED_WEATHERED_COPPER_PILLAR, new FabricItemSettings()));
+    public static final Item WAXED_OXIDIZED_COPPER_PILLAR = register("waxed_oxidized_copper_pillar", new BlockItem(TwigsBlocks.WAXED_OXIDIZED_COPPER_PILLAR, new FabricItemSettings()));
+
     //basalt blocks
     public static final Item POLISHED_BASALT_BRICKS = register("polished_basalt_bricks", new BlockItem(TwigsBlocks.POLISHED_BASALT_BRICKS, new FabricItemSettings()));
     public static final Item SMOOTH_BASALT_BRICKS = register("smooth_basalt_bricks", new BlockItem(TwigsBlocks.SMOOTH_BASALT_BRICKS, new FabricItemSettings()));

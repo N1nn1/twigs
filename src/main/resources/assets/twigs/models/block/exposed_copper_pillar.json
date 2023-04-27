@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cube_column",
   "textures": {
     "end": "twigs:block/exposed_copper_pillar_top",
-    "side": "twigs:block/exposed_copper_pillar_side"
+    "side": "twigs:block/exposed_copper_pillar"
   }
 }
