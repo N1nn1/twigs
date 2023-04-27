@@ -101,6 +101,17 @@ public class TwigsBlocks {
     public static final Block COMPACTED_DRIPSTONE = register("compacted_dripstone", new CompactedDripstoneBlock(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK)));
     public static final Block ROCKY_DIRT = register("rocky_dirt", new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(1.25F, 6.0F).sounds(TwigsSoundEvents.ROCKY_DIRT)));
 
+    //cobblestone bricks
+    public static final Block COBBLESTONE_BRICKS = register("cobblestone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
+    public static final Block COBBLESTONE_BRICK_STAIRS = register("cobblestone_brick_stairs", new StairBlock(COBBLESTONE_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(COBBLESTONE_BRICKS)));
+    public static final Block COBBLESTONE_BRICK_SLAB = register("cobblestone_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(COBBLESTONE_BRICKS)));
+    public static final Block COBBLESTONE_BRICK_WALL = register("cobblestone_brick_wall", new WallBlock(FabricBlockSettings.copyOf(COBBLESTONE_BRICKS)));
+    public static final Block CRACKED_COBBLESTONE_BRICKS = register("cracked_cobblestone_bricks", new Block(FabricBlockSettings.copyOf(COBBLESTONE_BRICKS)));
+    public static final Block MOSSY_COBBLESTONE_BRICKS = register("mossy_cobblestone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.MOSSY_COBBLESTONE)));
+    public static final Block MOSSY_COBBLESTONE_BRICK_STAIRS = register("mossy_cobblestone_brick_stairs", new StairBlock(MOSSY_COBBLESTONE_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(MOSSY_COBBLESTONE_BRICKS)));
+    public static final Block MOSSY_COBBLESTONE_BRICK_SLAB = register("mossy_cobblestone_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(MOSSY_COBBLESTONE_BRICKS)));
+    public static final Block MOSSY_COBBLESTONE_BRICK_WALL = register("mossy_cobblestone_brick_wall", new WallBlock(FabricBlockSettings.copyOf(MOSSY_COBBLESTONE_BRICKS)));
+
     //decorated blackstone bricks
     public static final Block TWISTING_POLISHED_BLACKSTONE_BRICKS = register("twisting_polished_blackstone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.POLISHED_BLACKSTONE_BRICKS)));
     public static final Block TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS = register("twisting_polished_blackstone_brick_stairs", new StairBlock(TWISTING_POLISHED_BLACKSTONE_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(TWISTING_POLISHED_BLACKSTONE_BRICKS)));

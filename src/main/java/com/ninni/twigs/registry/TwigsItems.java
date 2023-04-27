@@ -101,6 +101,17 @@ public class TwigsItems {
     public static final Item COMPACTED_DRIPSTONE = register("compacted_dripstone", new BlockItem(TwigsBlocks.COMPACTED_DRIPSTONE, new FabricItemSettings()));
     public static final Item ROCKY_DIRT = register("rocky_dirt", new BlockItem(TwigsBlocks.ROCKY_DIRT, new FabricItemSettings()));
 
+    //cobblestone bricks
+    public static final Item COBBLESTONE_BRICKS = register("cobblestone_bricks", new BlockItem(TwigsBlocks.COBBLESTONE_BRICKS, new FabricItemSettings()));
+    public static final Item COBBLESTONE_BRICK_STAIRS = register("cobblestone_brick_stairs", new BlockItem(TwigsBlocks.COBBLESTONE_BRICK_STAIRS, new FabricItemSettings()));
+    public static final Item COBBLESTONE_BRICK_SLAB = register("cobblestone_brick_slab", new BlockItem(TwigsBlocks.COBBLESTONE_BRICK_SLAB, new FabricItemSettings()));
+    public static final Item COBBLESTONE_BRICK_WALL = register("cobblestone_brick_wall", new BlockItem(TwigsBlocks.COBBLESTONE_BRICK_WALL, new FabricItemSettings()));
+    public static final Item CRACKED_COBBLESTONE_BRICKS = register("cracked_cobblestone_bricks", new BlockItem(TwigsBlocks.CRACKED_COBBLESTONE_BRICKS, new FabricItemSettings()));
+    public static final Item MOSSY_COBBLESTONE_BRICKS = register("mossy_cobblestone_bricks", new BlockItem(TwigsBlocks.MOSSY_COBBLESTONE_BRICKS, new FabricItemSettings()));
+    public static final Item MOSSY_COBBLESTONE_BRICK_STAIRS = register("mossy_cobblestone_brick_stairs", new BlockItem(TwigsBlocks.MOSSY_COBBLESTONE_BRICK_STAIRS, new FabricItemSettings()));
+    public static final Item MOSSY_COBBLESTONE_BRICK_SLAB = register("mossy_cobblestone_brick_slab", new BlockItem(TwigsBlocks.MOSSY_COBBLESTONE_BRICK_SLAB, new FabricItemSettings()));
+    public static final Item MOSSY_COBBLESTONE_BRICK_WALL = register("mossy_cobblestone_brick_wall", new BlockItem(TwigsBlocks.MOSSY_COBBLESTONE_BRICK_WALL, new FabricItemSettings()));
+
     //decorated blackstone bricks
     public static final Item TWISTING_POLISHED_BLACKSTONE_BRICKS = register("twisting_polished_blackstone_bricks", new BlockItem(TwigsBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS, new FabricItemSettings()));
     public static final Item TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS = register("twisting_polished_blackstone_brick_stairs", new BlockItem(TwigsBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS, new FabricItemSettings()));

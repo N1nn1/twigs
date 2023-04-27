@@ -20,7 +20,6 @@ public class TwigsCreativeModeTab {
                     PAPER_LANTERN,
                     ALLIUM_PAPER_LANTERN,
                     BLUE_ORCHID_PAPER_LANTERN,
-                    CRIMSON_SHROOMLAMP,
                     DANDELION_PAPER_LANTERN,
                     lAMP,
                     SOUL_LAMP
@@ -87,7 +86,7 @@ public class TwigsCreativeModeTab {
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(entries -> {
 
-            entries.addAfter(Items.REINFORCED_DEEPSLATE, COMPACTED_DRIPSTONE);
+            entries.addAfter(Items.REINFORCED_DEEPSLATE, Blocks.DRIPSTONE_BLOCK, COMPACTED_DRIPSTONE);
 
             entries.addAfter(Items.QUARTZ_BLOCK, QUARTZ_COLUMN);
             entries.addAfter(Items.STONE, STONE_COLUMN);
@@ -100,6 +99,21 @@ public class TwigsCreativeModeTab {
             entries.addAfter(Items.BAMBOO_TRAPDOOR, BAMBOO_MAT);
 
             entries.addAfter(Items.AMETHYST_BLOCK, POLISHED_AMETHYST, CUT_AMETHYST);
+
+            entries.addAfter(Items.COBBLESTONE_WALL,
+                    COBBLESTONE_BRICKS,
+                    COBBLESTONE_BRICK_STAIRS,
+                    COBBLESTONE_BRICK_SLAB,
+                    COBBLESTONE_BRICK_WALL,
+                    CRACKED_COBBLESTONE_BRICKS
+            );
+
+            entries.addAfter(Items.MOSSY_COBBLESTONE_WALL,
+                    MOSSY_COBBLESTONE_BRICKS,
+                    MOSSY_COBBLESTONE_BRICK_STAIRS,
+                    MOSSY_COBBLESTONE_BRICK_SLAB,
+                    MOSSY_COBBLESTONE_BRICK_WALL
+            );
 
             entries.addAfter(Items.BRICKS, CRACKED_BRICKS);
             entries.addAfter(Items.BRICK_WALL,
@@ -440,6 +454,17 @@ public class TwigsCreativeModeTab {
             output.accept(COMPACTED_DRIPSTONE);
             output.accept(ROCKY_DIRT);
 
+            //cobblestone bricks
+            output.accept(COBBLESTONE_BRICKS);
+            output.accept(COBBLESTONE_BRICK_STAIRS);
+            output.accept(COBBLESTONE_BRICK_SLAB);
+            output.accept(COBBLESTONE_BRICK_WALL);
+            output.accept(CRACKED_COBBLESTONE_BRICKS);
+            output.accept(MOSSY_COBBLESTONE_BRICKS);
+            output.accept(MOSSY_COBBLESTONE_BRICK_STAIRS);
+            output.accept(MOSSY_COBBLESTONE_BRICK_SLAB);
+            output.accept(MOSSY_COBBLESTONE_BRICK_WALL);
+
             //decorated blackstone bricks
             output.accept(TWISTING_POLISHED_BLACKSTONE_BRICKS);
             output.accept(TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS);
@@ -463,7 +488,7 @@ public class TwigsCreativeModeTab {
             output.accept(POLISHED_TUFF_BRICK_SLAB);
             output.accept(POLISHED_TUFF_BRICK_WALL);
 
-            //tuff blocks
+            //calcite blocks
             output.accept(CALCITE_STAIRS);
             output.accept(CALCITE_SLAB);
             output.accept(CALCITE_WALL);
