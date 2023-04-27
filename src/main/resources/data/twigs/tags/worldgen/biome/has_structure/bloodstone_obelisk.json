@@ -1,8 +1,7 @@
 {
   "replace": false,
   "values": [
-    "minecraft:crimson_forest",
-    "minecraft:warped_forest",
-    "minecraft:basalt_deltas"
+    "minecraft:nether_wastes",
+    "minecraft:crimson_forest"
   ]
 }

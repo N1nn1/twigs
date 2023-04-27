@@ -36,9 +36,10 @@ public class ObeliskStructure extends Structure {
             for (int z = -range; z <= range; z++) {
                 BlockPos structurePos = blockPos.offset(x, 0, z);
                 NoiseColumn verticalBlockSample = context.chunkGenerator().getBaseColumn(structurePos.getX(), structurePos.getZ(), context.heightAccessor(), context.randomState());
-                for (int y = 127; y > context.chunkGenerator().getSeaLevel(); y--) {
+                for (int y = 80; y > context.chunkGenerator().getSeaLevel(); y--) {
                     if (verticalBlockSample.getBlock(y - 1).canOcclude() && verticalBlockSample.getBlock(y).isAir() && verticalBlockSample.getBlock(y + 14).isAir()) {
                         flag = true;
+                        break;
                     }
                 }
             }
