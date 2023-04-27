@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
 
 import static com.ninni.twigs.Twigs.MOD_ID;
 import static com.ninni.twigs.registry.TwigsItems.*;
@@ -152,6 +153,30 @@ public class TwigsCreativeModeTab {
             );
 
             entries.addAfter(Items.POLISHED_ANDESITE_SLAB,
+                    Blocks.CALCITE,
+                    CALCITE_STAIRS,
+                    CALCITE_SLAB,
+                    CALCITE_WALL,
+                    POLISHED_CALCITE,
+                    POLISHED_CALCITE_STAIRS,
+                    POLISHED_CALCITE_SLAB,
+                    POLISHED_CALCITE_BRICKS,
+                    CRACKED_POLISHED_CALCITE_BRICKS,
+                    POLISHED_CALCITE_BRICK_STAIRS,
+                    POLISHED_CALCITE_BRICK_SLAB,
+                    POLISHED_CALCITE_BRICK_WALL,
+                    Blocks.TUFF,
+                    TUFF_STAIRS,
+                    TUFF_SLAB,
+                    TUFF_WALL,
+                    POLISHED_TUFF,
+                    POLISHED_TUFF_STAIRS,
+                    POLISHED_TUFF_SLAB,
+                    POLISHED_TUFF_BRICKS,
+                    CRACKED_POLISHED_TUFF_BRICKS,
+                    POLISHED_TUFF_BRICK_STAIRS,
+                    POLISHED_TUFF_BRICK_SLAB,
+                    POLISHED_TUFF_BRICK_WALL,
                     SCHIST,
                     SCHIST_STAIRS,
                     SCHIST_SLAB,
@@ -355,6 +380,12 @@ public class TwigsCreativeModeTab {
             output.accept(CRIMSON_ROOTS_PAPER_LANTERN);
             output.accept(DANDELION_PAPER_LANTERN);
 
+            //lamps
+            output.accept(lAMP);
+            output.accept(SOUL_LAMP);
+            output.accept(CRIMSON_SHROOMLAMP);
+            output.accept(WARPED_SHROOMLAMP);
+
             //copper pillars
             output.accept(COPPER_PILLAR);
             output.accept(EXPOSED_COPPER_PILLAR);
@@ -364,12 +395,6 @@ public class TwigsCreativeModeTab {
             output.accept(WAXED_EXPOSED_COPPER_PILLAR);
             output.accept(WAXED_WEATHERED_COPPER_PILLAR);
             output.accept(WAXED_OXIDIZED_COPPER_PILLAR);
-
-            //lamps
-            output.accept(lAMP);
-            output.accept(SOUL_LAMP);
-            output.accept(CRIMSON_SHROOMLAMP);
-            output.accept(WARPED_SHROOMLAMP);
 
             //basalt blocks
             output.accept(POLISHED_BASALT_BRICKS);
@@ -387,16 +412,6 @@ public class TwigsCreativeModeTab {
             output.accept(MOSSY_BRICK_STAIRS);
             output.accept(MOSSY_BRICK_SLAB);
             output.accept(MOSSY_BRICK_WALL);
-
-            //decorated blackstone bricks
-            output.accept(TWISTING_POLISHED_BLACKSTONE_BRICKS);
-            output.accept(TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS);
-            output.accept(TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB);
-            output.accept(TWISTING_POLISHED_BLACKSTONE_BRICK_WALL);
-            output.accept(WEEPING_POLISHED_BLACKSTONE_BRICKS);
-            output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS);
-            output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB);
-            output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_WALL);
 
             //gravel bricks
             output.accept(GRAVEL_BRICKS);
@@ -424,6 +439,42 @@ public class TwigsCreativeModeTab {
             output.accept(PETRIFIED_LICHEN);
             output.accept(COMPACTED_DRIPSTONE);
             output.accept(ROCKY_DIRT);
+
+            //decorated blackstone bricks
+            output.accept(TWISTING_POLISHED_BLACKSTONE_BRICKS);
+            output.accept(TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS);
+            output.accept(TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB);
+            output.accept(TWISTING_POLISHED_BLACKSTONE_BRICK_WALL);
+            output.accept(WEEPING_POLISHED_BLACKSTONE_BRICKS);
+            output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS);
+            output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB);
+            output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_WALL);
+
+            //tuff blocks
+            output.accept(TUFF_STAIRS);
+            output.accept(TUFF_SLAB);
+            output.accept(TUFF_WALL);
+            output.accept(POLISHED_TUFF);
+            output.accept(POLISHED_TUFF_STAIRS);
+            output.accept(POLISHED_TUFF_SLAB);
+            output.accept(POLISHED_TUFF_BRICKS);
+            output.accept(CRACKED_POLISHED_TUFF_BRICKS);
+            output.accept(POLISHED_TUFF_BRICK_STAIRS);
+            output.accept(POLISHED_TUFF_BRICK_SLAB);
+            output.accept(POLISHED_TUFF_BRICK_WALL);
+
+            //tuff blocks
+            output.accept(CALCITE_STAIRS);
+            output.accept(CALCITE_SLAB);
+            output.accept(CALCITE_WALL);
+            output.accept(POLISHED_CALCITE);
+            output.accept(POLISHED_CALCITE_STAIRS);
+            output.accept(POLISHED_CALCITE_SLAB);
+            output.accept(POLISHED_CALCITE_BRICKS);
+            output.accept(CRACKED_POLISHED_CALCITE_BRICKS);
+            output.accept(POLISHED_CALCITE_BRICK_STAIRS);
+            output.accept(POLISHED_CALCITE_BRICK_SLAB);
+            output.accept(POLISHED_CALCITE_BRICK_WALL);
 
             //schist blocks
             output.accept(SCHIST);

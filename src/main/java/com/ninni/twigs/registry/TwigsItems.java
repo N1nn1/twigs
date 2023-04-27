@@ -47,11 +47,11 @@ public class TwigsItems {
     public static final Item CRIMSON_SHROOMLAMP = register("crimson_shroomlamp", new BlockItem(TwigsBlocks.CRIMSON_SHROOMLAMP, new FabricItemSettings()));
     public static final Item WARPED_SHROOMLAMP = register("warped_shroomlamp", new BlockItem(TwigsBlocks.WARPED_SHROOMLAMP, new FabricItemSettings()));
 
+    //copper pillars
     public static final Item COPPER_PILLAR = register("copper_pillar", new BlockItem(TwigsBlocks.COPPER_PILLAR, new FabricItemSettings()));
     public static final Item EXPOSED_COPPER_PILLAR = register("exposed_copper_pillar", new BlockItem(TwigsBlocks.EXPOSED_COPPER_PILLAR, new FabricItemSettings()));
     public static final Item WEATHERED_COPPER_PILLAR = register("weathered_copper_pillar", new BlockItem(TwigsBlocks.WEATHERED_COPPER_PILLAR, new FabricItemSettings()));
     public static final Item OXIDIZED_COPPER_PILLAR = register("oxidized_copper_pillar", new BlockItem(TwigsBlocks.OXIDIZED_COPPER_PILLAR, new FabricItemSettings()));
-
     public static final Item WAXED_COPPER_PILLAR = register("waxed_copper_pillar", new BlockItem(TwigsBlocks.WAXED_COPPER_PILLAR, new FabricItemSettings()));
     public static final Item WAXED_EXPOSED_COPPER_PILLAR = register("waxed_exposed_copper_pillar", new BlockItem(TwigsBlocks.WAXED_EXPOSED_COPPER_PILLAR, new FabricItemSettings()));
     public static final Item WAXED_WEATHERED_COPPER_PILLAR = register("waxed_weathered_copper_pillar", new BlockItem(TwigsBlocks.WAXED_WEATHERED_COPPER_PILLAR, new FabricItemSettings()));
@@ -73,16 +73,6 @@ public class TwigsItems {
     public static final Item MOSSY_BRICK_STAIRS = register("mossy_brick_stairs", new BlockItem(TwigsBlocks.MOSSY_BRICK_STAIRS, new FabricItemSettings()));
     public static final Item MOSSY_BRICK_SLAB = register("mossy_brick_slab", new BlockItem(TwigsBlocks.MOSSY_BRICK_SLAB, new FabricItemSettings()));
     public static final Item MOSSY_BRICK_WALL = register("mossy_brick_wall", new BlockItem(TwigsBlocks.MOSSY_BRICK_WALL, new FabricItemSettings()));
-
-    //decorated blackstone bricks
-    public static final Item TWISTING_POLISHED_BLACKSTONE_BRICKS = register("twisting_polished_blackstone_bricks", new BlockItem(TwigsBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS, new FabricItemSettings()));
-    public static final Item TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS = register("twisting_polished_blackstone_brick_stairs", new BlockItem(TwigsBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS, new FabricItemSettings()));
-    public static final Item TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB = register("twisting_polished_blackstone_brick_slab", new BlockItem(TwigsBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB, new FabricItemSettings()));
-    public static final Item TWISTING_POLISHED_BLACKSTONE_BRICK_WALL = register("twisting_polished_blackstone_brick_wall", new BlockItem(TwigsBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_WALL, new FabricItemSettings()));
-    public static final Item WEEPING_POLISHED_BLACKSTONE_BRICKS = register("weeping_polished_blackstone_bricks", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS, new FabricItemSettings()));
-    public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS = register("weeping_polished_blackstone_brick_stairs", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS, new FabricItemSettings()));
-    public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB = register("weeping_polished_blackstone_brick_slab", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB, new FabricItemSettings()));
-    public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_WALL = register("weeping_polished_blackstone_brick_wall", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL, new FabricItemSettings()));
 
     //gravel bricks
     public static final Item GRAVEL_BRICKS = register("gravel_bricks", new BlockItem(TwigsBlocks.GRAVEL_BRICKS, new FabricItemSettings()));
@@ -110,6 +100,42 @@ public class TwigsItems {
     public static final Item PETRIFIED_LICHEN = register("petrified_lichen", new BlockItem(TwigsBlocks.PETRIFIED_LICHEN, new Item.Properties()));
     public static final Item COMPACTED_DRIPSTONE = register("compacted_dripstone", new BlockItem(TwigsBlocks.COMPACTED_DRIPSTONE, new FabricItemSettings()));
     public static final Item ROCKY_DIRT = register("rocky_dirt", new BlockItem(TwigsBlocks.ROCKY_DIRT, new FabricItemSettings()));
+
+    //decorated blackstone bricks
+    public static final Item TWISTING_POLISHED_BLACKSTONE_BRICKS = register("twisting_polished_blackstone_bricks", new BlockItem(TwigsBlocks.TWISTING_POLISHED_BLACKSTONE_BRICKS, new FabricItemSettings()));
+    public static final Item TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS = register("twisting_polished_blackstone_brick_stairs", new BlockItem(TwigsBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS, new FabricItemSettings()));
+    public static final Item TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB = register("twisting_polished_blackstone_brick_slab", new BlockItem(TwigsBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB, new FabricItemSettings()));
+    public static final Item TWISTING_POLISHED_BLACKSTONE_BRICK_WALL = register("twisting_polished_blackstone_brick_wall", new BlockItem(TwigsBlocks.TWISTING_POLISHED_BLACKSTONE_BRICK_WALL, new FabricItemSettings()));
+    public static final Item WEEPING_POLISHED_BLACKSTONE_BRICKS = register("weeping_polished_blackstone_bricks", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICKS, new FabricItemSettings()));
+    public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS = register("weeping_polished_blackstone_brick_stairs", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS, new FabricItemSettings()));
+    public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB = register("weeping_polished_blackstone_brick_slab", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB, new FabricItemSettings()));
+    public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_WALL = register("weeping_polished_blackstone_brick_wall", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL, new FabricItemSettings()));
+
+    //tuff blocks
+    public static final Item TUFF_STAIRS = register("tuff_stairs", new BlockItem(TwigsBlocks.TUFF_STAIRS, new FabricItemSettings()));
+    public static final Item TUFF_SLAB = register("tuff_slab", new BlockItem(TwigsBlocks.TUFF_SLAB, new FabricItemSettings()));
+    public static final Item TUFF_WALL = register("tuff_wall", new BlockItem(TwigsBlocks.TUFF_WALL, new FabricItemSettings()));
+    public static final Item POLISHED_TUFF = register("polished_tuff", new BlockItem(TwigsBlocks.POLISHED_TUFF, new FabricItemSettings()));
+    public static final Item POLISHED_TUFF_STAIRS = register("polished_tuff_stairs", new BlockItem(TwigsBlocks.POLISHED_TUFF_STAIRS, new FabricItemSettings()));
+    public static final Item POLISHED_TUFF_SLAB = register("polished_tuff_slab", new BlockItem(TwigsBlocks.POLISHED_TUFF_SLAB, new FabricItemSettings()));
+    public static final Item POLISHED_TUFF_BRICKS = register("polished_tuff_bricks", new BlockItem(TwigsBlocks.POLISHED_TUFF_BRICKS, new FabricItemSettings()));
+    public static final Item POLISHED_TUFF_BRICK_STAIRS = register("polished_tuff_brick_stairs", new BlockItem(TwigsBlocks.POLISHED_TUFF_BRICK_STAIRS, new FabricItemSettings()));
+    public static final Item POLISHED_TUFF_BRICK_SLAB = register("polished_tuff_brick_slab", new BlockItem(TwigsBlocks.POLISHED_TUFF_BRICK_SLAB, new FabricItemSettings()));
+    public static final Item POLISHED_TUFF_BRICK_WALL = register("polished_tuff_brick_wall", new BlockItem(TwigsBlocks.POLISHED_TUFF_BRICK_WALL, new FabricItemSettings()));
+    public static final Item CRACKED_POLISHED_TUFF_BRICKS = register("cracked_polished_tuff_bricks", new BlockItem(TwigsBlocks.CRACKED_POLISHED_TUFF_BRICKS, new FabricItemSettings()));
+
+    //calcite blocks
+    public static final Item CALCITE_STAIRS = register("calcite_stairs", new BlockItem(TwigsBlocks.CALCITE_STAIRS, new FabricItemSettings()));
+    public static final Item CALCITE_SLAB = register("calcite_slab", new BlockItem(TwigsBlocks.CALCITE_SLAB, new FabricItemSettings()));
+    public static final Item CALCITE_WALL = register("calcite_wall", new BlockItem(TwigsBlocks.CALCITE_WALL, new FabricItemSettings()));
+    public static final Item POLISHED_CALCITE = register("polished_calcite", new BlockItem(TwigsBlocks.POLISHED_CALCITE, new FabricItemSettings()));
+    public static final Item POLISHED_CALCITE_STAIRS = register("polished_calcite_stairs", new BlockItem(TwigsBlocks.POLISHED_CALCITE_STAIRS, new FabricItemSettings()));
+    public static final Item POLISHED_CALCITE_SLAB = register("polished_calcite_slab", new BlockItem(TwigsBlocks.POLISHED_CALCITE_SLAB, new FabricItemSettings()));
+    public static final Item POLISHED_CALCITE_BRICKS = register("polished_calcite_bricks", new BlockItem(TwigsBlocks.POLISHED_CALCITE_BRICKS, new FabricItemSettings()));
+    public static final Item POLISHED_CALCITE_BRICK_STAIRS = register("polished_calcite_brick_stairs", new BlockItem(TwigsBlocks.POLISHED_CALCITE_BRICK_STAIRS, new FabricItemSettings()));
+    public static final Item POLISHED_CALCITE_BRICK_SLAB = register("polished_calcite_brick_slab", new BlockItem(TwigsBlocks.POLISHED_CALCITE_BRICK_SLAB, new FabricItemSettings()));
+    public static final Item POLISHED_CALCITE_BRICK_WALL = register("polished_calcite_brick_wall", new BlockItem(TwigsBlocks.POLISHED_CALCITE_BRICK_WALL, new FabricItemSettings()));
+    public static final Item CRACKED_POLISHED_CALCITE_BRICKS = register("cracked_polished_calcite_bricks", new BlockItem(TwigsBlocks.CRACKED_POLISHED_CALCITE_BRICKS, new FabricItemSettings()));
 
     //schist blocks
     public static final Item SCHIST = register("schist", new BlockItem(TwigsBlocks.SCHIST, new FabricItemSettings()));
