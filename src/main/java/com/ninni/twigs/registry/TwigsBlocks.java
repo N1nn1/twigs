@@ -23,10 +23,10 @@ public class TwigsBlocks {
     @SuppressWarnings("unused") public static final Block POTTED_AZALEA_FLOWERS = register("potted_azalea_flowers", new FlowerPotBlock(AZALEA_FLOWERS, FabricBlockSettings.copyOf(Blocks.POTTED_FLOWERING_AZALEA)));
     public static final Block TWIG = register("twig", new FloorItemBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).instabreak().noOcclusion().sound(SoundType.WOOD)));
     public static final Block PEBBLE = register("pebble", new FloorItemBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).instabreak().noOcclusion().sound(SoundType.STONE)));
-    public static final Block OPALINE_SEASHELL = register("opaline_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(SoundType.BONE_BLOCK)));
-    public static final Block BRONZED_SEASHELL = register("bronzed_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(SoundType.BONE_BLOCK)));
-    public static final Block ROSEATE_SEASHELL = register("roseate_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(SoundType.BONE_BLOCK)));
-    public static final Block TANGERINE_SEASHELL = register("tangerine_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(SoundType.BONE_BLOCK)));
+    public static final Block OPALINE_SEASHELL = register("opaline_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
+    public static final Block BRONZED_SEASHELL = register("bronzed_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
+    public static final Block ROSEATE_SEASHELL = register("roseate_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
+    public static final Block TANGERINE_SEASHELL = register("tangerine_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
 
     //bamboo
     public static final Block BAMBOO_LEAVES = register("bamboo_leaves", new BambooLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).noOcclusion().instabreak().noCollission().sound(TwigsSoundEvents.BAMBOO_LEAVES)));
@@ -141,7 +141,7 @@ public class TwigsBlocks {
     public static final Block POLISHED_TUFF = register("polished_tuff", new Block(FabricBlockSettings.copyOf(Blocks.TUFF)));
     public static final Block POLISHED_TUFF_STAIRS = register("polished_tuff_stairs", new StairBlock(POLISHED_TUFF.defaultBlockState(), FabricBlockSettings.copyOf(POLISHED_TUFF)));
     public static final Block POLISHED_TUFF_SLAB = register("polished_tuff_slab", new SlabBlock(FabricBlockSettings.copyOf(POLISHED_TUFF)));
-    public static final Block POLISHED_TUFF_BRICKS = register("polished_tuff_bricks", new Block(FabricBlockSettings.copyOf(Blocks.TUFF)));
+    public static final Block POLISHED_TUFF_BRICKS = register("polished_tuff_bricks", new Block(FabricBlockSettings.copyOf(Blocks.TUFF).sounds(TwigsSoundEvents.TUFF_BRICKS)));
     public static final Block POLISHED_TUFF_BRICK_STAIRS = register("polished_tuff_brick_stairs", new StairBlock(POLISHED_TUFF_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(POLISHED_TUFF_BRICKS)));
     public static final Block POLISHED_TUFF_BRICK_SLAB = register("polished_tuff_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(POLISHED_TUFF_BRICKS)));
     public static final Block POLISHED_TUFF_BRICK_WALL = register("polished_tuff_brick_wall", new WallBlock(FabricBlockSettings.copyOf(POLISHED_TUFF_BRICKS)));
@@ -154,49 +154,49 @@ public class TwigsBlocks {
     public static final Block POLISHED_CALCITE = register("polished_calcite", new Block(FabricBlockSettings.copyOf(Blocks.CALCITE)));
     public static final Block POLISHED_CALCITE_STAIRS = register("polished_calcite_stairs", new StairBlock(POLISHED_CALCITE.defaultBlockState(), FabricBlockSettings.copyOf(POLISHED_CALCITE)));
     public static final Block POLISHED_CALCITE_SLAB = register("polished_calcite_slab", new SlabBlock(FabricBlockSettings.copyOf(POLISHED_CALCITE)));
-    public static final Block POLISHED_CALCITE_BRICKS = register("polished_calcite_bricks", new Block(FabricBlockSettings.copyOf(Blocks.CALCITE)));
+    public static final Block POLISHED_CALCITE_BRICKS = register("polished_calcite_bricks", new Block(FabricBlockSettings.copyOf(Blocks.CALCITE).sounds(TwigsSoundEvents.CALCITE_BRICKS)));
     public static final Block POLISHED_CALCITE_BRICK_STAIRS = register("polished_calcite_brick_stairs", new StairBlock(POLISHED_CALCITE_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(POLISHED_CALCITE_BRICKS)));
     public static final Block POLISHED_CALCITE_BRICK_SLAB = register("polished_calcite_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(POLISHED_CALCITE_BRICKS)));
     public static final Block POLISHED_CALCITE_BRICK_WALL = register("polished_calcite_brick_wall", new WallBlock(FabricBlockSettings.copyOf(POLISHED_CALCITE_BRICKS)));
     public static final Block CRACKED_POLISHED_CALCITE_BRICKS = register("cracked_polished_calcite_bricks", new Block(FabricBlockSettings.copyOf(POLISHED_CALCITE_BRICKS)));
 
     //schist blocks
-    public static final Block SCHIST = register("schist", new Block(FabricBlockSettings.of(Material.STONE, MaterialColor.TERRACOTTA_WHITE).requiresTool().strength(1F).sounds(SoundType.CALCITE)));
+    public static final Block SCHIST = register("schist", new Block(FabricBlockSettings.of(Material.STONE, MaterialColor.TERRACOTTA_WHITE).requiresTool().strength(1F).sounds(TwigsSoundEvents.SCHIST)));
     public static final Block SCHIST_STAIRS = register("schist_stairs", new StairBlock(SCHIST.defaultBlockState(), FabricBlockSettings.copyOf(SCHIST)));
     public static final Block SCHIST_SLAB = register("schist_slab", new SlabBlock(FabricBlockSettings.copyOf(SCHIST)));
     public static final Block SCHIST_WALL = register("schist_wall", new WallBlock(FabricBlockSettings.copyOf(SCHIST)));
     public static final Block POLISHED_SCHIST = register("polished_schist", new Block(FabricBlockSettings.copyOf(SCHIST)));
     public static final Block POLISHED_SCHIST_STAIRS = register("polished_schist_stairs", new StairBlock(POLISHED_SCHIST.defaultBlockState(), FabricBlockSettings.copyOf(POLISHED_SCHIST)));
     public static final Block POLISHED_SCHIST_SLAB = register("polished_schist_slab", new SlabBlock(FabricBlockSettings.copyOf(POLISHED_SCHIST)));
-    public static final Block POLISHED_SCHIST_BRICKS = register("polished_schist_bricks", new Block(FabricBlockSettings.copyOf(SCHIST)));
+    public static final Block POLISHED_SCHIST_BRICKS = register("polished_schist_bricks", new Block(FabricBlockSettings.copyOf(SCHIST).sounds(TwigsSoundEvents.SCHIST_BRICKS)));
     public static final Block POLISHED_SCHIST_BRICK_STAIRS = register("polished_schist_brick_stairs", new StairBlock(POLISHED_SCHIST_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(POLISHED_SCHIST_BRICKS)));
     public static final Block POLISHED_SCHIST_BRICK_SLAB = register("polished_schist_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(POLISHED_SCHIST_BRICKS)));
     public static final Block POLISHED_SCHIST_BRICK_WALL = register("polished_schist_brick_wall", new WallBlock(FabricBlockSettings.copyOf(POLISHED_SCHIST_BRICKS)));
     public static final Block CRACKED_POLISHED_SCHIST_BRICKS = register("cracked_polished_schist_bricks", new Block(FabricBlockSettings.copyOf(POLISHED_SCHIST_BRICKS)));
 
     //rhyolite blocks
-    public static final Block RHYOLITE = register("rhyolite", new RotatedPillarBlock(FabricBlockSettings.of(Material.STONE, MaterialColor.TERRACOTTA_WHITE).requiresTool().strength(1.5F).sounds(SoundType.DEEPSLATE)));
+    public static final Block RHYOLITE = register("rhyolite", new RotatedPillarBlock(FabricBlockSettings.of(Material.STONE, MaterialColor.TERRACOTTA_WHITE).requiresTool().strength(1.5F).sounds(TwigsSoundEvents.RHYOLITE)));
     public static final Block RHYOLITE_STAIRS = register("rhyolite_stairs", new StairBlock(RHYOLITE.defaultBlockState(), FabricBlockSettings.copyOf(RHYOLITE)));
     public static final Block RHYOLITE_SLAB = register("rhyolite_slab", new SlabBlock(FabricBlockSettings.copyOf(RHYOLITE)));
     public static final Block RHYOLITE_WALL = register("rhyolite_wall", new WallBlock(FabricBlockSettings.copyOf(RHYOLITE)));
     public static final Block POLISHED_RHYOLITE = register("polished_rhyolite", new Block(FabricBlockSettings.copyOf(RHYOLITE)));
     public static final Block POLISHED_RHYOLITE_STAIRS = register("polished_rhyolite_stairs", new StairBlock(POLISHED_RHYOLITE.defaultBlockState(), FabricBlockSettings.copyOf(POLISHED_RHYOLITE)));
     public static final Block POLISHED_RHYOLITE_SLAB = register("polished_rhyolite_slab", new SlabBlock(FabricBlockSettings.copyOf(POLISHED_RHYOLITE)));
-    public static final Block POLISHED_RHYOLITE_BRICKS = register("polished_rhyolite_bricks", new Block(FabricBlockSettings.copyOf(RHYOLITE)));
+    public static final Block POLISHED_RHYOLITE_BRICKS = register("polished_rhyolite_bricks", new Block(FabricBlockSettings.copyOf(RHYOLITE).sounds(TwigsSoundEvents.RHYOLITE_BRICKS)));
     public static final Block POLISHED_RHYOLITE_BRICK_STAIRS = register("polished_rhyolite_brick_stairs", new StairBlock(POLISHED_RHYOLITE_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(POLISHED_RHYOLITE_BRICKS)));
     public static final Block POLISHED_RHYOLITE_BRICK_SLAB = register("polished_rhyolite_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(POLISHED_RHYOLITE_BRICKS)));
     public static final Block POLISHED_RHYOLITE_BRICK_WALL = register("polished_rhyolite_brick_wall", new WallBlock(FabricBlockSettings.copyOf(POLISHED_RHYOLITE_BRICKS)));
     public static final Block CRACKED_POLISHED_RHYOLITE_BRICKS = register("cracked_polished_rhyolite_bricks", new Block(FabricBlockSettings.copyOf(POLISHED_RHYOLITE_BRICKS)));
 
     //bloodstone blocks
-    public static final Block BLOODSTONE = register("bloodstone", new Block(FabricBlockSettings.of(Material.STONE, MaterialColor.TERRACOTTA_WHITE).requiresTool().strength(1F).sounds(SoundType.BASALT)));
+    public static final Block BLOODSTONE = register("bloodstone", new Block(FabricBlockSettings.of(Material.STONE, MaterialColor.TERRACOTTA_WHITE).requiresTool().strength(1F).sounds(TwigsSoundEvents.BLOODSTONE)));
     public static final Block BLOODSTONE_STAIRS = register("bloodstone_stairs", new StairBlock(BLOODSTONE.defaultBlockState(), FabricBlockSettings.copyOf(BLOODSTONE)));
     public static final Block BLOODSTONE_SLAB = register("bloodstone_slab", new SlabBlock(FabricBlockSettings.copyOf(BLOODSTONE)));
     public static final Block BLOODSTONE_WALL = register("bloodstone_wall", new WallBlock(FabricBlockSettings.copyOf(BLOODSTONE)));
     public static final Block POLISHED_BLOODSTONE = register("polished_bloodstone", new Block(FabricBlockSettings.copyOf(BLOODSTONE)));
     public static final Block POLISHED_BLOODSTONE_STAIRS = register("polished_bloodstone_stairs", new StairBlock(POLISHED_BLOODSTONE.defaultBlockState(), FabricBlockSettings.copyOf(POLISHED_BLOODSTONE)));
     public static final Block POLISHED_BLOODSTONE_SLAB = register("polished_bloodstone_slab", new SlabBlock(FabricBlockSettings.copyOf(POLISHED_BLOODSTONE)));
-    public static final Block POLISHED_BLOODSTONE_BRICKS = register("polished_bloodstone_bricks", new Block(FabricBlockSettings.copyOf(BLOODSTONE)));
+    public static final Block POLISHED_BLOODSTONE_BRICKS = register("polished_bloodstone_bricks", new Block(FabricBlockSettings.copyOf(BLOODSTONE).sounds(TwigsSoundEvents.BLOODSTONE_BRICKS)));
     public static final Block POLISHED_BLOODSTONE_BRICK_STAIRS = register("polished_bloodstone_brick_stairs", new StairBlock(POLISHED_BLOODSTONE_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(POLISHED_BLOODSTONE_BRICKS)));
     public static final Block POLISHED_BLOODSTONE_BRICK_SLAB = register("polished_bloodstone_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(POLISHED_BLOODSTONE_BRICKS)));
     public static final Block POLISHED_BLOODSTONE_BRICK_WALL = register("polished_bloodstone_brick_wall", new WallBlock(FabricBlockSettings.copyOf(POLISHED_BLOODSTONE_BRICKS)));
