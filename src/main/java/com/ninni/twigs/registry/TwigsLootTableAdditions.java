@@ -34,9 +34,6 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class TwigsLootTableAdditions {
-    private static final float[] TWIG_DROP_CHANCE = new float[]{0.05F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F};
-    private static final LootItemCondition.Builder WITH_SILK_TOUCH = MatchTool.toolMatches(ItemPredicate.Builder.item().hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1))));
-    private static final LootItemCondition.Builder WITH_SHEARS = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS));
 
     static {
         Supplier<Set<ResourceLocation>> leafTablesSupplier = Suppliers.memoize(() -> {
