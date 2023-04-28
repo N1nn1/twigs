@@ -8,6 +8,7 @@
     "FallingBlockEntityInvoker",
     "FeatureContextAccessor",
     "FlowerBlockMixin",
+    "LootItemAccessor",
     "MultifaceGrowthFeatureMixin"
   ],
   "client": [
