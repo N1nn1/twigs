@@ -24,10 +24,20 @@ public interface    TwigsSoundEvents {
     SoundType SILT_POT_FILLED = register("silt_pot_filled", 1, 1);
     SoundType SILT_SHINGLES = register("silt_shingles", 1, 1);
     SoundType GRAVEL_BRICKS = register("gravel_bricks", 1, 1);
+
     //TODO Change this to custom sound
-    SoundType PETRIFIED_LICHEN = SoundType.DEEPSLATE;
-    SoundType BAMBOO_LEAVES = SoundType.AZALEA_LEAVES;
-    SoundType PAPER_LANTERN = SoundType.WOOL;
+    SoundType PETRIFIED_LICHEN = register("petrified_lichen", 1, 1);
+    SoundType BAMBOO_LEAVES = register("bamboo_leaves", 1, 1);
+    SoundType PAPER_LANTERN = register("paper_lantern", 1, 1);
+    SoundType SEASHELL = register("seashell", 1, 1);
+    SoundType TUFF_BRICKS = register("tuff_bricks", 1, 1);
+    SoundType CALCITE_BRICKS = register("calcite_bricks", 1, 1);
+    SoundType RHYOLITE = register("rhyolite", 1, 1);
+    SoundType RHYOLITE_BRICKS = register("rhyolite_bricks", 1, 1);
+    SoundType SCHIST = register("schist", 1, 1);
+    SoundType SCHIST_BRICKS = register("schist_bricks", 1, 1);
+    SoundType BLOODSTONE = register("bloodstone", 1, 1);
+    SoundType BLOODSTONE_BRICKS = register("bloodstone_bricks", 1, 1);
 
 
     private static SoundType register(String name, float volume, float pitch) {
