@@ -1,0 +1,9 @@
+{
+	"parent": "twigs:block/template_table_leg",
+	"textures": {
+		"side": "twigs:block/mangrove_table",
+		"bottom": "twigs:block/mangrove_table_bottom",
+		"top": "twigs:block/mangrove_table_top",
+		"particle": "block/mangrove_planks"
+	}
+}

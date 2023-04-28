@@ -33,14 +33,16 @@
   "block.twigs.crimson_shroomlamp": "Fungolampada cremisi",
   "block.twigs.warped_shroomlamp": "Fungolampada distorta",
 
-  "block.twigs.copper_pillar": "Pilastro di rame",
-  "block.twigs.exposed_copper_pillar": "Pilastro di rame esposto",
-  "block.twigs.weathered_copper_pillar": "Pilastro di rame corroso",
-  "block.twigs.oxidized_copper_pillar": "Pilastro di rame ossidato",
-  "block.twigs.waxed_copper_pillar": "Pilastro di rame cerato",
-  "block.twigs.waxed_exposed_copper_pillar": "Pilastro di rame esposto cerato",
-  "block.twigs.waxed_weathered_copper_pillar": "Pilastro di rame corroso cerato",
-  "block.twigs.waxed_oxidized_copper_pillar": "Pilastro di rame ossidato cerato",
+  "block.twigs.oak_table": "Tavolo di quercia",
+  "block.twigs.spruce_table": "Tavolo di abete",
+  "block.twigs.birch_table": "Tavolo di betulla",
+  "block.twigs.acacia_table": "Tavolo di acacia",
+  "block.twigs.jungle_table": "Tavolo di giungla",
+  "block.twigs.dark_oak_table": "Tavolo di quercia scura",
+  "block.twigs.mangrove_table": "Tavolo di mangrovia",
+  "block.twigs.crimson_table": "Tavolo cremisi",
+  "block.twigs.warped_table": "Tavolo distorto",
+  "block.twigs.bamboo_table": "Tavolo di bambù",
 
   "block.twigs.polished_basalt_bricks": "Mattoni di basalto levigato",
   "block.twigs.chiseled_smooth_basalt_bricks": "Mattoni di basalto liscio cesellati",
@@ -57,12 +59,10 @@
   "block.twigs.mossy_brick_slab": "Lastra di mattoni muschiosi",
   "block.twigs.mossy_brick_wall": "Muretto di mattoni muschiosi",
 
-
   "block.twigs.gravel_bricks": "Mattoni di ghiaia",
   "block.twigs.gravel_brick_wall": "Muretto di mattoni di ghiaia",
   "block.twigs.gravel_brick_slab": "Lastra di mattoni di ghiaia",
   "block.twigs.gravel_brick_stairs": "Scalini di mattoni di ghiaia",
-
 
   "block.twigs.smooth_stone_bricks": "Mattoni di pietra liscia",
   "block.twigs.smooth_stone_brick_wall": "Muretto di mattoni di pietra liscia",
@@ -73,6 +73,15 @@
   "block.twigs.stone_column": "Colonna di pietra",
   "block.twigs.deepslate_column": "Colonna di ardesia profonda",
   "block.twigs.blackstone_column": "Colonna di pietranera",
+
+  "block.twigs.copper_pillar": "Pilastro di rame",
+  "block.twigs.exposed_copper_pillar": "Pilastro di rame esposto",
+  "block.twigs.weathered_copper_pillar": "Pilastro di rame corroso",
+  "block.twigs.oxidized_copper_pillar": "Pilastro di rame ossidato",
+  "block.twigs.waxed_copper_pillar": "Pilastro di rame cerato",
+  "block.twigs.waxed_exposed_copper_pillar": "Pilastro di rame esposto cerato",
+  "block.twigs.waxed_weathered_copper_pillar": "Pilastro di rame corroso cerato",
+  "block.twigs.waxed_oxidized_copper_pillar": "Pilastro di rame ossidato cerato",
 
   "block.twigs.polished_amethyst": "Ametista levigata",
   "block.twigs.cut_amethyst": "Ametista intagliata",

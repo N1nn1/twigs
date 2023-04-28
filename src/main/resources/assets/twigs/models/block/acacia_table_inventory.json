@@ -1,0 +1,9 @@
+{
+	"parent": "twigs:block/template_table_inventory",
+	"textures": {
+		"side": "twigs:block/acacia_table",
+		"bottom": "twigs:block/acacia_table_bottom",
+		"top": "twigs:block/acacia_table_top",
+		"particle": "block/acacia_planks"
+	}
+}

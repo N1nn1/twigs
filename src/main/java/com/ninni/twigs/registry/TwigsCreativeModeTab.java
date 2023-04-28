@@ -86,6 +86,17 @@ public class TwigsCreativeModeTab {
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(entries -> {
 
+            entries.addAfter(Items.OAK_SLAB, OAK_TABLE);
+            entries.addAfter(Items.SPRUCE_SLAB, SPRUCE_TABLE);
+            entries.addAfter(Items.BIRCH_SLAB, BIRCH_TABLE);
+            entries.addAfter(Items.JUNGLE_SLAB, JUNGLE_TABLE);
+            entries.addAfter(Items.ACACIA_SLAB, ACACIA_TABLE);
+            entries.addAfter(Items.DARK_OAK_SLAB, DARK_OAK_TABLE);
+            entries.addAfter(Items.MANGROVE_SLAB, MANGROVE_TABLE);
+            entries.addAfter(Items.BAMBOO_SLAB, BAMBOO_TABLE);
+            entries.addAfter(Items.CRIMSON_SLAB, CRIMSON_TABLE);
+            entries.addAfter(Items.WARPED_SLAB, WARPED_TABLE);
+
             entries.addAfter(Items.REINFORCED_DEEPSLATE, Blocks.DRIPSTONE_BLOCK, COMPACTED_DRIPSTONE);
 
             entries.addAfter(Items.QUARTZ_BLOCK, QUARTZ_COLUMN);
@@ -400,15 +411,17 @@ public class TwigsCreativeModeTab {
             output.accept(CRIMSON_SHROOMLAMP);
             output.accept(WARPED_SHROOMLAMP);
 
-            //copper pillars
-            output.accept(COPPER_PILLAR);
-            output.accept(EXPOSED_COPPER_PILLAR);
-            output.accept(WEATHERED_COPPER_PILLAR);
-            output.accept(OXIDIZED_COPPER_PILLAR);
-            output.accept(WAXED_COPPER_PILLAR);
-            output.accept(WAXED_EXPOSED_COPPER_PILLAR);
-            output.accept(WAXED_WEATHERED_COPPER_PILLAR);
-            output.accept(WAXED_OXIDIZED_COPPER_PILLAR);
+            //tables
+            output.accept(OAK_TABLE);
+            output.accept(SPRUCE_TABLE);
+            output.accept(BIRCH_TABLE);
+            output.accept(JUNGLE_TABLE);
+            output.accept(ACACIA_TABLE);
+            output.accept(DARK_OAK_TABLE);
+            output.accept(MANGROVE_TABLE);
+            output.accept(BAMBOO_TABLE);
+            output.accept(CRIMSON_TABLE);
+            output.accept(WARPED_TABLE);
 
             //basalt blocks
             output.accept(POLISHED_BASALT_BRICKS);
@@ -444,6 +457,16 @@ public class TwigsCreativeModeTab {
             output.accept(STONE_COLUMN);
             output.accept(DEEPSLATE_COLUMN);
             output.accept(BLACKSTONE_COLUMN);
+
+            //copper pillars
+            output.accept(COPPER_PILLAR);
+            output.accept(EXPOSED_COPPER_PILLAR);
+            output.accept(WEATHERED_COPPER_PILLAR);
+            output.accept(OXIDIZED_COPPER_PILLAR);
+            output.accept(WAXED_COPPER_PILLAR);
+            output.accept(WAXED_EXPOSED_COPPER_PILLAR);
+            output.accept(WAXED_WEATHERED_COPPER_PILLAR);
+            output.accept(WAXED_OXIDIZED_COPPER_PILLAR);
 
             //amethyst blocks
             output.accept(POLISHED_AMETHYST);

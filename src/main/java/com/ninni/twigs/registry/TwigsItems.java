@@ -47,15 +47,17 @@ public class TwigsItems {
     public static final Item CRIMSON_SHROOMLAMP = register("crimson_shroomlamp", new BlockItem(TwigsBlocks.CRIMSON_SHROOMLAMP, new FabricItemSettings()));
     public static final Item WARPED_SHROOMLAMP = register("warped_shroomlamp", new BlockItem(TwigsBlocks.WARPED_SHROOMLAMP, new FabricItemSettings()));
 
-    //copper pillars
-    public static final Item COPPER_PILLAR = register("copper_pillar", new BlockItem(TwigsBlocks.COPPER_PILLAR, new FabricItemSettings()));
-    public static final Item EXPOSED_COPPER_PILLAR = register("exposed_copper_pillar", new BlockItem(TwigsBlocks.EXPOSED_COPPER_PILLAR, new FabricItemSettings()));
-    public static final Item WEATHERED_COPPER_PILLAR = register("weathered_copper_pillar", new BlockItem(TwigsBlocks.WEATHERED_COPPER_PILLAR, new FabricItemSettings()));
-    public static final Item OXIDIZED_COPPER_PILLAR = register("oxidized_copper_pillar", new BlockItem(TwigsBlocks.OXIDIZED_COPPER_PILLAR, new FabricItemSettings()));
-    public static final Item WAXED_COPPER_PILLAR = register("waxed_copper_pillar", new BlockItem(TwigsBlocks.WAXED_COPPER_PILLAR, new FabricItemSettings()));
-    public static final Item WAXED_EXPOSED_COPPER_PILLAR = register("waxed_exposed_copper_pillar", new BlockItem(TwigsBlocks.WAXED_EXPOSED_COPPER_PILLAR, new FabricItemSettings()));
-    public static final Item WAXED_WEATHERED_COPPER_PILLAR = register("waxed_weathered_copper_pillar", new BlockItem(TwigsBlocks.WAXED_WEATHERED_COPPER_PILLAR, new FabricItemSettings()));
-    public static final Item WAXED_OXIDIZED_COPPER_PILLAR = register("waxed_oxidized_copper_pillar", new BlockItem(TwigsBlocks.WAXED_OXIDIZED_COPPER_PILLAR, new FabricItemSettings()));
+    //tables
+    public static final Item OAK_TABLE = register("oak_table", new BlockItem(TwigsBlocks.OAK_TABLE, new FabricItemSettings()));
+    public static final Item SPRUCE_TABLE = register("spruce_table", new BlockItem(TwigsBlocks.SPRUCE_TABLE, new FabricItemSettings()));
+    public static final Item BIRCH_TABLE = register("birch_table", new BlockItem(TwigsBlocks.BIRCH_TABLE, new FabricItemSettings()));
+    public static final Item JUNGLE_TABLE = register("jungle_table", new BlockItem(TwigsBlocks.JUNGLE_TABLE, new FabricItemSettings()));
+    public static final Item ACACIA_TABLE = register("acacia_table", new BlockItem(TwigsBlocks.ACACIA_TABLE, new FabricItemSettings()));
+    public static final Item DARK_OAK_TABLE = register("dark_oak_table", new BlockItem(TwigsBlocks.DARK_OAK_TABLE, new FabricItemSettings()));
+    public static final Item MANGROVE_TABLE = register("mangrove_table", new BlockItem(TwigsBlocks.MANGROVE_TABLE, new FabricItemSettings()));
+    public static final Item BAMBOO_TABLE = register("bamboo_table", new BlockItem(TwigsBlocks.BAMBOO_TABLE, new FabricItemSettings()));
+    public static final Item CRIMSON_TABLE = register("crimson_table", new BlockItem(TwigsBlocks.CRIMSON_TABLE, new FabricItemSettings()));
+    public static final Item WARPED_TABLE = register("warped_table", new BlockItem(TwigsBlocks.WARPED_TABLE, new FabricItemSettings()));
 
     //basalt blocks
     public static final Item POLISHED_BASALT_BRICKS = register("polished_basalt_bricks", new BlockItem(TwigsBlocks.POLISHED_BASALT_BRICKS, new FabricItemSettings()));
@@ -91,6 +93,16 @@ public class TwigsItems {
     public static final Item STONE_COLUMN = register("stone_column", new BlockItem(TwigsBlocks.STONE_COLUMN, new FabricItemSettings()));
     public static final Item DEEPSLATE_COLUMN = register("deepslate_column", new BlockItem(TwigsBlocks.DEEPSLATE_COLUMN, new FabricItemSettings()));
     public static final Item BLACKSTONE_COLUMN = register("blackstone_column", new BlockItem(TwigsBlocks.BLACKSTONE_COLUMN, new FabricItemSettings()));
+
+    //copper pillars
+    public static final Item COPPER_PILLAR = register("copper_pillar", new BlockItem(TwigsBlocks.COPPER_PILLAR, new FabricItemSettings()));
+    public static final Item EXPOSED_COPPER_PILLAR = register("exposed_copper_pillar", new BlockItem(TwigsBlocks.EXPOSED_COPPER_PILLAR, new FabricItemSettings()));
+    public static final Item WEATHERED_COPPER_PILLAR = register("weathered_copper_pillar", new BlockItem(TwigsBlocks.WEATHERED_COPPER_PILLAR, new FabricItemSettings()));
+    public static final Item OXIDIZED_COPPER_PILLAR = register("oxidized_copper_pillar", new BlockItem(TwigsBlocks.OXIDIZED_COPPER_PILLAR, new FabricItemSettings()));
+    public static final Item WAXED_COPPER_PILLAR = register("waxed_copper_pillar", new BlockItem(TwigsBlocks.WAXED_COPPER_PILLAR, new FabricItemSettings()));
+    public static final Item WAXED_EXPOSED_COPPER_PILLAR = register("waxed_exposed_copper_pillar", new BlockItem(TwigsBlocks.WAXED_EXPOSED_COPPER_PILLAR, new FabricItemSettings()));
+    public static final Item WAXED_WEATHERED_COPPER_PILLAR = register("waxed_weathered_copper_pillar", new BlockItem(TwigsBlocks.WAXED_WEATHERED_COPPER_PILLAR, new FabricItemSettings()));
+    public static final Item WAXED_OXIDIZED_COPPER_PILLAR = register("waxed_oxidized_copper_pillar", new BlockItem(TwigsBlocks.WAXED_OXIDIZED_COPPER_PILLAR, new FabricItemSettings()));
 
     //amethyst blocks
     public static final Item POLISHED_AMETHYST = register("polished_amethyst", new BlockItem(TwigsBlocks.POLISHED_AMETHYST, new FabricItemSettings()));

@@ -1,0 +1,72 @@
+{
+	"parent": "minecraft:block/cube",
+	"elements": [
+		{
+			"name": "top",
+			"from": [0, 12, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 4], "texture": "#side"},
+				"east": {"uv": [0, 0, 16, 4], "texture": "#side"},
+				"south": {"uv": [0, 0, 16, 4], "texture": "#side"},
+				"west": {"uv": [0, 0, 16, 4], "texture": "#side"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#bottom"}
+			}
+		},
+		{
+			"name": "leg1",
+			"from": [12, 0, 12],
+			"to": [15, 12, 15],
+			"faces": {
+				"north": {"uv": [15, 4, 12, 16], "texture": "#side"},
+				"east": {"uv": [4, 4, 1, 16], "texture": "#side"},
+				"south": {"uv": [15, 4, 12, 16], "texture": "#side"},
+				"west": {"uv": [4, 4, 1, 16], "texture": "#side"},
+				"up": {"uv": [1, 1, 4, 4], "texture": "#top"},
+				"down": {"uv": [1, 1, 4, 4], "texture": "#bottom"}
+			}
+		},
+		{
+			"name": "leg2",
+			"from": [1, 0, 12],
+			"to": [4, 12, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [16, 0, 0]},
+			"faces": {
+				"north": {"uv": [4, 4, 1, 16], "texture": "#side"},
+				"east": {"uv": [15, 4, 12, 16], "texture": "#side"},
+				"south": {"uv": [4, 4, 1, 16], "texture": "#side"},
+				"west": {"uv": [15, 4, 12, 16], "texture": "#side"},
+				"up": {"uv": [15, 1, 12, 4], "texture": "#top"},
+				"down": {"uv": [15, 1, 12, 4], "texture": "#bottom"}
+			}
+		},
+		{
+			"name": "leg3",
+			"from": [12, 0, 1],
+			"to": [15, 12, 4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [16, 0, 0]},
+			"faces": {
+				"north": {"uv": [4, 4, 1, 16], "texture": "#side"},
+				"east": {"uv": [15, 4, 12, 16], "texture": "#side"},
+				"south": {"uv": [4, 4, 1, 16], "texture": "#side"},
+				"west": {"uv": [15, 4, 12, 16], "texture": "#side"},
+				"up": {"uv": [4, 12, 1, 15], "texture": "#top"},
+				"down": {"uv": [4, 12, 1, 15], "texture": "#bottom"}
+			}
+		},
+		{
+			"name": "leg4",
+			"from": [1, 0, 1],
+			"to": [4, 12, 4],
+			"faces": {
+				"north": {"uv": [15, 4, 12, 16], "texture": "#side"},
+				"east": {"uv": [4, 4, 1, 16], "texture": "#side"},
+				"south": {"uv": [15, 4, 12, 16], "texture": "#side"},
+				"west": {"uv": [4, 4, 1, 16], "texture": "#side"},
+				"up": {"uv": [12, 12, 15, 15], "texture": "#top"},
+				"down": {"uv": [12, 12, 15, 15], "texture": "#bottom"}
+			}
+		}
+	]
+}

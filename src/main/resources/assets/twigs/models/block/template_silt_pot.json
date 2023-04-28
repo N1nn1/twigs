@@ -43,8 +43,8 @@
 	],
 	"display": {
 		"head": {
-			"rotation": [-180, 0, -19],
-			"translation": [-5.75, 10, 0]
+			"rotation": [-180, 0, 0],
+			"translation": [0, 14, 0]
 		}
 	}
 }

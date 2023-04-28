@@ -1,0 +1,9 @@
+{
+	"parent": "twigs:block/template_table_top",
+	"textures": {
+		"side": "twigs:block/birch_table",
+		"bottom": "twigs:block/birch_table_bottom",
+		"top": "twigs:block/birch_table_top",
+		"particle": "block/birch_planks"
+	}
+}

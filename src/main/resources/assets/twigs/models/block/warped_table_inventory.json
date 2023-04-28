@@ -1,0 +1,9 @@
+{
+	"parent": "twigs:block/template_table_inventory",
+	"textures": {
+		"side": "twigs:block/warped_table",
+		"bottom": "twigs:block/warped_table_bottom",
+		"top": "twigs:block/warped_table_top",
+		"particle": "block/warped_planks"
+	}
+}

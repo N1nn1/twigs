@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "twigs:jungle_table"
+    ]
+  },
+  "criteria": {
+    "has_jungle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:jungle_planks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "twigs:jungle_table"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_jungle",
+      "has_the_recipe"
+    ]
+  ]
+}

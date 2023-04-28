@@ -1,0 +1,9 @@
+{
+	"parent": "twigs:block/template_table_top",
+	"textures": {
+		"side": "twigs:block/spruce_table",
+		"bottom": "twigs:block/spruce_table_bottom",
+		"top": "twigs:block/spruce_table_top",
+		"particle": "block/spruce_planks"
+	}
+}

@@ -21,6 +21,7 @@ public interface TwigsTags {
     TagKey<Item> PACKED_SILT_FULL_BLOCKS = TagKey.create(Registries.ITEM, new ResourceLocation(MOD_ID, "packed_silt_full_blocks"));
     TagKey<Item> SILT_POTS_ITEM = TagKey.create(Registries.ITEM, new ResourceLocation(MOD_ID, "silt_pots"));
     TagKey<Item> SEASHELLS = TagKey.create(Registries.ITEM, new ResourceLocation(MOD_ID, "seashells"));
+    TagKey<Item> TABLES_ITEM = TagKey.create(Registries.ITEM, new ResourceLocation(MOD_ID, "tables"));
 
     //block tags
     TagKey<Block> SCHIST_BLOCK = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "schist"));
@@ -30,6 +31,7 @@ public interface TwigsTags {
     TagKey<Block> SILT_POTS_BLOCK = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "silt_pots"));
     TagKey<Block> OFFSET_REMOVER = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "offset_remover"));
     TagKey<Block> SEA_SHELL_PLACEABLES = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "sea_shell_placeables"));
+    TagKey<Block> TABLES_BLOCK = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "tables"));
 
     //biome tags
     TagKey<Biome> BLOODSTONE_GENERATES = TagKey.create(Registries.BIOME, new ResourceLocation(MOD_ID, "bloodstone_generates"));

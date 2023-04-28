@@ -1,0 +1,9 @@
+{
+	"parent": "twigs:block/template_table_inventory",
+	"textures": {
+		"side": "twigs:block/jungle_table",
+		"bottom": "twigs:block/jungle_table_bottom",
+		"top": "twigs:block/jungle_table_top",
+		"particle": "block/jungle_planks"
+	}
+}
