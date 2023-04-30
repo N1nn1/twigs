@@ -48,6 +48,95 @@
       }
     ]
   },
+  "block.rhyolite.break": {
+    "sounds": [
+      "twigs:block/rhyolite/heavy1",
+      "twigs:block/rhyolite/heavy2",
+      "twigs:block/rhyolite/heavy3",
+      "twigs:block/rhyolite/heavy4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.rhyolite.fall": {
+    "sounds": [
+      {
+        "name": "twigs:block.rhyolite.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.rhyolite.hit": {
+    "sounds": [
+      {
+        "name": "twigs:block.rhyolite.step",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.rhyolite.place": {
+    "sounds": [
+      {
+        "name": "twigs:block.rhyolite.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.rhyolite.step": {
+    "sounds": [
+      "twigs:block/rhyolite/light1",
+      "twigs:block/rhyolite/light2",
+      "twigs:block/rhyolite/light3",
+      "twigs:block/rhyolite/light4",
+      "twigs:block/rhyolite/light5"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.rhyolite_bricks.break": {
+    "sounds": [
+      "twigs:block/rhyolite_bricks/heavy1",
+      "twigs:block/rhyolite_bricks/heavy2",
+      "twigs:block/rhyolite_bricks/heavy3",
+      "twigs:block/rhyolite_bricks/heavy4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.rhyolite_bricks.fall": {
+    "sounds": [
+      {
+        "name": "twigs:block.rhyolite_bricks.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.rhyolite_bricks.hit": {
+    "sounds": [
+      {
+        "name": "block.rhyolite.hit",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.rhyolite_bricks.place": {
+    "sounds": [
+      {
+        "name": "twigs:block.rhyolite_bricks.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.rhyolite_bricks.step": {
+    "sounds": [
+      {
+        "name": "block.rhyolite.step",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
   "block.tuff_bricks.break": {
     "sounds": [
       "twigs:block/tuff_bricks/heavy1",
