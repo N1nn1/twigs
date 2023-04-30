@@ -6,13 +6,9 @@
   "refmap": "twigs.refmap.json",
   "mixins": [
     "BlockStateBaseMixin",
-    "BuilderAccessor",
     "FallingBlockEntityInvoker",
     "FeatureContextAccessor",
     "FlowerBlockMixin",
-    "LootItemAccessor",
-    "LootPoolAccessor",
-    "LootTableAccessor",
     "MultifaceGrowthFeatureMixin"
   ],
   "client": [
