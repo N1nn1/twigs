@@ -28,7 +28,7 @@ public class LampBlock extends Block {
         if (!player.isShiftKeyDown()) {
             final boolean wasLit = state.getValue(LIT);
             level.setBlockAndUpdate(pos, state.setValue(LIT, !wasLit));
-            level.playSound(null, pos, !wasLit ? TwigsSoundEvents.LAMP_ON : TwigsSoundEvents.LAMP_OFF, SoundSource.BLOCKS, 1, 1);
+            level.playSound(null, pos, !wasLit ? TwigsSoundEvents.LAMP_ON.get() : TwigsSoundEvents.LAMP_OFF.get(), SoundSource.BLOCKS, 1, 1);
             return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;

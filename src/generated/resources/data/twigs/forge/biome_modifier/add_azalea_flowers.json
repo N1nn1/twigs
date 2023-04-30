@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#twigs:azalea_flowers_generate",
+  "features": "twigs:azalea_flowers",
+  "step": "vegetal_decoration"
+}

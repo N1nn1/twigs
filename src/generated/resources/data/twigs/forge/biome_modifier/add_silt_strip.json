@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_nether",
+  "features": "twigs:silt_strip",
+  "step": "underground_ores"
+}

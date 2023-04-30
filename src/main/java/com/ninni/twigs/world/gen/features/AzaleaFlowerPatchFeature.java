@@ -39,14 +39,14 @@ public class AzaleaFlowerPatchFeature extends Feature<AzaleaFlowerPatchConfig> {
                         }
                         for (Direction direction : Direction.values()) {
                             BlockState blockState = world.getBlockState(pos.relative(direction));
-                            BlockState state = TwigsBlocks.AZALEA_FLOWERS.defaultBlockState();
+                            BlockState state = TwigsBlocks.AZALEA_FLOWERS.get().defaultBlockState();
                             BlockState blockState1 = world.getBlockState(pos);
-                            boolean flag = world.isEmptyBlock(pos) || blockState1.is(TwigsBlocks.AZALEA_FLOWERS);
+                            boolean flag = world.isEmptyBlock(pos) || blockState1.is(TwigsBlocks.AZALEA_FLOWERS.get());
                             if (flag && (blockState.is(BlockTags.BASE_STONE_OVERWORLD) || blockState.is(BlockTags.DIRT) || blockState.is(Blocks.CLAY))) {
                                 if (random.nextFloat() > 0.5F) {
                                     continue;
                                 }
-                                if (blockState1.is(TwigsBlocks.AZALEA_FLOWERS)) {
+                                if (blockState1.is(TwigsBlocks.AZALEA_FLOWERS.get())) {
                                     for (Direction direction1 : Direction.values()) {
                                         if (!MultifaceBlock.hasFace(blockState1, direction1)) {
                                             continue;

@@ -100,7 +100,7 @@ public class SiltPotBlock extends FallingBlockWithEntity implements SimpleWaterl
 
     @Override
     public void onBrokenAfterFall(Level level, BlockPos pos, FallingBlockEntity fallingBlockEntity) {
-        SiltPotBlockEntity blockEntity = TwigsBlockEntityType.SILT_POT.create(pos, fallingBlockEntity.getBlockState());
+        SiltPotBlockEntity blockEntity = TwigsBlockEntityType.SILT_POT.get().create(pos, fallingBlockEntity.getBlockState());
         assert blockEntity != null;
         blockEntity.load(fallingBlockEntity.blockData);
         Containers.dropContents(level, pos, blockEntity);

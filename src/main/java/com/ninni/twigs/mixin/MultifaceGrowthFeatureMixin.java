@@ -19,7 +19,7 @@ import java.util.function.Supplier;
 @Mixin(MultifaceGrowthFeature.class)
 public class MultifaceGrowthFeatureMixin {
     @Unique
-    private static final Supplier<MultifaceGrowthConfiguration> TWIGS_PETRIFIED_LICHEN_REPLACEMENT_CONFIG = Suppliers.memoize(() -> new MultifaceGrowthConfiguration((MultifaceBlock) TwigsBlocks.PETRIFIED_LICHEN, 20, true, true, true, 0.5F, HolderSet.direct(Block::builtInRegistryHolder, Blocks.STONE, Blocks.ANDESITE, Blocks.DIORITE, Blocks.GRANITE, Blocks.DRIPSTONE_BLOCK, Blocks.CALCITE, Blocks.TUFF, Blocks.DEEPSLATE)));
+    private static final Supplier<MultifaceGrowthConfiguration> TWIGS_PETRIFIED_LICHEN_REPLACEMENT_CONFIG = Suppliers.memoize(() -> new MultifaceGrowthConfiguration((MultifaceBlock) TwigsBlocks.PETRIFIED_LICHEN.get(), 20, true, true, true, 0.5F, HolderSet.direct(Block::builtInRegistryHolder, Blocks.STONE, Blocks.ANDESITE, Blocks.DIORITE, Blocks.GRANITE, Blocks.DRIPSTONE_BLOCK, Blocks.CALCITE, Blocks.TUFF, Blocks.DEEPSLATE)));
 
     @SuppressWarnings("unchecked")
     @ModifyVariable(method = "place", at = @At(value = "HEAD", ordinal = 0), argsOnly = true)

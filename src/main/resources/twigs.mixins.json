@@ -1,14 +1,18 @@
 {
   "required": true,
-  "minVersion": "0.8",
   "package": "com.ninni.twigs.mixin",
   "compatibilityLevel": "JAVA_17",
+  "minVersion": "0.8",
+  "refmap": "twigs.refmap.json",
   "mixins": [
     "BlockStateBaseMixin",
+    "BuilderAccessor",
     "FallingBlockEntityInvoker",
     "FeatureContextAccessor",
     "FlowerBlockMixin",
     "LootItemAccessor",
+    "LootPoolAccessor",
+    "LootTableAccessor",
     "MultifaceGrowthFeatureMixin"
   ],
   "client": [

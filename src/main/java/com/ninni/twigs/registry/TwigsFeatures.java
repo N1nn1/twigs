@@ -6,21 +6,19 @@ import com.ninni.twigs.world.gen.features.NoiseStripFeature;
 import com.ninni.twigs.world.gen.features.WaterloggableSimpleBlockFeature;
 import com.ninni.twigs.world.gen.features.config.AzaleaFlowerPatchConfig;
 import com.ninni.twigs.world.gen.features.config.NoiseStripConfig;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
+@Mod.EventBusSubscriber(modid = Twigs.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class TwigsFeatures {
+    public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, Twigs.MOD_ID);
 
-    public static final Feature<NoiseStripConfig> NOISE_STRIP = register("noise_strip", new NoiseStripFeature(NoiseStripConfig.CODEC));
-    public static final Feature<AzaleaFlowerPatchConfig> AZALEA_FLOWER_PATCH = register("azalea_flower_patch", new AzaleaFlowerPatchFeature(AzaleaFlowerPatchConfig.CODEC));
-    public static final Feature<SimpleBlockConfiguration> WATERLOGGABLE_SIMPLE_BLOCK = register("waterloggable_simple_block", new WaterloggableSimpleBlockFeature(SimpleBlockConfiguration.CODEC));
-
-    private static <C extends FeatureConfiguration, F extends Feature<C>> F register(String string, F feature) {
-        return Registry.register(BuiltInRegistries.FEATURE, new ResourceLocation(Twigs.MOD_ID, string), feature);
-    }
+    public static final RegistryObject<Feature<NoiseStripConfig>> NOISE_STRIP = FEATURES.register("noise_strip", () -> new NoiseStripFeature(NoiseStripConfig.CODEC));
+    public static final RegistryObject<Feature<AzaleaFlowerPatchConfig>> AZALEA_FLOWER_PATCH = FEATURES.register("azalea_flower_patch", () -> new AzaleaFlowerPatchFeature(AzaleaFlowerPatchConfig.CODEC));
+    public static final RegistryObject<Feature<SimpleBlockConfiguration>> WATERLOGGABLE_SIMPLE_BLOCK = FEATURES.register("waterloggable_simple_block", () -> new WaterloggableSimpleBlockFeature(SimpleBlockConfiguration.CODEC));
 
 }

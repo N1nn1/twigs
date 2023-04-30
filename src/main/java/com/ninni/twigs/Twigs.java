@@ -1,74 +1,68 @@
 package com.ninni.twigs;
 
-import com.google.common.reflect.Reflection;
-import com.ninni.twigs.entity.Pebble;
-import com.ninni.twigs.registry.TwigsBiomeModifier;
+import com.ninni.twigs.events.MiscEvents;
 import com.ninni.twigs.registry.TwigsBlockEntityType;
 import com.ninni.twigs.registry.TwigsBlocks;
-import com.ninni.twigs.registry.TwigsCreativeModeTab;
 import com.ninni.twigs.registry.TwigsEntityTypes;
 import com.ninni.twigs.registry.TwigsFeatures;
 import com.ninni.twigs.registry.TwigsItems;
-import com.ninni.twigs.registry.TwigsLootTableAdditions;
+import com.ninni.twigs.registry.TwigsLootModifiers;
 import com.ninni.twigs.registry.TwigsParticleTypes;
 import com.ninni.twigs.registry.TwigsSoundEvents;
 import com.ninni.twigs.registry.TwigsStructurePieceTypes;
 import com.ninni.twigs.registry.TwigsStructureTypes;
+import com.ninni.twigs.registry.TwigsVanillaIntegration;
 import com.ninni.twigs.stat.TwigsStats;
-import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
-import net.minecraft.Util;
-import net.minecraft.core.Position;
-import net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DispenserBlock;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-import java.util.LinkedHashMap;
-import java.util.List;
-
-public class Twigs implements ModInitializer {
+@Mod(Twigs.MOD_ID)
+public class Twigs {
 	public static final String MOD_ID = "twigs";
 
-	@Override
+	public Twigs() {
+		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+		IEventBus eventBus = MinecraftForge.EVENT_BUS;
+
+		TwigsBlocks.BLOCKS.register(modEventBus);
+		TwigsBlockEntityType.BLOCK_ENTITY_TYPES.register(modEventBus);
+		TwigsEntityTypes.ENTITY_TYPES.register(modEventBus);
+		TwigsFeatures.FEATURES.register(modEventBus);
+		TwigsItems.ITEMS.register(modEventBus);
+		TwigsLootModifiers.LOOT_MODIFIERS.register(modEventBus);
+		TwigsParticleTypes.PARTICLE_TYPES.register(modEventBus);
+		TwigsSoundEvents.SOUND_EVENTS.register(modEventBus);
+
+		modEventBus.addListener(this::commonSetup);
+		eventBus.register(this);
+		eventBus.register(new MiscEvents());
+	}
+
+	private void commonSetup(final FMLCommonSetupEvent event) {
+		event.enqueueWork(() -> {
+			TwigsVanillaIntegration.init();
+			TwigsStats.init();
+			TwigsStructureTypes.init();
+			TwigsStructurePieceTypes.init();
+		});
+	}
+
 	public void onInitialize() {
-		TwigsBiomeModifier.init();
-		Reflection.initialize(
-				TwigsEntityTypes.class,
-				TwigsParticleTypes.class,
-				TwigsItems.class,
-				TwigsFeatures.class,
-				TwigsCreativeModeTab.class,
-				TwigsLootTableAdditions.class,
-				TwigsBlocks.class,
-				TwigsStats.class,
-				TwigsBlockEntityType.class,
-				TwigsSoundEvents.class,
-				TwigsStructureTypes.class,
-				TwigsStructurePieceTypes.class
-		);
-
-		DispenserBlock.registerBehavior(TwigsItems.PEBBLE, new AbstractProjectileDispenseBehavior() {
-			@Override
-			protected Projectile getProjectile(Level world, Position position, ItemStack stack) {
-				return Util.make(new Pebble(world, position.x(), position.y(), position.z()), entity -> entity.setItem(stack));
-			}
-		});
-
-		Util.make(new LinkedHashMap<Block, Block>(), pairs -> {
-			pairs.put(TwigsBlocks.COPPER_PILLAR, TwigsBlocks.WAXED_COPPER_PILLAR);
-			pairs.put(TwigsBlocks.EXPOSED_COPPER_PILLAR, TwigsBlocks.WAXED_EXPOSED_COPPER_PILLAR);
-			pairs.put(TwigsBlocks.WEATHERED_COPPER_PILLAR, TwigsBlocks.WAXED_WEATHERED_COPPER_PILLAR);
-			pairs.put(TwigsBlocks.OXIDIZED_COPPER_PILLAR, TwigsBlocks.WAXED_OXIDIZED_COPPER_PILLAR);
-
-			pairs.forEach(OxidizableBlocksRegistry::registerWaxableBlockPair);
-
-			List<Block> unwaxed = List.copyOf(pairs.keySet());
-			for (int i = 0, l = unwaxed.size(); i < l - 1; i++) {
-				OxidizableBlocksRegistry.registerOxidizableBlockPair(unwaxed.get(i), unwaxed.get(i + 1));
-			}
-		});
+//		Util.make(new LinkedHashMap<Block, Block>(), pairs -> {
+//			pairs.put(TwigsBlocks.COPPER_PILLAR.get(), TwigsBlocks.WAXED_COPPER_PILLAR.get());
+//			pairs.put(TwigsBlocks.EXPOSED_COPPER_PILLAR.get(), TwigsBlocks.WAXED_EXPOSED_COPPER_PILLAR.get());
+//			pairs.put(TwigsBlocks.WEATHERED_COPPER_PILLAR.get(), TwigsBlocks.WAXED_WEATHERED_COPPER_PILLAR.get());
+//			pairs.put(TwigsBlocks.OXIDIZED_COPPER_PILLAR.get(), TwigsBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get());
+//
+//			pairs.forEach(OxidizableBlocksRegistry::registerWaxableBlockPair);
+//
+//			List<Block> unwaxed = List.copyOf(pairs.keySet());
+//			for (int i = 0, l = unwaxed.size(); i < l - 1; i++) {
+//				OxidizableBlocksRegistry.registerOxidizableBlockPair(unwaxed.get(i), unwaxed.get(i + 1));
+//			}
+//		});
 	}
 }

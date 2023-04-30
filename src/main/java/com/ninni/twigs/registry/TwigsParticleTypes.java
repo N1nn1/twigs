@@ -1,14 +1,16 @@
 package com.ninni.twigs.registry;
 
 import com.ninni.twigs.Twigs;
-import com.ninni.twigs.client.particle.TwigsParticleType;
-import net.minecraft.core.Registry;
+import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class TwigsParticleTypes {
 
-    public static final SimpleParticleType ITEM_PEBBLE = Registry.register(BuiltInRegistries.PARTICLE_TYPE, new ResourceLocation(Twigs.MOD_ID, "item_pebble"), new TwigsParticleType(false));
+    public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, Twigs.MOD_ID);
+
+    public static final RegistryObject<SimpleParticleType> ITEM_PEBBLE = PARTICLE_TYPES.register("item_pebble", () -> new SimpleParticleType(false));
 
 }

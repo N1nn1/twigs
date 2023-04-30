@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#twigs:schist_generates",
+  "features": [
+    "twigs:ore_schist_lower",
+    "twigs:ore_schist_upper"
+  ],
+  "step": "underground_ores"
+}

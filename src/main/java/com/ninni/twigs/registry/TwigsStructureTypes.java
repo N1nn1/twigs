@@ -11,6 +11,8 @@ import net.minecraft.world.level.levelgen.structure.StructureType;
 
 public class TwigsStructureTypes {
 
+    public static void init() { }
+
     public static final StructureType<ObeliskStructure> OBELISK = register("obelisk", ObeliskStructure.CODEC);
 
     private static <S extends Structure> StructureType<S> register(String string, Codec<S> codec) {

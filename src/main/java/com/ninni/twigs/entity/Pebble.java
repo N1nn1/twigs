@@ -7,8 +7,6 @@ import net.minecraft.core.particles.ItemParticleOption;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -26,21 +24,21 @@ public class Pebble extends ThrowableItemProjectile {
     }
 
     public Pebble(Level level, LivingEntity livingEntity) {
-        super(TwigsEntityTypes.PEBBLE, livingEntity, level);
+        super(TwigsEntityTypes.PEBBLE.get(), livingEntity, level);
     }
 
     public Pebble(Level level, double x, double y, double z) {
-        super(TwigsEntityTypes.PEBBLE, x, y, z, level);
+        super(TwigsEntityTypes.PEBBLE.get(), x, y, z, level);
     }
 
     @Override
     protected Item getDefaultItem() {
-        return TwigsItems.PEBBLE;
+        return TwigsItems.PEBBLE.get();
     }
 
     private ParticleOptions getParticle() {
         ItemStack itemStack = this.getItemRaw();
-        return itemStack.isEmpty() ? TwigsParticleTypes.ITEM_PEBBLE : new ItemParticleOption(ParticleTypes.ITEM, itemStack);
+        return itemStack.isEmpty() ? TwigsParticleTypes.ITEM_PEBBLE.get() : new ItemParticleOption(ParticleTypes.ITEM, itemStack);
     }
 
     @Override
@@ -68,7 +66,7 @@ public class Pebble extends ThrowableItemProjectile {
     @Override
     protected void onHitEntity(EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
-        entityHitResult.getEntity().hurt(DamageSource.thrown(this, this.getOwner()), 1.0F);
+        entityHitResult.getEntity().hurt(this.damageSources().thrown(this, this.getOwner()), 1.0F);
     }
 
     @Override

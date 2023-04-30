@@ -1,4 +1,5 @@
 {
+	"render_type": "cutout",
 	"parent": "minecraft:block/cube",
 	"textures": {
 		"0": "twigs:block/compacted_dripstone_top",

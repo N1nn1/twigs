@@ -1,4 +1,5 @@
 {
+	"render_type": "cutout",
 	"textures": {
 		"0": "twigs:block/bamboo_leaves2",
 		"particle": "twigs:block/bamboo_leaves2"

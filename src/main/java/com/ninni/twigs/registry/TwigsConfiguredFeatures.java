@@ -37,14 +37,14 @@ public class TwigsConfiguredFeatures {
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         TagMatchTest baseStoneOverworld = new TagMatchTest(BlockTags.BASE_STONE_OVERWORLD);
         TagMatchTest baseStoneNether = new TagMatchTest(BlockTags.BASE_STONE_NETHER);
-        registerConfiguredFeature(context, ORE_RHYOLITE, Feature.ORE, new OreConfiguration(baseStoneOverworld, TwigsBlocks.RHYOLITE.defaultBlockState(), 45));
-        registerConfiguredFeature(context, ORE_SCHIST, Feature.ORE, new OreConfiguration(baseStoneOverworld, TwigsBlocks.SCHIST.defaultBlockState(), 64));
-        registerConfiguredFeature(context, ORE_BLOODSTONE, Feature.ORE, new OreConfiguration(baseStoneNether, TwigsBlocks.BLOODSTONE.defaultBlockState(), 64));
-        registerConfiguredFeature(context, SILT_STRIP, TwigsFeatures.NOISE_STRIP, new NoiseStripConfig(BlockStateProvider.simple(TwigsBlocks.SILT)));
-        registerConfiguredFeature(context, AZALEA_FLOWERS, TwigsFeatures.AZALEA_FLOWER_PATCH, new AzaleaFlowerPatchConfig(UniformInt.of(2, 4), 3));
-        registerConfiguredFeature(context, PATCH_TWIG, Feature.RANDOM_PATCH, FeatureUtils.simpleRandomPatchConfiguration(3, PlacementUtils.onlyWhenEmpty(TwigsFeatures.WATERLOGGABLE_SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(TwigsBlocks.TWIG)))));
-        registerConfiguredFeature(context, PATCH_PEBBLE, Feature.RANDOM_PATCH, FeatureUtils.simpleRandomPatchConfiguration(2, PlacementUtils.onlyWhenEmpty(TwigsFeatures.WATERLOGGABLE_SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(TwigsBlocks.PEBBLE)))));
-        registerConfiguredFeature(context, PATCH_SEASHELL, Feature.RANDOM_PATCH, FeatureUtils.simpleRandomPatchConfiguration(2, PlacementUtils.filtered(TwigsFeatures.WATERLOGGABLE_SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(TwigsBlocks.OPALINE_SEASHELL.defaultBlockState(), 20).add(TwigsBlocks.TANGERINE_SEASHELL.defaultBlockState(), 20).add(TwigsBlocks.ROSEATE_SEASHELL.defaultBlockState(), 15).add(TwigsBlocks.BRONZED_SEASHELL.defaultBlockState(), 8))), BlockPredicate.ONLY_IN_AIR_OR_WATER_PREDICATE)));
+        registerConfiguredFeature(context, ORE_RHYOLITE, Feature.ORE, new OreConfiguration(baseStoneOverworld, TwigsBlocks.RHYOLITE.get().defaultBlockState(), 45));
+        registerConfiguredFeature(context, ORE_SCHIST, Feature.ORE, new OreConfiguration(baseStoneOverworld, TwigsBlocks.SCHIST.get().defaultBlockState(), 64));
+        registerConfiguredFeature(context, ORE_BLOODSTONE, Feature.ORE, new OreConfiguration(baseStoneNether, TwigsBlocks.BLOODSTONE.get().defaultBlockState(), 64));
+        registerConfiguredFeature(context, SILT_STRIP, TwigsFeatures.NOISE_STRIP.get(), new NoiseStripConfig(BlockStateProvider.simple(TwigsBlocks.SILT.get())));
+        registerConfiguredFeature(context, AZALEA_FLOWERS, TwigsFeatures.AZALEA_FLOWER_PATCH.get(), new AzaleaFlowerPatchConfig(UniformInt.of(2, 4), 3));
+        registerConfiguredFeature(context, PATCH_TWIG, Feature.RANDOM_PATCH, FeatureUtils.simpleRandomPatchConfiguration(3, PlacementUtils.onlyWhenEmpty(TwigsFeatures.WATERLOGGABLE_SIMPLE_BLOCK.get(), new SimpleBlockConfiguration(BlockStateProvider.simple(TwigsBlocks.TWIG.get())))));
+        registerConfiguredFeature(context, PATCH_PEBBLE, Feature.RANDOM_PATCH, FeatureUtils.simpleRandomPatchConfiguration(2, PlacementUtils.onlyWhenEmpty(TwigsFeatures.WATERLOGGABLE_SIMPLE_BLOCK.get(), new SimpleBlockConfiguration(BlockStateProvider.simple(TwigsBlocks.PEBBLE.get())))));
+        registerConfiguredFeature(context, PATCH_SEASHELL, Feature.RANDOM_PATCH, FeatureUtils.simpleRandomPatchConfiguration(2, PlacementUtils.filtered(TwigsFeatures.WATERLOGGABLE_SIMPLE_BLOCK.get(), new SimpleBlockConfiguration(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(TwigsBlocks.OPALINE_SEASHELL.get().defaultBlockState(), 20).add(TwigsBlocks.TANGERINE_SEASHELL.get().defaultBlockState(), 20).add(TwigsBlocks.ROSEATE_SEASHELL.get().defaultBlockState(), 15).add(TwigsBlocks.BRONZED_SEASHELL.get().defaultBlockState(), 8))), BlockPredicate.ONLY_IN_AIR_OR_WATER_PREDICATE)));
     }
 
     private static <FC extends FeatureConfiguration, F extends Feature<FC>> void registerConfiguredFeature(BootstapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> resourceKey, F feature, FC featureConfiguration) {

@@ -1,4 +1,5 @@
 {
+	"render_type": "cutout",
 	"textures": {
 		"bottom": "twigs:block/paper_lantern_bottom",
 		"top": "twigs:block/paper_lantern_top",

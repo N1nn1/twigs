@@ -8,8 +8,10 @@ import static net.minecraft.stats.Stats.CUSTOM;
 
 public interface TwigsStats {
 
-    ResourceLocation OPEN_SILT_POT = register("open_silt_pot", StatFormatter.DEFAULT);
+    static void init() {
+    }
 
+    ResourceLocation OPEN_SILT_POT = register("open_silt_pot", StatFormatter.DEFAULT);
 
     private static ResourceLocation register(String id, StatFormatter formatter) {
         ResourceLocation rl = new ResourceLocation(id);

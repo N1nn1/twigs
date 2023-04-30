@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#twigs:spawns_twig",
+  "features": "twigs:patch_twig",
+  "step": "vegetal_decoration"
+}

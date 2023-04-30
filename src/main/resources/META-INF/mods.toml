@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[39,)"
+license="All rights reserved"
+[[mods]]
+modId="twigs"
+version="1.19.4-2.0.0"
+displayName="Twigs"
+logoFile= "twigs.png"
+authors="Ninni"
+description='''
+A Minecraft mod all about building, adding new and interesting materials, as well as new renditions of current vanilla blocks.
+
+Author:
+- Ninni
+
+Contributors:
+- Orcinus
+- Andante
+
+'''
+[[dependencies.twigs]]
+    modId="forge"
+    mandatory=true
+    versionRange="[39,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.twigs]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19,1.20)"
+    ordering="NONE"
+    side="BOTH"

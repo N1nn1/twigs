@@ -24,7 +24,7 @@ public class SiltPotBlockEntity extends RandomizableContainerBlockEntity {
     }
 
     public SiltPotBlockEntity(BlockPos pos, BlockState state) {
-        this(TwigsBlockEntityType.SILT_POT, pos, state);
+        this(TwigsBlockEntityType.SILT_POT.get(), pos, state);
     }
 
     @Override

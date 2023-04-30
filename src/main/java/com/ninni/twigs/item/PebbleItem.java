@@ -21,7 +21,7 @@ public class PebbleItem extends BlockItem {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand interactionHand) {
         ItemStack stack = player.getItemInHand(interactionHand);
-        level.playSound(null, player.getX(), player.getY(), player.getZ(), TwigsSoundEvents.ENTITY_PEBBLE_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F / (level.getRandom().nextFloat() * 0.4F + 0.8F));
+        level.playSound(null, player.getX(), player.getY(), player.getZ(), TwigsSoundEvents.ENTITY_PEBBLE_THROW.get(), SoundSource.NEUTRAL, 0.5F, 0.4F / (level.getRandom().nextFloat() * 0.4F + 0.8F));
         if (!level.isClientSide) {
             Pebble pebble = new Pebble(level, player);
             pebble.setItem(stack);

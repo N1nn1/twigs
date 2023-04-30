@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "twigs:ore_rhyolite",
+  "step": "underground_ores"
+}

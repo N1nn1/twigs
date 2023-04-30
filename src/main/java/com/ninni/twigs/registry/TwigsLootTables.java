@@ -1,7 +1,6 @@
 package com.ninni.twigs.registry;
 
 import com.ninni.twigs.Twigs;
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.resources.ResourceLocation;
 
 public class TwigsLootTables {

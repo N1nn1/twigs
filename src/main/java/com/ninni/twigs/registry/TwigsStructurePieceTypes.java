@@ -8,6 +8,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.structure.pieces.StructurePieceType;
 
 public class TwigsStructurePieceTypes {
+
+    public static void init() { }
+
     public static final StructurePieceType BLOODSTONE_OBELISK = register("bloodstone_obelisk", ObeliskGenerator.Piece::new);
 
     private static StructurePieceType register(String id, StructurePieceType type) {

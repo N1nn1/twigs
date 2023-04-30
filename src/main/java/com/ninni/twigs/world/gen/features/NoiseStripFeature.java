@@ -45,7 +45,7 @@ public class NoiseStripFeature extends Feature<NoiseStripConfig> {
                             if (!world.isStateAtPosition(mutableBlockPos.relative(direction), DripstoneUtils::isEmptyOrWaterOrLava)) {
                                 continue;
                             }
-                            world.setBlock(mutableBlockPos, TwigsBlocks.SILT.defaultBlockState(), 2);
+                            world.setBlock(mutableBlockPos, TwigsBlocks.SILT.get().defaultBlockState(), 2);
                         }
                     }
                 }

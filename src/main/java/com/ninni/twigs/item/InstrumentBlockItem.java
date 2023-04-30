@@ -47,7 +47,7 @@ public class InstrumentBlockItem extends BlockItem {
     }
 
     private static void play(Level level, Player player) {
-        level.playSound(player, player, TwigsSoundEvents.ITEM_BRONZED_SEASHELL, SoundSource.RECORDS, 16.0f, 1.0f);
+        level.playSound(player, player, TwigsSoundEvents.ITEM_BRONZED_SEASHELL.get(), SoundSource.RECORDS, 16.0f, 1.0f);
         level.gameEvent(GameEvent.INSTRUMENT_PLAY, player.position(), GameEvent.Context.of(player));
     }
 }

@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#twigs:bloodstone_generates",
+  "features": "twigs:ore_bloodstone",
+  "step": "underground_ores"
+}
