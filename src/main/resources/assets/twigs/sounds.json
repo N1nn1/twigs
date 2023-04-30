@@ -48,6 +48,92 @@
       }
     ]
   },
+  "block.schist.break": {
+    "sounds": [
+      "twigs:block/schist/heavy1",
+      "twigs:block/schist/heavy2",
+      "twigs:block/schist/heavy3"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.schist.step": {
+    "sounds": [
+      "twigs:block/schist/light1",
+      "twigs:block/schist/light2",
+      "twigs:block/schist/light3",
+      "twigs:block/schist/light4"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.schist.fall": {
+    "sounds": [
+      {
+        "name": "twigs:block.schist.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.schist.hit": {
+    "sounds": [
+      {
+        "name": "twigs:block.schist.step",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.schist.place": {
+    "sounds": [
+      {
+        "name": "twigs:block.schist.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.schist_bricks.break": {
+    "sounds": [
+      "twigs:block/schist_bricks/heavy1",
+      "twigs:block/schist_bricks/heavy2",
+      "twigs:block/schist_bricks/heavy3"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.schist_bricks.fall": {
+    "sounds": [
+      {
+        "name": "twigs:block.schist_bricks.break",
+        "type": "event"
+      }
+    ]
+  },
+  "block.schist_bricks.hit": {
+    "sounds": [
+      {
+        "name": "twigs:block.schist.hit",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.schist_bricks.place": {
+    "sounds": [
+      {
+        "name": "twigs:block.schist_bricks.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.schist_bricks.step": {
+    "sounds": [
+      {
+        "name": "twigs:block.schist.step",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
   "block.rhyolite.break": {
     "sounds": [
       "twigs:block/rhyolite/heavy1",
@@ -113,7 +199,7 @@
   "block.rhyolite_bricks.hit": {
     "sounds": [
       {
-        "name": "block.rhyolite.hit",
+        "name": "twigs:block.rhyolite.hit",
         "type": "event"
       }
     ],
@@ -131,7 +217,7 @@
   "block.rhyolite_bricks.step": {
     "sounds": [
       {
-        "name": "block.rhyolite.step",
+        "name": "twigs:block.rhyolite.step",
         "type": "event"
       }
     ],
