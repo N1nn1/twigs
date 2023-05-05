@@ -27,6 +27,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
+@SuppressWarnings("deprecation")
 public class BambooLeavesBlock extends BushBlock implements SimpleWaterloggedBlock {
     private static final IntegerProperty LAYERS = TwigsProperties.LAYERS_1_4;
     private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;

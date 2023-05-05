@@ -16,6 +16,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 import java.util.function.Supplier;
 
+@SuppressWarnings("deprecation")
 @Mixin(MultifaceGrowthFeature.class)
 public class MultifaceGrowthFeatureMixin {
     @Unique

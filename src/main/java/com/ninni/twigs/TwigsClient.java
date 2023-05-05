@@ -16,6 +16,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.resources.ResourceLocation;
 
+@SuppressWarnings("deprecation")
 @Environment(EnvType.CLIENT)
 public class TwigsClient implements ClientModInitializer {
 

@@ -19,8 +19,8 @@
   ],
 
   "contact": {
-    "sources": "https://github.com/N1nn1/twigs-rewrite",
-    "issues": "https://github.com/N1nn1/twigs-rewrite/issues"
+    "sources": "https://github.com/N1nn1/twigs",
+    "issues": "https://github.com/N1nn1/twigs/issues"
   },
   "custom": {
     "modmenu": { "links": { "mod.twigs.contact.discord": "https://discord.gg/fT4MKzUTZS" } }

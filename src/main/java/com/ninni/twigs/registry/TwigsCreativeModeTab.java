@@ -382,7 +382,7 @@ public class TwigsCreativeModeTab {
             );
         });
 
-        FabricItemGroup.builder(new ResourceLocation(MOD_ID,"item_group")).icon(TWIGS::getDefaultInstance).displayItems((featureFlagSet, output, bl) -> {
+        FabricItemGroup.builder(new ResourceLocation(MOD_ID,"item_group")).icon(TWIGS::getDefaultInstance).displayItems((featureFlagSet, output) -> {
 
             //collectibles
             output.accept(AZALEA_FLOWERS);
