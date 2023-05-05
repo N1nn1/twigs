@@ -1,5 +1,6 @@
 package com.ninni.twigs.world.gen.structures;
 
+import com.google.common.collect.Lists;
 import com.ninni.twigs.Twigs;
 import com.ninni.twigs.registry.TwigsLootTables;
 import com.ninni.twigs.registry.TwigsStructurePieceTypes;
@@ -9,6 +10,10 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.StructureManager;
@@ -24,6 +29,10 @@ import net.minecraft.world.level.levelgen.structure.pieces.StructurePiecesBuilde
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockIgnoreProcessor;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplateManager;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class ObeliskGenerator {
     private static final ResourceLocation OBELISK = new ResourceLocation(Twigs.MOD_ID, "bloodstone_obelisk/bloodstone_obelisk");
@@ -73,6 +82,27 @@ public class ObeliskGenerator {
                             case "ChestWest" -> Direction.WEST;
                         }
                 )));
+            } else {
+                List<Mob> list = Lists.newArrayList();
+                switch (metadata) {
+                    case "PIGLIN_BRUTE":
+                        list.add(EntityType.PIGLIN_BRUTE.create(world.getLevel()));
+                        break;
+                    case "PIGLIN":
+                        list.add(EntityType.PIGLIN.create(world.getLevel()));
+                        break;
+                    default:
+                        return;
+                }
+                for (Mob mob : list) {
+                    if (mob != null) {
+                        mob.setPersistenceRequired();
+                        mob.moveTo(pos, 0.0F, 0.0F);
+                        mob.finalizeSpawn(world, world.getCurrentDifficultyAt(mob.blockPosition()), MobSpawnType.STRUCTURE, (SpawnGroupData) null, (CompoundTag) null);
+                        world.addFreshEntityWithPassengers(mob);
+                        world.setBlock(pos, Blocks.AIR.defaultBlockState(), 2);
+                    }
+                }
             }
         }
     }
