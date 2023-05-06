@@ -3,7 +3,7 @@ loaderVersion="[39,)"
 license="All rights reserved"
 [[mods]]
 modId="twigs"
-version="1.19.4-2.0.0"
+version="1.19.4-3.0.0"
 displayName="Twigs"
 logoFile= "twigs.png"
 authors="Ninni"
