@@ -40,6 +40,7 @@ public class TwigsItems {
     public static final Item BLUE_ORCHID_PAPER_LANTERN = register("blue_orchid_paper_lantern", new BlockItem(TwigsBlocks.BLUE_ORCHID_PAPER_LANTERN, new FabricItemSettings()));
     public static final Item CRIMSON_ROOTS_PAPER_LANTERN = register("crimson_roots_paper_lantern", new BlockItem(TwigsBlocks.CRIMSON_ROOTS_PAPER_LANTERN, new FabricItemSettings()));
     public static final Item DANDELION_PAPER_LANTERN = register("dandelion_paper_lantern", new BlockItem(TwigsBlocks.DANDELION_PAPER_LANTERN, new FabricItemSettings()));
+    public static final Item TORCHFLOWER_PAPER_LANTERN = register("torchflower_paper_lantern", new BlockItem(TwigsBlocks.TORCHFLOWER_PAPER_LANTERN, new FabricItemSettings()));
 
     //lamps
     public static final Item lAMP = register("lamp", new BlockItem(TwigsBlocks.LAMP, new FabricItemSettings()));

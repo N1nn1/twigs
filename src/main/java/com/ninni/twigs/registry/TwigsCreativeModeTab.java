@@ -20,7 +20,9 @@ public class TwigsCreativeModeTab {
                     PAPER_LANTERN,
                     ALLIUM_PAPER_LANTERN,
                     BLUE_ORCHID_PAPER_LANTERN,
+                    CRIMSON_ROOTS_PAPER_LANTERN,
                     DANDELION_PAPER_LANTERN,
+                    TORCHFLOWER_PAPER_LANTERN,
                     lAMP,
                     SOUL_LAMP
             );
@@ -405,6 +407,7 @@ public class TwigsCreativeModeTab {
             output.accept(BLUE_ORCHID_PAPER_LANTERN);
             output.accept(CRIMSON_ROOTS_PAPER_LANTERN);
             output.accept(DANDELION_PAPER_LANTERN);
+            output.accept(TORCHFLOWER_PAPER_LANTERN);
 
             //lamps
             output.accept(lAMP);

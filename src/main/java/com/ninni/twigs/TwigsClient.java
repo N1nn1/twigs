@@ -33,6 +33,7 @@ public class TwigsClient implements ClientModInitializer {
 				TwigsBlocks.BLUE_ORCHID_PAPER_LANTERN,
 				TwigsBlocks.CRIMSON_ROOTS_PAPER_LANTERN,
 				TwigsBlocks.DANDELION_PAPER_LANTERN,
+				TwigsBlocks.TORCHFLOWER_PAPER_LANTERN,
 				TwigsBlocks.COMPACTED_DRIPSTONE,
 				TwigsBlocks.BAMBOO_LEAVES,
 				TwigsBlocks.BAMBOO_THATCH,

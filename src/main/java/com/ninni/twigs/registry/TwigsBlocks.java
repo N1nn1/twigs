@@ -40,6 +40,7 @@ public class TwigsBlocks {
     public static final Block BLUE_ORCHID_PAPER_LANTERN = register("blue_orchid_paper_lantern", new PaperLanternBlock(Blocks.BLUE_ORCHID, BlockBehaviour.Properties.copy(PAPER_LANTERN)));
     public static final Block CRIMSON_ROOTS_PAPER_LANTERN = register("crimson_roots_paper_lantern", new PaperLanternBlock(Blocks.CRIMSON_ROOTS, BlockBehaviour.Properties.copy(PAPER_LANTERN)));
     public static final Block DANDELION_PAPER_LANTERN = register("dandelion_paper_lantern", new PaperLanternBlock(Blocks.DANDELION, BlockBehaviour.Properties.copy(PAPER_LANTERN)));
+    public static final Block TORCHFLOWER_PAPER_LANTERN = register("torchflower_paper_lantern", new PaperLanternBlock(Blocks.TORCHFLOWER, BlockBehaviour.Properties.copy(PAPER_LANTERN)));
 
     //lamps
     public static final Block LAMP = register("lamp", new LampBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(4.5F).sounds(TwigsSoundEvents.LAMP).luminance(createLampLightLevel())));
