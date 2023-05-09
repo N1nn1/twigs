@@ -91,6 +91,7 @@ public class TwigsCreativeModeTab {
             entries.addAfter(Items.BIRCH_SLAB, BIRCH_TABLE);
             entries.addAfter(Items.JUNGLE_SLAB, JUNGLE_TABLE);
             entries.addAfter(Items.ACACIA_SLAB, ACACIA_TABLE);
+            entries.addAfter(Items.CHERRY_SLAB, CHERRY_TABLE);
             entries.addAfter(Items.DARK_OAK_SLAB, DARK_OAK_TABLE);
             entries.addAfter(Items.MANGROVE_SLAB, MANGROVE_TABLE);
             entries.addAfter(Items.BAMBOO_SLAB, BAMBOO_TABLE);
@@ -419,6 +420,7 @@ public class TwigsCreativeModeTab {
             output.accept(ACACIA_TABLE);
             output.accept(DARK_OAK_TABLE);
             output.accept(MANGROVE_TABLE);
+            output.accept(CHERRY_TABLE);
             output.accept(BAMBOO_TABLE);
             output.accept(CRIMSON_TABLE);
             output.accept(WARPED_TABLE);

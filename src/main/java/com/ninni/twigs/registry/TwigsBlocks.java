@@ -55,6 +55,7 @@ public class TwigsBlocks {
     public static final Block ACACIA_TABLE = register("acacia_table", new TableBlock(FabricBlockSettings.copyOf(Blocks.ACACIA_PLANKS)));
     public static final Block DARK_OAK_TABLE = register("dark_oak_table", new TableBlock(FabricBlockSettings.copyOf(Blocks.DARK_OAK_PLANKS)));
     public static final Block MANGROVE_TABLE = register("mangrove_table", new TableBlock(FabricBlockSettings.copyOf(Blocks.MANGROVE_PLANKS)));
+    public static final Block CHERRY_TABLE = register("cherry_table", new TableBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_PLANKS)));
     public static final Block BAMBOO_TABLE = register("bamboo_table", new TableBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO_PLANKS)));
     public static final Block CRIMSON_TABLE = register("crimson_table", new TableBlock(FabricBlockSettings.copyOf(Blocks.CRIMSON_PLANKS)));
     public static final Block WARPED_TABLE = register("warped_table", new TableBlock(FabricBlockSettings.copyOf(Blocks.WARPED_PLANKS)));

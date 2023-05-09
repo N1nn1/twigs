@@ -55,6 +55,7 @@ public class TwigsItems {
     public static final Item ACACIA_TABLE = register("acacia_table", new BlockItem(TwigsBlocks.ACACIA_TABLE, new FabricItemSettings()));
     public static final Item DARK_OAK_TABLE = register("dark_oak_table", new BlockItem(TwigsBlocks.DARK_OAK_TABLE, new FabricItemSettings()));
     public static final Item MANGROVE_TABLE = register("mangrove_table", new BlockItem(TwigsBlocks.MANGROVE_TABLE, new FabricItemSettings()));
+    public static final Item CHERRY_TABLE = register("cherry_table", new BlockItem(TwigsBlocks.CHERRY_TABLE, new FabricItemSettings()));
     public static final Item BAMBOO_TABLE = register("bamboo_table", new BlockItem(TwigsBlocks.BAMBOO_TABLE, new FabricItemSettings()));
     public static final Item CRIMSON_TABLE = register("crimson_table", new BlockItem(TwigsBlocks.CRIMSON_TABLE, new FabricItemSettings()));
     public static final Item WARPED_TABLE = register("warped_table", new BlockItem(TwigsBlocks.WARPED_TABLE, new FabricItemSettings()));

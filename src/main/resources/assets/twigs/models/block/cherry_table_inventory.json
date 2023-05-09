@@ -1,0 +1,9 @@
+{
+	"parent": "twigs:block/template_table_inventory",
+	"textures": {
+		"side": "twigs:block/cherry_table",
+		"bottom": "twigs:block/cherry_table_bottom",
+		"top": "twigs:block/cherry_table_top",
+		"particle": "block/cherry_planks"
+	}
+}
