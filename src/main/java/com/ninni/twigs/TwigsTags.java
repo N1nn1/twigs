@@ -30,7 +30,6 @@ public interface TwigsTags {
     TagKey<Block> PACKED_SILT_BLOCK = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "packed_silt"));
     TagKey<Block> SILT_POTS_BLOCK = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "silt_pots"));
     TagKey<Block> OFFSET_REMOVER = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "offset_remover"));
-    TagKey<Block> SEA_SHELL_PLACEABLES = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "sea_shell_placeables"));
     TagKey<Block> TABLES_BLOCK = TagKey.create(Registries.BLOCK, new ResourceLocation(MOD_ID, "tables"));
 
     //biome tags
