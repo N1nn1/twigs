@@ -56,6 +56,7 @@ public class TwigsItems {
     public static final RegistryObject<Item> ACACIA_TABLE = ITEMS.register("acacia_table", () -> new BlockItem(TwigsBlocks.ACACIA_TABLE.get(), new Item.Properties()));
     public static final RegistryObject<Item> DARK_OAK_TABLE = ITEMS.register("dark_oak_table", () -> new BlockItem(TwigsBlocks.DARK_OAK_TABLE.get(), new Item.Properties()));
     public static final RegistryObject<Item> MANGROVE_TABLE = ITEMS.register("mangrove_table", () -> new BlockItem(TwigsBlocks.MANGROVE_TABLE.get(), new Item.Properties()));
+    public static final RegistryObject<Item> CHERRY_TABLE = ITEMS.register("cherry_table", () -> new BlockItem(TwigsBlocks.CHERRY_TABLE.get(), new Item.Properties()));
     public static final RegistryObject<Item> BAMBOO_TABLE = ITEMS.register("bamboo_table", () -> new BlockItem(TwigsBlocks.BAMBOO_TABLE.get(), new Item.Properties()));
     public static final RegistryObject<Item> CRIMSON_TABLE = ITEMS.register("crimson_table", () -> new BlockItem(TwigsBlocks.CRIMSON_TABLE.get(), new Item.Properties()));
     public static final RegistryObject<Item> WARPED_TABLE = ITEMS.register("warped_table", () -> new BlockItem(TwigsBlocks.WARPED_TABLE.get(), new Item.Properties()));

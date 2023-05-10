@@ -94,6 +94,7 @@ public class MiscEvents {
             putAfter(entries, Items.ACACIA_SLAB, TwigsItems.ACACIA_TABLE.get());
             putAfter(entries, Items.DARK_OAK_SLAB, TwigsItems.DARK_OAK_TABLE.get());
             putAfter(entries, Items.MANGROVE_SLAB, TwigsItems.MANGROVE_TABLE.get());
+            putAfter(entries, Items.CHERRY_SLAB, TwigsItems.CHERRY_TABLE.get());
             putAfter(entries, Items.BAMBOO_SLAB, TwigsItems.BAMBOO_TABLE.get());
             putAfter(entries, Items.CRIMSON_SLAB, TwigsItems.CRIMSON_TABLE.get());
             putAfter(entries, Items.WARPED_SLAB, TwigsItems.WARPED_TABLE.get());
@@ -432,6 +433,7 @@ public class MiscEvents {
                 output.accept(TwigsItems.ACACIA_TABLE.get());
                 output.accept(TwigsItems.DARK_OAK_TABLE.get());
                 output.accept(TwigsItems.MANGROVE_TABLE.get());
+                output.accept(TwigsItems.CHERRY_TABLE.get());
                 output.accept(TwigsItems.BAMBOO_TABLE.get());
                 output.accept(TwigsItems.CRIMSON_TABLE.get());
                 output.accept(TwigsItems.WARPED_TABLE.get());
