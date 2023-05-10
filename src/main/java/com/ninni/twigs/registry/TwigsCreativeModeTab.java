@@ -154,7 +154,19 @@ public class TwigsCreativeModeTab {
                     TWISTING_POLISHED_BLACKSTONE_BRICKS,
                     TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS,
                     TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB,
-                    TWISTING_POLISHED_BLACKSTONE_BRICK_WALL
+                    TWISTING_POLISHED_BLACKSTONE_BRICK_WALL,
+                    BLOODSTONE,
+                    BLOODSTONE_STAIRS,
+                    BLOODSTONE_SLAB,
+                    BLOODSTONE_WALL,
+                    POLISHED_BLOODSTONE,
+                    POLISHED_BLOODSTONE_STAIRS,
+                    POLISHED_BLOODSTONE_SLAB,
+                    POLISHED_BLOODSTONE_BRICKS,
+                    CRACKED_POLISHED_BLOODSTONE_BRICKS,
+                    POLISHED_BLOODSTONE_BRICK_STAIRS,
+                    POLISHED_BLOODSTONE_BRICK_SLAB,
+                    POLISHED_BLOODSTONE_BRICK_WALL
             );
 
             entries.addAfter(Items.POLISHED_BASALT, POLISHED_BASALT_BRICKS);
@@ -229,21 +241,6 @@ public class TwigsCreativeModeTab {
                     POLISHED_RHYOLITE_BRICK_STAIRS,
                     POLISHED_RHYOLITE_BRICK_SLAB,
                     POLISHED_RHYOLITE_BRICK_WALL
-            );
-
-            entries.addAfter(Items.POLISHED_BLACKSTONE_BRICK_WALL,
-                    BLOODSTONE,
-                    BLOODSTONE_STAIRS,
-                    BLOODSTONE_SLAB,
-                    BLOODSTONE_WALL,
-                    POLISHED_BLOODSTONE,
-                    POLISHED_BLOODSTONE_STAIRS,
-                    POLISHED_BLOODSTONE_SLAB,
-                    POLISHED_BLOODSTONE_BRICKS,
-                    CRACKED_POLISHED_BLOODSTONE_BRICKS,
-                    POLISHED_BLOODSTONE_BRICK_STAIRS,
-                    POLISHED_BLOODSTONE_BRICK_SLAB,
-                    POLISHED_BLOODSTONE_BRICK_WALL
             );
 
             entries.addAfter(Items.CUT_COPPER_SLAB,
