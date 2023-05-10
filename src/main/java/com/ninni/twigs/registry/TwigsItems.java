@@ -41,6 +41,7 @@ public class TwigsItems {
     public static final RegistryObject<Item> BLUE_ORCHID_PAPER_LANTERN = ITEMS.register("blue_orchid_paper_lantern", () -> new BlockItem(TwigsBlocks.BLUE_ORCHID_PAPER_LANTERN.get(), new Item.Properties()));
     public static final RegistryObject<Item> CRIMSON_ROOTS_PAPER_LANTERN = ITEMS.register("crimson_roots_paper_lantern", () -> new BlockItem(TwigsBlocks.CRIMSON_ROOTS_PAPER_LANTERN.get(), new Item.Properties()));
     public static final RegistryObject<Item> DANDELION_PAPER_LANTERN = ITEMS.register("dandelion_paper_lantern", () -> new BlockItem(TwigsBlocks.DANDELION_PAPER_LANTERN.get(), new Item.Properties()));
+    public static final RegistryObject<Item> TORCHFLOWER_PAPER_LANTERN = ITEMS.register("torchflower_paper_lantern", () -> new BlockItem(TwigsBlocks.TORCHFLOWER_PAPER_LANTERN.get(), new Item.Properties()));
 
     //lamps
     public static final RegistryObject<Item> LAMP = ITEMS.register("lamp", () -> new BlockItem(TwigsBlocks.LAMP.get(), new Item.Properties()));

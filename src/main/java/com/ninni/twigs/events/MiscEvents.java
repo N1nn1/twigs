@@ -59,7 +59,15 @@ public class MiscEvents {
         MutableHashedLinkedMap<ItemStack, CreativeModeTab.TabVisibility> entries = event.getEntries();
         CreativeModeTab tab = event.getTab();
         if (tab.equals(CreativeModeTabs.FUNCTIONAL_BLOCKS)) {
-            putAfter(entries, Items.REDSTONE_TORCH, TwigsItems.PAPER_LANTERN.get(), TwigsItems.ALLIUM_PAPER_LANTERN.get(), TwigsItems.BLUE_ORCHID_PAPER_LANTERN.get(), TwigsItems.DANDELION_PAPER_LANTERN.get(), TwigsItems.LAMP.get(), TwigsItems.SOUL_LAMP.get());
+            putAfter(entries, Items.REDSTONE_TORCH,
+                    TwigsItems.PAPER_LANTERN.get(),
+                    TwigsItems.ALLIUM_PAPER_LANTERN.get(),
+                    TwigsItems.BLUE_ORCHID_PAPER_LANTERN.get(),
+                    TwigsItems.CRIMSON_ROOTS_PAPER_LANTERN.get(),
+                    TwigsItems.DANDELION_PAPER_LANTERN.get(),
+                    TwigsItems.TORCHFLOWER_PAPER_LANTERN.get(),
+                    TwigsItems.LAMP.get(),
+                    TwigsItems.SOUL_LAMP.get());
             putAfter(entries, Items.GLOW_LICHEN, TwigsItems.PETRIFIED_LICHEN.get());
             putAfter(entries, Items.SHROOMLIGHT, TwigsItems.CRIMSON_SHROOMLAMP.get(), TwigsItems.WARPED_SHROOMLAMP.get());
             putAfter(entries, Items.FLOWER_POT, TwigsItems.SILT_POT.get(), TwigsItems.WHITE_SILT_POT.get(), TwigsItems.LIGHT_GRAY_SILT_POT.get(), TwigsItems.GRAY_SILT_POT.get(), TwigsItems.BLACK_SILT_POT.get(), TwigsItems.BROWN_SILT_POT.get(), TwigsItems.RED_SILT_POT.get(), TwigsItems.ORANGE_SILT_POT.get(), TwigsItems.YELLOW_SILT_POT.get(), TwigsItems.LIME_SILT_POT.get(), TwigsItems.GREEN_SILT_POT.get(), TwigsItems.CYAN_SILT_POT.get(), TwigsItems.LIGHT_BLUE_SILT_POT.get(), TwigsItems.BLUE_SILT_POT.get(), TwigsItems.PURPLE_SILT_POT.get(), TwigsItems.MAGENTA_SILT_POT.get(), TwigsItems.PINK_SILT_POT.get());
@@ -418,6 +426,7 @@ public class MiscEvents {
                 output.accept(TwigsItems.BLUE_ORCHID_PAPER_LANTERN.get());
                 output.accept(TwigsItems.CRIMSON_ROOTS_PAPER_LANTERN.get());
                 output.accept(TwigsItems.DANDELION_PAPER_LANTERN.get());
+                output.accept(TwigsItems.TORCHFLOWER_PAPER_LANTERN.get());
 
                 //lamps
                 output.accept(TwigsItems.LAMP.get());

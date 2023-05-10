@@ -47,6 +47,7 @@ public class TwigsBlocks {
     public static final RegistryObject<Block> BLUE_ORCHID_PAPER_LANTERN = BLOCKS.register("blue_orchid_paper_lantern", () -> new PaperLanternBlock(Blocks.BLUE_ORCHID, BlockBehaviour.Properties.copy(PAPER_LANTERN.get())));
     public static final RegistryObject<Block> CRIMSON_ROOTS_PAPER_LANTERN = BLOCKS.register("crimson_roots_paper_lantern", () -> new PaperLanternBlock(Blocks.CRIMSON_ROOTS, BlockBehaviour.Properties.copy(PAPER_LANTERN.get())));
     public static final RegistryObject<Block> DANDELION_PAPER_LANTERN = BLOCKS.register("dandelion_paper_lantern", () -> new PaperLanternBlock(Blocks.DANDELION, BlockBehaviour.Properties.copy(PAPER_LANTERN.get())));
+    public static final RegistryObject<Block> TORCHFLOWER_PAPER_LANTERN = BLOCKS.register("torchflower_paper_lantern", () -> new PaperLanternBlock(Blocks.TORCHFLOWER, BlockBehaviour.Properties.copy(PAPER_LANTERN.get())));
 
     //lamps
     public static final RegistryObject<Block> LAMP = BLOCKS.register("lamp", () -> new LampBlock(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(4.5F).sound(TwigsSoundEvents.LAMP).lightLevel(createLampLightLevel())));
