@@ -161,7 +161,19 @@ public class MiscEvents {
                     TwigsItems.TWISTING_POLISHED_BLACKSTONE_BRICKS.get(),
                     TwigsItems.TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS.get(),
                     TwigsItems.TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB.get(),
-                    TwigsItems.TWISTING_POLISHED_BLACKSTONE_BRICK_WALL.get()
+                    TwigsItems.TWISTING_POLISHED_BLACKSTONE_BRICK_WALL.get(),
+                    TwigsItems.BLOODSTONE.get(),
+                    TwigsItems.BLOODSTONE_STAIRS.get(),
+                    TwigsItems.BLOODSTONE_SLAB.get(),
+                    TwigsItems.BLOODSTONE_WALL.get(),
+                    TwigsItems.POLISHED_BLOODSTONE.get(),
+                    TwigsItems.POLISHED_BLOODSTONE_STAIRS.get(),
+                    TwigsItems.POLISHED_BLOODSTONE_SLAB.get(),
+                    TwigsItems.POLISHED_BLOODSTONE_BRICKS.get(),
+                    TwigsItems.CRACKED_POLISHED_BLOODSTONE_BRICKS.get(),
+                    TwigsItems.POLISHED_BLOODSTONE_BRICK_STAIRS.get(),
+                    TwigsItems.POLISHED_BLOODSTONE_BRICK_SLAB.get(),
+                    TwigsItems.POLISHED_BLOODSTONE_BRICK_WALL.get()
             );
 
             putAfter(entries, Items.POLISHED_BASALT, TwigsItems.POLISHED_BASALT_BRICKS.get());
@@ -236,21 +248,6 @@ public class MiscEvents {
                     TwigsItems.POLISHED_RHYOLITE_BRICK_STAIRS.get(),
                     TwigsItems.POLISHED_RHYOLITE_BRICK_SLAB.get(),
                     TwigsItems.POLISHED_RHYOLITE_BRICK_WALL.get()
-            );
-
-            putAfter(entries, Items.POLISHED_BLACKSTONE_BRICK_WALL,
-                    TwigsItems.BLOODSTONE.get(),
-                    TwigsItems.BLOODSTONE_STAIRS.get(),
-                    TwigsItems.BLOODSTONE_SLAB.get(),
-                    TwigsItems.BLOODSTONE_WALL.get(),
-                    TwigsItems.POLISHED_BLOODSTONE.get(),
-                    TwigsItems.POLISHED_BLOODSTONE_STAIRS.get(),
-                    TwigsItems.POLISHED_BLOODSTONE_SLAB.get(),
-                    TwigsItems.POLISHED_BLOODSTONE_BRICKS.get(),
-                    TwigsItems.CRACKED_POLISHED_BLOODSTONE_BRICKS.get(),
-                    TwigsItems.POLISHED_BLOODSTONE_BRICK_STAIRS.get(),
-                    TwigsItems.POLISHED_BLOODSTONE_BRICK_SLAB.get(),
-                    TwigsItems.POLISHED_BLOODSTONE_BRICK_WALL.get()
             );
 
             putAfter(entries, Items.CUT_COPPER_SLAB,
