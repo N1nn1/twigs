@@ -7,35 +7,36 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.ToIntFunction;
 
 public class TwigsBlocks {
 
     //collectibles
-    public static final Block AZALEA_FLOWERS = register("azalea_flowers", new AzaleaFlowersBlock(FabricBlockSettings.of(Material.PLANT).breakInstantly().collidable(false).nonOpaque().sounds(SoundType.MOSS_CARPET)));
+    public static final Block AZALEA_FLOWERS = register("azalea_flowers", new AzaleaFlowersBlock(FabricBlockSettings.of().mapColor(MapColor.PLANT).instabreak().noCollission().noOcclusion().sound(SoundType.MOSS_CARPET)));
     @SuppressWarnings("unused") public static final Block POTTED_AZALEA_FLOWERS = register("potted_azalea_flowers", new FlowerPotBlock(AZALEA_FLOWERS, FabricBlockSettings.copyOf(Blocks.POTTED_FLOWERING_AZALEA)));
-    public static final Block TWIG = register("twig", new FloorItemBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).instabreak().noOcclusion().sound(SoundType.WOOD)));
-    public static final Block PEBBLE = register("pebble", new FloorItemBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).instabreak().noOcclusion().sound(SoundType.STONE)));
-    public static final Block OPALINE_SEASHELL = register("opaline_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
-    public static final Block BRONZED_SEASHELL = register("bronzed_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
-    public static final Block ROSEATE_SEASHELL = register("roseate_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
-    public static final Block TANGERINE_SEASHELL = register("tangerine_seashell", new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
+    public static final Block TWIG = register("twig", new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instabreak().noOcclusion().sound(SoundType.WOOD)));
+    public static final Block PEBBLE = register("pebble", new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion().sound(SoundType.STONE)));
+    public static final Block OPALINE_SEASHELL = register("opaline_seashell", new SeashellBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_WHITE).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
+    public static final Block BRONZED_SEASHELL = register("bronzed_seashell", new SeashellBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
+    public static final Block ROSEATE_SEASHELL = register("roseate_seashell", new SeashellBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_PINK).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
+    public static final Block TANGERINE_SEASHELL = register("tangerine_seashell", new SeashellBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
 
     //bamboo
-    public static final Block BAMBOO_LEAVES = register("bamboo_leaves", new BambooLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).noOcclusion().instabreak().noCollission().sound(SoundType.MOSS_CARPET)));
-    public static final Block BAMBOO_THATCH = register("bamboo_thatch", new Block(BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.COLOR_GREEN).strength(0.2F).sound(SoundType.MOSS)));
+    public static final Block BAMBOO_LEAVES = register("bamboo_leaves", new BambooLeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.2F).noOcclusion().instabreak().noCollission().sound(SoundType.MOSS_CARPET)));
+    public static final Block BAMBOO_THATCH = register("bamboo_thatch", new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GREEN).strength(0.2F).sound(SoundType.MOSS)));
     public static final Block BAMBOO_THATCH_SLAB = register("bamboo_thatch_slab", new SlabBlock(BlockBehaviour.Properties.copy(BAMBOO_THATCH)));
     public static final Block BAMBOO_MAT = register("bamboo_mat", new BambooMatBlock(FabricBlockSettings.copyOf(Blocks.BAMBOO_PLANKS)));
 
     //paper lanterns
-    public static final Block PAPER_LANTERN = register("paper_lantern", new PaperLanternBlock(Blocks.AIR, BlockBehaviour.Properties.of(Material.GRASS).strength(1.5f).sound(TwigsSoundEvents.PAPER_LANTERN).lightLevel(blockState -> 15).noOcclusion()));
+    public static final Block PAPER_LANTERN = register("paper_lantern", new PaperLanternBlock(Blocks.AIR, BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_WHITE).strength(1.5f).pushReaction(PushReaction.DESTROY).sound(TwigsSoundEvents.PAPER_LANTERN).lightLevel(blockState -> 15).noOcclusion()));
     public static final Block ALLIUM_PAPER_LANTERN = register("allium_paper_lantern", new PaperLanternBlock(Blocks.ALLIUM, BlockBehaviour.Properties.copy(PAPER_LANTERN)));
     public static final Block BLUE_ORCHID_PAPER_LANTERN = register("blue_orchid_paper_lantern", new PaperLanternBlock(Blocks.BLUE_ORCHID, BlockBehaviour.Properties.copy(PAPER_LANTERN)));
     public static final Block CRIMSON_ROOTS_PAPER_LANTERN = register("crimson_roots_paper_lantern", new PaperLanternBlock(Blocks.CRIMSON_ROOTS, BlockBehaviour.Properties.copy(PAPER_LANTERN)));
@@ -43,10 +44,10 @@ public class TwigsBlocks {
     public static final Block TORCHFLOWER_PAPER_LANTERN = register("torchflower_paper_lantern", new PaperLanternBlock(Blocks.TORCHFLOWER, BlockBehaviour.Properties.copy(PAPER_LANTERN)));
 
     //lamps
-    public static final Block LAMP = register("lamp", new LampBlock(FabricBlockSettings.of(Material.METAL).requiresTool().strength(4.5F).sounds(TwigsSoundEvents.LAMP).luminance(createLampLightLevel())));
+    public static final Block LAMP = register("lamp", new LampBlock(FabricBlockSettings.of().mapColor(MapColor.METAL).requiresCorrectToolForDrops().strength(4.5F).sound(TwigsSoundEvents.LAMP).lightLevel(createLampLightLevel())));
     public static final Block SOUL_LAMP = register("soul_lamp", new LampBlock(FabricBlockSettings.copyOf(TwigsBlocks.LAMP)));
-    public static final Block CRIMSON_SHROOMLAMP = register("crimson_shroomlamp", new Block(FabricBlockSettings.of(Material.NETHER_WOOD).strength(3.5F).sounds(TwigsSoundEvents.SHROOMLAMP).luminance(15)));
-    public static final Block WARPED_SHROOMLAMP = register("warped_shroomlamp", new Block(FabricBlockSettings.copyOf(CRIMSON_SHROOMLAMP)));
+    public static final Block CRIMSON_SHROOMLAMP = register("crimson_shroomlamp", new Block(FabricBlockSettings.of().mapColor(Blocks.CRIMSON_PLANKS.defaultMapColor()).strength(3.5F).sound(TwigsSoundEvents.SHROOMLAMP).lightLevel(blockState -> 15)));
+    public static final Block WARPED_SHROOMLAMP = register("warped_shroomlamp", new Block(FabricBlockSettings.copyOf(CRIMSON_SHROOMLAMP).mapColor(Blocks.WARPED_PLANKS.defaultMapColor())));
 
     //tables
     public static final Block OAK_TABLE = register("oak_table", new TableBlock(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
@@ -79,7 +80,7 @@ public class TwigsBlocks {
     public static final Block MOSSY_BRICK_WALL = register("mossy_brick_wall", new WallBlock(FabricBlockSettings.copyOf(MOSSY_BRICKS)));
 
     //gravel bricks
-    public static final Block GRAVEL_BRICKS = register("gravel_bricks", new Block(FabricBlockSettings.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(0.8f).sound(TwigsSoundEvents.GRAVEL_BRICKS)));
+    public static final Block GRAVEL_BRICKS = register("gravel_bricks", new Block(FabricBlockSettings.of().mapColor(Blocks.GRAVEL.defaultMapColor()).strength(0.8f).sound(TwigsSoundEvents.GRAVEL_BRICKS)));
     public static final Block GRAVEL_BRICK_STAIRS = register("gravel_brick_stairs", new StairBlock(GRAVEL_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(GRAVEL_BRICKS)));
     public static final Block GRAVEL_BRICK_SLAB = register("gravel_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(GRAVEL_BRICKS)));
     public static final Block GRAVEL_BRICK_WALL = register("gravel_brick_wall", new WallBlock(FabricBlockSettings.copyOf(GRAVEL_BRICKS)));
@@ -111,9 +112,9 @@ public class TwigsBlocks {
     public static final Block CUT_AMETHYST = register("cut_amethyst", new CutAmethystBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK)));
 
     //misc
-    public static final Block PETRIFIED_LICHEN = register("petrified_lichen", new GlowLichenBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.GLOW_LICHEN).noCollission().strength(0.2f).sound(SoundType.DEEPSLATE).lightLevel(GlowLichenBlock.emission(7))));
+    public static final Block PETRIFIED_LICHEN = register("petrified_lichen", new GlowLichenBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).noCollission().strength(0.2f).sound(SoundType.DEEPSLATE).lightLevel(GlowLichenBlock.emission(7))));
     public static final Block COMPACTED_DRIPSTONE = register("compacted_dripstone", new CompactedDripstoneBlock(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK)));
-    public static final Block ROCKY_DIRT = register("rocky_dirt", new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(1.25F, 6.0F).sounds(TwigsSoundEvents.ROCKY_DIRT)));
+    public static final Block ROCKY_DIRT = register("rocky_dirt", new Block(FabricBlockSettings.of().mapColor(DyeColor.GRAY).requiresCorrectToolForDrops().strength(1.25F, 6.0F).sound(TwigsSoundEvents.ROCKY_DIRT)));
 
     //cobblestone bricks
     public static final Block COBBLESTONE_BRICKS = register("cobblestone_bricks", new Block(FabricBlockSettings.copyOf(Blocks.COBBLESTONE)));
@@ -163,7 +164,7 @@ public class TwigsBlocks {
     public static final Block CRACKED_POLISHED_CALCITE_BRICKS = register("cracked_polished_calcite_bricks", new Block(FabricBlockSettings.copyOf(POLISHED_CALCITE_BRICKS)));
 
     //schist blocks
-    public static final Block SCHIST = register("schist", new Block(FabricBlockSettings.of(Material.STONE, MaterialColor.TERRACOTTA_WHITE).requiresTool().strength(1F).sounds(TwigsSoundEvents.SCHIST)));
+    public static final Block SCHIST = register("schist", new Block(FabricBlockSettings.of().mapColor(DyeColor.WHITE).requiresCorrectToolForDrops().strength(1F).sound(TwigsSoundEvents.SCHIST)));
     public static final Block SCHIST_STAIRS = register("schist_stairs", new StairBlock(SCHIST.defaultBlockState(), FabricBlockSettings.copyOf(SCHIST)));
     public static final Block SCHIST_SLAB = register("schist_slab", new SlabBlock(FabricBlockSettings.copyOf(SCHIST)));
     public static final Block SCHIST_WALL = register("schist_wall", new WallBlock(FabricBlockSettings.copyOf(SCHIST)));
@@ -177,7 +178,7 @@ public class TwigsBlocks {
     public static final Block CRACKED_POLISHED_SCHIST_BRICKS = register("cracked_polished_schist_bricks", new Block(FabricBlockSettings.copyOf(POLISHED_SCHIST_BRICKS)));
 
     //rhyolite blocks
-    public static final Block RHYOLITE = register("rhyolite", new RotatedPillarBlock(FabricBlockSettings.of(Material.STONE, MaterialColor.TERRACOTTA_WHITE).requiresTool().strength(1.5F).sounds(TwigsSoundEvents.RHYOLITE)));
+    public static final Block RHYOLITE = register("rhyolite", new RotatedPillarBlock(FabricBlockSettings.of().mapColor(DyeColor.BROWN).requiresCorrectToolForDrops().strength(1.5F).sound(TwigsSoundEvents.RHYOLITE)));
     public static final Block RHYOLITE_STAIRS = register("rhyolite_stairs", new StairBlock(RHYOLITE.defaultBlockState(), FabricBlockSettings.copyOf(RHYOLITE)));
     public static final Block RHYOLITE_SLAB = register("rhyolite_slab", new SlabBlock(FabricBlockSettings.copyOf(RHYOLITE)));
     public static final Block RHYOLITE_WALL = register("rhyolite_wall", new WallBlock(FabricBlockSettings.copyOf(RHYOLITE)));
@@ -191,7 +192,7 @@ public class TwigsBlocks {
     public static final Block CRACKED_POLISHED_RHYOLITE_BRICKS = register("cracked_polished_rhyolite_bricks", new Block(FabricBlockSettings.copyOf(POLISHED_RHYOLITE_BRICKS)));
 
     //bloodstone blocks
-    public static final Block BLOODSTONE = register("bloodstone", new Block(FabricBlockSettings.of(Material.STONE, MaterialColor.TERRACOTTA_WHITE).requiresTool().strength(1F).sounds(TwigsSoundEvents.BLOODSTONE)));
+    public static final Block BLOODSTONE = register("bloodstone", new Block(FabricBlockSettings.of().mapColor(DyeColor.GRAY).requiresCorrectToolForDrops().strength(1F).sound(TwigsSoundEvents.BLOODSTONE)));
     public static final Block BLOODSTONE_STAIRS = register("bloodstone_stairs", new StairBlock(BLOODSTONE.defaultBlockState(), FabricBlockSettings.copyOf(BLOODSTONE)));
     public static final Block BLOODSTONE_SLAB = register("bloodstone_slab", new SlabBlock(FabricBlockSettings.copyOf(BLOODSTONE)));
     public static final Block BLOODSTONE_WALL = register("bloodstone_wall", new WallBlock(FabricBlockSettings.copyOf(BLOODSTONE)));
@@ -205,8 +206,8 @@ public class TwigsBlocks {
     public static final Block CRACKED_POLISHED_BLOODSTONE_BRICKS = register("cracked_polished_bloodstone_bricks", new Block(FabricBlockSettings.copyOf(POLISHED_BLOODSTONE_BRICKS)));
 
     //silt blocks
-    public static final Block SILT = register("silt", new RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.CLAY).color(MaterialColor.COLOR_BROWN).sound(TwigsSoundEvents.SILT)));
-    public static final Block SILT_BRICKS = register("silt_bricks", new Block(FabricBlockSettings.copyOf(Blocks.BRICKS).color(MaterialColor.COLOR_YELLOW)));
+    public static final Block SILT = register("silt", new RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.CLAY).mapColor(DyeColor.BROWN).sound(TwigsSoundEvents.SILT)));
+    public static final Block SILT_BRICKS = register("silt_bricks", new Block(FabricBlockSettings.copyOf(Blocks.BRICKS).mapColor(DyeColor.YELLOW)));
     public static final Block SILT_BRICK_STAIRS = register("silt_brick_stairs", new StairBlock(SILT_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(SILT_BRICKS)));
     public static final Block SILT_BRICK_SLAB = register("silt_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(SILT_BRICKS)));
     public static final Block SILT_BRICK_WALL = register("silt_brick_wall", new WallBlock(FabricBlockSettings.copyOf(SILT_BRICKS)));
@@ -214,59 +215,59 @@ public class TwigsBlocks {
     public static final Block CHISELED_SILT_BRICKS = register("chiseled_silt_bricks", new FacingBlock(FabricBlockSettings.copyOf(SILT_BRICKS)));
     public static final Block CRACKED_SILT_BRICKS = register("cracked_silt_bricks", new Block(FabricBlockSettings.copyOf(SILT_BRICKS)));
 
-    public static final Block SILT_POT = register("silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).strength(0.5f, 2f)));
-    public static final Block WHITE_SILT_POT = register("white_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.TERRACOTTA_WHITE)));
-    public static final Block ORANGE_SILT_POT = register("orange_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_ORANGE)));
-    public static final Block MAGENTA_SILT_POT = register("magenta_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_MAGENTA)));
-    public static final Block LIGHT_BLUE_SILT_POT = register("light_blue_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_LIGHT_BLUE)));
-    public static final Block YELLOW_SILT_POT = register("yellow_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_YELLOW)));
-    public static final Block LIME_SILT_POT = register("lime_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_LIGHT_GREEN)));
-    public static final Block PINK_SILT_POT = register("pink_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_PINK)));
-    public static final Block GRAY_SILT_POT = register("gray_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_GRAY)));
-    public static final Block LIGHT_GRAY_SILT_POT = register("light_gray_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_LIGHT_GRAY)));
-    public static final Block CYAN_SILT_POT = register("cyan_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_CYAN)));
-    public static final Block PURPLE_SILT_POT = register("purple_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_PURPLE)));
-    public static final Block BLUE_SILT_POT = register("blue_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_BLUE)));
-    public static final Block BROWN_SILT_POT = register("brown_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_BROWN)));
-    public static final Block GREEN_SILT_POT = register("green_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_GREEN)));
-    public static final Block RED_SILT_POT = register("red_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_RED)));
-    public static final Block BLACK_SILT_POT = register("black_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).color(MaterialColor.COLOR_BLACK)));
+    public static final Block SILT_POT = register("silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).strength(0.5f, 2f).pushReaction(PushReaction.NORMAL)));
+    public static final Block WHITE_SILT_POT = register("white_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.TERRACOTTA_WHITE)));
+    public static final Block ORANGE_SILT_POT = register("orange_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_ORANGE)));
+    public static final Block MAGENTA_SILT_POT = register("magenta_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_MAGENTA)));
+    public static final Block LIGHT_BLUE_SILT_POT = register("light_blue_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+    public static final Block YELLOW_SILT_POT = register("yellow_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_YELLOW)));
+    public static final Block LIME_SILT_POT = register("lime_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+    public static final Block PINK_SILT_POT = register("pink_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_PINK)));
+    public static final Block GRAY_SILT_POT = register("gray_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_GRAY)));
+    public static final Block LIGHT_GRAY_SILT_POT = register("light_gray_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_LIGHT_GRAY)));
+    public static final Block CYAN_SILT_POT = register("cyan_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_CYAN)));
+    public static final Block PURPLE_SILT_POT = register("purple_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_PURPLE)));
+    public static final Block BLUE_SILT_POT = register("blue_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_BLUE)));
+    public static final Block BROWN_SILT_POT = register("brown_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_BROWN)));
+    public static final Block GREEN_SILT_POT = register("green_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_GREEN)));
+    public static final Block RED_SILT_POT = register("red_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_RED)));
+    public static final Block BLACK_SILT_POT = register("black_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.COLOR_BLACK)));
 
     public static final Block PACKED_SILT = register("packed_silt", new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(TwigsSoundEvents.PACKED_SILT)));
-    public static final Block WHITE_PACKED_SILT = register("white_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.TERRACOTTA_WHITE)));
-    public static final Block ORANGE_PACKED_SILT = register("orange_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_ORANGE)));
-    public static final Block MAGENTA_PACKED_SILT = register("magenta_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_MAGENTA)));
-    public static final Block LIGHT_BLUE_PACKED_SILT = register("light_blue_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_LIGHT_BLUE)));
-    public static final Block YELLOW_PACKED_SILT = register("yellow_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_YELLOW)));
-    public static final Block LIME_PACKED_SILT = register("lime_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_LIGHT_GREEN)));
-    public static final Block PINK_PACKED_SILT = register("pink_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_PINK)));
-    public static final Block GRAY_PACKED_SILT = register("gray_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_GRAY)));
-    public static final Block LIGHT_GRAY_PACKED_SILT = register("light_gray_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_LIGHT_GRAY)));
-    public static final Block CYAN_PACKED_SILT = register("cyan_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_CYAN)));
-    public static final Block PURPLE_PACKED_SILT = register("purple_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_PURPLE)));
-    public static final Block BLUE_PACKED_SILT = register("blue_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_BLUE)));
-    public static final Block BROWN_PACKED_SILT = register("brown_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_BROWN)));
-    public static final Block GREEN_PACKED_SILT = register("green_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_GREEN)));
-    public static final Block RED_PACKED_SILT = register("red_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_RED)));
-    public static final Block BLACK_PACKED_SILT = register("black_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).color(MaterialColor.COLOR_BLACK)));
+    public static final Block WHITE_PACKED_SILT = register("white_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.TERRACOTTA_WHITE)));
+    public static final Block ORANGE_PACKED_SILT = register("orange_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_ORANGE)));
+    public static final Block MAGENTA_PACKED_SILT = register("magenta_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_MAGENTA)));
+    public static final Block LIGHT_BLUE_PACKED_SILT = register("light_blue_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+    public static final Block YELLOW_PACKED_SILT = register("yellow_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_YELLOW)));
+    public static final Block LIME_PACKED_SILT = register("lime_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+    public static final Block PINK_PACKED_SILT = register("pink_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_PINK)));
+    public static final Block GRAY_PACKED_SILT = register("gray_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_GRAY)));
+    public static final Block LIGHT_GRAY_PACKED_SILT = register("light_gray_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_LIGHT_GRAY)));
+    public static final Block CYAN_PACKED_SILT = register("cyan_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_CYAN)));
+    public static final Block PURPLE_PACKED_SILT = register("purple_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_PURPLE)));
+    public static final Block BLUE_PACKED_SILT = register("blue_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_BLUE)));
+    public static final Block BROWN_PACKED_SILT = register("brown_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_BROWN)));
+    public static final Block GREEN_PACKED_SILT = register("green_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_GREEN)));
+    public static final Block RED_PACKED_SILT = register("red_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_RED)));
+    public static final Block BLACK_PACKED_SILT = register("black_packed_silt", new Block(FabricBlockSettings.copyOf(PACKED_SILT).mapColor(MapColor.COLOR_BLACK)));
 
     public static final Block SILT_SHINGLES = register("silt_shingles", new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(TwigsSoundEvents.SILT_SHINGLES)));
-    public static final Block WHITE_SILT_SHINGLES = register("white_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.TERRACOTTA_WHITE)));
-    public static final Block ORANGE_SILT_SHINGLES = register("orange_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_ORANGE)));
-    public static final Block MAGENTA_SILT_SHINGLES = register("magenta_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_MAGENTA)));
-    public static final Block LIGHT_BLUE_SILT_SHINGLES = register("light_blue_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_LIGHT_BLUE)));
-    public static final Block YELLOW_SILT_SHINGLES = register("yellow_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_YELLOW)));
-    public static final Block LIME_SILT_SHINGLES = register("lime_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_LIGHT_GREEN)));
-    public static final Block PINK_SILT_SHINGLES = register("pink_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_PINK)));
-    public static final Block GRAY_SILT_SHINGLES = register("gray_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_GRAY)));
-    public static final Block LIGHT_GRAY_SILT_SHINGLES = register("light_gray_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_LIGHT_GRAY)));
-    public static final Block CYAN_SILT_SHINGLES = register("cyan_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_CYAN)));
-    public static final Block PURPLE_SILT_SHINGLES = register("purple_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_PURPLE)));
-    public static final Block BLUE_SILT_SHINGLES = register("blue_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_BLUE)));
-    public static final Block BROWN_SILT_SHINGLES = register("brown_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_BROWN)));
-    public static final Block GREEN_SILT_SHINGLES = register("green_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_GREEN)));
-    public static final Block RED_SILT_SHINGLES = register("red_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_RED)));
-    public static final Block BLACK_SILT_SHINGLES = register("black_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).color(MaterialColor.COLOR_BLACK)));
+    public static final Block WHITE_SILT_SHINGLES = register("white_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.TERRACOTTA_WHITE)));
+    public static final Block ORANGE_SILT_SHINGLES = register("orange_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_ORANGE)));
+    public static final Block MAGENTA_SILT_SHINGLES = register("magenta_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_MAGENTA)));
+    public static final Block LIGHT_BLUE_SILT_SHINGLES = register("light_blue_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+    public static final Block YELLOW_SILT_SHINGLES = register("yellow_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_YELLOW)));
+    public static final Block LIME_SILT_SHINGLES = register("lime_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+    public static final Block PINK_SILT_SHINGLES = register("pink_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_PINK)));
+    public static final Block GRAY_SILT_SHINGLES = register("gray_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_GRAY)));
+    public static final Block LIGHT_GRAY_SILT_SHINGLES = register("light_gray_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_LIGHT_GRAY)));
+    public static final Block CYAN_SILT_SHINGLES = register("cyan_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_CYAN)));
+    public static final Block PURPLE_SILT_SHINGLES = register("purple_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_PURPLE)));
+    public static final Block BLUE_SILT_SHINGLES = register("blue_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_BLUE)));
+    public static final Block BROWN_SILT_SHINGLES = register("brown_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_BROWN)));
+    public static final Block GREEN_SILT_SHINGLES = register("green_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_GREEN)));
+    public static final Block RED_SILT_SHINGLES = register("red_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_RED)));
+    public static final Block BLACK_SILT_SHINGLES = register("black_silt_shingles", new Block(FabricBlockSettings.copyOf(SILT_SHINGLES).mapColor(MapColor.COLOR_BLACK)));
 
     public static final Block SILT_SHINGLE_STAIRS = register("silt_shingle_stairs", new StairBlock(SILT_SHINGLES.defaultBlockState(), FabricBlockSettings.copyOf(SILT_SHINGLES)));
     public static final Block WHITE_SILT_SHINGLE_STAIRS = register("white_silt_shingle_stairs", new StairBlock(WHITE_SILT_SHINGLES.defaultBlockState(), FabricBlockSettings.copyOf(WHITE_SILT_SHINGLES)));

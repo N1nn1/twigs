@@ -1,8 +1,13 @@
 package com.ninni.twigs.registry;
 
+import com.ninni.twigs.Twigs;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
@@ -381,325 +386,331 @@ public class TwigsCreativeModeTab {
                     PINK_SILT_SHINGLE_WALL
             );
         });
-
-        FabricItemGroup.builder(new ResourceLocation(MOD_ID,"item_group")).icon(TWIGS::getDefaultInstance).displayItems((featureFlagSet, output) -> {
-
-            //collectibles
-            output.accept(AZALEA_FLOWERS);
-            output.accept(TWIG);
-            output.accept(PEBBLE);
-            output.accept(BRONZED_SEASHELL);
-            output.accept(OPALINE_SEASHELL);
-            output.accept(ROSEATE_SEASHELL);
-            output.accept(TANGERINE_SEASHELL);
-
-            output.accept(BAMBOO_LEAVES);
-            output.accept(BAMBOO_THATCH);
-            output.accept(BAMBOO_THATCH_SLAB);
-            output.accept(BAMBOO_MAT);
-
-            //paper lanterns
-            output.accept(PAPER_LANTERN);
-            output.accept(ALLIUM_PAPER_LANTERN);
-            output.accept(BLUE_ORCHID_PAPER_LANTERN);
-            output.accept(CRIMSON_ROOTS_PAPER_LANTERN);
-            output.accept(DANDELION_PAPER_LANTERN);
-            output.accept(TORCHFLOWER_PAPER_LANTERN);
-
-            //lamps
-            output.accept(lAMP);
-            output.accept(SOUL_LAMP);
-            output.accept(CRIMSON_SHROOMLAMP);
-            output.accept(WARPED_SHROOMLAMP);
-
-            //tables
-            output.accept(OAK_TABLE);
-            output.accept(SPRUCE_TABLE);
-            output.accept(BIRCH_TABLE);
-            output.accept(JUNGLE_TABLE);
-            output.accept(ACACIA_TABLE);
-            output.accept(DARK_OAK_TABLE);
-            output.accept(MANGROVE_TABLE);
-            output.accept(CHERRY_TABLE);
-            output.accept(BAMBOO_TABLE);
-            output.accept(CRIMSON_TABLE);
-            output.accept(WARPED_TABLE);
-
-            //basalt blocks
-            output.accept(POLISHED_BASALT_BRICKS);
-            output.accept(CHISELED_SMOOTH_BASALT_BRICKS);
-            output.accept(SMOOTH_BASALT_BRICKS);
-            output.accept(SMOOTH_BASALT_BRICK_STAIRS);
-            output.accept(SMOOTH_BASALT_BRICK_SLAB);
-            output.accept(SMOOTH_BASALT_BRICK_WALL);
-
-            //bricks
-            output.accept(CRACKED_BRICKS);
-            output.accept(MIXED_BRICKS);
-            output.accept(CHISELED_BRICKS);
-            output.accept(MOSSY_BRICKS);
-            output.accept(MOSSY_BRICK_STAIRS);
-            output.accept(MOSSY_BRICK_SLAB);
-            output.accept(MOSSY_BRICK_WALL);
-
-            //gravel bricks
-            output.accept(GRAVEL_BRICKS);
-            output.accept(GRAVEL_BRICK_STAIRS);
-            output.accept(GRAVEL_BRICK_SLAB);
-            output.accept(GRAVEL_BRICK_WALL);
-
-            //smooth stone bricks
-            output.accept(SMOOTH_STONE_BRICKS);
-            output.accept(SMOOTH_STONE_BRICK_STAIRS);
-            output.accept(SMOOTH_STONE_BRICK_SLAB);
-            output.accept(SMOOTH_STONE_BRICK_WALL);
-
-            //columns
-            output.accept(QUARTZ_COLUMN);
-            output.accept(STONE_COLUMN);
-            output.accept(DEEPSLATE_COLUMN);
-            output.accept(BLACKSTONE_COLUMN);
-
-            //copper pillars
-            output.accept(COPPER_PILLAR);
-            output.accept(EXPOSED_COPPER_PILLAR);
-            output.accept(WEATHERED_COPPER_PILLAR);
-            output.accept(OXIDIZED_COPPER_PILLAR);
-            output.accept(WAXED_COPPER_PILLAR);
-            output.accept(WAXED_EXPOSED_COPPER_PILLAR);
-            output.accept(WAXED_WEATHERED_COPPER_PILLAR);
-            output.accept(WAXED_OXIDIZED_COPPER_PILLAR);
-
-            //amethyst blocks
-            output.accept(POLISHED_AMETHYST);
-            output.accept(CUT_AMETHYST);
-
-            //misc
-            output.accept(PETRIFIED_LICHEN);
-            output.accept(COMPACTED_DRIPSTONE);
-            output.accept(ROCKY_DIRT);
-
-            //cobblestone bricks
-            output.accept(COBBLESTONE_BRICKS);
-            output.accept(COBBLESTONE_BRICK_STAIRS);
-            output.accept(COBBLESTONE_BRICK_SLAB);
-            output.accept(COBBLESTONE_BRICK_WALL);
-            output.accept(CRACKED_COBBLESTONE_BRICKS);
-            output.accept(MOSSY_COBBLESTONE_BRICKS);
-            output.accept(MOSSY_COBBLESTONE_BRICK_STAIRS);
-            output.accept(MOSSY_COBBLESTONE_BRICK_SLAB);
-            output.accept(MOSSY_COBBLESTONE_BRICK_WALL);
-
-            //decorated blackstone bricks
-            output.accept(TWISTING_POLISHED_BLACKSTONE_BRICKS);
-            output.accept(TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS);
-            output.accept(TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB);
-            output.accept(TWISTING_POLISHED_BLACKSTONE_BRICK_WALL);
-            output.accept(WEEPING_POLISHED_BLACKSTONE_BRICKS);
-            output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS);
-            output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB);
-            output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_WALL);
-
-            //tuff blocks
-            output.accept(TUFF_STAIRS);
-            output.accept(TUFF_SLAB);
-            output.accept(TUFF_WALL);
-            output.accept(POLISHED_TUFF);
-            output.accept(POLISHED_TUFF_STAIRS);
-            output.accept(POLISHED_TUFF_SLAB);
-            output.accept(POLISHED_TUFF_BRICKS);
-            output.accept(CRACKED_POLISHED_TUFF_BRICKS);
-            output.accept(POLISHED_TUFF_BRICK_STAIRS);
-            output.accept(POLISHED_TUFF_BRICK_SLAB);
-            output.accept(POLISHED_TUFF_BRICK_WALL);
-
-            //calcite blocks
-            output.accept(CALCITE_STAIRS);
-            output.accept(CALCITE_SLAB);
-            output.accept(CALCITE_WALL);
-            output.accept(POLISHED_CALCITE);
-            output.accept(POLISHED_CALCITE_STAIRS);
-            output.accept(POLISHED_CALCITE_SLAB);
-            output.accept(POLISHED_CALCITE_BRICKS);
-            output.accept(CRACKED_POLISHED_CALCITE_BRICKS);
-            output.accept(POLISHED_CALCITE_BRICK_STAIRS);
-            output.accept(POLISHED_CALCITE_BRICK_SLAB);
-            output.accept(POLISHED_CALCITE_BRICK_WALL);
-
-            //schist blocks
-            output.accept(SCHIST);
-            output.accept(SCHIST_STAIRS);
-            output.accept(SCHIST_SLAB);
-            output.accept(SCHIST_WALL);
-            output.accept(POLISHED_SCHIST);
-            output.accept(POLISHED_SCHIST_STAIRS);
-            output.accept(POLISHED_SCHIST_SLAB);
-            output.accept(POLISHED_SCHIST_BRICKS);
-            output.accept(CRACKED_POLISHED_SCHIST_BRICKS);
-            output.accept(POLISHED_SCHIST_BRICK_STAIRS);
-            output.accept(POLISHED_SCHIST_BRICK_SLAB);
-            output.accept(POLISHED_SCHIST_BRICK_WALL);
-
-            //rhyolite blocks
-            output.accept(RHYOLITE);
-            output.accept(RHYOLITE_STAIRS);
-            output.accept(RHYOLITE_SLAB);
-            output.accept(RHYOLITE_WALL);
-            output.accept(POLISHED_RHYOLITE);
-            output.accept(POLISHED_RHYOLITE_STAIRS);
-            output.accept(POLISHED_RHYOLITE_SLAB);
-            output.accept(POLISHED_RHYOLITE_BRICKS);
-            output.accept(CRACKED_POLISHED_RHYOLITE_BRICKS);
-            output.accept(POLISHED_RHYOLITE_BRICK_STAIRS);
-            output.accept(POLISHED_RHYOLITE_BRICK_SLAB);
-            output.accept(POLISHED_RHYOLITE_BRICK_WALL);
-
-            //bloodstone blocks
-            output.accept(BLOODSTONE);
-            output.accept(BLOODSTONE_STAIRS);
-            output.accept(BLOODSTONE_SLAB);
-            output.accept(BLOODSTONE_WALL);
-            output.accept(POLISHED_BLOODSTONE);
-            output.accept(POLISHED_BLOODSTONE_STAIRS);
-            output.accept(POLISHED_BLOODSTONE_SLAB);
-            output.accept(POLISHED_BLOODSTONE_BRICKS);
-            output.accept(CRACKED_POLISHED_BLOODSTONE_BRICKS);
-            output.accept(POLISHED_BLOODSTONE_BRICK_STAIRS);
-            output.accept(POLISHED_BLOODSTONE_BRICK_SLAB);
-            output.accept(POLISHED_BLOODSTONE_BRICK_WALL);
-
-            //silt blocks
-            output.accept(SILT);
-            output.accept(SILT_BALL);
-            output.accept(SILT_BRICK);
-            output.accept(SILT_BRICKS);
-            output.accept(CRACKED_SILT_BRICKS);
-            output.accept(SILT_BRICK_STAIRS);
-            output.accept(SILT_BRICK_SLAB);
-            output.accept(SILT_BRICK_WALL);
-            output.accept(CHISELED_SILT_BRICKS);
-            output.accept(MIXED_SILT_BRICKS);
+    }
 
 
-            output.accept(PACKED_SILT);
-            output.accept(SILT_POT);
-            output.accept(SILT_SHINGLES);
-            output.accept(SILT_SHINGLE_STAIRS);
-            output.accept(SILT_SHINGLE_SLAB);
-            output.accept(SILT_SHINGLE_WALL);
+    public static final CreativeModeTab ITEM_GROUP = register("item_group", FabricItemGroup.builder().icon(TWIGS::getDefaultInstance).title(Component.translatable("twigs.item_group")).displayItems((featureFlagSet, output) -> {
 
-            output.accept(WHITE_PACKED_SILT);
-            output.accept(WHITE_SILT_POT);
-            output.accept(WHITE_SILT_SHINGLES);
-            output.accept(WHITE_SILT_SHINGLE_STAIRS);
-            output.accept(WHITE_SILT_SHINGLE_SLAB);
-            output.accept(WHITE_SILT_SHINGLE_WALL);
+                //collectibles
+                output.accept(AZALEA_FLOWERS);
+                output.accept(TWIG);
+                output.accept(PEBBLE);
+                output.accept(BRONZED_SEASHELL);
+                output.accept(OPALINE_SEASHELL);
+                output.accept(ROSEATE_SEASHELL);
+                output.accept(TANGERINE_SEASHELL);
 
-            output.accept(LIGHT_GRAY_PACKED_SILT);
-            output.accept(LIGHT_GRAY_SILT_POT);
-            output.accept(LIGHT_GRAY_SILT_SHINGLES);
-            output.accept(LIGHT_GRAY_SILT_SHINGLE_STAIRS);
-            output.accept(LIGHT_GRAY_SILT_SHINGLE_SLAB);
-            output.accept(LIGHT_GRAY_SILT_SHINGLE_WALL);
+                output.accept(BAMBOO_LEAVES);
+                output.accept(BAMBOO_THATCH);
+                output.accept(BAMBOO_THATCH_SLAB);
+                output.accept(BAMBOO_MAT);
 
-            output.accept(GRAY_PACKED_SILT);
-            output.accept(GRAY_SILT_POT);
-            output.accept(GRAY_SILT_SHINGLES);
-            output.accept(GRAY_SILT_SHINGLE_STAIRS);
-            output.accept(GRAY_SILT_SHINGLE_SLAB);
-            output.accept(GRAY_SILT_SHINGLE_WALL);
+                //paper lanterns
+                output.accept(PAPER_LANTERN);
+                output.accept(ALLIUM_PAPER_LANTERN);
+                output.accept(BLUE_ORCHID_PAPER_LANTERN);
+                output.accept(CRIMSON_ROOTS_PAPER_LANTERN);
+                output.accept(DANDELION_PAPER_LANTERN);
+                output.accept(TORCHFLOWER_PAPER_LANTERN);
 
-            output.accept(BLACK_PACKED_SILT);
-            output.accept(BLACK_SILT_POT);
-            output.accept(BLACK_SILT_SHINGLES);
-            output.accept(BLACK_SILT_SHINGLE_STAIRS);
-            output.accept(BLACK_SILT_SHINGLE_SLAB);
-            output.accept(BLACK_SILT_SHINGLE_WALL);
+                //lamps
+                output.accept(lAMP);
+                output.accept(SOUL_LAMP);
+                output.accept(CRIMSON_SHROOMLAMP);
+                output.accept(WARPED_SHROOMLAMP);
 
-            output.accept(BROWN_PACKED_SILT);
-            output.accept(BROWN_SILT_POT);
-            output.accept(BROWN_SILT_SHINGLES);
-            output.accept(BROWN_SILT_SHINGLE_STAIRS);
-            output.accept(BROWN_SILT_SHINGLE_SLAB);
-            output.accept(BROWN_SILT_SHINGLE_WALL);
+                //tables
+                output.accept(OAK_TABLE);
+                output.accept(SPRUCE_TABLE);
+                output.accept(BIRCH_TABLE);
+                output.accept(JUNGLE_TABLE);
+                output.accept(ACACIA_TABLE);
+                output.accept(DARK_OAK_TABLE);
+                output.accept(MANGROVE_TABLE);
+                output.accept(CHERRY_TABLE);
+                output.accept(BAMBOO_TABLE);
+                output.accept(CRIMSON_TABLE);
+                output.accept(WARPED_TABLE);
 
-            output.accept(RED_PACKED_SILT);
-            output.accept(RED_SILT_POT);
-            output.accept(RED_SILT_SHINGLES);
-            output.accept(RED_SILT_SHINGLE_STAIRS);
-            output.accept(RED_SILT_SHINGLE_SLAB);
-            output.accept(RED_SILT_SHINGLE_WALL);
+                //basalt blocks
+                output.accept(POLISHED_BASALT_BRICKS);
+                output.accept(CHISELED_SMOOTH_BASALT_BRICKS);
+                output.accept(SMOOTH_BASALT_BRICKS);
+                output.accept(SMOOTH_BASALT_BRICK_STAIRS);
+                output.accept(SMOOTH_BASALT_BRICK_SLAB);
+                output.accept(SMOOTH_BASALT_BRICK_WALL);
 
-            output.accept(ORANGE_PACKED_SILT);
-            output.accept(ORANGE_SILT_POT);
-            output.accept(ORANGE_SILT_SHINGLES);
-            output.accept(ORANGE_SILT_SHINGLE_STAIRS);
-            output.accept(ORANGE_SILT_SHINGLE_SLAB);
-            output.accept(ORANGE_SILT_SHINGLE_WALL);
+                //bricks
+                output.accept(CRACKED_BRICKS);
+                output.accept(MIXED_BRICKS);
+                output.accept(CHISELED_BRICKS);
+                output.accept(MOSSY_BRICKS);
+                output.accept(MOSSY_BRICK_STAIRS);
+                output.accept(MOSSY_BRICK_SLAB);
+                output.accept(MOSSY_BRICK_WALL);
 
-            output.accept(YELLOW_PACKED_SILT);
-            output.accept(YELLOW_SILT_POT);
-            output.accept(YELLOW_SILT_SHINGLES);
-            output.accept(YELLOW_SILT_SHINGLE_STAIRS);
-            output.accept(YELLOW_SILT_SHINGLE_SLAB);
-            output.accept(YELLOW_SILT_SHINGLE_WALL);
+                //gravel bricks
+                output.accept(GRAVEL_BRICKS);
+                output.accept(GRAVEL_BRICK_STAIRS);
+                output.accept(GRAVEL_BRICK_SLAB);
+                output.accept(GRAVEL_BRICK_WALL);
 
-            output.accept(LIME_PACKED_SILT);
-            output.accept(LIME_SILT_POT);
-            output.accept(LIME_SILT_SHINGLES);
-            output.accept(LIME_SILT_SHINGLE_STAIRS);
-            output.accept(LIME_SILT_SHINGLE_SLAB);
-            output.accept(LIME_SILT_SHINGLE_WALL);
+                //smooth stone bricks
+                output.accept(SMOOTH_STONE_BRICKS);
+                output.accept(SMOOTH_STONE_BRICK_STAIRS);
+                output.accept(SMOOTH_STONE_BRICK_SLAB);
+                output.accept(SMOOTH_STONE_BRICK_WALL);
 
-            output.accept(GREEN_PACKED_SILT);
-            output.accept(GREEN_SILT_POT);
-            output.accept(GREEN_SILT_SHINGLES);
-            output.accept(GREEN_SILT_SHINGLE_STAIRS);
-            output.accept(GREEN_SILT_SHINGLE_SLAB);
-            output.accept(GREEN_SILT_SHINGLE_WALL);
+                //columns
+                output.accept(QUARTZ_COLUMN);
+                output.accept(STONE_COLUMN);
+                output.accept(DEEPSLATE_COLUMN);
+                output.accept(BLACKSTONE_COLUMN);
 
-            output.accept(CYAN_PACKED_SILT);
-            output.accept(CYAN_SILT_POT);
-            output.accept(CYAN_SILT_SHINGLES);
-            output.accept(CYAN_SILT_SHINGLE_STAIRS);
-            output.accept(CYAN_SILT_SHINGLE_SLAB);
-            output.accept(CYAN_SILT_SHINGLE_WALL);
+                //copper pillars
+                output.accept(COPPER_PILLAR);
+                output.accept(EXPOSED_COPPER_PILLAR);
+                output.accept(WEATHERED_COPPER_PILLAR);
+                output.accept(OXIDIZED_COPPER_PILLAR);
+                output.accept(WAXED_COPPER_PILLAR);
+                output.accept(WAXED_EXPOSED_COPPER_PILLAR);
+                output.accept(WAXED_WEATHERED_COPPER_PILLAR);
+                output.accept(WAXED_OXIDIZED_COPPER_PILLAR);
 
-            output.accept(LIGHT_BLUE_PACKED_SILT);
-            output.accept(LIGHT_BLUE_SILT_POT);
-            output.accept(LIGHT_BLUE_SILT_SHINGLES);
-            output.accept(LIGHT_BLUE_SILT_SHINGLE_STAIRS);
-            output.accept(LIGHT_BLUE_SILT_SHINGLE_SLAB);
-            output.accept(LIGHT_BLUE_SILT_SHINGLE_WALL);
+                //amethyst blocks
+                output.accept(POLISHED_AMETHYST);
+                output.accept(CUT_AMETHYST);
 
-            output.accept(BLUE_PACKED_SILT);
-            output.accept(BLUE_SILT_POT);
-            output.accept(BLUE_SILT_SHINGLES);
-            output.accept(BLUE_SILT_SHINGLE_STAIRS);
-            output.accept(BLUE_SILT_SHINGLE_SLAB);
-            output.accept(BLUE_SILT_SHINGLE_WALL);
+                //misc
+                output.accept(PETRIFIED_LICHEN);
+                output.accept(COMPACTED_DRIPSTONE);
+                output.accept(ROCKY_DIRT);
 
-            output.accept(PURPLE_PACKED_SILT);
-            output.accept(PURPLE_SILT_POT);
-            output.accept(PURPLE_SILT_SHINGLES);
-            output.accept(PURPLE_SILT_SHINGLE_STAIRS);
-            output.accept(PURPLE_SILT_SHINGLE_SLAB);
-            output.accept(PURPLE_SILT_SHINGLE_WALL);
+                //cobblestone bricks
+                output.accept(COBBLESTONE_BRICKS);
+                output.accept(COBBLESTONE_BRICK_STAIRS);
+                output.accept(COBBLESTONE_BRICK_SLAB);
+                output.accept(COBBLESTONE_BRICK_WALL);
+                output.accept(CRACKED_COBBLESTONE_BRICKS);
+                output.accept(MOSSY_COBBLESTONE_BRICKS);
+                output.accept(MOSSY_COBBLESTONE_BRICK_STAIRS);
+                output.accept(MOSSY_COBBLESTONE_BRICK_SLAB);
+                output.accept(MOSSY_COBBLESTONE_BRICK_WALL);
 
-            output.accept(MAGENTA_PACKED_SILT);
-            output.accept(MAGENTA_SILT_POT);
-            output.accept(MAGENTA_SILT_SHINGLES);
-            output.accept(MAGENTA_SILT_SHINGLE_STAIRS);
-            output.accept(MAGENTA_SILT_SHINGLE_SLAB);
-            output.accept(MAGENTA_SILT_SHINGLE_WALL);
+                //decorated blackstone bricks
+                output.accept(TWISTING_POLISHED_BLACKSTONE_BRICKS);
+                output.accept(TWISTING_POLISHED_BLACKSTONE_BRICK_STAIRS);
+                output.accept(TWISTING_POLISHED_BLACKSTONE_BRICK_SLAB);
+                output.accept(TWISTING_POLISHED_BLACKSTONE_BRICK_WALL);
+                output.accept(WEEPING_POLISHED_BLACKSTONE_BRICKS);
+                output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_STAIRS);
+                output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_SLAB);
+                output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_WALL);
 
-            output.accept(PINK_PACKED_SILT);
-            output.accept(PINK_SILT_POT);
-            output.accept(PINK_SILT_SHINGLES);
-            output.accept(PINK_SILT_SHINGLE_STAIRS);
-            output.accept(PINK_SILT_SHINGLE_SLAB);
-            output.accept(PINK_SILT_SHINGLE_WALL);
+                //tuff blocks
+                output.accept(TUFF_STAIRS);
+                output.accept(TUFF_SLAB);
+                output.accept(TUFF_WALL);
+                output.accept(POLISHED_TUFF);
+                output.accept(POLISHED_TUFF_STAIRS);
+                output.accept(POLISHED_TUFF_SLAB);
+                output.accept(POLISHED_TUFF_BRICKS);
+                output.accept(CRACKED_POLISHED_TUFF_BRICKS);
+                output.accept(POLISHED_TUFF_BRICK_STAIRS);
+                output.accept(POLISHED_TUFF_BRICK_SLAB);
+                output.accept(POLISHED_TUFF_BRICK_WALL);
 
-        }).build();
+                //calcite blocks
+                output.accept(CALCITE_STAIRS);
+                output.accept(CALCITE_SLAB);
+                output.accept(CALCITE_WALL);
+                output.accept(POLISHED_CALCITE);
+                output.accept(POLISHED_CALCITE_STAIRS);
+                output.accept(POLISHED_CALCITE_SLAB);
+                output.accept(POLISHED_CALCITE_BRICKS);
+                output.accept(CRACKED_POLISHED_CALCITE_BRICKS);
+                output.accept(POLISHED_CALCITE_BRICK_STAIRS);
+                output.accept(POLISHED_CALCITE_BRICK_SLAB);
+                output.accept(POLISHED_CALCITE_BRICK_WALL);
+
+                //schist blocks
+                output.accept(SCHIST);
+                output.accept(SCHIST_STAIRS);
+                output.accept(SCHIST_SLAB);
+                output.accept(SCHIST_WALL);
+                output.accept(POLISHED_SCHIST);
+                output.accept(POLISHED_SCHIST_STAIRS);
+                output.accept(POLISHED_SCHIST_SLAB);
+                output.accept(POLISHED_SCHIST_BRICKS);
+                output.accept(CRACKED_POLISHED_SCHIST_BRICKS);
+                output.accept(POLISHED_SCHIST_BRICK_STAIRS);
+                output.accept(POLISHED_SCHIST_BRICK_SLAB);
+                output.accept(POLISHED_SCHIST_BRICK_WALL);
+
+                //rhyolite blocks
+                output.accept(RHYOLITE);
+                output.accept(RHYOLITE_STAIRS);
+                output.accept(RHYOLITE_SLAB);
+                output.accept(RHYOLITE_WALL);
+                output.accept(POLISHED_RHYOLITE);
+                output.accept(POLISHED_RHYOLITE_STAIRS);
+                output.accept(POLISHED_RHYOLITE_SLAB);
+                output.accept(POLISHED_RHYOLITE_BRICKS);
+                output.accept(CRACKED_POLISHED_RHYOLITE_BRICKS);
+                output.accept(POLISHED_RHYOLITE_BRICK_STAIRS);
+                output.accept(POLISHED_RHYOLITE_BRICK_SLAB);
+                output.accept(POLISHED_RHYOLITE_BRICK_WALL);
+
+                //bloodstone blocks
+                output.accept(BLOODSTONE);
+                output.accept(BLOODSTONE_STAIRS);
+                output.accept(BLOODSTONE_SLAB);
+                output.accept(BLOODSTONE_WALL);
+                output.accept(POLISHED_BLOODSTONE);
+                output.accept(POLISHED_BLOODSTONE_STAIRS);
+                output.accept(POLISHED_BLOODSTONE_SLAB);
+                output.accept(POLISHED_BLOODSTONE_BRICKS);
+                output.accept(CRACKED_POLISHED_BLOODSTONE_BRICKS);
+                output.accept(POLISHED_BLOODSTONE_BRICK_STAIRS);
+                output.accept(POLISHED_BLOODSTONE_BRICK_SLAB);
+                output.accept(POLISHED_BLOODSTONE_BRICK_WALL);
+
+                //silt blocks
+                output.accept(SILT);
+                output.accept(SILT_BALL);
+                output.accept(SILT_BRICK);
+                output.accept(SILT_BRICKS);
+                output.accept(CRACKED_SILT_BRICKS);
+                output.accept(SILT_BRICK_STAIRS);
+                output.accept(SILT_BRICK_SLAB);
+                output.accept(SILT_BRICK_WALL);
+                output.accept(CHISELED_SILT_BRICKS);
+                output.accept(MIXED_SILT_BRICKS);
+
+
+                output.accept(PACKED_SILT);
+                output.accept(SILT_POT);
+                output.accept(SILT_SHINGLES);
+                output.accept(SILT_SHINGLE_STAIRS);
+                output.accept(SILT_SHINGLE_SLAB);
+                output.accept(SILT_SHINGLE_WALL);
+
+                output.accept(WHITE_PACKED_SILT);
+                output.accept(WHITE_SILT_POT);
+                output.accept(WHITE_SILT_SHINGLES);
+                output.accept(WHITE_SILT_SHINGLE_STAIRS);
+                output.accept(WHITE_SILT_SHINGLE_SLAB);
+                output.accept(WHITE_SILT_SHINGLE_WALL);
+
+                output.accept(LIGHT_GRAY_PACKED_SILT);
+                output.accept(LIGHT_GRAY_SILT_POT);
+                output.accept(LIGHT_GRAY_SILT_SHINGLES);
+                output.accept(LIGHT_GRAY_SILT_SHINGLE_STAIRS);
+                output.accept(LIGHT_GRAY_SILT_SHINGLE_SLAB);
+                output.accept(LIGHT_GRAY_SILT_SHINGLE_WALL);
+
+                output.accept(GRAY_PACKED_SILT);
+                output.accept(GRAY_SILT_POT);
+                output.accept(GRAY_SILT_SHINGLES);
+                output.accept(GRAY_SILT_SHINGLE_STAIRS);
+                output.accept(GRAY_SILT_SHINGLE_SLAB);
+                output.accept(GRAY_SILT_SHINGLE_WALL);
+
+                output.accept(BLACK_PACKED_SILT);
+                output.accept(BLACK_SILT_POT);
+                output.accept(BLACK_SILT_SHINGLES);
+                output.accept(BLACK_SILT_SHINGLE_STAIRS);
+                output.accept(BLACK_SILT_SHINGLE_SLAB);
+                output.accept(BLACK_SILT_SHINGLE_WALL);
+
+                output.accept(BROWN_PACKED_SILT);
+                output.accept(BROWN_SILT_POT);
+                output.accept(BROWN_SILT_SHINGLES);
+                output.accept(BROWN_SILT_SHINGLE_STAIRS);
+                output.accept(BROWN_SILT_SHINGLE_SLAB);
+                output.accept(BROWN_SILT_SHINGLE_WALL);
+
+                output.accept(RED_PACKED_SILT);
+                output.accept(RED_SILT_POT);
+                output.accept(RED_SILT_SHINGLES);
+                output.accept(RED_SILT_SHINGLE_STAIRS);
+                output.accept(RED_SILT_SHINGLE_SLAB);
+                output.accept(RED_SILT_SHINGLE_WALL);
+
+                output.accept(ORANGE_PACKED_SILT);
+                output.accept(ORANGE_SILT_POT);
+                output.accept(ORANGE_SILT_SHINGLES);
+                output.accept(ORANGE_SILT_SHINGLE_STAIRS);
+                output.accept(ORANGE_SILT_SHINGLE_SLAB);
+                output.accept(ORANGE_SILT_SHINGLE_WALL);
+
+                output.accept(YELLOW_PACKED_SILT);
+                output.accept(YELLOW_SILT_POT);
+                output.accept(YELLOW_SILT_SHINGLES);
+                output.accept(YELLOW_SILT_SHINGLE_STAIRS);
+                output.accept(YELLOW_SILT_SHINGLE_SLAB);
+                output.accept(YELLOW_SILT_SHINGLE_WALL);
+
+                output.accept(LIME_PACKED_SILT);
+                output.accept(LIME_SILT_POT);
+                output.accept(LIME_SILT_SHINGLES);
+                output.accept(LIME_SILT_SHINGLE_STAIRS);
+                output.accept(LIME_SILT_SHINGLE_SLAB);
+                output.accept(LIME_SILT_SHINGLE_WALL);
+
+                output.accept(GREEN_PACKED_SILT);
+                output.accept(GREEN_SILT_POT);
+                output.accept(GREEN_SILT_SHINGLES);
+                output.accept(GREEN_SILT_SHINGLE_STAIRS);
+                output.accept(GREEN_SILT_SHINGLE_SLAB);
+                output.accept(GREEN_SILT_SHINGLE_WALL);
+
+                output.accept(CYAN_PACKED_SILT);
+                output.accept(CYAN_SILT_POT);
+                output.accept(CYAN_SILT_SHINGLES);
+                output.accept(CYAN_SILT_SHINGLE_STAIRS);
+                output.accept(CYAN_SILT_SHINGLE_SLAB);
+                output.accept(CYAN_SILT_SHINGLE_WALL);
+
+                output.accept(LIGHT_BLUE_PACKED_SILT);
+                output.accept(LIGHT_BLUE_SILT_POT);
+                output.accept(LIGHT_BLUE_SILT_SHINGLES);
+                output.accept(LIGHT_BLUE_SILT_SHINGLE_STAIRS);
+                output.accept(LIGHT_BLUE_SILT_SHINGLE_SLAB);
+                output.accept(LIGHT_BLUE_SILT_SHINGLE_WALL);
+
+                output.accept(BLUE_PACKED_SILT);
+                output.accept(BLUE_SILT_POT);
+                output.accept(BLUE_SILT_SHINGLES);
+                output.accept(BLUE_SILT_SHINGLE_STAIRS);
+                output.accept(BLUE_SILT_SHINGLE_SLAB);
+                output.accept(BLUE_SILT_SHINGLE_WALL);
+
+                output.accept(PURPLE_PACKED_SILT);
+                output.accept(PURPLE_SILT_POT);
+                output.accept(PURPLE_SILT_SHINGLES);
+                output.accept(PURPLE_SILT_SHINGLE_STAIRS);
+                output.accept(PURPLE_SILT_SHINGLE_SLAB);
+                output.accept(PURPLE_SILT_SHINGLE_WALL);
+
+                output.accept(MAGENTA_PACKED_SILT);
+                output.accept(MAGENTA_SILT_POT);
+                output.accept(MAGENTA_SILT_SHINGLES);
+                output.accept(MAGENTA_SILT_SHINGLE_STAIRS);
+                output.accept(MAGENTA_SILT_SHINGLE_SLAB);
+                output.accept(MAGENTA_SILT_SHINGLE_WALL);
+
+                output.accept(PINK_PACKED_SILT);
+                output.accept(PINK_SILT_POT);
+                output.accept(PINK_SILT_SHINGLES);
+                output.accept(PINK_SILT_SHINGLE_STAIRS);
+                output.accept(PINK_SILT_SHINGLE_SLAB);
+                output.accept(PINK_SILT_SHINGLE_WALL);
+
+            }).build()
+    );
+
+    private static CreativeModeTab register(String id, CreativeModeTab tab) {
+        return Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(Twigs.MOD_ID, id), tab);
     }
 }

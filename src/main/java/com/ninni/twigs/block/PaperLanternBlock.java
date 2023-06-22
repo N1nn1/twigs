@@ -95,11 +95,6 @@ public class PaperLanternBlock extends Block implements SimpleWaterloggedBlock {
     }
 
     @Override
-    public PushReaction getPistonPushReaction(BlockState blockState) {
-        return PushReaction.DESTROY;
-    }
-
-    @Override
     public boolean isPathfindable(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, PathComputationType pathComputationType) {
         return false;
     }
