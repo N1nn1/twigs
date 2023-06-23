@@ -44,15 +44,15 @@ public class Pebble extends ThrowableItemProjectile {
     @Override
     protected void onHit(HitResult hitResult) {
         super.onHit(hitResult);
-        if (!this.level.isClientSide) {
+        if (!this.level().isClientSide) {
             if (hitResult.getType() != HitResult.Type.ENTITY) {
                 ItemStack stack = this.getItem();
-                RandomSource random = this.level.random;
-                ItemEntity itemEntity = new ItemEntity(this.level, this.getX(), this.getY(), this.getZ(), stack.isEmpty() ? new ItemStack(this.getDefaultItem()) : stack, random.nextDouble() * 0.2D - 0.1D, this.isUnderWater() ? 0.0D : 0.2D, random.nextDouble() * 0.2D - 0.1D);
+                RandomSource random = this.level().random;
+                ItemEntity itemEntity = new ItemEntity(this.level(), this.getX(), this.getY(), this.getZ(), stack.isEmpty() ? new ItemStack(this.getDefaultItem()) : stack, random.nextDouble() * 0.2D - 0.1D, this.isUnderWater() ? 0.0D : 0.2D, random.nextDouble() * 0.2D - 0.1D);
                 itemEntity.setDefaultPickUpDelay();
-                this.level.addFreshEntity(itemEntity);
+                this.level().addFreshEntity(itemEntity);
             }
-            this.level.broadcastEntityEvent(this, (byte) 3);
+            this.level().broadcastEntityEvent(this, (byte) 3);
             this.discard();
         }
     }
@@ -73,7 +73,7 @@ public class Pebble extends ThrowableItemProjectile {
     public void handleEntityEvent(byte b) {
         if (b == 3) {
             for (int i = 0; i < 8; i++) {
-                this.level.addParticle(this.getParticle(), this.getX(), this.getY(), this.getZ(), 0.0, 0.0, 0.0);
+                this.level().addParticle(this.getParticle(), this.getX(), this.getY(), this.getZ(), 0.0, 0.0, 0.0);
             }
         }
     }

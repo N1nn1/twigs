@@ -3,6 +3,7 @@ package com.ninni.twigs;
 import com.ninni.twigs.events.MiscEvents;
 import com.ninni.twigs.registry.TwigsBlockEntityType;
 import com.ninni.twigs.registry.TwigsBlocks;
+import com.ninni.twigs.registry.TwigsCreativeModeTabs;
 import com.ninni.twigs.registry.TwigsEntityTypes;
 import com.ninni.twigs.registry.TwigsFeatures;
 import com.ninni.twigs.registry.TwigsItems;
@@ -29,6 +30,7 @@ public class Twigs {
 
 		TwigsBlocks.BLOCKS.register(modEventBus);
 		TwigsBlockEntityType.BLOCK_ENTITY_TYPES.register(modEventBus);
+		TwigsCreativeModeTabs.CREATIVE_MODE_TABS.register(modEventBus);
 		TwigsEntityTypes.ENTITY_TYPES.register(modEventBus);
 		TwigsFeatures.FEATURES.register(modEventBus);
 		TwigsItems.ITEMS.register(modEventBus);
@@ -50,19 +52,4 @@ public class Twigs {
 		});
 	}
 
-	public void onInitialize() {
-//		Util.make(new LinkedHashMap<Block, Block>(), pairs -> {
-//			pairs.put(TwigsBlocks.COPPER_PILLAR.get(), TwigsBlocks.WAXED_COPPER_PILLAR.get());
-//			pairs.put(TwigsBlocks.EXPOSED_COPPER_PILLAR.get(), TwigsBlocks.WAXED_EXPOSED_COPPER_PILLAR.get());
-//			pairs.put(TwigsBlocks.WEATHERED_COPPER_PILLAR.get(), TwigsBlocks.WAXED_WEATHERED_COPPER_PILLAR.get());
-//			pairs.put(TwigsBlocks.OXIDIZED_COPPER_PILLAR.get(), TwigsBlocks.WAXED_OXIDIZED_COPPER_PILLAR.get());
-//
-//			pairs.forEach(OxidizableBlocksRegistry::registerWaxableBlockPair);
-//
-//			List<Block> unwaxed = List.copyOf(pairs.keySet());
-//			for (int i = 0, l = unwaxed.size(); i < l - 1; i++) {
-//				OxidizableBlocksRegistry.registerOxidizableBlockPair(unwaxed.get(i), unwaxed.get(i + 1));
-//			}
-//		});
-	}
 }

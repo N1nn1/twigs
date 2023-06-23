@@ -1,18 +1,39 @@
 package com.ninni.twigs.registry;
 
 import com.ninni.twigs.Twigs;
-import com.ninni.twigs.block.*;
+import com.ninni.twigs.block.AzaleaFlowersBlock;
+import com.ninni.twigs.block.BambooLeavesBlock;
+import com.ninni.twigs.block.BambooMatBlock;
+import com.ninni.twigs.block.ColumnBlock;
+import com.ninni.twigs.block.CompactedDripstoneBlock;
+import com.ninni.twigs.block.CutAmethystBlock;
+import com.ninni.twigs.block.FacingBlock;
+import com.ninni.twigs.block.FloorItemBlock;
+import com.ninni.twigs.block.LampBlock;
+import com.ninni.twigs.block.PaperLanternBlock;
+import com.ninni.twigs.block.PillarOxidizableBlock;
+import com.ninni.twigs.block.SeashellBlock;
+import com.ninni.twigs.block.TableBlock;
 import com.ninni.twigs.block.enums.SiltPotBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.AmethystBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.GlowLichenBlock;
+import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.WeatheringCopper;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,23 +47,23 @@ public class TwigsBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Twigs.MOD_ID);
 
     //collectibles
-    public static final RegistryObject<Block> AZALEA_FLOWERS = BLOCKS.register("azalea_flowers", () -> new AzaleaFlowersBlock(BlockBehaviour.Properties.of(Material.PLANT).instabreak().noCollission().noOcclusion().sound(SoundType.MOSS_CARPET)));
+    public static final RegistryObject<Block> AZALEA_FLOWERS = BLOCKS.register("azalea_flowers", () -> new AzaleaFlowersBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).instabreak().noCollission().noOcclusion().sound(SoundType.MOSS_CARPET)));
     public static final RegistryObject<Block> POTTED_AZALEA_FLOWERS = BLOCKS.register("potted_azalea_flowers", () -> new FlowerPotBlock(AZALEA_FLOWERS.get(), BlockBehaviour.Properties.copy(Blocks.POTTED_FLOWERING_AZALEA)));
-    public static final RegistryObject<Block> TWIG = BLOCKS.register("twig", () -> new FloorItemBlock(BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).instabreak().noOcclusion().sound(SoundType.WOOD)));
-    public static final RegistryObject<Block> PEBBLE = BLOCKS.register("pebble", () -> new FloorItemBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).instabreak().noOcclusion().sound(SoundType.STONE)));
-    public static final RegistryObject<Block> OPALINE_SEASHELL = BLOCKS.register("opaline_seashell", () -> new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
-    public static final RegistryObject<Block> BRONZED_SEASHELL = BLOCKS.register("bronzed_seashell", () -> new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
-    public static final RegistryObject<Block> ROSEATE_SEASHELL = BLOCKS.register("roseate_seashell", () -> new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
-    public static final RegistryObject<Block> TANGERINE_SEASHELL = BLOCKS.register("tangerine_seashell", () -> new SeashellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
+    public static final RegistryObject<Block> TWIG = BLOCKS.register("twig", () -> new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instabreak().noOcclusion().sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PEBBLE = BLOCKS.register("pebble", () -> new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion().sound(SoundType.STONE)));
+    public static final RegistryObject<Block> OPALINE_SEASHELL = BLOCKS.register("opaline_seashell", () -> new SeashellBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
+    public static final RegistryObject<Block> BRONZED_SEASHELL = BLOCKS.register("bronzed_seashell", () -> new SeashellBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
+    public static final RegistryObject<Block> ROSEATE_SEASHELL = BLOCKS.register("roseate_seashell", () -> new SeashellBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
+    public static final RegistryObject<Block> TANGERINE_SEASHELL = BLOCKS.register("tangerine_seashell", () -> new SeashellBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
 
     //bamboo
-        public static final RegistryObject<Block> BAMBOO_LEAVES = BLOCKS.register("bamboo_leaves", () -> new BambooLeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F).noOcclusion().instabreak().noCollission().sound(SoundType.MOSS_CARPET)));
-    public static final RegistryObject<Block> BAMBOO_THATCH = BLOCKS.register("bamboo_thatch", () -> new Block(BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.COLOR_GREEN).strength(0.2F).sound(SoundType.MOSS)));
+    public static final RegistryObject<Block> BAMBOO_LEAVES = BLOCKS.register("bamboo_leaves", () -> new BambooLeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.2F).noOcclusion().instabreak().noCollission().sound(SoundType.MOSS_CARPET)));
+    public static final RegistryObject<Block> BAMBOO_THATCH = BLOCKS.register("bamboo_thatch", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GREEN).strength(0.2F).sound(SoundType.MOSS)));
     public static final RegistryObject<Block> BAMBOO_THATCH_SLAB = BLOCKS.register("bamboo_thatch_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(BAMBOO_THATCH.get())));
     public static final RegistryObject<Block> BAMBOO_MAT = BLOCKS.register("bamboo_mat", () -> new BambooMatBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS)));
 
     //paper lanterns
-    public static final RegistryObject<Block> PAPER_LANTERN = BLOCKS.register("paper_lantern", () -> new PaperLanternBlock(Blocks.AIR, BlockBehaviour.Properties.of(Material.GRASS).strength(1.5f).sound(TwigsSoundEvents.PAPER_LANTERN).lightLevel(blockState -> 15).noOcclusion()));
+    public static final RegistryObject<Block> PAPER_LANTERN = BLOCKS.register("paper_lantern", () -> new PaperLanternBlock(Blocks.AIR, BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_WHITE).strength(1.5f).sound(TwigsSoundEvents.PAPER_LANTERN).lightLevel(blockState -> 15).noOcclusion()));
     public static final RegistryObject<Block> ALLIUM_PAPER_LANTERN = BLOCKS.register("allium_paper_lantern", () -> new PaperLanternBlock(Blocks.ALLIUM, BlockBehaviour.Properties.copy(PAPER_LANTERN.get())));
     public static final RegistryObject<Block> BLUE_ORCHID_PAPER_LANTERN = BLOCKS.register("blue_orchid_paper_lantern", () -> new PaperLanternBlock(Blocks.BLUE_ORCHID, BlockBehaviour.Properties.copy(PAPER_LANTERN.get())));
     public static final RegistryObject<Block> CRIMSON_ROOTS_PAPER_LANTERN = BLOCKS.register("crimson_roots_paper_lantern", () -> new PaperLanternBlock(Blocks.CRIMSON_ROOTS, BlockBehaviour.Properties.copy(PAPER_LANTERN.get())));
@@ -50,9 +71,9 @@ public class TwigsBlocks {
     public static final RegistryObject<Block> TORCHFLOWER_PAPER_LANTERN = BLOCKS.register("torchflower_paper_lantern", () -> new PaperLanternBlock(Blocks.TORCHFLOWER, BlockBehaviour.Properties.copy(PAPER_LANTERN.get())));
 
     //lamps
-    public static final RegistryObject<Block> LAMP = BLOCKS.register("lamp", () -> new LampBlock(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(4.5F).sound(TwigsSoundEvents.LAMP).lightLevel(createLampLightLevel())));
+    public static final RegistryObject<Block> LAMP = BLOCKS.register("lamp", () -> new LampBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).requiresCorrectToolForDrops().strength(4.5F).sound(TwigsSoundEvents.LAMP).lightLevel(createLampLightLevel())));
     public static final RegistryObject<Block> SOUL_LAMP = BLOCKS.register("soul_lamp", () -> new LampBlock(BlockBehaviour.Properties.copy(TwigsBlocks.LAMP.get())));
-    public static final RegistryObject<Block> CRIMSON_SHROOMLAMP = BLOCKS.register("crimson_shroomlamp", () -> new Block(BlockBehaviour.Properties.of(Material.NETHER_WOOD).strength(3.5F).sound(TwigsSoundEvents.SHROOMLAMP).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> CRIMSON_SHROOMLAMP = BLOCKS.register("crimson_shroomlamp", () -> new Block(BlockBehaviour.Properties.of().mapColor(Blocks.CRIMSON_PLANKS.defaultMapColor()).strength(3.5F).sound(TwigsSoundEvents.SHROOMLAMP).lightLevel(state -> 15)));
     public static final RegistryObject<Block> WARPED_SHROOMLAMP = BLOCKS.register("warped_shroomlamp", () -> new Block(BlockBehaviour.Properties.copy(CRIMSON_SHROOMLAMP.get())));
 
     //tables
@@ -86,7 +107,7 @@ public class TwigsBlocks {
     public static final RegistryObject<Block> MOSSY_BRICK_WALL = BLOCKS.register("mossy_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(MOSSY_BRICKS.get())));
 
     //gravel bricks
-    public static final RegistryObject<Block> GRAVEL_BRICKS = BLOCKS.register("gravel_bricks", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY).strength(0.8f).sound(TwigsSoundEvents.GRAVEL_BRICKS)));
+    public static final RegistryObject<Block> GRAVEL_BRICKS = BLOCKS.register("gravel_bricks", () -> new Block(BlockBehaviour.Properties.of().mapColor(Blocks.GRAVEL.defaultMapColor()).strength(0.8f).sound(TwigsSoundEvents.GRAVEL_BRICKS)));
     public static final RegistryObject<Block> GRAVEL_BRICK_STAIRS = BLOCKS.register("gravel_brick_stairs", () -> new StairBlock(GRAVEL_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(GRAVEL_BRICKS.get())));
     public static final RegistryObject<Block> GRAVEL_BRICK_SLAB = BLOCKS.register("gravel_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(GRAVEL_BRICKS.get())));
     public static final RegistryObject<Block> GRAVEL_BRICK_WALL = BLOCKS.register("gravel_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(GRAVEL_BRICKS.get())));
@@ -118,9 +139,9 @@ public class TwigsBlocks {
     public static final RegistryObject<Block> CUT_AMETHYST = BLOCKS.register("cut_amethyst", () -> new CutAmethystBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
 
     //misc
-    public static final RegistryObject<Block> PETRIFIED_LICHEN = BLOCKS.register("petrified_lichen", () -> new GlowLichenBlock(BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT, MaterialColor.GLOW_LICHEN).noCollission().strength(0.2f).sound(SoundType.DEEPSLATE).lightLevel(GlowLichenBlock.emission(7))));
+    public static final RegistryObject<Block> PETRIFIED_LICHEN = BLOCKS.register("petrified_lichen", () -> new GlowLichenBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).noCollission().strength(0.2f).sound(SoundType.DEEPSLATE).lightLevel(GlowLichenBlock.emission(7))));
     public static final RegistryObject<Block> COMPACTED_DRIPSTONE = BLOCKS.register("compacted_dripstone", () -> new CompactedDripstoneBlock(BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
-    public static final RegistryObject<Block> ROCKY_DIRT = BLOCKS.register("rocky_dirt", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(1.25F, 6.0F).sound(TwigsSoundEvents.ROCKY_DIRT)));
+    public static final RegistryObject<Block> ROCKY_DIRT = BLOCKS.register("rocky_dirt", () -> new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.GRAY).requiresCorrectToolForDrops().strength(1.25F, 6.0F).sound(TwigsSoundEvents.ROCKY_DIRT)));
 
     //cobblestone bricks
     public static final RegistryObject<Block> COBBLESTONE_BRICKS = BLOCKS.register("cobblestone_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
@@ -170,7 +191,7 @@ public class TwigsBlocks {
     public static final RegistryObject<Block> CRACKED_POLISHED_CALCITE_BRICKS = BLOCKS.register("cracked_polished_calcite_bricks", () -> new Block(BlockBehaviour.Properties.copy(POLISHED_CALCITE_BRICKS.get())));
 
     //schist blocks
-    public static final RegistryObject<Block> SCHIST = BLOCKS.register("schist", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_WHITE).requiresCorrectToolForDrops().strength(1F).sound(TwigsSoundEvents.SCHIST)));
+    public static final RegistryObject<Block> SCHIST = BLOCKS.register("schist", () -> new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).requiresCorrectToolForDrops().strength(1F).sound(TwigsSoundEvents.SCHIST)));
     public static final RegistryObject<Block> SCHIST_STAIRS = BLOCKS.register("schist_stairs", () -> new StairBlock(SCHIST.get().defaultBlockState(), BlockBehaviour.Properties.copy(SCHIST.get())));
     public static final RegistryObject<Block> SCHIST_SLAB = BLOCKS.register("schist_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SCHIST.get())));
     public static final RegistryObject<Block> SCHIST_WALL = BLOCKS.register("schist_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SCHIST.get())));
@@ -184,7 +205,7 @@ public class TwigsBlocks {
     public static final RegistryObject<Block> CRACKED_POLISHED_SCHIST_BRICKS = BLOCKS.register("cracked_polished_schist_bricks", () -> new Block(BlockBehaviour.Properties.copy(POLISHED_SCHIST_BRICKS.get())));
 
     //rhyolite blocks
-    public static final RegistryObject<Block> RHYOLITE = BLOCKS.register("rhyolite", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_WHITE).requiresCorrectToolForDrops().strength(1.5F).sound(TwigsSoundEvents.RHYOLITE)));
+    public static final RegistryObject<Block> RHYOLITE = BLOCKS.register("rhyolite", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.BROWN).requiresCorrectToolForDrops().strength(1.5F).sound(TwigsSoundEvents.RHYOLITE)));
     public static final RegistryObject<Block> RHYOLITE_STAIRS = BLOCKS.register("rhyolite_stairs", () -> new StairBlock(RHYOLITE.get().defaultBlockState(), BlockBehaviour.Properties.copy(RHYOLITE.get())));
     public static final RegistryObject<Block> RHYOLITE_SLAB = BLOCKS.register("rhyolite_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(RHYOLITE.get())));
     public static final RegistryObject<Block> RHYOLITE_WALL = BLOCKS.register("rhyolite_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(RHYOLITE.get())));
@@ -198,7 +219,7 @@ public class TwigsBlocks {
     public static final RegistryObject<Block> CRACKED_POLISHED_RHYOLITE_BRICKS = BLOCKS.register("cracked_polished_rhyolite_bricks", () -> new Block(BlockBehaviour.Properties.copy(POLISHED_RHYOLITE_BRICKS.get())));
 
     //bloodstone blocks
-    public static final RegistryObject<Block> BLOODSTONE = BLOCKS.register("bloodstone", () -> new Block(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.TERRACOTTA_WHITE).requiresCorrectToolForDrops().strength(1F).sound(TwigsSoundEvents.BLOODSTONE)));
+    public static final RegistryObject<Block> BLOODSTONE = BLOCKS.register("bloodstone", () -> new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.GRAY).requiresCorrectToolForDrops().strength(1F).sound(TwigsSoundEvents.BLOODSTONE)));
     public static final RegistryObject<Block> BLOODSTONE_STAIRS = BLOCKS.register("bloodstone_stairs", () -> new StairBlock(BLOODSTONE.get().defaultBlockState(), BlockBehaviour.Properties.copy(BLOODSTONE.get())));
     public static final RegistryObject<Block> BLOODSTONE_SLAB = BLOCKS.register("bloodstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(BLOODSTONE.get())));
     public static final RegistryObject<Block> BLOODSTONE_WALL = BLOCKS.register("bloodstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(BLOODSTONE.get())));
@@ -212,8 +233,8 @@ public class TwigsBlocks {
     public static final RegistryObject<Block> CRACKED_POLISHED_BLOODSTONE_BRICKS = BLOCKS.register("cracked_polished_bloodstone_bricks", () -> new Block(BlockBehaviour.Properties.copy(POLISHED_BLOODSTONE_BRICKS.get())));
 
     //silt blocks
-    public static final RegistryObject<Block> SILT = BLOCKS.register("silt", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CLAY).color(MaterialColor.COLOR_BROWN).sound(TwigsSoundEvents.SILT)));
-    public static final RegistryObject<Block> SILT_BRICKS = BLOCKS.register("silt_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).color(MaterialColor.COLOR_YELLOW)));
+    public static final RegistryObject<Block> SILT = BLOCKS.register("silt", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CLAY).mapColor(MapColor.COLOR_BROWN).sound(TwigsSoundEvents.SILT)));
+    public static final RegistryObject<Block> SILT_BRICKS = BLOCKS.register("silt_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).mapColor(MapColor.COLOR_YELLOW)));
     public static final RegistryObject<Block> SILT_BRICK_STAIRS = BLOCKS.register("silt_brick_stairs", () -> new StairBlock(SILT_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(SILT_BRICKS.get())));
     public static final RegistryObject<Block> SILT_BRICK_SLAB = BLOCKS.register("silt_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(SILT_BRICKS.get())));
     public static final RegistryObject<Block> SILT_BRICK_WALL = BLOCKS.register("silt_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(SILT_BRICKS.get())));
@@ -222,58 +243,58 @@ public class TwigsBlocks {
     public static final RegistryObject<Block> CRACKED_SILT_BRICKS = BLOCKS.register("cracked_silt_bricks", () -> new Block(BlockBehaviour.Properties.copy(SILT_BRICKS.get())));
 
     public static final RegistryObject<Block> SILT_POT = BLOCKS.register("silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).strength(0.5f, 2f)));
-    public static final RegistryObject<Block> WHITE_SILT_POT = BLOCKS.register("white_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.TERRACOTTA_WHITE)));
-    public static final RegistryObject<Block> ORANGE_SILT_POT = BLOCKS.register("orange_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_ORANGE)));
-    public static final RegistryObject<Block> MAGENTA_SILT_POT = BLOCKS.register("magenta_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_MAGENTA)));
-    public static final RegistryObject<Block> LIGHT_BLUE_SILT_POT = BLOCKS.register("light_blue_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_LIGHT_BLUE)));
-    public static final RegistryObject<Block> YELLOW_SILT_POT = BLOCKS.register("yellow_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_YELLOW)));
-    public static final RegistryObject<Block> LIME_SILT_POT = BLOCKS.register("lime_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_LIGHT_GREEN)));
-    public static final RegistryObject<Block> PINK_SILT_POT = BLOCKS.register("pink_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_PINK)));
-    public static final RegistryObject<Block> GRAY_SILT_POT = BLOCKS.register("gray_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_GRAY)));
-    public static final RegistryObject<Block> LIGHT_GRAY_SILT_POT = BLOCKS.register("light_gray_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_LIGHT_GRAY)));
-    public static final RegistryObject<Block> CYAN_SILT_POT = BLOCKS.register("cyan_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_CYAN)));
-    public static final RegistryObject<Block> PURPLE_SILT_POT = BLOCKS.register("purple_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_PURPLE)));
-    public static final RegistryObject<Block> BLUE_SILT_POT = BLOCKS.register("blue_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_BLUE)));
-    public static final RegistryObject<Block> BROWN_SILT_POT = BLOCKS.register("brown_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_BROWN)));
-    public static final RegistryObject<Block> GREEN_SILT_POT = BLOCKS.register("green_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_GREEN)));
-    public static final RegistryObject<Block> RED_SILT_POT = BLOCKS.register("red_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_RED)));
-    public static final RegistryObject<Block> BLACK_SILT_POT = BLOCKS.register("black_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).color(MaterialColor.COLOR_BLACK)));
+    public static final RegistryObject<Block> WHITE_SILT_POT = BLOCKS.register("white_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.TERRACOTTA_WHITE)));
+    public static final RegistryObject<Block> ORANGE_SILT_POT = BLOCKS.register("orange_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_ORANGE)));
+    public static final RegistryObject<Block> MAGENTA_SILT_POT = BLOCKS.register("magenta_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_MAGENTA)));
+    public static final RegistryObject<Block> LIGHT_BLUE_SILT_POT = BLOCKS.register("light_blue_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+    public static final RegistryObject<Block> YELLOW_SILT_POT = BLOCKS.register("yellow_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_YELLOW)));
+    public static final RegistryObject<Block> LIME_SILT_POT = BLOCKS.register("lime_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+    public static final RegistryObject<Block> PINK_SILT_POT = BLOCKS.register("pink_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_PINK)));
+    public static final RegistryObject<Block> GRAY_SILT_POT = BLOCKS.register("gray_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_GRAY)));
+    public static final RegistryObject<Block> LIGHT_GRAY_SILT_POT = BLOCKS.register("light_gray_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_LIGHT_GRAY)));
+    public static final RegistryObject<Block> CYAN_SILT_POT = BLOCKS.register("cyan_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_CYAN)));
+    public static final RegistryObject<Block> PURPLE_SILT_POT = BLOCKS.register("purple_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_PURPLE)));
+    public static final RegistryObject<Block> BLUE_SILT_POT = BLOCKS.register("blue_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_BLUE)));
+    public static final RegistryObject<Block> BROWN_SILT_POT = BLOCKS.register("brown_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_BROWN)));
+    public static final RegistryObject<Block> GREEN_SILT_POT = BLOCKS.register("green_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_GREEN)));
+    public static final RegistryObject<Block> RED_SILT_POT = BLOCKS.register("red_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_RED)));
+    public static final RegistryObject<Block> BLACK_SILT_POT = BLOCKS.register("black_silt_pot", () -> new SiltPotBlock(BlockBehaviour.Properties.copy(SILT_POT.get()).mapColor(MapColor.COLOR_BLACK)));
 
     public static final RegistryObject<Block> PACKED_SILT = BLOCKS.register("packed_silt", () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).sound(TwigsSoundEvents.PACKED_SILT)));
-    public static final RegistryObject<Block> WHITE_PACKED_SILT = BLOCKS.register("white_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.TERRACOTTA_WHITE)));
-    public static final RegistryObject<Block> ORANGE_PACKED_SILT = BLOCKS.register("orange_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_ORANGE)));
-    public static final RegistryObject<Block> MAGENTA_PACKED_SILT = BLOCKS.register("magenta_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_MAGENTA)));
-    public static final RegistryObject<Block> LIGHT_BLUE_PACKED_SILT = BLOCKS.register("light_blue_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_LIGHT_BLUE)));
-    public static final RegistryObject<Block> YELLOW_PACKED_SILT = BLOCKS.register("yellow_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_YELLOW)));
-    public static final RegistryObject<Block> LIME_PACKED_SILT = BLOCKS.register("lime_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_LIGHT_GREEN)));
-    public static final RegistryObject<Block> PINK_PACKED_SILT = BLOCKS.register("pink_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_PINK)));
-    public static final RegistryObject<Block> GRAY_PACKED_SILT = BLOCKS.register("gray_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_GRAY)));
-    public static final RegistryObject<Block> LIGHT_GRAY_PACKED_SILT = BLOCKS.register("light_gray_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_LIGHT_GRAY)));
-    public static final RegistryObject<Block> CYAN_PACKED_SILT = BLOCKS.register("cyan_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_CYAN)));
-    public static final RegistryObject<Block> PURPLE_PACKED_SILT = BLOCKS.register("purple_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_PURPLE)));
-    public static final RegistryObject<Block> BLUE_PACKED_SILT = BLOCKS.register("blue_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_BLUE)));
-    public static final RegistryObject<Block> BROWN_PACKED_SILT = BLOCKS.register("brown_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_BROWN)));
-    public static final RegistryObject<Block> GREEN_PACKED_SILT = BLOCKS.register("green_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_GREEN)));
-    public static final RegistryObject<Block> RED_PACKED_SILT = BLOCKS.register("red_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_RED)));
-    public static final RegistryObject<Block> BLACK_PACKED_SILT = BLOCKS.register("black_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).color(MaterialColor.COLOR_BLACK)));
+    public static final RegistryObject<Block> WHITE_PACKED_SILT = BLOCKS.register("white_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.TERRACOTTA_WHITE)));
+    public static final RegistryObject<Block> ORANGE_PACKED_SILT = BLOCKS.register("orange_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_ORANGE)));
+    public static final RegistryObject<Block> MAGENTA_PACKED_SILT = BLOCKS.register("magenta_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_MAGENTA)));
+    public static final RegistryObject<Block> LIGHT_BLUE_PACKED_SILT = BLOCKS.register("light_blue_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+    public static final RegistryObject<Block> YELLOW_PACKED_SILT = BLOCKS.register("yellow_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_YELLOW)));
+    public static final RegistryObject<Block> LIME_PACKED_SILT = BLOCKS.register("lime_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+    public static final RegistryObject<Block> PINK_PACKED_SILT = BLOCKS.register("pink_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_PINK)));
+    public static final RegistryObject<Block> GRAY_PACKED_SILT = BLOCKS.register("gray_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_GRAY)));
+    public static final RegistryObject<Block> LIGHT_GRAY_PACKED_SILT = BLOCKS.register("light_gray_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_LIGHT_GRAY)));
+    public static final RegistryObject<Block> CYAN_PACKED_SILT = BLOCKS.register("cyan_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_CYAN)));
+    public static final RegistryObject<Block> PURPLE_PACKED_SILT = BLOCKS.register("purple_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_PURPLE)));
+    public static final RegistryObject<Block> BLUE_PACKED_SILT = BLOCKS.register("blue_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_BLUE)));
+    public static final RegistryObject<Block> BROWN_PACKED_SILT = BLOCKS.register("brown_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_BROWN)));
+    public static final RegistryObject<Block> GREEN_PACKED_SILT = BLOCKS.register("green_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_GREEN)));
+    public static final RegistryObject<Block> RED_PACKED_SILT = BLOCKS.register("red_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_RED)));
+    public static final RegistryObject<Block> BLACK_PACKED_SILT = BLOCKS.register("black_packed_silt", () -> new Block(BlockBehaviour.Properties.copy(PACKED_SILT.get()).mapColor(MapColor.COLOR_BLACK)));
 
     public static final RegistryObject<Block> SILT_SHINGLES = BLOCKS.register("silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).sound(TwigsSoundEvents.SILT_SHINGLES)));
-    public static final RegistryObject<Block> WHITE_SILT_SHINGLES = BLOCKS.register("white_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.TERRACOTTA_WHITE)));
-    public static final RegistryObject<Block> ORANGE_SILT_SHINGLES = BLOCKS.register("orange_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_ORANGE)));
-    public static final RegistryObject<Block> MAGENTA_SILT_SHINGLES = BLOCKS.register("magenta_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_MAGENTA)));
-    public static final RegistryObject<Block> LIGHT_BLUE_SILT_SHINGLES = BLOCKS.register("light_blue_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_LIGHT_BLUE)));
-    public static final RegistryObject<Block> YELLOW_SILT_SHINGLES = BLOCKS.register("yellow_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_YELLOW)));
-    public static final RegistryObject<Block> LIME_SILT_SHINGLES = BLOCKS.register("lime_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_LIGHT_GREEN)));
-    public static final RegistryObject<Block> PINK_SILT_SHINGLES = BLOCKS.register("pink_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_PINK)));
-    public static final RegistryObject<Block> GRAY_SILT_SHINGLES = BLOCKS.register("gray_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_GRAY)));
-    public static final RegistryObject<Block> LIGHT_GRAY_SILT_SHINGLES = BLOCKS.register("light_gray_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_LIGHT_GRAY)));
-    public static final RegistryObject<Block> CYAN_SILT_SHINGLES = BLOCKS.register("cyan_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_CYAN)));
-    public static final RegistryObject<Block> PURPLE_SILT_SHINGLES = BLOCKS.register("purple_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_PURPLE)));
-    public static final RegistryObject<Block> BLUE_SILT_SHINGLES = BLOCKS.register("blue_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_BLUE)));
-    public static final RegistryObject<Block> BROWN_SILT_SHINGLES = BLOCKS.register("brown_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_BROWN)));
-    public static final RegistryObject<Block> GREEN_SILT_SHINGLES = BLOCKS.register("green_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_GREEN)));
-    public static final RegistryObject<Block> RED_SILT_SHINGLES = BLOCKS.register("red_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_RED)));
-    public static final RegistryObject<Block> BLACK_SILT_SHINGLES = BLOCKS.register("black_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).color(MaterialColor.COLOR_BLACK)));
+    public static final RegistryObject<Block> WHITE_SILT_SHINGLES = BLOCKS.register("white_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.TERRACOTTA_WHITE)));
+    public static final RegistryObject<Block> ORANGE_SILT_SHINGLES = BLOCKS.register("orange_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_ORANGE)));
+    public static final RegistryObject<Block> MAGENTA_SILT_SHINGLES = BLOCKS.register("magenta_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_MAGENTA)));
+    public static final RegistryObject<Block> LIGHT_BLUE_SILT_SHINGLES = BLOCKS.register("light_blue_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_LIGHT_BLUE)));
+    public static final RegistryObject<Block> YELLOW_SILT_SHINGLES = BLOCKS.register("yellow_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_YELLOW)));
+    public static final RegistryObject<Block> LIME_SILT_SHINGLES = BLOCKS.register("lime_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_LIGHT_GREEN)));
+    public static final RegistryObject<Block> PINK_SILT_SHINGLES = BLOCKS.register("pink_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_PINK)));
+    public static final RegistryObject<Block> GRAY_SILT_SHINGLES = BLOCKS.register("gray_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_GRAY)));
+    public static final RegistryObject<Block> LIGHT_GRAY_SILT_SHINGLES = BLOCKS.register("light_gray_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_LIGHT_GRAY)));
+    public static final RegistryObject<Block> CYAN_SILT_SHINGLES = BLOCKS.register("cyan_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_CYAN)));
+    public static final RegistryObject<Block> PURPLE_SILT_SHINGLES = BLOCKS.register("purple_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_PURPLE)));
+    public static final RegistryObject<Block> BLUE_SILT_SHINGLES = BLOCKS.register("blue_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_BLUE)));
+    public static final RegistryObject<Block> BROWN_SILT_SHINGLES = BLOCKS.register("brown_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_BROWN)));
+    public static final RegistryObject<Block> GREEN_SILT_SHINGLES = BLOCKS.register("green_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_GREEN)));
+    public static final RegistryObject<Block> RED_SILT_SHINGLES = BLOCKS.register("red_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_RED)));
+    public static final RegistryObject<Block> BLACK_SILT_SHINGLES = BLOCKS.register("black_silt_shingles", () -> new Block(BlockBehaviour.Properties.copy(SILT_SHINGLES.get()).mapColor(MapColor.COLOR_BLACK)));
 
     public static final RegistryObject<Block> SILT_SHINGLE_STAIRS = BLOCKS.register("silt_shingle_stairs", () -> new StairBlock(SILT_SHINGLES.get().defaultBlockState(), BlockBehaviour.Properties.copy(SILT_SHINGLES.get())));
     public static final RegistryObject<Block> WHITE_SILT_SHINGLE_STAIRS = BLOCKS.register("white_silt_shingle_stairs", () -> new StairBlock(WHITE_SILT_SHINGLES.get().defaultBlockState(), BlockBehaviour.Properties.copy(WHITE_SILT_SHINGLES.get())));
