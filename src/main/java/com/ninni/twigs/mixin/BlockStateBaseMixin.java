@@ -20,10 +20,11 @@ public class BlockStateBaseMixin {
     private void removeOffset(BlockGetter blockGetter, BlockPos pos, CallbackInfoReturnable<Vec3> cir) {
         BlockBehaviour.BlockStateBase that = BlockBehaviour.BlockStateBase.class.cast(this);
 
-        if (that.getBlock() instanceof BushBlock) {
-            if (blockGetter.getBlockState(pos.below(1)).is(TwigsTags.OFFSET_REMOVER)
-                || (that.getBlock() instanceof TallGrassBlock && blockGetter.getBlockState(pos.below(2)).is(TwigsTags.OFFSET_REMOVER))
-            ) cir.setReturnValue(Vec3.ZERO);
-        }
+        //TODO I need to fix this and I have no clue how teehee
+        //if (that.getBlock() instanceof BushBlock) {
+        //    if (blockGetter.getBlockState(pos.below(1)).is(TwigsTags.OFFSET_REMOVER)
+        //        || (that.getBlock() instanceof TallGrassBlock && blockGetter.getBlockState(pos.below(2)).is(TwigsTags.OFFSET_REMOVER))
+        //    ) cir.setReturnValue(Vec3.ZERO);
+        //}
     }
 }
