@@ -18,12 +18,12 @@ public class BlockStateBaseMixin {
 
     @Inject(method = "getOffset", at = @At("HEAD"), cancellable = true)
     private void removeOffset(BlockGetter blockGetter, BlockPos pos, CallbackInfoReturnable<Vec3> cir) {
-        BlockBehaviour.BlockStateBase that = BlockBehaviour.BlockStateBase.class.cast(this);
-
-        if (that.getBlock() instanceof BushBlock) {
-            if (blockGetter.getBlockState(pos.below(1)).is(TwigsTags.OFFSET_REMOVER)
-                || (that.getBlock() instanceof TallGrassBlock && blockGetter.getBlockState(pos.below(2)).is(TwigsTags.OFFSET_REMOVER))
-            ) cir.setReturnValue(Vec3.ZERO);
-        }
+        //BlockBehaviour.BlockStateBase that = BlockBehaviour.BlockStateBase.class.cast(this);
+//
+        //if (that.getBlock() instanceof BushBlock) {
+        //    if (blockGetter.getBlockState(pos.below(1)).is(TwigsTags.OFFSET_REMOVER)
+        //        || (that.getBlock() instanceof TallGrassBlock && blockGetter.getBlockState(pos.below(2)).is(TwigsTags.OFFSET_REMOVER))
+        //    ) cir.setReturnValue(Vec3.ZERO);
+        //}
     }
 }
