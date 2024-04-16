@@ -1,0 +1,6 @@
+{
+  "parent": "twigs:block/template_brick_trail",
+  "textures": {
+    "all": "twigs:block/brick_trail"
+  }
+}

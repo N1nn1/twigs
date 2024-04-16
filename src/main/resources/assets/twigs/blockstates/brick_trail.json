@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "twigs:block/brick_trail",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "twigs:block/brick_trail"
+    },
+    "facing=south": {
+      "model": "twigs:block/brick_trail",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "twigs:block/brick_trail",
+      "y": 270
+    }
+  }
+}

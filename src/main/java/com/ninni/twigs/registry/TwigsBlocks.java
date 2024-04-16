@@ -2,7 +2,7 @@ package com.ninni.twigs.registry;
 
 import com.ninni.twigs.Twigs;
 import com.ninni.twigs.block.*;
-import com.ninni.twigs.block.enums.SiltPotBlock;
+import com.ninni.twigs.block.SiltPotBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -17,13 +17,15 @@ import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.ToIntFunction;
 
+import static net.minecraft.world.level.block.Blocks.BRICKS;
+
 public class TwigsBlocks {
 
     //collectibles
     public static final Block AZALEA_FLOWERS = register("azalea_flowers", new AzaleaFlowersBlock(FabricBlockSettings.of().mapColor(MapColor.PLANT).instabreak().noCollission().noOcclusion().sound(SoundType.MOSS_CARPET)));
     @SuppressWarnings("unused") public static final Block POTTED_AZALEA_FLOWERS = register("potted_azalea_flowers", new FlowerPotBlock(AZALEA_FLOWERS, FabricBlockSettings.copyOf(Blocks.POTTED_FLOWERING_AZALEA)));
-    public static final Block TWIG = register("twig", new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instabreak().noOcclusion().sound(SoundType.WOOD)));
-    public static final Block PEBBLE = register("pebble", new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion().sound(SoundType.STONE)));
+    public static final Block TWIG = register("twig", new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instabreak().noOcclusion().sound(SoundType.WOOD).noCollission()));
+    public static final Block PEBBLE = register("pebble", new FloorItemBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instabreak().noOcclusion().noCollission().sound(SoundType.STONE)));
     public static final Block OPALINE_SEASHELL = register("opaline_seashell", new SeashellBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_WHITE).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
     public static final Block BRONZED_SEASHELL = register("bronzed_seashell", new SeashellBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
     public static final Block ROSEATE_SEASHELL = register("roseate_seashell", new SeashellBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_PINK).instabreak().noOcclusion().sound(TwigsSoundEvents.SEASHELL)));
@@ -71,13 +73,14 @@ public class TwigsBlocks {
     public static final Block CHISELED_SMOOTH_BASALT_BRICKS = register("chiseled_smooth_basalt_bricks", new Block(FabricBlockSettings.copyOf(SMOOTH_BASALT_BRICKS)));
 
     //bricks
-    public static final Block MIXED_BRICKS = register("mixed_bricks", new Block(FabricBlockSettings.copyOf(Blocks.BRICKS)));
-    public static final Block CHISELED_BRICKS = register("chiseled_bricks", new FacingBlock(FabricBlockSettings.copyOf(Blocks.BRICKS)));
-    public static final Block CRACKED_BRICKS = register("cracked_bricks", new Block(FabricBlockSettings.copyOf(Blocks.BRICKS)));
-    public static final Block MOSSY_BRICKS = register("mossy_bricks", new Block(FabricBlockSettings.copyOf(Blocks.BRICKS)));
+    public static final Block MIXED_BRICKS = register("mixed_bricks", new Block(FabricBlockSettings.copyOf(BRICKS)));
+    public static final Block CHISELED_BRICKS = register("chiseled_bricks", new FacingBlock(FabricBlockSettings.copyOf(BRICKS)));
+    public static final Block CRACKED_BRICKS = register("cracked_bricks", new Block(FabricBlockSettings.copyOf(BRICKS)));
+    public static final Block MOSSY_BRICKS = register("mossy_bricks", new Block(FabricBlockSettings.copyOf(BRICKS)));
     public static final Block MOSSY_BRICK_STAIRS = register("mossy_brick_stairs", new StairBlock(MOSSY_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(MOSSY_BRICKS)));
     public static final Block MOSSY_BRICK_SLAB = register("mossy_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(MOSSY_BRICKS)));
     public static final Block MOSSY_BRICK_WALL = register("mossy_brick_wall", new WallBlock(FabricBlockSettings.copyOf(MOSSY_BRICKS)));
+    public static final Block BRICK_TRAIL = register("brick_trail", new BrickTrailBlock(FabricBlockSettings.copyOf(BRICKS).noCollission().noOcclusion().instabreak()));
 
     //gravel bricks
     public static final Block GRAVEL_BRICKS = register("gravel_bricks", new Block(FabricBlockSettings.of().mapColor(Blocks.GRAVEL.defaultMapColor()).strength(0.8f).sound(TwigsSoundEvents.GRAVEL_BRICKS)));
@@ -207,13 +210,14 @@ public class TwigsBlocks {
 
     //silt blocks
     public static final Block SILT = register("silt", new RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.CLAY).mapColor(DyeColor.BROWN).sound(TwigsSoundEvents.SILT)));
-    public static final Block SILT_BRICKS = register("silt_bricks", new Block(FabricBlockSettings.copyOf(Blocks.BRICKS).mapColor(DyeColor.YELLOW)));
+    public static final Block SILT_BRICKS = register("silt_bricks", new Block(FabricBlockSettings.copyOf(BRICKS).mapColor(DyeColor.YELLOW)));
     public static final Block SILT_BRICK_STAIRS = register("silt_brick_stairs", new StairBlock(SILT_BRICKS.defaultBlockState(), FabricBlockSettings.copyOf(SILT_BRICKS)));
     public static final Block SILT_BRICK_SLAB = register("silt_brick_slab", new SlabBlock(FabricBlockSettings.copyOf(SILT_BRICKS)));
     public static final Block SILT_BRICK_WALL = register("silt_brick_wall", new WallBlock(FabricBlockSettings.copyOf(SILT_BRICKS)));
     public static final Block MIXED_SILT_BRICKS = register("mixed_silt_bricks", new Block(FabricBlockSettings.copyOf(SILT_BRICKS)));
     public static final Block CHISELED_SILT_BRICKS = register("chiseled_silt_bricks", new FacingBlock(FabricBlockSettings.copyOf(SILT_BRICKS)));
     public static final Block CRACKED_SILT_BRICKS = register("cracked_silt_bricks", new Block(FabricBlockSettings.copyOf(SILT_BRICKS)));
+    public static final Block SILT_BRICK_TRAIL = register("silt_brick_trail", new BrickTrailBlock(FabricBlockSettings.copyOf(SILT_BRICKS).noCollission().noOcclusion().instabreak()));
 
     public static final Block SILT_POT = register("silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).strength(0.5f, 2f).pushReaction(PushReaction.NORMAL)));
     public static final Block WHITE_SILT_POT = register("white_silt_pot", new SiltPotBlock(FabricBlockSettings.copyOf(SILT_POT).mapColor(MapColor.TERRACOTTA_WHITE)));

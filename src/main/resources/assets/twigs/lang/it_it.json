@@ -60,6 +60,7 @@
   "block.twigs.mossy_brick_stairs": "Scalini di mattoni muschiosi",
   "block.twigs.mossy_brick_slab": "Lastra di mattoni muschiosi",
   "block.twigs.mossy_brick_wall": "Muretto di mattoni muschiosi",
+  "block.twigs.brick_trail": "Traccia di mattoni",
 
   "block.twigs.gravel_bricks": "Mattoni di ghiaia",
   "block.twigs.gravel_brick_wall": "Muretto di mattoni di ghiaia",
@@ -185,6 +186,7 @@
   "block.twigs.chiseled_silt_bricks": "Mattoni di limo cesellati",
   "block.twigs.cracked_silt_bricks": "Mattoni di limo crepati",
   "block.twigs.mixed_silt_bricks": "Mattoni di limo mischiati",
+  "block.twigs.silt_brick_trail": "Traccia di mattoni di limo",
 
   "container.twigs.silt_pot": "Vaso di limo",
   "block.twigs.silt_pot": "Vaso di limo",

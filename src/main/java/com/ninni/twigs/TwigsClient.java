@@ -23,6 +23,8 @@ public class TwigsClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderType.cutout(),
+				TwigsBlocks.BRICK_TRAIL,
+				TwigsBlocks.SILT_BRICK_TRAIL,
 				TwigsBlocks.AZALEA_FLOWERS,
 				TwigsBlocks.PETRIFIED_LICHEN,
 				TwigsBlocks.TWIG,

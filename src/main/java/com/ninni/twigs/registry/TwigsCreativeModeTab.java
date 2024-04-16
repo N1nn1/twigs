@@ -142,13 +142,15 @@ public class TwigsCreativeModeTab {
                     MOSSY_BRICK_STAIRS,
                     MOSSY_BRICK_SLAB,
                     MOSSY_BRICK_WALL,
+                    BRICK_TRAIL,
                     SILT_BRICKS,
                     CRACKED_SILT_BRICKS,
                     SILT_BRICK_STAIRS,
                     SILT_BRICK_SLAB,
                     SILT_BRICK_WALL,
                     CHISELED_SILT_BRICKS,
-                    MIXED_SILT_BRICKS
+                    MIXED_SILT_BRICKS,
+                    SILT_BRICK_TRAIL
             );
 
             entries.addAfter(Items.POLISHED_BLACKSTONE_BRICK_WALL,

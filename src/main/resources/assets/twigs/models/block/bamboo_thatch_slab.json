@@ -1,7 +1,5 @@
 {
-	"credit": "Made with Blockbench",
 	"parent": "minecraft:block/cube",
-	"ambientocclusion": false,
 	"textures": {
 		"0": "twigs:block/bamboo_thatch",
 		"1": "twigs:block/bamboo_thatch_thatch",

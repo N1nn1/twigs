@@ -1,7 +1,6 @@
-package com.ninni.twigs.block.enums;
+package com.ninni.twigs.block;
 
 import com.ninni.twigs.TwigsProperties;
-import com.ninni.twigs.block.FallingBlockWithEntity;
 import com.ninni.twigs.block.entity.SiltPotBlockEntity;
 import com.ninni.twigs.registry.TwigsBlockEntityType;
 import com.ninni.twigs.registry.TwigsSoundEvents;

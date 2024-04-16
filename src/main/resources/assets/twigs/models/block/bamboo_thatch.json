@@ -1,5 +1,4 @@
 {
-	"credit": "Made with Blockbench",
 	"parent": "minecraft:block/cube",
 	"textures": {
 		"particle": "twigs:block/bamboo_thatch",

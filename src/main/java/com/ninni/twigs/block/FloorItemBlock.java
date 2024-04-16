@@ -65,7 +65,7 @@ public class FloorItemBlock extends Block implements SimpleWaterloggedBlock {
     public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
         BlockPos belowPos = blockPos.below();
         BlockState belowState = levelReader.getBlockState(belowPos);
-        return (!belowState.getCollisionShape(levelReader, belowPos).getFaceShape(Direction.UP).isEmpty() || belowState.isFaceSturdy(levelReader, belowPos, Direction.UP)) && !belowState.is(BlockTags.LEAVES);
+        return (!belowState.getCollisionShape(levelReader, belowPos).getFaceShape(Direction.UP).isEmpty() || belowState.isFaceSturdy(levelReader, belowPos, Direction.UP));
     }
 
     @Override
