@@ -1,10 +1,8 @@
 package com.ninni.twigs.registry;
 
 import com.ninni.twigs.Twigs;
-import com.ninni.twigs.data.TwigsConfiguredFeatureProvider;
-import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
@@ -34,7 +32,7 @@ public class TwigsPlacedFeatures {
     public static final ResourceKey<PlacedFeature> PATCH_SEASHELL_LAND = createKey("patch_seashell_land");
     public static final ResourceKey<PlacedFeature> PATCH_SEASHELL_WATER = createKey("patch_seashell_water");
 
-    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+    public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         register(context, ORE_RHYOLITE, TwigsConfiguredFeatures.ORE_RHYOLITE, commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.absolute(16))));
         register(context, ORE_BLOODSTONE, TwigsConfiguredFeatures.ORE_BLOODSTONE, commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.absolute(5), VerticalAnchor.top())));
         register(context, ORE_SCHIST_UPPER, TwigsConfiguredFeatures.ORE_SCHIST, rareOrePlacement(6, HeightRangePlacement.uniform(VerticalAnchor.absolute(64), VerticalAnchor.absolute(128))));
@@ -47,11 +45,11 @@ public class TwigsPlacedFeatures {
         register(context, PATCH_SEASHELL_WATER, TwigsConfiguredFeatures.PATCH_SEASHELL, CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BiomeFilter.biome());
     }
 
-    public static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> resourceKey, ResourceKey<ConfiguredFeature<?, ?>> configuredFeature, PlacementModifier... placementModifiers) {
+    public static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> resourceKey, ResourceKey<ConfiguredFeature<?, ?>> configuredFeature, PlacementModifier... placementModifiers) {
         register(context, resourceKey, configuredFeature, List.of(placementModifiers));
     }
 
-    public static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> resourceKey, ResourceKey<ConfiguredFeature<?, ?>> configuredFeature, List<PlacementModifier> placementModifiers) {
+    public static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> resourceKey, ResourceKey<ConfiguredFeature<?, ?>> configuredFeature, List<PlacementModifier> placementModifiers) {
         context.register(resourceKey, new PlacedFeature(context.lookup(Registries.CONFIGURED_FEATURE).getOrThrow(configuredFeature), List.copyOf(placementModifiers)));
     }
 
@@ -68,7 +66,7 @@ public class TwigsPlacedFeatures {
     }
 
     public static ResourceKey<PlacedFeature> createKey(String string) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(Twigs.MOD_ID, string));
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, string));
     }
 
 }
