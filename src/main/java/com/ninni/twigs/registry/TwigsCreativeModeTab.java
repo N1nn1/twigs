@@ -713,6 +713,6 @@ public class TwigsCreativeModeTab {
     );
 
     private static CreativeModeTab register(String id, CreativeModeTab tab) {
-        return Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(Twigs.MOD_ID, id), tab);
+        return Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, id), tab);
     }
 }

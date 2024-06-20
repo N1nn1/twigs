@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 public class TwigsBlockEntityType {
 
     public static final BlockEntityType<SiltPotBlockEntity> SILT_POT = Registry.register(
-            BuiltInRegistries.BLOCK_ENTITY_TYPE, new ResourceLocation(Twigs.MOD_ID, "silt_pot"),
+            BuiltInRegistries.BLOCK_ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, "silt_pot"),
             FabricBlockEntityTypeBuilder.create(SiltPotBlockEntity::new,
                     TwigsBlocks.SILT_POT,
                     TwigsBlocks.BLACK_SILT_POT,

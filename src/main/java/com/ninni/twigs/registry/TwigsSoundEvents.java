@@ -43,7 +43,7 @@ public interface    TwigsSoundEvents {
     }
 
     private static SoundEvent register(String name) {
-        ResourceLocation id = new ResourceLocation(Twigs.MOD_ID, name);
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, name);
         return Registry.register(BuiltInRegistries.SOUND_EVENT, id, SoundEvent.createVariableRangeEvent(id));
     }
 }

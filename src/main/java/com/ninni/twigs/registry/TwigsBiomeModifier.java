@@ -37,11 +37,11 @@ public class TwigsBiomeModifier {
     }
 
     public static void addFeature(String id, GenerationStep.Decoration decoration, ResourceKey<PlacedFeature> resourceKey, TagKey<Biome> biome) {
-        BiomeModifications.create(new ResourceLocation(Twigs.MOD_ID, id)).add(ModificationPhase.ADDITIONS, BiomeSelectors.tag(biome), biomeModificationContext -> biomeModificationContext.getGenerationSettings().addFeature(decoration, resourceKey));
+        BiomeModifications.create(ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, id)).add(ModificationPhase.ADDITIONS, BiomeSelectors.tag(biome), biomeModificationContext -> biomeModificationContext.getGenerationSettings().addFeature(decoration, resourceKey));
     }
 
     private static void addOre(String id, ResourceKey<PlacedFeature> resourceKey, Predicate<BiomeSelectionContext> biome) {
-        BiomeModifications.create(new ResourceLocation(Twigs.MOD_ID, id)).add(ModificationPhase.ADDITIONS, biome, context -> context.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, resourceKey));
+        BiomeModifications.create(ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, id)).add(ModificationPhase.ADDITIONS, biome, context -> context.getGenerationSettings().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, resourceKey));
     }
 
 }
