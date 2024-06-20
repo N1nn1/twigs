@@ -1,5 +1,6 @@
 package com.ninni.twigs.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
@@ -24,6 +25,7 @@ import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("deprecation")
 public class BrickTrailBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
+    public static final MapCodec<BrickTrailBlock> CODEC = simpleCodec(BrickTrailBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     private static final VoxelShape SHAPE = box(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
@@ -31,6 +33,10 @@ public class BrickTrailBlock extends HorizontalDirectionalBlock implements Simpl
     public BrickTrailBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));
+    }
+    @Override
+    protected MapCodec<BrickTrailBlock> codec() {
+        return CODEC;
     }
 
     @Override

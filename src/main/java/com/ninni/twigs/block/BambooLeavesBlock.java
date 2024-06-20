@@ -1,5 +1,6 @@
 package com.ninni.twigs.block;
 
+import com.mojang.serialization.MapCodec;
 import com.ninni.twigs.TwigsProperties;
 import com.ninni.twigs.TwigsTags;
 import net.minecraft.core.BlockPos;
@@ -11,10 +12,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.BushBlock;
-import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -29,6 +27,7 @@ import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("deprecation")
 public class BambooLeavesBlock extends BushBlock implements SimpleWaterloggedBlock {
+    public static final MapCodec<BambooLeavesBlock> CODEC = simpleCodec(BambooLeavesBlock::new);
     private static final IntegerProperty LAYERS = TwigsProperties.LAYERS_1_4;
     private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final VoxelShape SHAPE_ONE = box(0, 0, 0, 16, 1, 16);
@@ -39,6 +38,10 @@ public class BambooLeavesBlock extends BushBlock implements SimpleWaterloggedBlo
     public BambooLeavesBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(LAYERS, 1).setValue(WATERLOGGED, false));
+    }
+    @Override
+    protected MapCodec<BambooLeavesBlock> codec() {
+        return CODEC;
     }
 
     @Override
