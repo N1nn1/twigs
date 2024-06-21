@@ -1,6 +1,7 @@
 package com.ninni.twigs.util;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.ninni.twigs.registry.TwigsItems;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
@@ -16,7 +17,7 @@ import net.minecraftforge.common.loot.LootModifier;
 import org.jetbrains.annotations.NotNull;
 
 public class TwigLootModifier extends LootModifier {
-    public static final Codec<TwigLootModifier> CODEC = RecordCodecBuilder.create(inst -> codecStart(inst).apply(inst, TwigLootModifier::new));
+    public static final MapCodec<TwigLootModifier> CODEC = RecordCodecBuilder.mapCodec(inst -> codecStart(inst).apply(inst, TwigLootModifier::new));
 
     public TwigLootModifier(LootItemCondition[] conditionsIn) {
         super(conditionsIn);
@@ -39,7 +40,7 @@ public class TwigLootModifier extends LootModifier {
     }
 
     @Override
-    public Codec<? extends IGlobalLootModifier> codec() {
+    public MapCodec<? extends IGlobalLootModifier> codec() {
         return CODEC;
     }
 }

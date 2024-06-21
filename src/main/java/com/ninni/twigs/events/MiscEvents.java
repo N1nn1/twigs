@@ -4,32 +4,17 @@ import com.google.common.base.Suppliers;
 import com.ninni.twigs.Twigs;
 import com.ninni.twigs.registry.TwigsBlocks;
 import com.ninni.twigs.registry.TwigsItems;
-import net.minecraft.advancements.critereon.EnchantmentPredicate;
-import net.minecraft.advancements.critereon.ItemPredicate;
-import net.minecraft.advancements.critereon.MinMaxBounds;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.block.BambooStalkBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DispenserBlock;
-import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.BambooLeaves;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.InvertedLootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
-import net.minecraft.world.level.storage.loot.predicates.MatchTool;
-import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.common.util.MutableHashedLinkedMap;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.LootTableLoadEvent;
@@ -403,9 +388,10 @@ public class MiscEvents {
             return BuiltInRegistries.BLOCK.stream()
                     .filter(LeavesBlock.class::isInstance)
                     .map(Block::getLootTable)
+                    .map(ResourceKey::location)
                     .collect(Collectors.toSet());
         });
-        if (id.equals(Blocks.BAMBOO.getLootTable())) {
+        if (id.equals(Blocks.BAMBOO.getLootTable().location())) {
             event.getTable().addPool(
                         LootPool.lootPool()
                                 .add(
@@ -419,7 +405,7 @@ public class MiscEvents {
                                 ).build()
                 );
         }
-        if (id.equals(Blocks.GRAVEL.getLootTable())) {
+       /* if (id.equals(Blocks.GRAVEL.getLootTable().location())) {
             event.getTable().addPool(
                         LootPool.lootPool()
                                 .add(
@@ -433,7 +419,7 @@ public class MiscEvents {
                                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))
                                 ).build()
                 );
-        }
+        }*/
     }
 
 }
