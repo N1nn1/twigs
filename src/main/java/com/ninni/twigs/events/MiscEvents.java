@@ -2,26 +2,20 @@ package com.ninni.twigs.events;
 
 import com.google.common.base.Suppliers;
 import com.ninni.twigs.Twigs;
-import com.ninni.twigs.entity.Pebble;
 import com.ninni.twigs.registry.TwigsBlocks;
 import com.ninni.twigs.registry.TwigsItems;
-import net.minecraft.Util;
 import net.minecraft.advancements.critereon.EnchantmentPredicate;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.MinMaxBounds;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
-import net.minecraft.core.Position;
-import net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BambooStalkBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -399,12 +393,7 @@ public class MiscEvents {
 
     @SubscribeEvent
     public void onTagsUpdated(TagsUpdatedEvent event) {
-        DispenserBlock.registerBehavior(TwigsItems.PEBBLE.get(), new AbstractProjectileDispenseBehavior() {
-            @Override
-            protected Projectile getProjectile(Level world, Position position, ItemStack stack) {
-                return Util.make(new Pebble(world, position.x(), position.y(), position.z()), entity -> entity.setItem(stack));
-            }
-        });
+        DispenserBlock.registerProjectileBehavior(TwigsItems.PEBBLE.get());
     }
 
     @SubscribeEvent
