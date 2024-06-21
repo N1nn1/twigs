@@ -10,11 +10,8 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.Container;
-import net.minecraft.world.Containers;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.*;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.entity.player.Player;
@@ -71,34 +68,34 @@ public class SiltPotBlock extends FallingBlockWithEntity implements SimpleWaterl
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        BlockEntity blockEntity = level.getBlockEntity(pos);
-        ItemStack stack = player.getItemInHand(hand);
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {    BlockEntity blockEntity = level.getBlockEntity(pos);
         if (hit.getDirection() == Direction.UP && stack.getItem() instanceof BlockItem blockItem && blockItem.getBlock() instanceof FlowerBlock && state.getValue(FILLED)) {
             blockItem.place(new BlockPlaceContext(player, hand, stack, hit));
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return ItemInteractionResult.sidedSuccess(level.isClientSide);
         }
         if (state.getValue(FILLED) && stack.getItem() instanceof ShovelItem) {
             level.setBlock(pos, state.setValue(FILLED, false), Block.UPDATE_NONE);
-            if (!player.getAbilities().instabuild) stack.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(player.getUsedItemHand()));
+            if (!player.getAbilities().instabuild) {
+                stack.hurtAndBreak(1, player, (hand == InteractionHand.MAIN_HAND) ? EquipmentSlot.MAINHAND : EquipmentSlot.OFFHAND);
+            }
             if (level.isClientSide) {
                 level.playSound(player, pos, SoundEvents.ROOTED_DIRT_BREAK, SoundSource.BLOCKS, 1, 1);
-                return InteractionResult.SUCCESS;
+                return ItemInteractionResult.SUCCESS;
             }
         } else if (!state.getValue(FILLED) && stack.is(Blocks.ROOTED_DIRT.asItem())) {
             level.setBlock(pos, state.setValue(FILLED, true), Block.UPDATE_NONE);
             if (level.isClientSide) {
                 level.playSound(player, pos, SoundEvents.ROOTED_DIRT_PLACE, SoundSource.BLOCKS, 1, 1);
-                return InteractionResult.SUCCESS;
+                return ItemInteractionResult.SUCCESS;
             }
             if (!player.getAbilities().instabuild) stack.shrink(1);
         } else if (blockEntity instanceof SiltPotBlockEntity && !state.getValue(FILLED)) {
-            if (level.isClientSide) return InteractionResult.SUCCESS;
+            if (level.isClientSide) return ItemInteractionResult.SUCCESS;
             player.openMenu((SiltPotBlockEntity)blockEntity);
             player.awardStat(TwigsStats.OPEN_SILT_POT);
             PiglinAi.angerNearbyPiglins(player, true);
         }
-        return InteractionResult.CONSUME;
+        return ItemInteractionResult.CONSUME;
 
     }
 
@@ -106,7 +103,7 @@ public class SiltPotBlock extends FallingBlockWithEntity implements SimpleWaterl
     public void onBrokenAfterFall(Level level, BlockPos pos, FallingBlockEntity fallingBlockEntity) {
         SiltPotBlockEntity blockEntity = TwigsBlockEntityType.SILT_POT.get().create(pos, fallingBlockEntity.getBlockState());
         assert blockEntity != null;
-        blockEntity.load(fallingBlockEntity.blockData);
+        blockEntity.loadAdditional(fallingBlockEntity.blockData, level.registryAccess());
         Containers.dropContents(level, pos, blockEntity);
     }
 
@@ -121,14 +118,6 @@ public class SiltPotBlock extends FallingBlockWithEntity implements SimpleWaterl
             }
 
             super.onRemove(state, level, pos, newState, moved);
-    }
-
-    @Override
-    public void setPlacedBy(Level level, BlockPos pos, BlockState blockState, @Nullable LivingEntity livingEntity, ItemStack itemStack) {
-            BlockEntity blockEntity;
-            if (itemStack.hasCustomHoverName() && (blockEntity = level.getBlockEntity(pos)) instanceof SiltPotBlockEntity) {
-                ((SiltPotBlockEntity)blockEntity).setCustomName(itemStack.getHoverName());
-            }
     }
 
     public BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
