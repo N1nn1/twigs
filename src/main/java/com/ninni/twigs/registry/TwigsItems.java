@@ -136,9 +136,6 @@ public class TwigsItems {
     public static final Item WEEPING_POLISHED_BLACKSTONE_BRICK_WALL = register("weeping_polished_blackstone_brick_wall", new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL, new Item.Properties()));
 
     //tuff blocks
-    public static final Item TUFF_STAIRS = register("tuff_stairs", new BlockItem(TwigsBlocks.TUFF_STAIRS, new Item.Properties()));
-    public static final Item TUFF_SLAB = register("tuff_slab", new BlockItem(TwigsBlocks.TUFF_SLAB, new Item.Properties()));
-    public static final Item TUFF_WALL = register("tuff_wall", new BlockItem(TwigsBlocks.TUFF_WALL, new Item.Properties()));
     public static final Item POLISHED_TUFF = register("polished_tuff", new BlockItem(TwigsBlocks.POLISHED_TUFF, new Item.Properties()));
     public static final Item POLISHED_TUFF_STAIRS = register("polished_tuff_stairs", new BlockItem(TwigsBlocks.POLISHED_TUFF_STAIRS, new Item.Properties()));
     public static final Item POLISHED_TUFF_SLAB = register("polished_tuff_slab", new BlockItem(TwigsBlocks.POLISHED_TUFF_SLAB, new Item.Properties()));
