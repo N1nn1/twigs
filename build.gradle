@@ -95,6 +95,9 @@ repositories {
 
 dependencies {
 	minecraft "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
+	// this fixes the problem of forge not booting, i dont know why this is needed, thanks forge :)
+	implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
+
 	annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
 }
 
@@ -127,4 +130,11 @@ publishing {
 			url "https://maven.minecraftforge.net"
 		}
 	}
+}
+
+// if this is not here "resources" will not be included
+sourceSets.each {
+	def dir = layout.buildDirectory.dir("sourcesSets/$it.name")
+	it.output.resourcesDir = dir
+	it.java.destinationDirectory = dir
 }
