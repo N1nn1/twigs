@@ -1,6 +1,6 @@
 package com.ninni.twigs.world.gen.structures;
 
-import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.ninni.twigs.registry.TwigsStructureTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.ChunkPos;
@@ -15,7 +15,7 @@ import net.minecraft.world.level.levelgen.structure.pieces.StructurePiecesBuilde
 import java.util.Optional;
 
 public class ObeliskStructure extends Structure {
-    public static final Codec<ObeliskStructure> CODEC = ObeliskStructure.simpleCodec(ObeliskStructure::new);
+    public static final MapCodec<ObeliskStructure> CODEC = ObeliskStructure.simpleCodec(ObeliskStructure::new);
 
     public ObeliskStructure(StructureSettings structureSettings) {
         super(structureSettings);

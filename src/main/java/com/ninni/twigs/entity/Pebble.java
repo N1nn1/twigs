@@ -37,7 +37,7 @@ public class Pebble extends ThrowableItemProjectile {
     }
 
     private ParticleOptions getParticle() {
-        ItemStack itemStack = this.getItemRaw();
+        ItemStack itemStack = this.getItem();
         return itemStack.isEmpty() ? TwigsParticleTypes.ITEM_PEBBLE : new ItemParticleOption(ParticleTypes.ITEM, itemStack);
     }
 

@@ -213,9 +213,6 @@ public class TwigsCreativeModeTab {
                     POLISHED_CALCITE_BRICK_SLAB,
                     POLISHED_CALCITE_BRICK_WALL,
                     Blocks.TUFF,
-                    TUFF_STAIRS,
-                    TUFF_SLAB,
-                    TUFF_WALL,
                     POLISHED_TUFF,
                     POLISHED_TUFF_STAIRS,
                     POLISHED_TUFF_SLAB,
@@ -510,9 +507,6 @@ public class TwigsCreativeModeTab {
                 output.accept(WEEPING_POLISHED_BLACKSTONE_BRICK_WALL);
 
                 //tuff blocks
-                output.accept(TUFF_STAIRS);
-                output.accept(TUFF_SLAB);
-                output.accept(TUFF_WALL);
                 output.accept(POLISHED_TUFF);
                 output.accept(POLISHED_TUFF_STAIRS);
                 output.accept(POLISHED_TUFF_SLAB);
@@ -713,6 +707,6 @@ public class TwigsCreativeModeTab {
     );
 
     private static CreativeModeTab register(String id, CreativeModeTab tab) {
-        return Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(Twigs.MOD_ID, id), tab);
+        return Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, id), tab);
     }
 }
