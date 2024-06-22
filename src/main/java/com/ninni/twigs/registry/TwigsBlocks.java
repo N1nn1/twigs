@@ -140,9 +140,6 @@ public class TwigsBlocks {
     public static final Block WEEPING_POLISHED_BLACKSTONE_BRICK_WALL = register("weeping_polished_blackstone_brick_wall", new WallBlock(BlockBehaviour.Properties.ofFullCopy(WEEPING_POLISHED_BLACKSTONE_BRICKS)));
 
     //tuff blocks
-    public static final Block TUFF_STAIRS = register("tuff_stairs", new StairBlock(Blocks.TUFF.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
-    public static final Block TUFF_SLAB = register("tuff_slab", new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
-    public static final Block TUFF_WALL = register("tuff_wall", new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final Block POLISHED_TUFF = register("polished_tuff", new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final Block POLISHED_TUFF_STAIRS = register("polished_tuff_stairs", new StairBlock(POLISHED_TUFF.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(POLISHED_TUFF)));
     public static final Block POLISHED_TUFF_SLAB = register("polished_tuff_slab", new SlabBlock(BlockBehaviour.Properties.ofFullCopy(POLISHED_TUFF)));
