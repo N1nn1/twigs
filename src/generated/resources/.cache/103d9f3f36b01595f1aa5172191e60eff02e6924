@@ -1,4 +1,4 @@
-// 1.19.4	2023-04-28T14:29:20.7182308	Registries
+// 1.21	2024-06-22T21:09:51.235972134	Registries
 1246e6708b1ac69de3a251babbdb88477531893c data/twigs/forge/biome_modifier/add_azalea_flowers.json
 382365853e501e7b34de18d2828f4ac61dcac0fe data/twigs/forge/biome_modifier/add_land_sea_shells.json
 a752cd0e73ccc35946e328f7ba0e319140a74fc9 data/twigs/forge/biome_modifier/add_ore_bloodstone.json
@@ -8,7 +8,7 @@ cd8396b910a27713e74acfaf124358c44f908aa4 data/twigs/forge/biome_modifier/add_ore
 b306508f371e96c8818ff0428ab88c087fd275f2 data/twigs/forge/biome_modifier/add_silt_strip.json
 4891225a361b9985a30270bc15efc33090e86c4a data/twigs/forge/biome_modifier/add_twigs.json
 7f84e82208a60f31f8f8cf4559b6b31d07fd0fc7 data/twigs/forge/biome_modifier/add_water_sea_shells.json
-09e0201edab89fd7fba389b7cca09abd471581ce data/twigs/worldgen/configured_feature/azalea_flowers.json
+e4669ddf2a31414026412f7e9e48d08cd365c95f data/twigs/worldgen/configured_feature/azalea_flowers.json
 e308fd61a81759900fdb310b07ec8f0c2e02803b data/twigs/worldgen/configured_feature/ore_bloodstone.json
 534ea1ec9b2782a5850075ceeefd6b5c1f16a07d data/twigs/worldgen/configured_feature/ore_rhyolite.json
 81c6417bd09b9276f7887820a725f23c730c9b52 data/twigs/worldgen/configured_feature/ore_schist.json
