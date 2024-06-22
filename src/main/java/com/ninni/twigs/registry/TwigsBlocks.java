@@ -165,9 +165,6 @@ public class TwigsBlocks {
     public static final RegistryObject<Block> WEEPING_POLISHED_BLACKSTONE_BRICK_WALL = BLOCKS.register("weeping_polished_blackstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(WEEPING_POLISHED_BLACKSTONE_BRICKS.get())));
 
     //tuff blocks
-    public static final RegistryObject<Block> TUFF_STAIRS = BLOCKS.register("tuff_stairs", () -> new StairBlock(Blocks.TUFF.defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
-    public static final RegistryObject<Block> TUFF_SLAB = BLOCKS.register("tuff_slab", () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
-    public static final RegistryObject<Block> TUFF_WALL = BLOCKS.register("tuff_wall", () -> new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final RegistryObject<Block> POLISHED_TUFF = BLOCKS.register("polished_tuff", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final RegistryObject<Block> POLISHED_TUFF_STAIRS = BLOCKS.register("polished_tuff_stairs", () -> new StairBlock(POLISHED_TUFF.get().defaultBlockState(), BlockBehaviour.Properties.ofFullCopy(POLISHED_TUFF.get())));
     public static final RegistryObject<Block> POLISHED_TUFF_SLAB = BLOCKS.register("polished_tuff_slab", () -> new SlabBlock(BlockBehaviour.Properties.ofFullCopy(POLISHED_TUFF.get())));
