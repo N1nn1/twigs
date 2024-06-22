@@ -18,6 +18,7 @@ import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.entries.NestedLootTable;
 import net.minecraft.world.level.storage.loot.functions.LootItemFunction;
 import net.minecraft.world.level.storage.loot.predicates.InvertedLootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
@@ -51,22 +52,17 @@ public class TwigsLootTableAdditions {
                                 ).build()
                 );
             } else if (equals(id, Blocks.GRAVEL)) {
-              /*  tableBuilder.pool(
+                tableBuilder.pool(
                         LootPool.lootPool()
                                 .with(
-                                        LootItem.lootTableItem(TwigsItems.PEBBLE)
-                                                .when(InvertedLootItemCondition.invert(
-                                                        MatchTool.toolMatches(
-                                                                ItemPredicate.Builder.item()
-                                                                        .hasEnchantment(new EnchantmentPredicate(
-
-                                                                                Enchantments.SILK_TOUCH
-                                                                                , MinMaxBounds.Ints.ANY)))
-                                                ))
-                                                .when(LootItemRandomChanceCondition.randomChance(0.2F))
-                                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F))).build()
-                                ).build()
-                );*/
+                                        // Since enchantments now are dynamically registered
+                                        // and we don't have registry access to them, we have to use a table reference
+                                        // Unless I(Ender) am very silly this is the only way to do it
+                                        NestedLootTable.lootTableReference(TwigsLootTables.PEBBLE_INJECTION)
+                                                .build()
+                                )
+                                .build()
+                );
             } else {
                 if (leafTablesSupplier.get().contains(id)) {
                     tableBuilder.modifyPools(original -> {

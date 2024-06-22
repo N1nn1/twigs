@@ -9,6 +9,7 @@ import net.minecraft.world.level.storage.loot.LootTable;
 
 public class TwigsLootTables {
     public static final ResourceKey<LootTable> BLOODSTONE_OBELISK_CHEST = create("chests/bloodstone_obelisk");
+    public static final ResourceKey<LootTable> PEBBLE_INJECTION = create("injection/pebble");
 
     private static ResourceKey<LootTable> create(String id) {
         return ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, id));
