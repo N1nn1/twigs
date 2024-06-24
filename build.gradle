@@ -1,37 +1,28 @@
-buildscript {
-	repositories {
-		maven { url = 'https://maven.minecraftforge.net' }
-		maven { url = "https://files.minecraftforge.net/maven" }
-		maven { url = "https://repo.spongepowered.org/repository/maven-public/" }
-		maven { url = 'https://maven.parchmentmc.org' }
-		mavenCentral()
-	}
-	dependencies {
-		classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: "${project.forgegradle_version}", changing: true
-		classpath 'org.parchmentmc:librarian:1.+'
-		classpath group: "org.spongepowered", name: "mixingradle", version: "0.7-SNAPSHOT"
-	}
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+	id 'net.minecraftforge.gradle' version '[6.0.24,6.2)'
+	id 'org.spongepowered.mixin' version '0.7-SNAPSHOT'
 }
-
-apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'eclipse'
-apply plugin: 'maven-publish'
-apply plugin: "org.spongepowered.mixin"
-apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 mixin {
 	add sourceSets.main, "twigs.refmap.json"
+	config "twigs.mixins.json"
 }
 
 version = "${project.minecraft_version}-${project.mod_version}"
 group = 'com.ninni.twigs'
 archivesBaseName = 'Twigs'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-	mappings channel: "${project.mappings_channel}", version: "${project.mappings_version}"
+	mappings channel: 'official', version: "${project.mappings_version}"
+
+	copyIdeResources = true //Calls processResources when in dev
+	reobf = false // Forge 1.20.6+ uses official mappings at runtime, so we shouldn't reobf from official to SRG
 
 	accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
@@ -95,6 +86,9 @@ repositories {
 
 dependencies {
 	minecraft "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
+	// this fixes the problem of forge not booting, i dont know why this is needed, thanks forge :) (I learnt why this is need, its a hacky fix for dependency hell)
+	implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
+
 	annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
 }
 
@@ -111,10 +105,8 @@ jar {
 				"MixinConfigs"            : "twigs.mixins.json"
 		])
 	}
-	finalizedBy 'reobfJar'
 }
 
-jar.finalizedBy('reobfJar')
 
 publishing {
 	publications {
@@ -127,4 +119,11 @@ publishing {
 			url "https://maven.minecraftforge.net"
 		}
 	}
+}
+
+// if this is not here "resources" will not be included
+sourceSets.each {
+	def dir = layout.buildDirectory.dir("sourcesSets/$it.name")
+	it.output.resourcesDir = dir
+	it.java.destinationDirectory = dir
 }

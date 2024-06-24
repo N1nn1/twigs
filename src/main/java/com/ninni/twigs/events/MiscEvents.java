@@ -2,40 +2,21 @@ package com.ninni.twigs.events;
 
 import com.google.common.base.Suppliers;
 import com.ninni.twigs.Twigs;
-import com.ninni.twigs.entity.Pebble;
 import com.ninni.twigs.registry.TwigsBlocks;
 import com.ninni.twigs.registry.TwigsItems;
-import net.minecraft.Util;
-import net.minecraft.advancements.critereon.EnchantmentPredicate;
-import net.minecraft.advancements.critereon.ItemPredicate;
-import net.minecraft.advancements.critereon.MinMaxBounds;
+import com.ninni.twigs.registry.TwigsLootTables;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
-import net.minecraft.core.Position;
-import net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.BambooStalkBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DispenserBlock;
-import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.BambooLeaves;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.entries.NestedLootTable;
 import net.minecraft.world.level.storage.loot.predicates.InvertedLootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
-import net.minecraft.world.level.storage.loot.predicates.MatchTool;
-import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.common.util.MutableHashedLinkedMap;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.LootTableLoadEvent;
@@ -212,9 +193,6 @@ public class MiscEvents {
                     TwigsItems.POLISHED_CALCITE_BRICK_SLAB.get(),
                     TwigsItems.POLISHED_CALCITE_BRICK_WALL.get(),
                     Items.TUFF,
-                    TwigsItems.TUFF_STAIRS.get(),
-                    TwigsItems.TUFF_SLAB.get(),
-                    TwigsItems.TUFF_WALL.get(),
                     TwigsItems.POLISHED_TUFF.get(),
                     TwigsItems.POLISHED_TUFF_STAIRS.get(),
                     TwigsItems.POLISHED_TUFF_SLAB.get(),
@@ -251,7 +229,7 @@ public class MiscEvents {
 
             putAfter(entries, Items.CUT_COPPER_SLAB,
                     TwigsItems.COPPER_PILLAR.get()
-                    );
+            );
             putAfter(entries, Items.EXPOSED_CUT_COPPER_SLAB,
                     TwigsItems.EXPOSED_COPPER_PILLAR.get()
             );
@@ -273,7 +251,8 @@ public class MiscEvents {
             putAfter(entries, Items.WAXED_OXIDIZED_CUT_COPPER_SLAB,
                     TwigsItems.WAXED_OXIDIZED_COPPER_PILLAR.get()
             );
-        };
+        }
+        ;
 
         if (tab.equals(CreativeModeTabs.COLORED_BLOCKS)) {
             putAfter(entries, Items.PINK_TERRACOTTA,
@@ -399,12 +378,7 @@ public class MiscEvents {
 
     @SubscribeEvent
     public void onTagsUpdated(TagsUpdatedEvent event) {
-        DispenserBlock.registerBehavior(TwigsItems.PEBBLE.get(), new AbstractProjectileDispenseBehavior() {
-            @Override
-            protected Projectile getProjectile(Level world, Position position, ItemStack stack) {
-                return Util.make(new Pebble(world, position.x(), position.y(), position.z()), entity -> entity.setItem(stack));
-            }
-        });
+        DispenserBlock.registerProjectileBehavior(TwigsItems.PEBBLE.get());
     }
 
     @SubscribeEvent
@@ -414,36 +388,34 @@ public class MiscEvents {
             return BuiltInRegistries.BLOCK.stream()
                     .filter(LeavesBlock.class::isInstance)
                     .map(Block::getLootTable)
+                    .map(ResourceKey::location)
                     .collect(Collectors.toSet());
         });
-        if (id.equals(Blocks.BAMBOO.getLootTable())) {
+        if (id.equals(Blocks.BAMBOO.getLootTable().location())) {
             event.getTable().addPool(
-                        LootPool.lootPool()
-                                .add(
-                                        LootItem.lootTableItem(TwigsBlocks.BAMBOO_LEAVES.get())
-                                                .when(
-                                                        InvertedLootItemCondition.invert(
-                                                                LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.BAMBOO)
-                                                                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BambooStalkBlock.LEAVES, BambooLeaves.NONE))
-                                                        )
-                                                )
-                                ).build()
-                );
+                    LootPool.lootPool()
+                            .add(
+                                    LootItem.lootTableItem(TwigsBlocks.BAMBOO_LEAVES.get())
+                                            .when(
+                                                    InvertedLootItemCondition.invert(
+                                                            LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.BAMBOO)
+                                                                    .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BambooStalkBlock.LEAVES, BambooLeaves.NONE))
+                                                    )
+                                            )
+                            ).build()
+            );
         }
-        if (id.equals(Blocks.GRAVEL.getLootTable())) {
+        if (id.equals(Blocks.GRAVEL.getLootTable().location())) {
             event.getTable().addPool(
-                        LootPool.lootPool()
-                                .add(
-                                        LootItem.lootTableItem(TwigsItems.PEBBLE.get())
-                                                .when(InvertedLootItemCondition.invert(
-                                                        MatchTool.toolMatches(
-                                                                ItemPredicate.Builder.item()
-                                                                        .hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.ANY)))
-                                                ))
-                                                .when(LootItemRandomChanceCondition.randomChance(0.2F))
-                                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F)))
-                                ).build()
-                );
+                    LootPool.lootPool()
+                            .add(
+                                    // Since enchantments now are dynamically registered
+                                    // and we don't have registry access to them, we have to use a table reference
+                                    // Unless I(Ender) am very silly this is the only way to do it
+                                    NestedLootTable.lootTableReference(TwigsLootTables.PEBBLE_INJECTION)
+                            )
+                            .build()
+            );
         }
     }
 

@@ -68,7 +68,7 @@ public class FloorItemBlock extends Block implements SimpleWaterloggedBlock {
     }
 
     @Override
-    public boolean isPathfindable(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, PathComputationType pathComputationType) {
-        return (pathComputationType == PathComputationType.AIR && !this.hasCollision) || super.isPathfindable(blockState, blockGetter, blockPos, pathComputationType);
+    public boolean isPathfindable(BlockState blockState, PathComputationType pathComputationType) {
+        return (pathComputationType == PathComputationType.AIR && !this.hasCollision) || super.isPathfindable(blockState, pathComputationType);
     }
 }

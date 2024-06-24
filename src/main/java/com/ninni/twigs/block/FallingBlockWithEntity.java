@@ -1,5 +1,6 @@
 package com.ninni.twigs.block;
 
+import com.mojang.serialization.MapCodec;
 import com.ninni.twigs.mixin.FallingBlockEntityInvoker;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -20,9 +21,14 @@ import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("deprecation")
 public class FallingBlockWithEntity extends BaseEntityBlock implements Fallable {
-
+    public static final MapCodec<FallingBlockWithEntity> CODEC = simpleCodec(FallingBlockWithEntity::new);
     public FallingBlockWithEntity(Properties settings) {
         super(settings);
+    }
+
+    @Override
+    protected MapCodec<FallingBlockWithEntity> codec() {
+        return CODEC;
     }
 
     @Override
@@ -44,7 +50,7 @@ public class FallingBlockWithEntity extends BaseEntityBlock implements Fallable 
         }
         BlockEntity blockEntity = world.getBlockEntity(pos);
         FallingBlockEntity fallingBlockEntity = spawnFromBlock(world, pos, state);
-        if (blockEntity != null) fallingBlockEntity.blockData = blockEntity.saveWithoutMetadata();
+        if (blockEntity != null) fallingBlockEntity.blockData = blockEntity.saveWithoutMetadata(world.registryAccess());
         this.configureFallingBlockEntity(fallingBlockEntity);
     }
 

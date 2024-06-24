@@ -33,7 +33,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemp
 import java.util.List;
 
 public class ObeliskGenerator {
-    private static final ResourceLocation OBELISK = new ResourceLocation(Twigs.MOD_ID, "bloodstone_obelisk/bloodstone_obelisk");
+    private static final ResourceLocation OBELISK = ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, "bloodstone_obelisk/bloodstone_obelisk");
 
     public static void addPieces(StructureTemplateManager manager, BlockPos pos, Rotation rotation, StructurePiecesBuilder holder) {
         holder.addPiece(new ObeliskGenerator.Piece(manager, OBELISK, pos, rotation));
@@ -96,7 +96,7 @@ public class ObeliskGenerator {
                     if (mob != null) {
                         mob.setPersistenceRequired();
                         mob.moveTo(pos, 0.0F, 0.0F);
-                        mob.finalizeSpawn(world, world.getCurrentDifficultyAt(mob.blockPosition()), MobSpawnType.STRUCTURE, (SpawnGroupData) null, (CompoundTag) null);
+                        mob.finalizeSpawn(world, world.getCurrentDifficultyAt(mob.blockPosition()), MobSpawnType.STRUCTURE, (SpawnGroupData) null);
                         world.addFreshEntityWithPassengers(mob);
                         world.setBlock(pos, Blocks.AIR.defaultBlockState(), 2);
                     }

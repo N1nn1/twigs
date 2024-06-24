@@ -4,7 +4,7 @@ import com.ninni.twigs.Twigs;
 import com.ninni.twigs.world.gen.features.config.AzaleaFlowerPatchConfig;
 import com.ninni.twigs.world.gen.features.config.NoiseStripConfig;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
@@ -34,7 +34,7 @@ public class TwigsConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_PEBBLE = createKey("patch_pebble");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_SEASHELL = createKey("patch_seashell");
 
-    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         TagMatchTest baseStoneOverworld = new TagMatchTest(BlockTags.BASE_STONE_OVERWORLD);
         TagMatchTest baseStoneNether = new TagMatchTest(BlockTags.BASE_STONE_NETHER);
         registerConfiguredFeature(context, ORE_RHYOLITE, Feature.ORE, new OreConfiguration(baseStoneOverworld, TwigsBlocks.RHYOLITE.get().defaultBlockState(), 45));
@@ -47,12 +47,12 @@ public class TwigsConfiguredFeatures {
         registerConfiguredFeature(context, PATCH_SEASHELL, Feature.RANDOM_PATCH, FeatureUtils.simpleRandomPatchConfiguration(2, PlacementUtils.filtered(TwigsFeatures.WATERLOGGABLE_SIMPLE_BLOCK.get(), new SimpleBlockConfiguration(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(TwigsBlocks.OPALINE_SEASHELL.get().defaultBlockState(), 20).add(TwigsBlocks.TANGERINE_SEASHELL.get().defaultBlockState(), 20).add(TwigsBlocks.ROSEATE_SEASHELL.get().defaultBlockState(), 15).add(TwigsBlocks.BRONZED_SEASHELL.get().defaultBlockState(), 8))), BlockPredicate.ONLY_IN_AIR_OR_WATER_PREDICATE)));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void registerConfiguredFeature(BootstapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> resourceKey, F feature, FC featureConfiguration) {
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void registerConfiguredFeature(BootstrapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> resourceKey, F feature, FC featureConfiguration) {
         context.register(resourceKey, new ConfiguredFeature<>(feature, featureConfiguration));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> createKey(String string) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(Twigs.MOD_ID, string));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, string));
     }
 
 }

@@ -14,7 +14,7 @@ public class TwigsStructurePieceTypes {
     public static final StructurePieceType BLOODSTONE_OBELISK = register("bloodstone_obelisk", ObeliskGenerator.Piece::new);
 
     private static StructurePieceType register(String id, StructurePieceType type) {
-        return Registry.register(BuiltInRegistries.STRUCTURE_PIECE, new ResourceLocation(Twigs.MOD_ID, id), type);
+        return Registry.register(BuiltInRegistries.STRUCTURE_PIECE, ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, id), type);
     }
 
     private static StructurePieceType register(String id, StructurePieceType.StructureTemplateType type) {
