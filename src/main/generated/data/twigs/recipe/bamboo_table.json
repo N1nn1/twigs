@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "O": {
+      "item": "minecraft:bamboo_fence"
+    },
+    "_": {
+      "item": "minecraft:bamboo_slab"
+    }
+  },
+  "pattern": [
+    "___",
+    "O O",
+    "O O"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twigs:bamboo_table"
+  }
+}

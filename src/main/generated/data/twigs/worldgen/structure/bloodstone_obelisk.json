@@ -1,0 +1,7 @@
+{
+  "type": "twigs:obelisk",
+  "biomes": "#twigs:has_structure/bloodstone_obelisk",
+  "spawn_overrides": {},
+  "step": "surface_structures",
+  "terrain_adaptation": "beard_thin"
+}

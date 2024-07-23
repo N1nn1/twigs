@@ -42,7 +42,7 @@ public class TwigsClient implements ClientModInitializer {
 				TwigsBlocks.BAMBOO_THATCH_SLAB
 		);
 
-		FabricModelPredicateProviderRegistry.register(TwigsItems.BRONZED_SEASHELL, new ResourceLocation("playing"), (itemStack, clientWorld, livingEntity, var) -> {
+		FabricModelPredicateProviderRegistry.register(TwigsItems.BRONZED_SEASHELL,  ResourceLocation.withDefaultNamespace("playing"), (itemStack, clientWorld, livingEntity, var) -> {
 			if (livingEntity == null) return 0.0F;
 
 			return livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack ? 1.0F : 0.0F;

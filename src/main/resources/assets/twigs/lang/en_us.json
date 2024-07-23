@@ -293,5 +293,14 @@
   "block.twigs.brown_silt_shingle_wall": "Brown Silt Shingle Wall",
   "block.twigs.green_silt_shingle_wall": "Green Silt Shingle Wall",
   "block.twigs.red_silt_shingle_wall": "Red Silt Shingle Wall",
-  "block.twigs.black_silt_shingle_wall": "Black Silt Shingle Wall"
+  "block.twigs.black_silt_shingle_wall": "Black Silt Shingle Wall",
+
+  "tag.item.twigs.schist":  "Schist",
+  "tag.item.twigs.rhyolite": "Rhyolite",
+  "tag.item.twigs.bloodstone":  "Bloodstone",
+  "tag.item.twigs.packed_silt": "Packed Silt",
+  "tag.item.twigs.packed_silt_full_blocks":  "Packed Silt Full Blocks",
+  "tag.item.twigs.silt_pots":  "Silt Pots",
+  "tag.item.twigs.seashells": "Seashells",
+  "tag.item.twigs.tables": "Tables"
 }

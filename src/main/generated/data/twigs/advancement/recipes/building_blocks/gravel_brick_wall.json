@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gravel_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:gravel_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:gravel_brick_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gravel_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:gravel_brick_wall"
+    ]
+  }
+}

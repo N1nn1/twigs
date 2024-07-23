@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dye": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:red_dye"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_silt_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:silt_shingles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:red_packed_silt_from_silt_shingles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_silt_shingles",
+      "has_dye"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:red_packed_silt_from_silt_shingles"
+    ]
+  }
+}

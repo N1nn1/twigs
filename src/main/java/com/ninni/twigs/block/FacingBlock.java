@@ -1,5 +1,6 @@
 package com.ninni.twigs.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;
@@ -11,11 +12,16 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import org.jetbrains.annotations.Nullable;
 
 public class FacingBlock extends DirectionalBlock {
+    public static final MapCodec<FacingBlock> CODEC = simpleCodec(FacingBlock::new);
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
 
     public FacingBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH));
+    }
+    @Override
+    protected MapCodec<FacingBlock> codec() {
+        return CODEC;
     }
 
     @Nullable

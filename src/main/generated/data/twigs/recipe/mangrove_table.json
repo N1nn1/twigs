@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "O": {
+      "item": "minecraft:mangrove_fence"
+    },
+    "_": {
+      "item": "minecraft:mangrove_slab"
+    }
+  },
+  "pattern": [
+    "___",
+    "O O",
+    "O O"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twigs:mangrove_table"
+  }
+}

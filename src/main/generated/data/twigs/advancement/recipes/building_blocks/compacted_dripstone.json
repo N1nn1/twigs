@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_compacted_dripstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:compacted_dripstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_pointed_dripstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:pointed_dripstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:compacted_dripstone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pointed_dripstone",
+      "has_compacted_dripstone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:compacted_dripstone"
+    ]
+  }
+}

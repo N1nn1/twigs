@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:waxed_weathered_cut_copper_slab"
+  },
+  "result": {
+    "count": 1,
+    "id": "twigs:waxed_weathered_copper_pillar"
+  }
+}

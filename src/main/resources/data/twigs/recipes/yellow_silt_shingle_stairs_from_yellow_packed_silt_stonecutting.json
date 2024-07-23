@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "twigs:yellow_packed_silt"
-  },
-  "result": "twigs:yellow_silt_shingle_stairs",
-  "count": 1
-}

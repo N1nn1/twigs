@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "F": {
+      "item": "minecraft:soul_sand"
+    },
+    "S": {
+      "item": "minecraft:soul_torch"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "iii",
+    "iSi",
+    "iFi"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twigs:soul_lamp"
+  }
+}

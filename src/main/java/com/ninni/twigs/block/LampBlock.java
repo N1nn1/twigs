@@ -3,7 +3,6 @@ package com.ninni.twigs.block;
 import com.ninni.twigs.registry.TwigsSoundEvents;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
@@ -22,9 +21,8 @@ public class LampBlock extends Block {
         this.registerDefaultState(this.defaultBlockState().setValue(LIT, true));
     }
 
-    @SuppressWarnings("deprecation")
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult blockHitResult) {
         if (!player.isShiftKeyDown()) {
             final boolean wasLit = state.getValue(LIT);
             level.setBlockAndUpdate(pos, state.setValue(LIT, !wasLit));

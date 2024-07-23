@@ -20,7 +20,7 @@ public class TwigsFeatures {
     public static final Feature<SimpleBlockConfiguration> WATERLOGGABLE_SIMPLE_BLOCK = register("waterloggable_simple_block", new WaterloggableSimpleBlockFeature(SimpleBlockConfiguration.CODEC));
 
     private static <C extends FeatureConfiguration, F extends Feature<C>> F register(String string, F feature) {
-        return Registry.register(BuiltInRegistries.FEATURE, new ResourceLocation(Twigs.MOD_ID, string), feature);
+        return Registry.register(BuiltInRegistries.FEATURE, ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, string), feature);
     }
 
 }

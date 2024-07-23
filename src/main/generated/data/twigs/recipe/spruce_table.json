@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "O": {
+      "item": "minecraft:spruce_fence"
+    },
+    "_": {
+      "item": "minecraft:spruce_slab"
+    }
+  },
+  "pattern": [
+    "___",
+    "O O",
+    "O O"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twigs:spruce_table"
+  }
+}

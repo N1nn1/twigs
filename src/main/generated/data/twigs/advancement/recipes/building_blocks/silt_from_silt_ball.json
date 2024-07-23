@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_silt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:silt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_silt_ball": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:silt_ball"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:silt_from_silt_ball"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_silt_ball",
+      "has_silt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:silt_from_silt_ball"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_red_packed_silt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:red_packed_silt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:stonecutting/red_silt_shingle_slab_from_red_packed_silt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_red_packed_silt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:stonecutting/red_silt_shingle_slab_from_red_packed_silt"
+    ]
+  }
+}

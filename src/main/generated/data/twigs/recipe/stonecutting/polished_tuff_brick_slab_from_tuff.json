@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:tuff"
+  },
+  "result": {
+    "count": 2,
+    "id": "twigs:polished_tuff_brick_slab"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:white_silt_shingle_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_silt_shingles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:white_silt_shingles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_white_silt_shingles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:white_silt_shingle_wall"
+    ]
+  }
+}

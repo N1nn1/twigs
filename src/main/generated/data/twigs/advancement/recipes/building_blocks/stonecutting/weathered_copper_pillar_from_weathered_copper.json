@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:stonecutting/weathered_copper_pillar_from_weathered_copper"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_weathered_copper": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:weathered_copper"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_weathered_copper"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:stonecutting/weathered_copper_pillar_from_weathered_copper"
+    ]
+  }
+}

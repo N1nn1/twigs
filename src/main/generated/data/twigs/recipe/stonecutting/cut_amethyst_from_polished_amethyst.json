@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twigs:polished_amethyst"
+  },
+  "result": {
+    "count": 1,
+    "id": "twigs:cut_amethyst"
+  }
+}
