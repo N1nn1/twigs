@@ -15,6 +15,6 @@ public class TwigsEntityTypes {
 
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Twigs.MOD_ID);
 
-    public static final RegistryObject<EntityType<Pebble>> PEBBLE = ENTITY_TYPES.register("pebble", () -> EntityType.Builder.<Pebble>of(Pebble::new, MobCategory.MISC).sized(0.25F, 0.25F).clientTrackingRange(4).updateInterval(10).build(new ResourceLocation(Twigs.MOD_ID, "pebble").toString()));
+    public static final RegistryObject<EntityType<Pebble>> PEBBLE = ENTITY_TYPES.register("pebble", () -> EntityType.Builder.<Pebble>of(Pebble::new, MobCategory.MISC).sized(0.25F, 0.25F).clientTrackingRange(4).updateInterval(10).build(ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, "pebble").toString()));
 
 }

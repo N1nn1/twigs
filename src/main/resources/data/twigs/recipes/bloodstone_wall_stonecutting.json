@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "twigs:bloodstone"
-  },
-  "result": "twigs:bloodstone_wall",
-  "count": 1
-}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "packed_silt",
+  "key": {
+    "#": {
+      "item": "twigs:packed_silt"
+    },
+    "X": {
+      "item": "minecraft:blue_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "twigs:blue_packed_silt"
+  }
+}

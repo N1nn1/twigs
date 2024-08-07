@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lime_packed_silt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:lime_packed_silt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:stonecutting/lime_silt_shingle_wall_from_lime_packed_silt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lime_packed_silt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:stonecutting/lime_silt_shingle_wall_from_lime_packed_silt"
+    ]
+  }
+}

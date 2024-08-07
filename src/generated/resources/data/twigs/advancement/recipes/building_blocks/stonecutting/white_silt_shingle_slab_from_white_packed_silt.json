@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:stonecutting/white_silt_shingle_slab_from_white_packed_silt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_packed_silt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:white_packed_silt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_white_packed_silt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:stonecutting/white_silt_shingle_slab_from_white_packed_silt"
+    ]
+  }
+}

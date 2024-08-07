@@ -50,7 +50,7 @@ public class TwigsSoundEvents {
     }
 
     private static RegistryObject<SoundEvent> register(String name) {
-        ResourceLocation id = new ResourceLocation(Twigs.MOD_ID, name);
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, name);
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(id));
     }
 }

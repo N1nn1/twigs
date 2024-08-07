@@ -131,9 +131,6 @@ public class TwigsCreativeModeTabs {
                 output.accept(TwigsItems.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL.get());
 
                 //tuff blocks
-                output.accept(TwigsItems.TUFF_STAIRS.get());
-                output.accept(TwigsItems.TUFF_SLAB.get());
-                output.accept(TwigsItems.TUFF_WALL.get());
                 output.accept(TwigsItems.POLISHED_TUFF.get());
                 output.accept(TwigsItems.POLISHED_TUFF_STAIRS.get());
                 output.accept(TwigsItems.POLISHED_TUFF_SLAB.get());

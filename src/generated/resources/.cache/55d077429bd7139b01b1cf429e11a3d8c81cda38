@@ -1,0 +1,9 @@
+// 1.21	2024-08-07T22:38:51.496559958	Tags for minecraft:worldgen/biome mod id twigs
+0f241c94b10e4b16b4304f66ad949bb089955b1e data/twigs/tags/worldgen/biome/azalea_flowers_generate.json
+a47da4790ef580393967ae893b28e5c20640ed1b data/twigs/tags/worldgen/biome/bloodstone_generates.json
+b9d88eebe73b1ad63bb30d2153848ee9e14f6c0a data/twigs/tags/worldgen/biome/has_structure/bloodstone_obelisk.json
+8f5101d01c0043b32b309193648315ac92299f76 data/twigs/tags/worldgen/biome/schist_generates.json
+7d5941e8e3343232ad51784184e6ad28a4dc2047 data/twigs/tags/worldgen/biome/silt_generates.json
+631e18ec5c16f890d3431266b8ddf2952a2a33c2 data/twigs/tags/worldgen/biome/spawns_pebble.json
+748e4376bf3caef7e7ebc931facb73402fba5617 data/twigs/tags/worldgen/biome/spawns_sea_shell.json
+950a462e8cad10e32b7e2fda0c01efe349b71ca6 data/twigs/tags/worldgen/biome/spawns_twig.json

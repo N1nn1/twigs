@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_paper_lantern": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:paper_lantern"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:dandelion_paper_lantern"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_paper_lantern"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:dandelion_paper_lantern"
+    ]
+  }
+}

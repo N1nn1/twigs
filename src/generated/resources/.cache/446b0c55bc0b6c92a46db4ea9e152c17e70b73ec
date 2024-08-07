@@ -1,0 +1,21 @@
+// 1.21	2024-08-07T22:38:51.459962999	Tags for minecraft:block mod id twigs
+342d1c926630cb925d6eb9d820022ee45fe6c2e2 data/minecraft/tags/block/crystal_sound_blocks.json
+09620d4cf563c8fc87466bca3f0530140f260de3 data/minecraft/tags/block/flower_pots.json
+8b4f9b6d93b1e42c523e8a141df3682e8133e79e data/minecraft/tags/block/inside_step_sound_blocks.json
+d98f5087086b742d3310c4356bbf4ef824764bb6 data/minecraft/tags/block/mineable/axe.json
+09b092c64fc5ef3fb0fd55e2f2d5549a3adf47a9 data/minecraft/tags/block/mineable/pickaxe.json
+24d2ac804c89467a50f2f26ab923ac79d8b58ed0 data/minecraft/tags/block/mineable/shovel.json
+599791d5ff829d9bc2c89986df8bf789dca7e962 data/minecraft/tags/block/piglin_repellents.json
+0f272983a157bea31392a17708ff6cae52275e01 data/minecraft/tags/block/replaceable.json
+0f272983a157bea31392a17708ff6cae52275e01 data/minecraft/tags/block/replaceable_by_trees.json
+bb490d6298d60add7923fd01e6b2279cef2909d0 data/minecraft/tags/block/slabs.json
+33e68d4e3e1958c8ef642f2af2ae761bb67b7ad3 data/minecraft/tags/block/small_flowers.json
+96c4fae30aa703fb8bb48d3c8dfb126468677f35 data/minecraft/tags/block/stairs.json
+b149ca0af955728398901a109a265985c8148fef data/minecraft/tags/block/walls.json
+be04783777713d461327c38454be43107254bf71 data/twigs/tags/block/bloodstone.json
+e6076b519f016d5b5e38c00c9e224e9e20756ad9 data/twigs/tags/block/offset_remover.json
+6b2fbd51696b24130e7b9082e8c2bba4ae324a22 data/twigs/tags/block/packed_silt.json
+2d36e807a9494cb31437d5a846b38ea081b7a75a data/twigs/tags/block/rhyolite.json
+555634d44bd366e8aa29df9dde35d30b3eac87b8 data/twigs/tags/block/schist.json
+53b99d8c0c4c77ea2142b8553858d2954d7beb25 data/twigs/tags/block/silt_pots.json
+f76b491c1b4e07e5dec76430704d4721fdbd0969 data/twigs/tags/block/tables.json

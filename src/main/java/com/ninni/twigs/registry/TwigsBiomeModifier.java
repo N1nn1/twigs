@@ -4,7 +4,7 @@ import com.ninni.twigs.Twigs;
 import com.ninni.twigs.TwigsTags;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
@@ -31,7 +31,7 @@ public class TwigsBiomeModifier {
     private static final ResourceKey<BiomeModifier> ADD_LAND_SEA_SHELLS = createKey("add_land_sea_shells");
     private static final ResourceKey<BiomeModifier> ADD_WATER_SEA_SHELLS = createKey("add_water_sea_shells");
 
-    public static void bootstrap(BootstapContext<BiomeModifier> context) {
+    public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         context.register(ADD_ORE_BLOODSTONE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(biomeTag(context, TwigsTags.BLOODSTONE_GENERATES), getPlacedFeature(context, TwigsPlacedFeatures.ORE_BLOODSTONE), GenerationStep.Decoration.UNDERGROUND_ORES));
         context.register(ORE_RHYOLITE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(biomeTag(context, BiomeTags.IS_OVERWORLD), getPlacedFeature(context, TwigsPlacedFeatures.ORE_RHYOLITE), GenerationStep.Decoration.UNDERGROUND_ORES));
         context.register(ADD_ORE_SCHIST, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(biomeTag(context, TwigsTags.SCHIST_GENERATES), getPlacedFeature(context, TwigsPlacedFeatures.ORE_SCHIST_LOWER, TwigsPlacedFeatures.ORE_SCHIST_UPPER), GenerationStep.Decoration.UNDERGROUND_ORES));
@@ -45,22 +45,22 @@ public class TwigsBiomeModifier {
 
     @SafeVarargs
     @NotNull
-    private static HolderSet.Direct<PlacedFeature> getPlacedFeature(BootstapContext<BiomeModifier> context, ResourceKey<PlacedFeature>... placedFeature) {
+    private static HolderSet.Direct<PlacedFeature> getPlacedFeature(BootstrapContext<BiomeModifier> context, ResourceKey<PlacedFeature>... placedFeature) {
         return HolderSet.direct(Stream.of(placedFeature).map(resourceKey -> context.lookup(Registries.PLACED_FEATURE).getOrThrow(resourceKey)).collect(Collectors.toList()));
     }
 
     @NotNull
-    private static HolderSet.Direct<PlacedFeature> getPlacedFeature(BootstapContext<BiomeModifier> context, ResourceKey<PlacedFeature> placedFeature) {
+    private static HolderSet.Direct<PlacedFeature> getPlacedFeature(BootstrapContext<BiomeModifier> context, ResourceKey<PlacedFeature> placedFeature) {
         return HolderSet.direct(context.lookup(Registries.PLACED_FEATURE).getOrThrow(placedFeature));
     }
 
     @NotNull
-    private static HolderSet.Named<Biome> biomeTag(BootstapContext<BiomeModifier> context, TagKey<Biome> tag) {
+    private static HolderSet.Named<Biome> biomeTag(BootstrapContext<BiomeModifier> context, TagKey<Biome> tag) {
         return context.lookup(Registries.BIOME).getOrThrow(tag);
     }
 
     public static ResourceKey<BiomeModifier> createKey(String string) {
-        return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, new ResourceLocation(Twigs.MOD_ID, string));
+        return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, string));
     }
 
 }

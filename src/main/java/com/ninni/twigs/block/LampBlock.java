@@ -24,7 +24,7 @@ public class LampBlock extends Block {
 
     @SuppressWarnings("deprecation")
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult blockHitResult) {
         if (!player.isShiftKeyDown()) {
             final boolean wasLit = state.getValue(LIT);
             level.setBlockAndUpdate(pos, state.setValue(LIT, !wasLit));

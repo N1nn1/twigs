@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bloodstone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:bloodstone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:stonecutting/polished_bloodstone_stairs_from_bloodstone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bloodstone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:stonecutting/polished_bloodstone_stairs_from_bloodstone"
+    ]
+  }
+}

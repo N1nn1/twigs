@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "silt_shingles",
+  "key": {
+    "#": {
+      "item": "twigs:silt_shingles"
+    },
+    "X": {
+      "item": "minecraft:white_dye"
+    }
+  },
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "twigs:white_silt_shingles"
+  }
+}

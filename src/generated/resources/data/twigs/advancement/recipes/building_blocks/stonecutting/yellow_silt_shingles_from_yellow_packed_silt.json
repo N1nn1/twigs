@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:stonecutting/yellow_silt_shingles_from_yellow_packed_silt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_packed_silt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:yellow_packed_silt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yellow_packed_silt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:stonecutting/yellow_silt_shingles_from_yellow_packed_silt"
+    ]
+  }
+}

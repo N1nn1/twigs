@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "twigs:polished_rhyolite_bricks"
+  },
+  "result": {
+    "id": "twigs:cracked_polished_rhyolite_bricks"
+  }
+}

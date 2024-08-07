@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cyan_packed_silt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:cyan_packed_silt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:stonecutting/cyan_silt_shingle_slab_from_cyan_packed_silt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cyan_packed_silt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:stonecutting/cyan_silt_shingle_slab_from_cyan_packed_silt"
+    ]
+  }
+}

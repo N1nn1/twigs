@@ -1,0 +1,14 @@
+// 1.21	2024-08-07T22:38:51.461276707	Tags for minecraft:item mod id twigs
+599791d5ff829d9bc2c89986df8bf789dca7e962 data/minecraft/tags/item/piglin_repellents.json
+bb490d6298d60add7923fd01e6b2279cef2909d0 data/minecraft/tags/item/slabs.json
+33e68d4e3e1958c8ef642f2af2ae761bb67b7ad3 data/minecraft/tags/item/small_flowers.json
+96c4fae30aa703fb8bb48d3c8dfb126468677f35 data/minecraft/tags/item/stairs.json
+b149ca0af955728398901a109a265985c8148fef data/minecraft/tags/item/walls.json
+be04783777713d461327c38454be43107254bf71 data/twigs/tags/item/bloodstone.json
+6b2fbd51696b24130e7b9082e8c2bba4ae324a22 data/twigs/tags/item/packed_silt.json
+c6029ff916924cf1a8283307ba9c1a1576a75f24 data/twigs/tags/item/packed_silt_full_blocks.json
+2d36e807a9494cb31437d5a846b38ea081b7a75a data/twigs/tags/item/rhyolite.json
+555634d44bd366e8aa29df9dde35d30b3eac87b8 data/twigs/tags/item/schist.json
+31b960b72b02328418d0052c3265d6ee821d1d02 data/twigs/tags/item/seashells.json
+53b99d8c0c4c77ea2142b8553858d2954d7beb25 data/twigs/tags/item/silt_pots.json
+f76b491c1b4e07e5dec76430704d4721fdbd0969 data/twigs/tags/item/tables.json

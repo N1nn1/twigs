@@ -138,9 +138,6 @@ public class TwigsItems {
     public static final RegistryObject<Item> WEEPING_POLISHED_BLACKSTONE_BRICK_WALL = ITEMS.register("weeping_polished_blackstone_brick_wall", () -> new BlockItem(TwigsBlocks.WEEPING_POLISHED_BLACKSTONE_BRICK_WALL.get(), new Item.Properties()));
 
     //tuff blocks
-    public static final RegistryObject<Item> TUFF_STAIRS = ITEMS.register("tuff_stairs", () -> new BlockItem(TwigsBlocks.TUFF_STAIRS.get(), new Item.Properties()));
-    public static final RegistryObject<Item> TUFF_SLAB = ITEMS.register("tuff_slab", () -> new BlockItem(TwigsBlocks.TUFF_SLAB.get(), new Item.Properties()));
-    public static final RegistryObject<Item> TUFF_WALL = ITEMS.register("tuff_wall", () -> new BlockItem(TwigsBlocks.TUFF_WALL.get(), new Item.Properties()));
     public static final RegistryObject<Item> POLISHED_TUFF = ITEMS.register("polished_tuff", () -> new BlockItem(TwigsBlocks.POLISHED_TUFF.get(), new Item.Properties()));
     public static final RegistryObject<Item> POLISHED_TUFF_STAIRS = ITEMS.register("polished_tuff_stairs", () -> new BlockItem(TwigsBlocks.POLISHED_TUFF_STAIRS.get(), new Item.Properties()));
     public static final RegistryObject<Item> POLISHED_TUFF_SLAB = ITEMS.register("polished_tuff_slab", () -> new BlockItem(TwigsBlocks.POLISHED_TUFF_SLAB.get(), new Item.Properties()));

@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brick_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brick_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_chiseled_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:chiseled_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:chiseled_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_brick_slab",
+      "has_chiseled_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:chiseled_bricks"
+    ]
+  }
+}

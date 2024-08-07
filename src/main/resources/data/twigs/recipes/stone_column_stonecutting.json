@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:stone"
-  },
-  "result": "twigs:stone_column",
-  "count": 1
-}

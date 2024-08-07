@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_amethyst": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:polished_amethyst"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:cut_amethyst"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_amethyst"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:cut_amethyst"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_polished_rhyolite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "twigs:polished_rhyolite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "twigs:stonecutting/polished_rhyolite_brick_wall_from_polished_rhyolite"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_polished_rhyolite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "twigs:stonecutting/polished_rhyolite_brick_wall_from_polished_rhyolite"
+    ]
+  }
+}

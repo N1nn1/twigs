@@ -20,7 +20,7 @@ public class ClientEvents {
 
     @SubscribeEvent
     public static void onClientSetup(final FMLClientSetupEvent event) {
-        ItemProperties.register(TwigsItems.BRONZED_SEASHELL.get(), new ResourceLocation("playing"), (itemStack, clientWorld, livingEntity, var) -> {
+        ItemProperties.register(TwigsItems.BRONZED_SEASHELL.get(), ResourceLocation.withDefaultNamespace("playing"), (itemStack, clientWorld, livingEntity, var) -> {
             if (livingEntity == null) return 0.0F;
 
             return livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack ? 1.0F : 0.0F;

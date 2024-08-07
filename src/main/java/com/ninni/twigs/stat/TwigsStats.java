@@ -14,7 +14,7 @@ public interface TwigsStats {
     ResourceLocation OPEN_SILT_POT = register("open_silt_pot", StatFormatter.DEFAULT);
 
     private static ResourceLocation register(String id, StatFormatter formatter) {
-        ResourceLocation rl = new ResourceLocation(id);
+        ResourceLocation rl = ResourceLocation.parse(id);
         Registry.register(BuiltInRegistries.CUSTOM_STAT, id, rl);
         CUSTOM.get(rl, formatter);
         return rl;
