@@ -27,8 +27,9 @@ public class Pebble extends ThrowableItemProjectile {
         super(TwigsEntityTypes.PEBBLE, livingEntity, level);
     }
 
-    public Pebble(Level level, double x, double y, double z) {
+    public Pebble(Level level, double x, double y, double z, ItemStack itemStack) {
         super(TwigsEntityTypes.PEBBLE, x, y, z, level);
+        setItem(itemStack);
     }
 
     @Override
@@ -37,22 +38,23 @@ public class Pebble extends ThrowableItemProjectile {
     }
 
     private ParticleOptions getParticle() {
-        ItemStack itemStack = this.getItemRaw();
+        ItemStack itemStack = this.getItem();
         return itemStack.isEmpty() ? TwigsParticleTypes.ITEM_PEBBLE : new ItemParticleOption(ParticleTypes.ITEM, itemStack);
     }
 
     @Override
     protected void onHit(HitResult hitResult) {
         super.onHit(hitResult);
-        if (!this.level().isClientSide) {
+        Level level = this.level();
+        if (!level.isClientSide) {
             if (hitResult.getType() != HitResult.Type.ENTITY) {
                 ItemStack stack = this.getItem();
-                RandomSource random = this.level().random;
-                ItemEntity itemEntity = new ItemEntity(this.level(), this.getX(), this.getY(), this.getZ(), stack.isEmpty() ? new ItemStack(this.getDefaultItem()) : stack, random.nextDouble() * 0.2D - 0.1D, this.isUnderWater() ? 0.0D : 0.2D, random.nextDouble() * 0.2D - 0.1D);
+                RandomSource random = level.random;
+                ItemEntity itemEntity = new ItemEntity(level, this.getX(), this.getY(), this.getZ(), stack.isEmpty() ? new ItemStack(this.getDefaultItem()) : stack, random.nextDouble() * 0.2D - 0.1D, this.isUnderWater() ? 0.0D : 0.2D, random.nextDouble() * 0.2D - 0.1D);
                 itemEntity.setDefaultPickUpDelay();
-                this.level().addFreshEntity(itemEntity);
+                level.addFreshEntity(itemEntity);
             }
-            this.level().broadcastEntityEvent(this, (byte) 3);
+            level.broadcastEntityEvent(this, (byte) 3);
             this.discard();
         }
     }

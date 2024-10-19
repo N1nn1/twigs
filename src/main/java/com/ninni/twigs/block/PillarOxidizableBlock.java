@@ -20,10 +20,9 @@ public class PillarOxidizableBlock extends RotatedPillarBlock implements Weather
         return WeatheringCopper.getPrevious(blockState.getBlock()).isPresent();
     }
 
-    @SuppressWarnings("deprecation")
     @Override
     public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
-        this.applyChangeOverTime(blockState, serverLevel, blockPos, randomSource);
+        this.changeOverTime(blockState, serverLevel, blockPos, randomSource);
     }
 
     @Override

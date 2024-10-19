@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twigs:polished_schist"
+  },
+  "result": {
+    "id": "twigs:polished_schist_brick_stairs"
+  },
+  "count": 1
+}

@@ -27,7 +27,6 @@ import org.jetbrains.annotations.Nullable;
     go check it out it's a very awesome mod
 */
 
-@SuppressWarnings("deprecation")
 public class TableBlock extends Block implements SimpleWaterloggedBlock  {
     private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     private static final BooleanProperty LEG1 = TwigsProperties.TABLE_LEG1;
@@ -142,7 +141,7 @@ public class TableBlock extends Block implements SimpleWaterloggedBlock  {
     }
 
     @Override
-    public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
+    public boolean isPathfindable(BlockState blockState, PathComputationType pathComputationType) {
         return false;
     }
 }

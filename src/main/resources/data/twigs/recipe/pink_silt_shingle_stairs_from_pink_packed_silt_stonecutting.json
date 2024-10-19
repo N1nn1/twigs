@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twigs:pink_packed_silt"
+  },
+  "result": {
+    "id": "twigs:pink_silt_shingle_stairs"
+  },
+  "count": 1
+}

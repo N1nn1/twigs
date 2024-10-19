@@ -13,7 +13,6 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.StructureManager;
@@ -30,12 +29,10 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.BlockIgnorePr
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplateManager;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class ObeliskGenerator {
-    private static final ResourceLocation OBELISK = new ResourceLocation(Twigs.MOD_ID, "bloodstone_obelisk/bloodstone_obelisk");
+    private static final ResourceLocation OBELISK = ResourceLocation.fromNamespaceAndPath(Twigs.MOD_ID, "bloodstone_obelisk/bloodstone_obelisk");
 
     public static void addPieces(StructureTemplateManager manager, BlockPos pos, Rotation rotation, StructurePiecesBuilder holder) {
         holder.addPiece(new ObeliskGenerator.Piece(manager, OBELISK, pos, rotation));
@@ -76,10 +73,10 @@ public class ObeliskGenerator {
                 Rotation rotation = this.placeSettings.getRotation();
                 this.createChest(world, boundingBox, random, pos, TwigsLootTables.BLOODSTONE_OBELISK_CHEST, Blocks.CHEST.defaultBlockState().setValue(ChestBlock.FACING, rotation.rotate(
                         switch (metadata) {
-                            default -> Direction.NORTH;
                             case "ChestEast" -> Direction.EAST;
                             case "ChestSouth" -> Direction.SOUTH;
                             case "ChestWest" -> Direction.WEST;
+                            default -> Direction.NORTH;
                         }
                 )));
             } else {
@@ -98,7 +95,7 @@ public class ObeliskGenerator {
                     if (mob != null) {
                         mob.setPersistenceRequired();
                         mob.moveTo(pos, 0.0F, 0.0F);
-                        mob.finalizeSpawn(world, world.getCurrentDifficultyAt(mob.blockPosition()), MobSpawnType.STRUCTURE, (SpawnGroupData) null, (CompoundTag) null);
+                        mob.finalizeSpawn(world, world.getCurrentDifficultyAt(mob.blockPosition()), MobSpawnType.STRUCTURE, null);
                         world.addFreshEntityWithPassengers(mob);
                         world.setBlock(pos, Blocks.AIR.defaultBlockState(), 2);
                     }

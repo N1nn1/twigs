@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "minecraft:waxed_cut_copper"
+    },
+    "result": {
+    "id": "twigs:waxed_copper_pillar"
+  },
+    "count": 1
+}

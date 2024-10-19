@@ -11,8 +11,7 @@ import org.spongepowered.asm.mixin.Mixin;
 
 @Mixin(FlowerBlock.class)
 public abstract class FlowerBlockMixin extends BushBlock {
-
-    public FlowerBlockMixin(Properties properties) {
+    private FlowerBlockMixin(Properties properties) {
         super(properties);
     }
 

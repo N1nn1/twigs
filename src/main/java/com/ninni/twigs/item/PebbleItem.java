@@ -2,20 +2,29 @@ package com.ninni.twigs.item;
 
 import com.ninni.twigs.entity.Pebble;
 import com.ninni.twigs.registry.TwigsSoundEvents;
+import net.minecraft.core.Direction;
+import net.minecraft.core.Position;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ProjectileItem;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.NotNull;
 
-public class PebbleItem extends BlockItem {
-
+public class PebbleItem extends BlockItem implements ProjectileItem {
     public PebbleItem(Block block, Properties properties) {
         super(block, properties);
+    }
+
+    @Override
+    public @NotNull Projectile asProjectile(Level level, Position position, ItemStack itemStack, Direction direction) {
+        return new Pebble(level, position.x(), position.y(), position.z(), itemStack);
     }
 
     @Override

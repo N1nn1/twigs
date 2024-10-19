@@ -1,9 +1,8 @@
 {
   "mod.twigs.name": "Twigs",
-  "twigs.item_group": "Twigs",
+  "itemGroup.twigs.item_group": "Twigs",
   "mod.twigs.contact.discord": "Discord",
   "item.twigs.twigs": "Twigs",
-
   "block.twigs.azalea_flowers": "Fiori di azalea",
   "block.twigs.potted_azalea_flowers": "Potted Azalea Flowers",
   "block.twigs.twig": "Ramoscello",
@@ -19,21 +18,18 @@
   "block.twigs.roseate_seashell": "Conchiglia rosata",
   "block.twigs.tangerine_seashell": "Conchiglia arancione",
   "block.twigs.petrified_lichen": "Lichene pietrificato",
-
   "block.twigs.paper_lantern": "Lanterna di carta",
   "block.twigs.allium_paper_lantern": "Lanterna di carta",
   "block.twigs.dandelion_paper_lantern": "Lanterna di carta",
   "block.twigs.crimson_roots_paper_lantern": "Lanterna di carta",
   "block.twigs.blue_orchid_paper_lantern": "Lanterna di carta",
   "block.twigs.torchflower_paper_lantern": "Lanterna di carta",
-
   "block.twigs.lamp": "Lucerna",
   "block.twigs.soul_lamp": "Lucerna delle anime",
   "subtitles.block.lamp.on": "Lucerna è accesa",
   "subtitles.block.lamp.off": "Lucerna è spenta",
   "block.twigs.crimson_shroomlamp": "Fungolampada cremisi",
   "block.twigs.warped_shroomlamp": "Fungolampada distorta",
-
   "block.twigs.oak_table": "Tavolo di quercia",
   "block.twigs.spruce_table": "Tavolo di abete",
   "block.twigs.birch_table": "Tavolo di betulla",
@@ -45,14 +41,12 @@
   "block.twigs.crimson_table": "Tavolo cremisi",
   "block.twigs.warped_table": "Tavolo distorto",
   "block.twigs.bamboo_table": "Tavolo di bambù",
-
   "block.twigs.polished_basalt_bricks": "Mattoni di basalto levigato",
   "block.twigs.chiseled_smooth_basalt_bricks": "Mattoni di basalto liscio cesellati",
   "block.twigs.smooth_basalt_bricks": "Mattoni di basalto liscio",
   "block.twigs.smooth_basalt_brick_stairs": "Scalini di mattoni di basalto liscio",
   "block.twigs.smooth_basalt_brick_slab": "Lastra di mattoni di basalto liscio",
   "block.twigs.smooth_basalt_brick_wall": "Muretto di mattoni di basalto liscio",
-
   "block.twigs.chiseled_bricks": "Mattoni cesellati",
   "block.twigs.cracked_bricks": "Mattoni crepati",
   "block.twigs.mixed_bricks": "Mattoni mischiati",
@@ -61,22 +55,18 @@
   "block.twigs.mossy_brick_slab": "Lastra di mattoni muschiosi",
   "block.twigs.mossy_brick_wall": "Muretto di mattoni muschiosi",
   "block.twigs.brick_trail": "Traccia di mattoni",
-
   "block.twigs.gravel_bricks": "Mattoni di ghiaia",
   "block.twigs.gravel_brick_wall": "Muretto di mattoni di ghiaia",
   "block.twigs.gravel_brick_slab": "Lastra di mattoni di ghiaia",
   "block.twigs.gravel_brick_stairs": "Scalini di mattoni di ghiaia",
-
   "block.twigs.smooth_stone_bricks": "Mattoni di pietra liscia",
   "block.twigs.smooth_stone_brick_wall": "Muretto di mattoni di pietra liscia",
   "block.twigs.smooth_stone_brick_slab": "Lastra di mattoni di pietra liscia",
   "block.twigs.smooth_stone_brick_stairs": "Scalini di mattoni di pietra liscia",
-
   "block.twigs.quartz_column": "Colonna di quarzo",
   "block.twigs.stone_column": "Colonna di pietra",
   "block.twigs.deepslate_column": "Colonna di ardesia profonda",
   "block.twigs.blackstone_column": "Colonna di pietranera",
-
   "block.twigs.copper_pillar": "Pilastro di rame",
   "block.twigs.exposed_copper_pillar": "Pilastro di rame esposto",
   "block.twigs.weathered_copper_pillar": "Pilastro di rame corroso",
@@ -85,14 +75,11 @@
   "block.twigs.waxed_exposed_copper_pillar": "Pilastro di rame esposto cerato",
   "block.twigs.waxed_weathered_copper_pillar": "Pilastro di rame corroso cerato",
   "block.twigs.waxed_oxidized_copper_pillar": "Pilastro di rame ossidato cerato",
-
   "block.twigs.polished_amethyst": "Ametista levigata",
   "block.twigs.cut_amethyst": "Ametista intagliata",
-
   "block.twigs.bamboo_mat": "Tappeto di bambù",
   "block.twigs.compacted_dripstone": "Speleotema compatto",
   "block.twigs.rocky_dirt": "Terra rocciosa",
-
   "block.twigs.cobblestone_bricks": "Mattoni di pietrisco",
   "block.twigs.cobblestone_brick_stairs": "Scalini di mattoni di pietrisco",
   "block.twigs.cobblestone_brick_slab": "Lastra di mattoni di pietrisco",
@@ -102,7 +89,6 @@
   "block.twigs.mossy_cobblestone_brick_stairs": "Scalini di mattoni di pietrisco muschioso",
   "block.twigs.mossy_cobblestone_brick_slab": "Lastra di mattoni di pietrisco muschioso",
   "block.twigs.mossy_cobblestone_brick_wall": "Muretto di mattoni di pietrisco muschioso",
-
   "block.twigs.twisting_polished_blackstone_bricks": "Mattoni di pietranera levigata distorta",
   "block.twigs.twisting_polished_blackstone_brick_wall": "Muretto di mattoni di pietranera levigata distorta",
   "block.twigs.twisting_polished_blackstone_brick_slab": "Lastra di mattoni di pietranera levigata distorta",
@@ -111,7 +97,6 @@
   "block.twigs.weeping_polished_blackstone_brick_wall": "Muretto di mattoni di pietranera levigata cremisi",
   "block.twigs.weeping_polished_blackstone_brick_slab": "Lastra di mattoni di pietranera levigata cremisi",
   "block.twigs.weeping_polished_blackstone_brick_stairs": "Scalini di mattoni di pietranera levigata cremisi",
-
   "block.twigs.tuff_stairs": "Scalini di tufo",
   "block.twigs.tuff_slab": "Lastra di tufo",
   "block.twigs.tuff_wall": "Muretto di tufo",
@@ -123,7 +108,6 @@
   "block.twigs.polished_tuff_brick_slab": "Lastra di mattoni di tufo levigato",
   "block.twigs.polished_tuff_brick_wall": "Muretto di mattoni di tufo levigato",
   "block.twigs.cracked_polished_tuff_bricks": "Mattoni di tufo levigato crepati",
-
   "block.twigs.calcite_stairs": "Scalini di calcite",
   "block.twigs.calcite_slab": "Lastra di calcite",
   "block.twigs.calcite_wall": "Muretto di calcite",
@@ -135,7 +119,6 @@
   "block.twigs.polished_calcite_brick_slab": "Lastra di mattoni di calcite levigata",
   "block.twigs.polished_calcite_brick_wall": "Muretto di mattoni di calcite levigata",
   "block.twigs.cracked_polished_calcite_bricks": "Mattoni di calcite levigata crepati",
-
   "block.twigs.schist": "Scisto",
   "block.twigs.schist_wall": "Muretto di scisto",
   "block.twigs.schist_slab": "Lastra di scisto",
@@ -148,7 +131,6 @@
   "block.twigs.polished_schist_brick_slab": "Lastra di mattoni di scisto levigato",
   "block.twigs.polished_schist_brick_stairs": "Scalini di mattoni di scisto levigato",
   "block.twigs.cracked_polished_schist_bricks": "Mattoni di scisto levigato crepati",
-
   "block.twigs.rhyolite": "Riolite",
   "block.twigs.rhyolite_wall": "Muretto di riolite",
   "block.twigs.rhyolite_slab": "Lastra di riolite",
@@ -161,7 +143,6 @@
   "block.twigs.polished_rhyolite_brick_slab": "Lastra di mattoni di riolite levigata",
   "block.twigs.polished_rhyolite_brick_stairs": "Scalini di mattoni di riolite levigata",
   "block.twigs.cracked_polished_rhyolite_bricks": "Mattoni di riolite levigata crepati",
-
   "block.twigs.bloodstone": "Eliotropio",
   "block.twigs.bloodstone_wall": "Muretto di eliotropio",
   "block.twigs.bloodstone_slab": "Lastra di eliotropio",
@@ -174,11 +155,9 @@
   "block.twigs.polished_bloodstone_brick_slab": "Lastra di mattoni di eliotropio levigato",
   "block.twigs.polished_bloodstone_brick_stairs": "Scalini di mattoni di eliotropio levigato",
   "block.twigs.cracked_polished_bloodstone_bricks": "Mattoni di eliotropio levigato crepati",
-
   "block.twigs.silt": "Limo",
   "item.twigs.silt_ball": "Zolla di limo",
   "item.twigs.silt_brick": "Mattone di limo",
-
   "block.twigs.silt_bricks": "Mattoni di limo",
   "block.twigs.silt_brick_wall": "Muretto di mattoni di limo",
   "block.twigs.silt_brick_slab": "Lastra di mattoni di limo",
@@ -187,7 +166,6 @@
   "block.twigs.cracked_silt_bricks": "Mattoni di limo crepati",
   "block.twigs.mixed_silt_bricks": "Mattoni di limo mischiati",
   "block.twigs.silt_brick_trail": "Traccia di mattoni di limo",
-
   "container.twigs.silt_pot": "Vaso di limo",
   "block.twigs.silt_pot": "Vaso di limo",
   "block.twigs.white_silt_pot": "Vaso di limo bianco",
@@ -206,8 +184,7 @@
   "block.twigs.green_silt_pot": "Vaso di limo verde",
   "block.twigs.red_silt_pot": "Vaso di limo rosso",
   "block.twigs.black_silt_pot": "Vaso di limo nero",
-  "stat.minecraft.open_silt_pot": "Vasi di limo aperti",
-
+  "stat.twigs.open_silt_pot": "Vasi di limo aperti",
   "block.twigs.packed_silt": "Limo compatto",
   "block.twigs.white_packed_silt": "Limo compatto bianco",
   "block.twigs.orange_packed_silt": "Limo compatto arancione",
@@ -225,7 +202,6 @@
   "block.twigs.green_packed_silt": "Limo compatto verde",
   "block.twigs.red_packed_silt": "Limo compatto rosso",
   "block.twigs.black_packed_silt": "Limo compatto nero",
-
   "block.twigs.silt_shingles": "Tegole di limo",
   "block.twigs.white_silt_shingles": "Tegole di limo bianche",
   "block.twigs.orange_silt_shingles": "Tegole di limo arancioni",

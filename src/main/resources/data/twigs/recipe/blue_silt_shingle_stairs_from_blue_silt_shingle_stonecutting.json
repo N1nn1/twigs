@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "twigs:blue_silt_shingles"
+  },
+  "result": {
+    "id": "twigs:blue_silt_shingle_stairs"
+  },
+  "count": 1
+}

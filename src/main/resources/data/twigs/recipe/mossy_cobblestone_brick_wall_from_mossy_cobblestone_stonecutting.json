@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": {
+        "item": "minecraft:mossy_cobblestone"
+    },
+    "result": {
+    "id": "twigs:mossy_cobblestone_brick_wall"
+  },
+    "count": 1
+}

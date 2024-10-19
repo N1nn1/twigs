@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:exposed_cut_copper"
+  },
+  "result": {
+    "id": "twigs:exposed_copper_pillar"
+  },
+  "count": 1
+}

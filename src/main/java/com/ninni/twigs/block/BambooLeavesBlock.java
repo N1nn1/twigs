@@ -1,5 +1,6 @@
 package com.ninni.twigs.block;
 
+import com.mojang.serialization.MapCodec;
 import com.ninni.twigs.TwigsProperties;
 import com.ninni.twigs.TwigsTags;
 import net.minecraft.core.BlockPos;
@@ -27,7 +28,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-@SuppressWarnings("deprecation")
 public class BambooLeavesBlock extends BushBlock implements SimpleWaterloggedBlock {
     private static final IntegerProperty LAYERS = TwigsProperties.LAYERS_1_4;
     private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -36,18 +36,25 @@ public class BambooLeavesBlock extends BushBlock implements SimpleWaterloggedBlo
     public static final VoxelShape SHAPE_THREE = box(0, 0, 0, 16, 3, 16);
     public static final VoxelShape SHAPE_FOUR = box(0, 0, 0, 16, 5, 16);
 
+    private static final MapCodec<BambooLeavesBlock> CODEC = simpleCodec(BambooLeavesBlock::new);
+
     public BambooLeavesBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(LAYERS, 1).setValue(WATERLOGGED, false));
     }
 
     @Override
+    protected MapCodec<? extends BushBlock> codec() {
+        return CODEC;
+    }
+
+    @Override
     public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
         return switch (blockState.getValue(LAYERS)) {
-            default -> SHAPE_ONE;
             case 2 -> SHAPE_TWO;
             case 3 -> SHAPE_THREE;
             case 4 -> SHAPE_FOUR;
+            default -> SHAPE_ONE;
         };
     }
 

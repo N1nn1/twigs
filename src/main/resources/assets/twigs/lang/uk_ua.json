@@ -1,6 +1,6 @@
 {
   "mod.twigs.name": "Twigs",
-  "twigs.item_group": "Twigs",
+  "itemGroup.twigs.item_group": "Twigs",
   "mod.twigs.contact.discord": "Discord",
   "item.twigs.twigs": "Twigs",
 
@@ -125,7 +125,7 @@
   "block.twigs.green_silt_pot": "Зелений мулистий глек",
   "block.twigs.red_silt_pot": "Червоний мулистий глек",
   "block.twigs.black_silt_pot": "Чорний мулистий глек",
-  "stat.minecraft.open_silt_pot": "Відкрито мул. глеків",
+  "stat.twigs.open_silt_pot": "Відкрито мул. глеків",
 
   "block.twigs.packed_silt": "Ущільнений мул",
   "block.twigs.white_packed_silt": "Білий ущільнений мул",

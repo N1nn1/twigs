@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "twigs:polished_tuff_bricks"
+  },
+  "result": {
+    "id": "twigs:cracked_polished_tuff_bricks"
+  },
+  "experience": 0.1,
+  "cookingtime": 200
+}

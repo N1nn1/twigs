@@ -1,7 +1,6 @@
 package com.ninni.twigs;
 
 import com.google.common.reflect.Reflection;
-import com.ninni.twigs.entity.Pebble;
 import com.ninni.twigs.registry.TwigsBiomeModifier;
 import com.ninni.twigs.registry.TwigsBlockEntityType;
 import com.ninni.twigs.registry.TwigsBlocks;
@@ -18,11 +17,6 @@ import com.ninni.twigs.stat.TwigsStats;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.Util;
-import net.minecraft.core.Position;
-import net.minecraft.core.dispenser.AbstractProjectileDispenseBehavior;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DispenserBlock;
 
@@ -50,12 +44,7 @@ public class Twigs implements ModInitializer {
 				TwigsStructurePieceTypes.class
 		);
 
-		DispenserBlock.registerBehavior(TwigsItems.PEBBLE, new AbstractProjectileDispenseBehavior() {
-			@Override
-			protected Projectile getProjectile(Level world, Position position, ItemStack stack) {
-				return Util.make(new Pebble(world, position.x(), position.y(), position.z()), entity -> entity.setItem(stack));
-			}
-		});
+		DispenserBlock.registerProjectileBehavior(TwigsItems.PEBBLE);
 
 		Util.make(new LinkedHashMap<Block, Block>(), pairs -> {
 			pairs.put(TwigsBlocks.COPPER_PILLAR, TwigsBlocks.WAXED_COPPER_PILLAR);

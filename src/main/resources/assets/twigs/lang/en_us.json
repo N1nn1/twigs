@@ -1,6 +1,6 @@
 {
   "mod.twigs.name": "Twigs",
-  "twigs.item_group": "Twigs",
+  "itemGroup.twigs.item_group": "Twigs",
   "mod.twigs.contact.discord": "Discord",
   "item.twigs.twigs": "Twigs",
 
@@ -206,7 +206,7 @@
   "block.twigs.green_silt_pot": "Green Silt Pot",
   "block.twigs.red_silt_pot": "Red Silt Pot",
   "block.twigs.black_silt_pot": "Black Silt Pot",
-  "stat.minecraft.open_silt_pot": "Silt Pots opened",
+  "stat.twigs.open_silt_pot": "Silt Pots opened",
 
   "block.twigs.packed_silt": "Packed Silt",
   "block.twigs.white_packed_silt": "White Packed Silt",

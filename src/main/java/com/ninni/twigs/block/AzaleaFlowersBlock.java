@@ -1,5 +1,6 @@
 package com.ninni.twigs.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -20,10 +21,16 @@ import net.minecraft.world.level.material.Fluids;
 public class AzaleaFlowersBlock extends MultifaceBlock implements SimpleWaterloggedBlock {
     private static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     private final MultifaceSpreader spreader = new MultifaceSpreader(this);
+    private static final MapCodec<AzaleaFlowersBlock> CODEC = simpleCodec(AzaleaFlowersBlock::new);
 
     public AzaleaFlowersBlock(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, false));
+    }
+
+    @Override
+    protected MapCodec<? extends MultifaceBlock> codec() {
+        return CODEC;
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
@@ -42,7 +49,6 @@ public class AzaleaFlowersBlock extends MultifaceBlock implements SimpleWaterlog
         return !blockPlaceContext.getItemInHand().is(this.asItem()) || super.canBeReplaced(blockState, blockPlaceContext);
     }
 
-    @SuppressWarnings("deprecation")
     public FluidState getFluidState(BlockState blockState) {
         return blockState.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(blockState);
     }

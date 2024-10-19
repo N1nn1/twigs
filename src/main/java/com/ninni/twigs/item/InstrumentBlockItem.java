@@ -32,7 +32,7 @@ public class InstrumentBlockItem extends BlockItem {
     }
 
     @Override
-    public int getUseDuration(ItemStack itemStack) {
+    public int getUseDuration(ItemStack itemStack, LivingEntity livingEntity) {
         return 1200;
     }
 
@@ -51,4 +51,3 @@ public class InstrumentBlockItem extends BlockItem {
         level.gameEvent(GameEvent.INSTRUMENT_PLAY, player.position(), GameEvent.Context.of(player));
     }
 }
-
